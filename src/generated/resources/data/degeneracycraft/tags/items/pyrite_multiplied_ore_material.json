@@ -1,0 +1,23 @@
+{
+  "values": [
+    "degeneracycraft:raw_pyrite_ore",
+    "degeneracycraft:pyrite_dust",
+    "degeneracycraft:pyrite_puredust",
+    "degeneracycraft:pyrite_leachate",
+    "degeneracycraft:pyrite_concentrate",
+    "degeneracycraft:pyrite_plasma",
+    "degeneracycraft:pyrite_degeneratematter",
+    "degeneracycraft:pyrite_soup",
+    "degeneracycraft:pyrite_imaginarymatter",
+    "degeneracycraft:stable_pyrite_imaginarymatter",
+    "degeneracycraft:pyrite_tachyon",
+    "degeneracycraft:pyrite_antimatter",
+    "degeneracycraft:pyrite_ultrahotplasma",
+    "degeneracycraft:pyrite_overfluid",
+    "degeneracycraft:pyrite_crystal",
+    "degeneracycraft:pyrite_precipitate",
+    "degeneracycraft:pyrite_washeddust",
+    "degeneracycraft:pyrite_oresinter",
+    "degeneracycraft:pyrite_ingot"
+  ]
+}

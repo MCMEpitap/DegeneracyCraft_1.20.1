@@ -1,0 +1,19 @@
+{
+  "name": "天文学の説明",
+  "icon": "degeneracycraft:astronomy_icon",
+  "category": "degeneracycraft:astronomy",
+  "pages": [
+    {
+      "type": "image",
+      "title": "天文学アイコン",
+      "images": [
+        "degeneracycraft:textures/gui/entries/astronomy_introduction_icon.png"
+      ],
+      "text": "$(l)目指せ、星間飛行"
+    },
+    {
+      "type": "text",
+      "text": "DegeneracyCraftでの天文学は他の星の調査、研究はもちろん、他の星や危険な天体(技術力が上がれば現実味のない天体にも…)に上陸することも含まれます!$(br)また、ロケットより良い、重力に縛られない空間移動手段が存在するでしょう!"
+    }
+  ]
+}

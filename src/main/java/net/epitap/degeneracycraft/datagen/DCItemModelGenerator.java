@@ -1,0 +1,1039 @@
+package net.epitap.degeneracycraft.datagen;
+
+import net.epitap.degeneracycraft.Degeneracycraft;
+import net.epitap.degeneracycraft.item.DCItems;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Objects;
+
+public class DCItemModelGenerator extends ItemModelProvider {
+    public DCItemModelGenerator(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Degeneracycraft.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void registerModels() {
+//        iconItem(DCAdvancementIcon.ASTRONOMY_ICON.get());
+//        iconItem(DCAdvancementIcon.BIOLOGY_ICON.get());
+//        iconItem(DCAdvancementIcon.CHEMISTRY_ICON.get());
+//        iconItem(DCAdvancementIcon.DEGENERACYCRAFT_ICON.get());
+//        iconItem(DCAdvancementIcon.ENGINEERING_ICON.get());
+//        iconItem(DCAdvancementIcon.FORMAL_SCIENCE_ICON.get());
+//        iconItem(DCAdvancementIcon.GEO_SCIENCE_ICON.get());
+//        iconItem(DCAdvancementIcon.HYBRID_PHYSICS_ICON.get());
+//        iconItem(DCAdvancementIcon.IMITATION_MAGIC_ENGINEERING_ICON.get());
+
+
+        //
+        ingotMaterialItem(DCItems.BAUXITE_INGOT.get());
+        ingotMaterialItem(DCItems.BERYL_INGOT.get());
+        ingotMaterialItem(DCItems.BORAX_INGOT.get());
+        ingotMaterialItem(DCItems.CASSITERITE_INGOT.get());
+        ingotMaterialItem(DCItems.CHROMITE_INGOT.get());
+        ingotMaterialItem(DCItems.FLUORITE_INGOT.get());
+        ingotMaterialItem(DCItems.GRAPHITE_INGOT.get());
+        ingotMaterialItem(DCItems.LATERITE_INGOT.get());
+        ingotMaterialItem(DCItems.LIMESTONE_INGOT.get());
+        ingotMaterialItem(DCItems.NITRATINE_INGOT.get());
+        ingotMaterialItem(DCItems.PENTLANDITE_INGOT.get());
+        ingotMaterialItem(DCItems.PHOSPHORITE_INGOT.get());
+        ingotMaterialItem(DCItems.PYRITE_INGOT.get());
+        ingotMaterialItem(DCItems.PYROLUSITE_INGOT.get());
+        ingotMaterialItem(DCItems.QUARTZ_INGOT.get());
+        ingotMaterialItem(DCItems.RUTILE_INGOT.get());
+        ingotMaterialItem(DCItems.SPODUMENE_INGOT.get());
+        ingotMaterialItem(DCItems.SYLVITE_INGOT.get());
+        ingotMaterialItem(DCItems.ULEXITE_INGOT.get());
+        ingotMaterialItem(DCItems.VANADINITE_INGOT.get());
+
+        oreMaterialBauxiteItem(DCItems.RAW_BAUXITE_ORE.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_DUST.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_PUREDUST.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_LEACHATE.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_CONCENTRATE.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_PLASMA.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_DEGENERATEMATTER.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_SOUP.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_IMAGINARYMATTER.get());
+        oreMaterialBauxiteItem(DCItems.STABLE_BAUXITE_IMAGINARYMATTER.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_TACHYON.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_ANTIMATTER.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_ULTRAHOTPLASMA.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_OVERFLUID.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_CRYSTAL.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_PRECIPITATE.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_WASHEDDUST.get());
+        oreMaterialBauxiteItem(DCItems.BAUXITE_ORESINTER.get());
+
+        //
+        oreMaterialBerylItem(DCItems.RAW_BERYL_ORE.get());
+        oreMaterialBerylItem(DCItems.BERYL_DUST.get());
+        oreMaterialBerylItem(DCItems.BERYL_PUREDUST.get());
+        oreMaterialBerylItem(DCItems.BERYL_LEACHATE.get());
+        oreMaterialBerylItem(DCItems.BERYL_CONCENTRATE.get());
+        oreMaterialBerylItem(DCItems.BERYL_PLASMA.get());
+        oreMaterialBerylItem(DCItems.BERYL_DEGENERATEMATTER.get());
+        oreMaterialBerylItem(DCItems.BERYL_SOUP.get());
+        oreMaterialBerylItem(DCItems.BERYL_IMAGINARYMATTER.get());
+        oreMaterialBerylItem(DCItems.STABLE_BERYL_IMAGINARYMATTER.get());
+        oreMaterialBerylItem(DCItems.BERYL_TACHYON.get());
+        oreMaterialBerylItem(DCItems.BERYL_ANTIMATTER.get());
+        oreMaterialBerylItem(DCItems.BERYL_ULTRAHOTPLASMA.get());
+        oreMaterialBerylItem(DCItems.BERYL_OVERFLUID.get());
+        oreMaterialBerylItem(DCItems.BERYL_CRYSTAL.get());
+        oreMaterialBerylItem(DCItems.BERYL_PRECIPITATE.get());
+        oreMaterialBerylItem(DCItems.BERYL_WASHEDDUST.get());
+        oreMaterialBerylItem(DCItems.BERYL_ORESINTER.get());
+
+        //
+        oreMaterialBoraxItem(DCItems.RAW_BORAX_ORE.get());
+        oreMaterialBoraxItem(DCItems.BORAX_DUST.get());
+        oreMaterialBoraxItem(DCItems.BORAX_PUREDUST.get());
+        oreMaterialBoraxItem(DCItems.BORAX_LEACHATE.get());
+        oreMaterialBoraxItem(DCItems.BORAX_CONCENTRATE.get());
+        oreMaterialBoraxItem(DCItems.BORAX_PLASMA.get());
+        oreMaterialBoraxItem(DCItems.BORAX_DEGENERATEMATTER.get());
+        oreMaterialBoraxItem(DCItems.BORAX_SOUP.get());
+        oreMaterialBoraxItem(DCItems.BORAX_IMAGINARYMATTER.get());
+        oreMaterialBoraxItem(DCItems.STABLE_BORAX_IMAGINARYMATTER.get());
+        oreMaterialBoraxItem(DCItems.BORAX_TACHYON.get());
+        oreMaterialBoraxItem(DCItems.BORAX_ANTIMATTER.get());
+        oreMaterialBoraxItem(DCItems.BORAX_ULTRAHOTPLASMA.get());
+        oreMaterialBoraxItem(DCItems.BORAX_OVERFLUID.get());
+        oreMaterialBoraxItem(DCItems.BORAX_CRYSTAL.get());
+        oreMaterialBoraxItem(DCItems.BORAX_PRECIPITATE.get());
+        oreMaterialBoraxItem(DCItems.BORAX_WASHEDDUST.get());
+        oreMaterialBoraxItem(DCItems.BORAX_ORESINTER.get());
+
+        //
+        oreMaterialCassiteriteItem(DCItems.RAW_CASSITERITE_ORE.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_DUST.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_PUREDUST.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_LEACHATE.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_CONCENTRATE.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_PLASMA.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_DEGENERATEMATTER.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_SOUP.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_IMAGINARYMATTER.get());
+        oreMaterialCassiteriteItem(DCItems.STABLE_CASSITERITE_IMAGINARYMATTER.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_TACHYON.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_ANTIMATTER.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_ULTRAHOTPLASMA.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_OVERFLUID.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_CRYSTAL.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_PRECIPITATE.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_WASHEDDUST.get());
+        oreMaterialCassiteriteItem(DCItems.CASSITERITE_ORESINTER.get());
+
+        //
+        oreMaterialChromiteItem(DCItems.RAW_CHROMITE_ORE.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_DUST.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_PUREDUST.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_LEACHATE.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_CONCENTRATE.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_PLASMA.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_DEGENERATEMATTER.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_SOUP.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_IMAGINARYMATTER.get());
+        oreMaterialChromiteItem(DCItems.STABLE_CHROMITE_IMAGINARYMATTER.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_TACHYON.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_ANTIMATTER.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_ULTRAHOTPLASMA.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_OVERFLUID.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_CRYSTAL.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_PRECIPITATE.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_WASHEDDUST.get());
+        oreMaterialChromiteItem(DCItems.CHROMITE_ORESINTER.get());
+        //
+        oreMaterialFluoriteItem(DCItems.RAW_FLUORITE_ORE.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_DUST.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_PUREDUST.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_LEACHATE.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_CONCENTRATE.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_PLASMA.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_DEGENERATEMATTER.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_SOUP.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_IMAGINARYMATTER.get());
+        oreMaterialFluoriteItem(DCItems.STABLE_FLUORITE_IMAGINARYMATTER.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_TACHYON.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_ANTIMATTER.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_ULTRAHOTPLASMA.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_OVERFLUID.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_CRYSTAL.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_PRECIPITATE.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_WASHEDDUST.get());
+        oreMaterialFluoriteItem(DCItems.FLUORITE_ORESINTER.get());
+        //
+        oreMaterialGraphiteItem(DCItems.RAW_GRAPHITE_ORE.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_DUST.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_PUREDUST.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_LEACHATE.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_CONCENTRATE.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_PLASMA.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_DEGENERATEMATTER.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_SOUP.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_IMAGINARYMATTER.get());
+        oreMaterialGraphiteItem(DCItems.STABLE_GRAPHITE_IMAGINARYMATTER.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_TACHYON.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_ANTIMATTER.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_ULTRAHOTPLASMA.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_OVERFLUID.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_CRYSTAL.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_PRECIPITATE.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_WASHEDDUST.get());
+        oreMaterialGraphiteItem(DCItems.GRAPHITE_ORESINTER.get());
+        //
+//        simpleItem(DCItems.IRON_DUST.get());
+//        simpleItem(DCItems.IRON_PUREDUST.get());
+//        simpleItem(DCItems.IRON_LEACHATE.get());
+//        simpleItem(DCItems.IRON_CONCENTRATE.get());
+//        simpleItem(DCItems.IRON_PLASMA.get());
+//        simpleItem(DCItems.IRON_DEGENERATEMATTER.get());
+//        simpleItem(DCItems.IRON_SOUP.get());
+//        simpleItem(DCItems.IRON_IMAGINARYMATTER.get());
+//        simpleItem(DCItems.STABLE_IRON_IMAGINARYMATTER.get());
+//        simpleItem(DCItems.IRON_TACHYON.get());
+//        simpleItem(DCItems.IRON_ANTIMATTER.get());
+//        simpleItem(DCItems.IRON_ULTRAHOTPLASMA.get());
+//        simpleItem(DCItems.IRON_OVERFLUID.get());
+//        simpleItem(DCItems.IRON_CRYSTAL.get());
+//        simpleItem(DCItems.IRON_PRECIPITATE.get());
+//        simpleItem(DCItems.IRON_WASHEDDUST.get());
+//        simpleItem(DCItems.IRON_ORESINTER.get());
+        //
+        oreMaterialLateriteItem(DCItems.RAW_LATERITE_ORE.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_DUST.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_PUREDUST.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_LEACHATE.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_CONCENTRATE.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_PLASMA.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_DEGENERATEMATTER.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_SOUP.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_IMAGINARYMATTER.get());
+        oreMaterialLateriteItem(DCItems.STABLE_LATERITE_IMAGINARYMATTER.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_TACHYON.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_ANTIMATTER.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_ULTRAHOTPLASMA.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_OVERFLUID.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_CRYSTAL.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_PRECIPITATE.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_WASHEDDUST.get());
+        oreMaterialLateriteItem(DCItems.LATERITE_ORESINTER.get());
+        //
+        oreMaterialLimestoneItem(DCItems.RAW_LIMESTONE_ORE.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_DUST.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_PUREDUST.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_LEACHATE.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_CONCENTRATE.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_PLASMA.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_DEGENERATEMATTER.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_SOUP.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_IMAGINARYMATTER.get());
+        oreMaterialLimestoneItem(DCItems.STABLE_LIMESTONE_IMAGINARYMATTER.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_TACHYON.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_ANTIMATTER.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_ULTRAHOTPLASMA.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_OVERFLUID.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_CRYSTAL.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_PRECIPITATE.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_WASHEDDUST.get());
+        oreMaterialLimestoneItem(DCItems.LIMESTONE_ORESINTER.get());
+        //
+        oreMaterialNitratineItem(DCItems.RAW_NITRATINE_ORE.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_DUST.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_PUREDUST.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_LEACHATE.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_CONCENTRATE.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_PLASMA.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_DEGENERATEMATTER.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_SOUP.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_IMAGINARYMATTER.get());
+        oreMaterialNitratineItem(DCItems.STABLE_NITRATINE_IMAGINARYMATTER.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_TACHYON.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_ANTIMATTER.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_ULTRAHOTPLASMA.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_OVERFLUID.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_CRYSTAL.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_PRECIPITATE.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_WASHEDDUST.get());
+        oreMaterialNitratineItem(DCItems.NITRATINE_ORESINTER.get());
+        //
+        oreMaterialPentlanditeItem(DCItems.RAW_PENTLANDITE_ORE.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_DUST.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_PUREDUST.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_LEACHATE.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_CONCENTRATE.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_PLASMA.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_DEGENERATEMATTER.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_SOUP.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_IMAGINARYMATTER.get());
+        oreMaterialPentlanditeItem(DCItems.STABLE_PENTLANDITE_IMAGINARYMATTER.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_TACHYON.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_ANTIMATTER.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_ULTRAHOTPLASMA.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_OVERFLUID.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_CRYSTAL.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_PRECIPITATE.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_WASHEDDUST.get());
+        oreMaterialPentlanditeItem(DCItems.PENTLANDITE_ORESINTER.get());
+        //
+        oreMaterialPhosphoriteItem(DCItems.RAW_PHOSPHORITE_ORE.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_DUST.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_PUREDUST.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_LEACHATE.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_CONCENTRATE.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_PLASMA.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_DEGENERATEMATTER.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_SOUP.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_IMAGINARYMATTER.get());
+        oreMaterialPhosphoriteItem(DCItems.STABLE_PHOSPHORITE_IMAGINARYMATTER.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_TACHYON.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_ANTIMATTER.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_ULTRAHOTPLASMA.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_OVERFLUID.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_CRYSTAL.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_PRECIPITATE.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_WASHEDDUST.get());
+        oreMaterialPhosphoriteItem(DCItems.PHOSPHORITE_ORESINTER.get());
+        //
+        oreMaterialPyriteItem(DCItems.RAW_PYRITE_ORE.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_DUST.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_PUREDUST.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_LEACHATE.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_CONCENTRATE.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_PLASMA.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_DEGENERATEMATTER.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_SOUP.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_IMAGINARYMATTER.get());
+        oreMaterialPyriteItem(DCItems.STABLE_PYRITE_IMAGINARYMATTER.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_TACHYON.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_ANTIMATTER.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_ULTRAHOTPLASMA.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_OVERFLUID.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_CRYSTAL.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_PRECIPITATE.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_WASHEDDUST.get());
+        oreMaterialPyriteItem(DCItems.PYRITE_ORESINTER.get());
+        //
+        oreMaterialPyrolusiteItem(DCItems.RAW_PYROLUSITE_ORE.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_DUST.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_PUREDUST.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_LEACHATE.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_CONCENTRATE.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_PLASMA.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_DEGENERATEMATTER.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_SOUP.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_IMAGINARYMATTER.get());
+        oreMaterialPyrolusiteItem(DCItems.STABLE_PYROLUSITE_IMAGINARYMATTER.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_TACHYON.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_ANTIMATTER.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_ULTRAHOTPLASMA.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_OVERFLUID.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_CRYSTAL.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_PRECIPITATE.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_WASHEDDUST.get());
+        oreMaterialPyrolusiteItem(DCItems.PYROLUSITE_ORESINTER.get());
+        //
+        oreMaterialQuartzItem(DCItems.RAW_QUARTZ_ORE.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_DUST.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_PUREDUST.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_LEACHATE.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_CONCENTRATE.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_PLASMA.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_DEGENERATEMATTER.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_SOUP.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_IMAGINARYMATTER.get());
+        oreMaterialQuartzItem(DCItems.STABLE_QUARTZ_IMAGINARYMATTER.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_TACHYON.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_ANTIMATTER.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_ULTRAHOTPLASMA.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_OVERFLUID.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_CRYSTAL.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_PRECIPITATE.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_WASHEDDUST.get());
+        oreMaterialQuartzItem(DCItems.QUARTZ_ORESINTER.get());
+        //
+        oreMaterialRutileItem(DCItems.RAW_RUTILE_ORE.get());
+        oreMaterialRutileItem(DCItems.RUTILE_DUST.get());
+        oreMaterialRutileItem(DCItems.RUTILE_PUREDUST.get());
+        oreMaterialRutileItem(DCItems.RUTILE_LEACHATE.get());
+        oreMaterialRutileItem(DCItems.RUTILE_CONCENTRATE.get());
+        oreMaterialRutileItem(DCItems.RUTILE_PLASMA.get());
+        oreMaterialRutileItem(DCItems.RUTILE_DEGENERATEMATTER.get());
+        oreMaterialRutileItem(DCItems.RUTILE_SOUP.get());
+        oreMaterialRutileItem(DCItems.RUTILE_IMAGINARYMATTER.get());
+        oreMaterialRutileItem(DCItems.STABLE_RUTILE_IMAGINARYMATTER.get());
+        oreMaterialRutileItem(DCItems.RUTILE_TACHYON.get());
+        oreMaterialRutileItem(DCItems.RUTILE_ANTIMATTER.get());
+        oreMaterialRutileItem(DCItems.RUTILE_ULTRAHOTPLASMA.get());
+        oreMaterialRutileItem(DCItems.RUTILE_OVERFLUID.get());
+        oreMaterialRutileItem(DCItems.RUTILE_CRYSTAL.get());
+        oreMaterialRutileItem(DCItems.RUTILE_PRECIPITATE.get());
+        oreMaterialRutileItem(DCItems.RUTILE_WASHEDDUST.get());
+        oreMaterialRutileItem(DCItems.RUTILE_ORESINTER.get());
+        //
+        oreMaterialSpodumeneItem(DCItems.RAW_SPODUMENE_ORE.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_DUST.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_PUREDUST.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_LEACHATE.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_CONCENTRATE.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_PLASMA.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_DEGENERATEMATTER.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_SOUP.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_IMAGINARYMATTER.get());
+        oreMaterialSpodumeneItem(DCItems.STABLE_SPODUMENE_IMAGINARYMATTER.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_TACHYON.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_ANTIMATTER.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_ULTRAHOTPLASMA.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_OVERFLUID.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_CRYSTAL.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_PRECIPITATE.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_WASHEDDUST.get());
+        oreMaterialSpodumeneItem(DCItems.SPODUMENE_ORESINTER.get());
+        //
+        oreMaterialSylviteItem(DCItems.RAW_SYLVITE_ORE.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_DUST.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_PUREDUST.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_LEACHATE.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_CONCENTRATE.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_PLASMA.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_DEGENERATEMATTER.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_SOUP.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_IMAGINARYMATTER.get());
+        oreMaterialSylviteItem(DCItems.STABLE_SYLVITE_IMAGINARYMATTER.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_TACHYON.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_ANTIMATTER.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_ULTRAHOTPLASMA.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_OVERFLUID.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_CRYSTAL.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_PRECIPITATE.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_WASHEDDUST.get());
+        oreMaterialSylviteItem(DCItems.SYLVITE_ORESINTER.get());
+        //
+        oreMaterialUlexiteItem(DCItems.RAW_ULEXITE_ORE.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_DUST.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_PUREDUST.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_LEACHATE.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_CONCENTRATE.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_PLASMA.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_DEGENERATEMATTER.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_SOUP.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_IMAGINARYMATTER.get());
+        oreMaterialUlexiteItem(DCItems.STABLE_ULEXITE_IMAGINARYMATTER.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_TACHYON.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_ANTIMATTER.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_ULTRAHOTPLASMA.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_OVERFLUID.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_CRYSTAL.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_PRECIPITATE.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_WASHEDDUST.get());
+        oreMaterialUlexiteItem(DCItems.ULEXITE_ORESINTER.get());
+        //
+        oreMaterialVanadiniteItem(DCItems.RAW_VANADINITE_ORE.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_DUST.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_PUREDUST.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_LEACHATE.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_CONCENTRATE.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_PLASMA.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_DEGENERATEMATTER.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_SOUP.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_IMAGINARYMATTER.get());
+        oreMaterialVanadiniteItem(DCItems.STABLE_VANADINITE_IMAGINARYMATTER.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_TACHYON.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_ANTIMATTER.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_ULTRAHOTPLASMA.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_OVERFLUID.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_CRYSTAL.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_PRECIPITATE.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_WASHEDDUST.get());
+        oreMaterialVanadiniteItem(DCItems.VANADINITE_ORESINTER.get());
+
+
+
+        elementCopperItem(DCItems.COPPER_BEARING.get());
+        elementCopperItem(DCItems.COPPER_BOLT.get());
+        elementCopperItem(DCItems.COPPER_CAM.get());
+        elementCopperItem(DCItems.COPPER_CHAIN.get());
+        elementCopperItem(DCItems.COPPER_GEAR.get());
+        elementCopperItem(DCItems.COPPER_JOINT.get());
+        elementCopperItem(DCItems.COPPER_NUT.get());
+        elementCopperItem(DCItems.COPPER_KEY.get());
+        elementCopperItem(DCItems.COPPER_PIPE.get());
+        elementCopperItem(DCItems.COPPER_PIPEJOINT.get());
+        elementCopperItem(DCItems.COPPER_PLATE.get());
+        elementCopperItem(DCItems.COPPER_RIVET.get());
+        elementCopperItem(DCItems.COPPER_ROD.get());
+        elementCopperItem(DCItems.COPPER_SHAFT.get());
+        elementCopperItem(DCItems.COPPER_SHAFTCOUPLING.get());
+        elementCopperItem(DCItems.COPPER_SHAPESTEEL.get());
+        elementCopperItem(DCItems.COPPER_SPRING.get());
+        elementCopperItem(DCItems.COPPER_WIRE.get());
+
+
+        elementGoldItem(DCItems.GOLD_BEARING.get());
+        elementGoldItem(DCItems.GOLD_BOLT.get());
+        elementGoldItem(DCItems.GOLD_CAM.get());
+        elementGoldItem(DCItems.GOLD_CHAIN.get());
+        elementGoldItem(DCItems.GOLD_GEAR.get());
+        elementGoldItem(DCItems.GOLD_JOINT.get());
+        elementGoldItem(DCItems.GOLD_KEY.get());
+        elementGoldItem(DCItems.GOLD_NUT.get());
+        elementGoldItem(DCItems.GOLD_PIPE.get());
+        elementGoldItem(DCItems.GOLD_PIPEJOINT.get());
+        elementGoldItem(DCItems.GOLD_PLATE.get());
+        elementGoldItem(DCItems.GOLD_RIVET.get());
+        elementGoldItem(DCItems.GOLD_ROD.get());
+        elementGoldItem(DCItems.GOLD_SHAFT.get());
+        elementGoldItem(DCItems.GOLD_SHAFTCOUPLING.get());
+        elementGoldItem(DCItems.GOLD_SHAPESTEEL.get());
+        elementGoldItem(DCItems.GOLD_SPRING.get());
+        elementGoldItem(DCItems.GOLD_WIRE.get());
+
+
+
+        elementIronItem(DCItems.IRON_BEARING.get());
+        elementIronItem(DCItems.IRON_BOLT.get());
+        elementIronItem(DCItems.IRON_CAM.get());
+        elementIronItem(DCItems.IRON_CHAIN.get());
+        elementIronItem(DCItems.IRON_GEAR.get());
+        elementIronItem(DCItems.IRON_JOINT.get());
+        elementIronItem(DCItems.IRON_KEY.get());
+        elementIronItem(DCItems.IRON_NUT.get());
+        elementIronItem(DCItems.IRON_PIPE.get());
+        elementIronItem(DCItems.IRON_PIPEJOINT.get());
+        elementIronItem(DCItems.IRON_PLATE.get());
+        elementIronItem(DCItems.IRON_RIVET.get());
+        elementIronItem(DCItems.IRON_ROD.get());
+        elementIronItem(DCItems.IRON_SHAFT.get());
+        elementIronItem(DCItems.IRON_SHAFTCOUPLING.get());
+        elementIronItem(DCItems.IRON_SHAPESTEEL.get());
+        elementIronItem(DCItems.IRON_SPRING.get());
+        elementIronItem(DCItems.IRON_WIRE.get());
+
+        elementTinItem(DCItems.TIN_BEARING.get());
+        elementTinItem(DCItems.TIN_BOLT.get());
+        elementTinItem(DCItems.TIN_CAM.get());
+        elementTinItem(DCItems.TIN_CHAIN.get());
+        elementTinItem(DCItems.TIN_GEAR.get());
+        elementTinItem(DCItems.TIN_JOINT.get());
+        elementTinItem(DCItems.TIN_KEY.get());
+        elementTinItem(DCItems.TIN_NUT.get());
+        elementTinItem(DCItems.TIN_PIPE.get());
+        elementTinItem(DCItems.TIN_PIPEJOINT.get());
+        elementTinItem(DCItems.TIN_PLATE.get());
+        elementTinItem(DCItems.TIN_RIVET.get());
+        elementTinItem(DCItems.TIN_ROD.get());
+        elementTinItem(DCItems.TIN_SHAFT.get());
+        elementTinItem(DCItems.TIN_SHAFTCOUPLING.get());
+        elementTinItem(DCItems.TIN_SHAPESTEEL.get());
+        elementTinItem(DCItems.TIN_SPRING.get());
+        elementTinItem(DCItems.TIN_WIRE.get());
+
+
+
+        elementChlorineMaterialItem(DCItems.CHLORINE_GAS.get());
+
+        elementHydrogenMaterialItem(DCItems.HYDROGEN_GAS.get());
+        elementOxygenMaterialItem(DCItems.OXYGEN_GAS.get());
+
+
+        elementSiliconMaterialItem(DCItems.SILICON_INGOT.get());
+        elementSiliconMaterialItem(DCItems.SILICON_NUGGET.get());
+//        withExistingParent(DCBlocks.SILICON_BLOCK.getId().getPath(),
+//                modLoc("block/silicon_block"));
+
+        elementTinMaterialItem(DCItems.TIN_INGOT.get());
+        elementTinMaterialItem(DCItems.TIN_NUGGET.get());
+//        withExistingParent(DCBlocks.TIN_BLOCK.getId().getPath(),
+//                modLoc("block/tin_block"));
+
+
+        substanceItem(DCItems.AMMONIA_GAS.get());
+        substanceItem(DCItems.AMMONIUM_SULFATE_DUST.get());
+        substanceItem(DCItems.AMMONIUM_HYDROGEN_SULFATE_DUST.get());
+        substanceItem(DCItems.FERRIC_OXIDE_DUST.get());
+        substanceItem(DCItems.IRON_DISULFIDE_DUST.get());
+        substanceItem(DCItems.HYDROCHLORIC_ACID_SOLUTION.get());
+        substanceItem(DCItems.HYDROGEN_CHLORIDE_GAS.get());
+        substanceItem(DCItems.HYDROGEN_PEROXIDE_SOLUTION.get());
+        substanceItem(DCItems.POTASSIUM_CHLORIDE_DUST.get());
+        substanceItem(DCItems.POTASSIUM_NITRATE_DUST.get());
+        substanceItem(DCItems.SODIUM_CHLORIDE_DUST.get());
+        substanceItem(DCItems.SODIUM_NITRATE_DUST.get());
+        substanceItem(DCItems.SULFUR_DIOXIDE_GAS.get());
+        substanceItem(DCItems.SULFURIC_ACID_SOLUTION.get());
+
+
+        
+        dataChipItem(DCItems.DESIGNATED_DATA_CHIP_MOON.get());
+
+        deviceItem(DCItems.MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get());
+        deviceItem(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get());
+        deviceItem(DCItems.MACHINE_HALT_DEVICE.get());
+
+
+//        basicMaterialAstronomyItem(DCItems.ASTRONOMY_DATA_STORAGE.get());
+        dataStorageAstronomyItem(DCItems.STAR_DATA_STORAGE_MOON.get());
+
+        basicMaterialCommonItem(DCItems.EMPTY_CONTAINER.get());
+        basicMaterialCommonItem(DCItems.WATER_CONTAINER.get());
+
+
+
+
+
+        basicMaterialHybridPhysicsItem(DCItems.PURIFIED_GRAPHITE_ARC_ELECTRODE.get());
+
+        basicMaterialCommonItem(DCItems.COMPRESSED_PLANKS.get());
+        basicMaterialCommonItem(DCItems.COMPRESSED_REDSTONE.get());
+
+
+
+
+        basicPartAstronomyItem(DCItems.SIMPLE_CONVEX_LENS.get());
+        basicPartAstronomyItem(DCItems.SIMPLE_CONCAVE_LENS.get());
+
+
+
+        basicPartBiologyItem(DCItems.SIMPLE_BIOLOGICAL_FIBER.get());
+
+
+
+        basicPartChemistryItem(DCItems.SIMPLE_CHEMICAL_CONTAINER.get());
+        basicPartChemistryItem(DCItems.SIMPLE_CRYSTALLIZATION_SUBSTRATE_PLATE.get());
+        basicPartChemistryItem(DCItems.SIMPLE_LIQUID_NEUTRALIZATION_PROCESSOR.get());
+        basicPartChemistryItem(DCItems.SIMPLE_ORE_SORTING_FILTER.get());
+        basicPartChemistryItem(DCItems.SIMPLE_TEMPERED_GLASS.get());
+
+
+        basicPartEngineeringItem(DCItems.BASIC_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_CONDENSER.get());
+        basicPartEngineeringItem(DCItems.BASIC_COMBINEDSHAFT.get());
+        basicPartEngineeringItem(DCItems.BASIC_CONDUCTOR_WIRE.get());
+        basicPartEngineeringItem(DCItems.BASIC_CONVEYORBELT.get());
+        basicPartEngineeringItem(DCItems.BASIC_CYLINDER.get());
+        basicPartEngineeringItem(DCItems.BASIC_DIODE.get());
+        basicPartEngineeringItem(DCItems.BASIC_DRIVECHAIN.get());
+        basicPartEngineeringItem(DCItems.BASIC_EQUIPMENT_CONTAINER.get());
+        basicPartEngineeringItem(DCItems.BASIC_FIXED_FRAME.get());
+        basicPartEngineeringItem(DCItems.BASIC_INSCRIBE_NEEDLE.get());
+        basicPartEngineeringItem(DCItems.BASIC_INSCRIBED_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_LINKAGE.get());
+        basicPartEngineeringItem(DCItems.BASIC_MACHINE_SCREEN.get());
+        basicPartEngineeringItem(DCItems.BASIC_MOTOR.get());
+        basicPartEngineeringItem(DCItems.BASIC_PIPE_BUNDLE.get());
+        basicPartEngineeringItem(DCItems.BASIC_PROCESSING_BASE.get());
+        basicPartEngineeringItem(DCItems.BASIC_REDSTONE_BATTERY.get());
+        basicPartEngineeringItem(DCItems.BASIC_REINFORCED_PLATE.get());
+        basicPartEngineeringItem(DCItems.BASIC_ROBOT_ARM.get());
+        basicPartEngineeringItem(DCItems.BASIC_TRANSISTOR.get());
+        basicPartEngineeringItem(DCItems.BASIC_TURBINE.get());
+
+        basicPartEngineeringItem(DCItems.BASIC_ASTRONOMY_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_BIOLOGY_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_CHEMISTRY_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_DYNAMIC_ENERGETICS_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_ENGINEERING_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_FORMAL_SCIENCE_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_GEO_SCIENCE_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_HYBRID_PHYSICS_CIRCUIT.get());
+        basicPartEngineeringItem(DCItems.BASIC_IMITATION_MAGIC_ENGINEERING_CIRCUIT.get());
+
+        basicPartFormalScienceItem(DCItems.SIMPLE_ASTRONOMY_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_BIOLOGY_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_CHEMISTRY_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_DYNAMIC_ENERGETICS_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_ENGINEERING_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_FORMAL_SCIENCE_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_GEO_SCIENCE_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_HYBRID_PHYSICS_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_IMITATION_MAGIC_ENGINEERING_MEMORY_CIRCUIT.get());
+        basicPartFormalScienceItem(DCItems.SIMPLE_PROCESSING_CIRCUIT.get());
+
+
+
+
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_THUNDER_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_WIND_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_WATER_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_NIL_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_DARK_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_ICE_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_EARTH_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_FIRE_CRYSTAL.get());
+        basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_LIGHT_CRYSTAL.get());
+
+    }
+
+
+
+
+    private void ingotMaterialItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/ingot/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialBauxiteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/bauxite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialBerylItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/beryl/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialBoraxItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/borax/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialCassiteriteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/cassiterite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialChromiteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/chromite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialCobaliteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/cobalite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialDolomiteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/dolomite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialFluoriteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/fluorite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialGraphiteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/graphite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialLateriteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/laterite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialLimestoneItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/limestone/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialNitratineItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/nitratine/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialPentlanditeItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/pentlandite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialPhosphoriteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/phosphorite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialPyriteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/pyrite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+
+    private void oreMaterialPyrolusiteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/pyrolusite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialQuartzItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/quartz/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialRutileItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/rutile/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialSpodumeneItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/spodumene/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialSylviteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/sylvite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialUlexiteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/ulexite/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void oreMaterialVanadiniteItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/multiplied_ore_material/vanadinite/" 
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementChlorineMaterialItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/element/chlorine/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementHydrogenMaterialItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/element/hydrogen/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementOxygenMaterialItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/element/oxygen/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+
+    private void elementSiliconMaterialItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/element/silicon/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementTinMaterialItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/element/tin/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementCopperItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/element/copper/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementGoldItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/element/gold/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementIronItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/element/iron/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void elementTinItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/element/tin/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void substanceItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/substance/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+
+    private void basicPartAstronomyItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/astronomy/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicPartBiologyItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/biology/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+
+    private void basicPartChemistryItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/chemistry/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicPartEngineeringItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/engineering/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicPartFormalScienceItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+
+
+
+    private void basicPartImitationMagicEngineeringItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/imitation_magic_engineering/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+
+    private void basicMaterialAstronomyItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/basic/astronomy/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicMaterialChemistryItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/basic/chemistry/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicMaterialCommonItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/basic/common/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicMaterialHybridPhysicsItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/material/basic/hybrid_physics/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicMachineCircuitAstronomyItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/astronomy/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void basicMachineCircuitBiologyItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/biology/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitChemistryItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/chemistry/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitDynamicEnergeticsItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/dynamic_energetics/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitEngineeringItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/engineering/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitFormalScienceItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/formal_science/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitGeoScienceItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/geo_science/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitHybridPhysicsItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/hybrid_physics/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitImitationEngineeringItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/imitation_magic_engineering/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitJenithVoidScienceItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/jenith_void_science/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+    private void basicMachineCircuitKaleidoscopicRealityScienceItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/part/basic/formal_science/machine_circuit/kaleidoscopic_reality_science/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void dataChipItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/data_chip/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void dataStorageAstronomyItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/data_storage/astronomy/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void deviceItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/device/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+}

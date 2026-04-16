@@ -1,0 +1,23 @@
+{
+  "values": [
+    "degeneracycraft:raw_pentlandite_ore",
+    "degeneracycraft:pentlandite_dust",
+    "degeneracycraft:pentlandite_puredust",
+    "degeneracycraft:pentlandite_leachate",
+    "degeneracycraft:pentlandite_concentrate",
+    "degeneracycraft:pentlandite_plasma",
+    "degeneracycraft:pentlandite_degeneratematter",
+    "degeneracycraft:pentlandite_soup",
+    "degeneracycraft:pentlandite_imaginarymatter",
+    "degeneracycraft:stable_pentlandite_imaginarymatter",
+    "degeneracycraft:pentlandite_tachyon",
+    "degeneracycraft:pentlandite_antimatter",
+    "degeneracycraft:pentlandite_ultrahotplasma",
+    "degeneracycraft:pentlandite_overfluid",
+    "degeneracycraft:pentlandite_crystal",
+    "degeneracycraft:pentlandite_precipitate",
+    "degeneracycraft:pentlandite_washeddust",
+    "degeneracycraft:pentlandite_oresinter",
+    "degeneracycraft:pentlandite_ingot"
+  ]
+}

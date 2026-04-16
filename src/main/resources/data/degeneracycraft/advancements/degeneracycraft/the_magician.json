@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "degeneracycraft:basic_technology_machine_manufacturer_block"
+    },
+    "title": {
+      "translate": "advancements.Machine like \"The Magician\".title"
+    },
+    "description": {
+      "translate": "advancements.Machine like \"The Magician\".description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "degeneracycraft:degeneracycraft/the_fool",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "degeneracycraft:basic_technology_machine_manufacturer_block"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

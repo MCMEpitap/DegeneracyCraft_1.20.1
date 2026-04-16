@@ -1,0 +1,14 @@
+{
+  "values": [
+    "degeneracycraft:simple_astronomy_memory_circuit",
+    "degeneracycraft:simple_biology_memory_circuit",
+    "degeneracycraft:simple_chemistry_memory_circuit",
+    "degeneracycraft:simple_dynamic_energetics_memory_circuit",
+    "degeneracycraft:simple_engineering_memory_circuit",
+    "degeneracycraft:simple_formal_science_memory_circuit",
+    "degeneracycraft:simple_geo_science_memory_circuit",
+    "degeneracycraft:simple_hybrid_physics_memory_circuit",
+    "degeneracycraft:simple_imitation_magic_engineering_memory_circuit",
+    "degeneracycraft:simple_processing_circuit"
+  ]
+}

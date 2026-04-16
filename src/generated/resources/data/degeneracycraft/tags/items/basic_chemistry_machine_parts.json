@@ -1,0 +1,9 @@
+{
+  "values": [
+    "degeneracycraft:simple_chemical_container",
+    "degeneracycraft:simple_crystallization_substrate_plate",
+    "degeneracycraft:simple_liquid_neutralization_processor",
+    "degeneracycraft:simple_tempered_glass",
+    "degeneracycraft:simple_ore_sorting_filter"
+  ]
+}

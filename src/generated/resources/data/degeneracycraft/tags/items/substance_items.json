@@ -1,0 +1,20 @@
+{
+  "values": [
+    "degeneracycraft:empty_container",
+    "degeneracycraft:water_container",
+    "degeneracycraft:ammonia_gas",
+    "degeneracycraft:ammonium_sulfate_dust",
+    "degeneracycraft:ammonium_hydrogen_sulfate_dust",
+    "degeneracycraft:ferric_oxide_dust",
+    "degeneracycraft:iron_disulfide_dust",
+    "degeneracycraft:hydrochloric_acid_solution",
+    "degeneracycraft:hydrogen_chloride_gas",
+    "degeneracycraft:hydrogen_peroxide_solution",
+    "degeneracycraft:potassium_chloride_dust",
+    "degeneracycraft:potassium_nitrate_dust",
+    "degeneracycraft:sodium_chloride_dust",
+    "degeneracycraft:sodium_nitrate_dust",
+    "degeneracycraft:sulfur_dioxide_gas",
+    "degeneracycraft:sulfuric_acid_solution"
+  ]
+}
