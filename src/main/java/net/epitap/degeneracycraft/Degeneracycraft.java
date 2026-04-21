@@ -4,8 +4,10 @@ import com.mojang.logging.LogUtils;
 import net.epitap.degeneracycraft.block.DCBlockEntities;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.block.DCMenuTypes;
+import net.epitap.degeneracycraft.integration.jei.DCRecipeTypes;
 import net.epitap.degeneracycraft.items.DCCreativeTabs;
 import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.networking.DCMessages;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,13 +32,13 @@ public class Degeneracycraft {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         bus.addListener(this::commonSetup);
-
         DCItems.register(bus);
         DCCreativeTabs.register(bus);
         DCBlocks.register(bus);
         DCBlockEntities.register(bus);
         DCMenuTypes.register(bus);
-
+        DCMessages.register();
+        DCRecipeTypes.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
         bus.addListener(this::addCreative);
     }
