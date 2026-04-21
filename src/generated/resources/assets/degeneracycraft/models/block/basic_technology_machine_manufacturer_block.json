@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_manufacturer/basic_technology_machine_manufacturer_down",
+    "east": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_manufacturer/basic_technology_machine_manufacturer_side",
+    "north": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_manufacturer/basic_technology_machine_manufacturer_front",
+    "particle": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_manufacturer/basic_technology_machine_manufacturer_front",
+    "south": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_manufacturer/basic_technology_machine_manufacturer_side",
+    "up": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_manufacturer/basic_technology_machine_manufacturer_up",
+    "west": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_manufacturer/basic_technology_machine_manufacturer_side"
+  }
+}

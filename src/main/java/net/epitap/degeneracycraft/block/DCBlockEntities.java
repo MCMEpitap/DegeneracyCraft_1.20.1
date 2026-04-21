@@ -1,0 +1,505 @@
+package net.epitap.degeneracycraft.block;
+
+import net.epitap.degeneracycraft.Degeneracycraft;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_cell_incubator.BasicPerformanceCellIncubatorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_crop_cultivator.BasicPerformanceCropCultivatorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.chemistry.basic_performance_chemical_reactor.BasicPerformanceChemicalReactorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.chemistry.basic_performance_compound_purifier.BasicPerformanceCompoundPurifierBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.chemistry.basic_performance_electrolyser.BasicPerformanceElectrolyserBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_power_steam_generator.BasicPowerSteamGeneratorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_technology_compression_condenser.BasicTechnologyCompressionCondenserBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_technology_electromagnetic_inductor.BasicTechnologyElectromagneticInductorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_machine_element_processor.BasicTechnologyMachineElementProcessorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_machine_manufacturer.BasicTechnologyMachineManufacturerBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_machine_part_processor.BasicTechnologyMachinePartProcessorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_multiblock_equipment_fabricator.BasicTechnologyMultiblockEquipmentFabricatorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.formal_science.basic_performance_circuit_builder.BasicPerformanceCircuitBuilderBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.formal_science.basic_performance_designated_data_injector.BasicPerformanceDesignatedDataInjectorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.formal_science.basic_performance_machine_data_installer.BasicPerformanceMachineDataInstallerBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.geo_science.basic_performance_ore_sorter.BasicPerformanceOreSorterBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.geo_science.basic_performance_rock_crasher.BasicPerformanceRockCrasherBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.geo_science.basic_performance_soil_purifier.BasicPerformanceSoilPurifierBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.hybrid_physics.basic_performance_electric_arc_furnace.BasicPerformanceElectricArcFurnaceBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.hybrid_physics.basic_performance_forming_machine.BasicPerformanceFormingMachineBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.hybrid_physics.basic_performance_material_separator.BasicPerformanceMaterialSeparatorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_imitation_magic_engraver.BasicTechnologyImitationMagicEngraverBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_suspected_magic_condenser.BasicTechnologySuspectedMagicCondenserBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_virtual_sigil_processor.BasicTechnologyVirtualSigilProcessorBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.jenith_void_science.basic_technology_void_world_coordinate_recording_machine.BasicTechnologyVoidWorldCoordinateRecordingMachineBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity;
+import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineBlockEntity;
+import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.energy_storage.BasicStrengthAstronomyMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.input_bus.BasicStrengthAstronomyMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.output_bus.BasicStrengthAstronomyMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.input_port.BasicStrengthAstronomyMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.item_storage.BasicStrengthAstronomyMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.output_port.BasicStrengthAstronomyMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.biology.energy.energy_storage.BasicStrengthBiologyMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.biology.energy.input_bus.BasicStrengthBiologyMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.biology.energy.output_bus.BasicStrengthBiologyMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.biology.item.input_port.BasicStrengthBiologyMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.biology.item.item_storage.BasicStrengthBiologyMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.biology.item.output_port.BasicStrengthBiologyMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.energy_storage.BasicStrengthChemistryMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.input_bus.BasicStrengthChemistryMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.output_bus.BasicStrengthChemistryMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.input_port.BasicStrengthChemistryMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.item_storage.BasicStrengthChemistryMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.output_port.BasicStrengthChemistryMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.energy_storage.BasicStrengthDynamicEnergeticsMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.input_bus.BasicStrengthDynamicEnergeticsMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.output_bus.BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.input_port.BasicStrengthDynamicEnergeticsMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.item_storage.BasicStrengthDynamicEnergeticsMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.output_port.BasicStrengthDynamicEnergeticsMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.energy_storage.BasicStrengthEngineeringMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.input_bus.BasicStrengthEngineeringMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.output_bus.BasicStrengthEngineeringMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.item.input_port.BasicStrengthEngineeringMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.item.item_storage.BasicStrengthEngineeringMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.item.output_port.BasicStrengthEngineeringMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.energy_storage.BasicStrengthFormalScienceMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.input_bus.BasicStrengthFormalScienceMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.output_bus.BasicStrengthFormalScienceMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.input_port.BasicStrengthFormalScienceMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.item_storage.BasicStrengthFormalScienceMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.output_port.BasicStrengthFormalScienceMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.energy_storage.BasicStrengthGeoScienceMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.input_bus.BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.output_bus.BasicStrengthGeoScienceMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.input_port.BasicStrengthGeoScienceMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.item_storage.BasicStrengthGeoScienceMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.output_port.BasicStrengthGeoScienceMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.energy_storage.BasicStrengthHybridPhysicsMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.input_bus.BasicStrengthHybridPhysicsMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.output_bus.BasicStrengthHybridPhysicsMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.input_port.BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.item_storage.BasicStrengthHybridPhysicsMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.output_port.BasicStrengthHybridPhysicsMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.energy_storage.BasicStrengthImitationMagicEngineeringMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.input_bus.BasicStrengthImitationMagicEngineeringMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.output_bus.BasicStrengthImitationMagicEngineeringMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.input_port.BasicStrengthImitationMagicEngineeringMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.item_storage.BasicStrengthImitationMagicEngineeringMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.output_port.BasicStrengthImitationMagicEngineeringMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.energy_storage.BasicStrengthJenithVoidScienceMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.input_bus.BasicStrengthJenithVoidScienceMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.output_bus.BasicStrengthJenithVoidScienceMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.input_port.BasicStrengthJenithVoidScienceMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.item_storage.BasicStrengthJenithVoidScienceMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.output_port.BasicStrengthJenithVoidScienceMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.energy_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.input_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.output_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlockEntity;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlockEntity;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+
+public class DCBlockEntities {
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
+            DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, Degeneracycraft.MOD_ID);
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthAstronomyMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_astronomy_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthAstronomyMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthAstronomyMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_astronomy_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthAstronomyMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthAstronomyMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_astronomy_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthAstronomyMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthAstronomyMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_astronomy_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthAstronomyMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthAstronomyMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_astronomy_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthAstronomyMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthAstronomyMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_astronomy_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthAstronomyMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthBiologyMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_biology_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthBiologyMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthBiologyMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_biology_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthBiologyMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthBiologyMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_biology_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthBiologyMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthBiologyMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_biology_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthBiologyMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthBiologyMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_biology_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthBiologyMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthBiologyMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_biology_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthBiologyMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthChemistryMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_chemistry_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthChemistryMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthChemistryMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_chemistry_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthChemistryMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthChemistryMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_chemistry_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthChemistryMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthChemistryMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_chemistry_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthChemistryMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthChemistryMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_chemistry_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthChemistryMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthChemistryMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_chemistry_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthChemistryMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthDynamicEnergeticsMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_dynamic_energetics_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthDynamicEnergeticsMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthDynamicEnergeticsMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_dynamic_energetics_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthDynamicEnergeticsMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthDynamicEnergeticsMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_dynamic_energetics_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthDynamicEnergeticsMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_dynamic_energetics_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthDynamicEnergeticsMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_dynamic_energetics_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthDynamicEnergeticsMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthDynamicEnergeticsMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_dynamic_energetics_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthDynamicEnergeticsMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthEngineeringMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_engineering_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthEngineeringMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthEngineeringMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_engineering_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthEngineeringMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthEngineeringMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_engineering_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthEngineeringMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthEngineeringMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_engineering_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthEngineeringMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthEngineeringMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_engineering_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthEngineeringMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthEngineeringMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_engineering_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthEngineeringMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthFormalScienceMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_formal_science_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthFormalScienceMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthFormalScienceMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_formal_science_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthFormalScienceMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthFormalScienceMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_formal_science_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthFormalScienceMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthFormalScienceMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_formal_science_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthFormalScienceMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthFormalScienceMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_formal_science_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthFormalScienceMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthFormalScienceMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_formal_science_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthFormalScienceMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthGeoScienceMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_geo_science_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthGeoScienceMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthGeoScienceMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_geo_science_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthGeoScienceMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_geo_science_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthGeoScienceMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_geo_science_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthGeoScienceMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthGeoScienceMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_geo_science_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthGeoScienceMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthGeoScienceMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_geo_science_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthGeoScienceMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthHybridPhysicsMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_hybrid_physics_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthHybridPhysicsMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthHybridPhysicsMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_hybrid_physics_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthHybridPhysicsMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthHybridPhysicsMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_hybrid_physics_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthHybridPhysicsMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthHybridPhysicsMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_hybrid_physics_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthHybridPhysicsMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_hybrid_physics_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthHybridPhysicsMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_hybrid_physics_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthHybridPhysicsMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthImitationMagicEngineeringMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_imitation_magic_engineering_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthImitationMagicEngineeringMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthImitationMagicEngineeringMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_imitation_magic_engineering_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthImitationMagicEngineeringMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthImitationMagicEngineeringMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_imitation_magic_engineering_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthImitationMagicEngineeringMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthImitationMagicEngineeringMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_imitation_magic_engineering_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthImitationMagicEngineeringMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthImitationMagicEngineeringMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_imitation_magic_engineering_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthImitationMagicEngineeringMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthImitationMagicEngineeringMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_imitation_magic_engineering_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthImitationMagicEngineeringMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthJenithVoidScienceMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_jenith_void_science_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthJenithVoidScienceMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthJenithVoidScienceMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_jenith_void_science_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthJenithVoidScienceMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthJenithVoidScienceMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_jenith_void_science_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthJenithVoidScienceMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthJenithVoidScienceMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_jenith_void_science_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthJenithVoidScienceMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthJenithVoidScienceMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_jenith_void_science_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthJenithVoidScienceMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthJenithVoidScienceMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_jenith_void_science_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthJenithVoidScienceMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_kaleidoscopic_reality_science_multiblock_energy_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlockEntity>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_kaleidoscopic_reality_science_multiblock_item_storage_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlockEntity::new, DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusBlockEntity>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_kaleidoscopic_reality_science_multiblock_energy_input_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusBlockEntity>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_kaleidoscopic_reality_science_multiblock_energy_output_bus_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusBlockEntity::new, DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortBlockEntity>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_kaleidoscopic_reality_science_multiblock_item_input_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlockEntity>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_strength_kaleidoscopic_reality_science_multiblock_item_output_port_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlockEntity::new, DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<RedstonePoweredMachineElementManufactureMachineBlockEntity>> REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("redstone_powered_machine_element_manufacture_machine_block_entity", () ->
+                    BlockEntityType.Builder.of(RedstonePoweredMachineElementManufactureMachineBlockEntity::new, DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RedstonePoweredMachinePartManufactureMachineBlockEntity>> REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("redstone_powered_machine_part_manufacture_machine_block_entity", () ->
+                    BlockEntityType.Builder.of(RedstonePoweredMachinePartManufactureMachineBlockEntity::new, DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceAstronomicalTelescopeBlockEntity>> BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_astronomical_telescope_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceAstronomicalTelescopeBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceFineParticleAdsorberBlockEntity>> BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_fine_particle_adsorber_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceFineParticleAdsorberBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceStarlightCollectorBlockEntity>> BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_starlight_collector_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceStarlightCollectorBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceBioReactorBlockEntity>> BASIC_PERFORMANCE_BIO_REACTOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_bio_reactor_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceBioReactorBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_BIO_REACTOR_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceCellIncubatorBlockEntity>> BASIC_PERFORMANCE_CELL_INCUBATOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_cell_incubator_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceCellIncubatorBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_CELL_INCUBATOR_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceCropCultivatorBlockEntity>> BASIC_PERFORMANCE_CROP_CULTIVATOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_crop_cultivator_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceCropCultivatorBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_CROP_CULTIVATOR_BLOCK.get()).build(null));
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceChemicalReactorBlockEntity>> BASIC_PERFORMANCE_CHEMICAL_REACTOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_chemical_reactor_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceChemicalReactorBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_CHEMICAL_REACTOR_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceElectrolyserBlockEntity>> BASIC_PERFORMANCE_ELECTROLYSER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_electrolyser_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceElectrolyserBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_ELECTROLYSER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceCompoundPurifierBlockEntity>> BASIC_PERFORMANCE_COMPOUND_PURIFIER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_compound_purifier_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceCompoundPurifierBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_COMPOUND_PURIFIER_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPowerSteamGeneratorBlockEntity>> BASIC_POWER_STEAM_GENERATOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_power_steam_generator_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPowerSteamGeneratorBlockEntity::new, DCBlocks.BASIC_POWER_STEAM_GENERATOR_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyCompressionCondenserBlockEntity>> BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_compression_condenser_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyCompressionCondenserBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyElectromagneticInductorBlockEntity>> BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_electromagnetic_inductor_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyElectromagneticInductorBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_BLOCK.get()).build(null));
+
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyMachineManufacturerBlockEntity>> BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_machine_manufacturer_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyMachineManufacturerBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyMachineElementProcessorBlockEntity>> BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_machine_element_processor_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyMachineElementProcessorBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyMachinePartProcessorBlockEntity>> BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_machine_part_processor_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyMachinePartProcessorBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyMultiblockEquipmentFabricatorBlockEntity>> BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_multiblock_equipment_fabricator_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyMultiblockEquipmentFabricatorBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceCircuitBuilderBlockEntity>> BASIC_PERFORMANCE_CIRCUIT_BUILDER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_circuit_builder_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceCircuitBuilderBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_CIRCUIT_BUILDER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceMachineDataInstallerBlockEntity>> BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_machine_data_installer_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceMachineDataInstallerBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceDesignatedDataInjectorBlockEntity>> BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_designated_data_injector_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceDesignatedDataInjectorBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceOreSorterBlockEntity>> BASIC_PERFORMANCE_ORE_SORTER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_ore_sorter_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceOreSorterBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_ORE_SORTER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceRockCrasherBlockEntity>> BASIC_PERFORMANCE_ROCK_CRASHER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_rock_crasher_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceRockCrasherBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_ROCK_CRASHER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceSoilPurifierBlockEntity>> BASIC_PERFORMANCE_SOIL_PURIFIER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_soil_purifier_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceSoilPurifierBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_SOIL_PURIFIER_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceElectricArcFurnaceBlockEntity>> BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_electric_arc_furnace_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceElectricArcFurnaceBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceFormingMachineBlockEntity>> BASIC_PERFORMANCE_FORMING_MACHINE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_forming_machine_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceFormingMachineBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_FORMING_MACHINE_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceMaterialSeparatorBlockEntity>> BASIC_PERFORMANCE_MATERIAL_SEPARATOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_material_separator_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceMaterialSeparatorBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyImitationMagicEngraverBlockEntity>> BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_imitation_magic_engraver_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyImitationMagicEngraverBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologySuspectedMagicCondenserBlockEntity>> BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_suspected_magic_condenser_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologySuspectedMagicCondenserBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyVirtualSigilProcessorBlockEntity>> BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_virtual_sigil_processor_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyVirtualSigilProcessorBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicTechnologyVoidWorldCoordinateRecordingMachineBlockEntity>> BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_technology_void_world_coordinate_recording_machine_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicTechnologyVoidWorldCoordinateRecordingMachineBlockEntity::new, DCBlocks.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_BLOCK.get()).build(null));
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity>> BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_performance_reality_phase_adjustment_machine_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get()).build(null));
+
+    public static void register(IEventBus eventBus) {
+        BLOCK_ENTITIES.register(eventBus);
+    }
+}

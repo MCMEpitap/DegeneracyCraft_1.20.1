@@ -1,8 +1,11 @@
 package net.epitap.degeneracycraft;
 
 import com.mojang.logging.LogUtils;
-import net.epitap.degeneracycraft.item.DCCreativeTabs;
-import net.epitap.degeneracycraft.item.DCItems;
+import net.epitap.degeneracycraft.block.DCBlockEntities;
+import net.epitap.degeneracycraft.block.DCBlocks;
+import net.epitap.degeneracycraft.block.DCMenuTypes;
+import net.epitap.degeneracycraft.items.DCCreativeTabs;
+import net.epitap.degeneracycraft.items.DCItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,8 +20,7 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Degeneracycraft.MOD_ID)
-public class Degeneracycraft
-{
+public class Degeneracycraft {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "degeneracycraft";    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -31,6 +33,10 @@ public class Degeneracycraft
 
         DCItems.register(bus);
         DCCreativeTabs.register(bus);
+        DCBlocks.register(bus);
+        DCBlockEntities.register(bus);
+        DCMenuTypes.register(bus);
+
         MinecraftForge.EVENT_BUS.register(this);
         bus.addListener(this::addCreative);
     }

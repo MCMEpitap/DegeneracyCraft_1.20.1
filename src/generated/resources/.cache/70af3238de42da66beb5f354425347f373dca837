@@ -1,1 +1,7 @@
-// 1.20.1	2026-04-16T12:08:43.5524099	Block Tags
+// 1.20.1	2026-04-21T19:20:31.4861608	Block Tags
+c216fa76438759e8a5eaa385b3debc88dad27689 data/degeneracycraft/tags/blocks/cassiterite_ore.json
+8ef93e2a5f59b5dbd37ed0b934426efaf9605123 data/degeneracycraft/tags/blocks/degeneracycraft_ability_blocks.json
+a476e6bdfebde0dbee62238d8e8f92225e84af1b data/degeneracycraft/tags/blocks/degeneracycraft_machines.json
+7ce1794afbca899eea218f382fc1bf868e76d86f data/degeneracycraft/tags/blocks/degeneracycraft_multiblocks.json
+b73761a49e44fb515a32976eb07eb7bb7efedd18 data/minecraft/tags/blocks/mineable/pickaxe.json
+c216fa76438759e8a5eaa385b3debc88dad27689 data/minecraft/tags/blocks/needs_iron_tool.json

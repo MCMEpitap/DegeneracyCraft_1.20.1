@@ -25,6 +25,7 @@ public class DCDataGenerator {
 
 
         BlockTagsProvider blockTagsProvider = new DCBlockTagGenerator(packOutput, lookupProvider, existingFileHelper);
+        generator.addProvider(event.includeClient(), new DCBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), blockTagsProvider);
 
         generator.addProvider(event.includeServer(), new DCItemTagGenerator(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));

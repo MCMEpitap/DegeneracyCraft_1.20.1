@@ -1,0 +1,416 @@
+package net.epitap.degeneracycraft.block;
+
+import net.epitap.degeneracycraft.Degeneracycraft;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeMenu;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberMenu;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_cell_incubator.BasicPerformanceCellIncubatorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_crop_cultivator.BasicPerformanceCropCultivatorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.chemistry.basic_performance_chemical_reactor.BasicPerformanceChemicalReactorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.chemistry.basic_performance_compound_purifier.BasicPerformanceCompoundPurifierMenu;
+import net.epitap.degeneracycraft.block.machine.basic.chemistry.basic_performance_electrolyser.BasicPerformanceElectrolyserMenu;
+import net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_power_steam_generator.BasicPowerSteamGeneratorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_technology_compression_condenser.BasicTechnologyCompressionCondenserMenu;
+import net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_technology_electromagnetic_inductor.BasicTechnologyElectromagneticInductorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_machine_element_processor.BasicTechnologyMachineElementProcessorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_machine_manufacturer.BasicTechnologyMachineManufacturerMenu;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_machine_part_processor.BasicTechnologyMachinePartProcessorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_multiblock_equipment_fabricator.BasicTechnologyMultiblockEquipmentFabricatorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.formal_science.basic_performance_circuit_builder.BasicPerformanceCircuitBuilderMenu;
+import net.epitap.degeneracycraft.block.machine.basic.formal_science.basic_performance_designated_data_injector.BasicPerformanceDesignatedDataInjectorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.formal_science.basic_performance_machine_data_installer.BasicPerformanceMachineDataInstallerMenu;
+import net.epitap.degeneracycraft.block.machine.basic.geo_science.basic_performance_ore_sorter.BasicPerformanceOreSorterMenu;
+import net.epitap.degeneracycraft.block.machine.basic.geo_science.basic_performance_rock_crasher.BasicPerformanceRockCrasherMenu;
+import net.epitap.degeneracycraft.block.machine.basic.geo_science.basic_performance_soil_purifier.BasicPerformanceSoilPurifierMenu;
+import net.epitap.degeneracycraft.block.machine.basic.hybrid_physics.basic_performance_electric_arc_furnace.BasicPerformanceElectricArcFurnaceMenu;
+import net.epitap.degeneracycraft.block.machine.basic.hybrid_physics.basic_performance_forming_machine.BasicPerformanceFormingMachineMenu;
+import net.epitap.degeneracycraft.block.machine.basic.hybrid_physics.basic_performance_material_separator.BasicPerformanceMaterialSeparatorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_imitation_magic_engraver.BasicTechnologyImitationMagicEngraverMenu;
+import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_suspected_magic_condenser.BasicTechnologySuspectedMagicCondenserMenu;
+import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_virtual_sigil_processor.BasicTechnologyVirtualSigilProcessorMenu;
+import net.epitap.degeneracycraft.block.machine.basic.jenith_void_science.basic_technology_void_world_coordinate_recording_machine.BasicTechnologyVoidWorldCoordinateRecordingMachineMenu;
+import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineMenu;
+import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineMenu;
+import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineMenu;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.energy_storage.BasicStrengthAstronomyMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.input_bus.BasicStrengthAstronomyMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.output_bus.BasicStrengthAstronomyMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.input_port.BasicStrengthAstronomyMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.item_storage.BasicStrengthAstronomyMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.output_port.BasicStrengthAstronomyMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.biology.energy.energy_storage.BasicStrengthBiologyMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.biology.energy.input_bus.BasicStrengthBiologyMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.biology.energy.output_bus.BasicStrengthBiologyMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.biology.item.input_port.BasicStrengthBiologyMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.biology.item.item_storage.BasicStrengthBiologyMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.biology.item.output_port.BasicStrengthBiologyMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.energy_storage.BasicStrengthChemistryMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.input_bus.BasicStrengthChemistryMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.output_bus.BasicStrengthChemistryMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.input_port.BasicStrengthChemistryMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.item_storage.BasicStrengthChemistryMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.output_port.BasicStrengthChemistryMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.energy_storage.BasicStrengthDynamicEnergeticsMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.input_bus.BasicStrengthDynamicEnergeticsMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.output_bus.BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.input_port.BasicStrengthDynamicEnergeticsMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.item_storage.BasicStrengthDynamicEnergeticsMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.output_port.BasicStrengthDynamicEnergeticsMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.energy_storage.BasicStrengthEngineeringMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.input_bus.BasicStrengthEngineeringMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.output_bus.BasicStrengthEngineeringMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.item.input_port.BasicStrengthEngineeringMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.item.item_storage.BasicStrengthEngineeringMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.item.output_port.BasicStrengthEngineeringMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.energy_storage.BasicStrengthFormalScienceMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.input_bus.BasicStrengthFormalScienceMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.output_bus.BasicStrengthFormalScienceMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.input_port.BasicStrengthFormalScienceMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.item_storage.BasicStrengthFormalScienceMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.output_port.BasicStrengthFormalScienceMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.energy_storage.BasicStrengthGeoScienceMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.input_bus.BasicStrengthGeoScienceMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.output_bus.BasicStrengthGeoScienceMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.input_port.BasicStrengthGeoScienceMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.item_storage.BasicStrengthGeoScienceMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.output_port.BasicStrengthGeoScienceMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.energy_storage.BasicStrengthHybridPhysicsMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.input_bus.BasicStrengthHybridPhysicsMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.output_bus.BasicStrengthHybridPhysicsMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.input_port.BasicStrengthHybridPhysicsMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.item_storage.BasicStrengthHybridPhysicsMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.output_port.BasicStrengthHybridPhysicsMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.energy_storage.BasicStrengthImitationMagicEngineeringMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.input_bus.BasicStrengthImitationMagicEngineeringMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.output_bus.BasicStrengthImitationMagicEngineeringMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.input_port.BasicStrengthImitationMagicEngineeringMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.item_storage.BasicStrengthImitationMagicEngineeringMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.output_port.BasicStrengthImitationMagicEngineeringMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.energy_storage.BasicStrengthJenithVoidScienceMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.input_bus.BasicStrengthJenithVoidScienceMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.output_bus.BasicStrengthJenithVoidScienceMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.input_port.BasicStrengthJenithVoidScienceMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.item_storage.BasicStrengthJenithVoidScienceMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.output_port.BasicStrengthJenithVoidScienceMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.energy_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.input_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.output_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortMenu;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageMenu;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortMenu;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraftforge.common.extensions.IForgeMenuType;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.network.IContainerFactory;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class DCMenuTypes {
+    public static final DeferredRegister<MenuType<?>> MENUS =
+            DeferredRegister.create(ForgeRegistries.MENU_TYPES, Degeneracycraft.MOD_ID);
+
+
+    public static final RegistryObject<MenuType<BasicStrengthAstronomyMultiblockEnergyStorageMenu>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthAstronomyMultiblockEnergyStorageMenu::new, "basic_strength_astronomy_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthAstronomyMultiblockItemStorageMenu>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthAstronomyMultiblockItemStorageMenu::new, "basic_strength_astronomy_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthAstronomyMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthAstronomyMultiblockEnergyInputBusMenu::new, "basic_strength_astronomy_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthAstronomyMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthAstronomyMultiblockEnergyOutputBusMenu::new, "basic_strength_astronomy_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthAstronomyMultiblockItemInputPortMenu>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthAstronomyMultiblockItemInputPortMenu::new, "basic_strength_astronomy_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthAstronomyMultiblockItemOutputPortMenu>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthAstronomyMultiblockItemOutputPortMenu::new, "basic_strength_astronomy_multiblock_item_output_port_menu");
+
+
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthBiologyMultiblockEnergyStorageMenu>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthBiologyMultiblockEnergyStorageMenu::new, "basic_strength_biology_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthBiologyMultiblockItemStorageMenu>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthBiologyMultiblockItemStorageMenu::new, "basic_strength_biology_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthBiologyMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthBiologyMultiblockEnergyInputBusMenu::new, "basic_strength_biology_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthBiologyMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthBiologyMultiblockEnergyOutputBusMenu::new, "basic_strength_biology_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthBiologyMultiblockItemInputPortMenu>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthBiologyMultiblockItemInputPortMenu::new, "basic_strength_biology_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthBiologyMultiblockItemOutputPortMenu>> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthBiologyMultiblockItemOutputPortMenu::new, "basic_strength_biology_multiblock_item_output_port_menu");
+
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthChemistryMultiblockEnergyStorageMenu>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthChemistryMultiblockEnergyStorageMenu::new, "basic_strength_chemistry_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthChemistryMultiblockItemStorageMenu>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthChemistryMultiblockItemStorageMenu::new, "basic_strength_chemistry_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthChemistryMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthChemistryMultiblockEnergyInputBusMenu::new, "basic_strength_chemistry_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthChemistryMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthChemistryMultiblockEnergyOutputBusMenu::new, "basic_strength_chemistry_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthChemistryMultiblockItemInputPortMenu>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthChemistryMultiblockItemInputPortMenu::new, "basic_strength_chemistry_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthChemistryMultiblockItemOutputPortMenu>> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthChemistryMultiblockItemOutputPortMenu::new, "basic_strength_chemistry_multiblock_item_output_port_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthDynamicEnergeticsMultiblockEnergyStorageMenu>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthDynamicEnergeticsMultiblockEnergyStorageMenu::new, "basic_strength_dynamic_energetics_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthDynamicEnergeticsMultiblockItemStorageMenu>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthDynamicEnergeticsMultiblockItemStorageMenu::new, "basic_strength_dynamic_energetics_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthDynamicEnergeticsMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthDynamicEnergeticsMultiblockEnergyInputBusMenu::new, "basic_strength_dynamic_energetics_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusMenu::new, "basic_strength_dynamic_energetics_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthDynamicEnergeticsMultiblockItemInputPortMenu>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthDynamicEnergeticsMultiblockItemInputPortMenu::new, "basic_strength_dynamic_energetics_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthDynamicEnergeticsMultiblockItemOutputPortMenu>> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthDynamicEnergeticsMultiblockItemOutputPortMenu::new, "basic_strength_dynamic_energetics_multiblock_item_output_port_menu");
+
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthEngineeringMultiblockEnergyStorageMenu>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthEngineeringMultiblockEnergyStorageMenu::new, "basic_strength_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthEngineeringMultiblockItemStorageMenu>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthEngineeringMultiblockItemStorageMenu::new, "basic_strength_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthEngineeringMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthEngineeringMultiblockEnergyInputBusMenu::new, "basic_strength_engineering_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthEngineeringMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthEngineeringMultiblockEnergyOutputBusMenu::new, "basic_strength_engineering_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthEngineeringMultiblockItemInputPortMenu>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthEngineeringMultiblockItemInputPortMenu::new, "basic_strength_engineering_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthEngineeringMultiblockItemOutputPortMenu>> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthEngineeringMultiblockItemOutputPortMenu::new, "basic_strength_engineering_multiblock_item_output_port_menu");
+
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthFormalScienceMultiblockEnergyStorageMenu>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthFormalScienceMultiblockEnergyStorageMenu::new, "basic_strength_formal_science_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthFormalScienceMultiblockItemStorageMenu>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthFormalScienceMultiblockItemStorageMenu::new, "basic_strength_formal_science_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthFormalScienceMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthFormalScienceMultiblockEnergyInputBusMenu::new, "basic_strength_formal_science_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthFormalScienceMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthFormalScienceMultiblockEnergyOutputBusMenu::new, "basic_strength_formal_science_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthFormalScienceMultiblockItemInputPortMenu>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthFormalScienceMultiblockItemInputPortMenu::new, "basic_strength_formal_science_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthFormalScienceMultiblockItemOutputPortMenu>> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthFormalScienceMultiblockItemOutputPortMenu::new, "basic_strength_formal_science_multiblock_item_output_port_menu");
+
+
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthGeoScienceMultiblockEnergyStorageMenu>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthGeoScienceMultiblockEnergyStorageMenu::new, "basic_strength_geo_science_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthGeoScienceMultiblockItemStorageMenu>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthGeoScienceMultiblockItemStorageMenu::new, "basic_strength_geo_science_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthGeoScienceMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthGeoScienceMultiblockEnergyInputBusMenu::new, "basic_strength_geo_science_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthGeoScienceMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthGeoScienceMultiblockEnergyOutputBusMenu::new, "basic_strength_geo_science_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthGeoScienceMultiblockItemInputPortMenu>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthGeoScienceMultiblockItemInputPortMenu::new, "basic_strength_geo_science_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthGeoScienceMultiblockItemOutputPortMenu>> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthGeoScienceMultiblockItemOutputPortMenu::new, "basic_strength_geo_science_multiblock_item_output_port_menu");
+
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthHybridPhysicsMultiblockEnergyStorageMenu>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthHybridPhysicsMultiblockEnergyStorageMenu::new, "basic_strength_hybrid_physics_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthHybridPhysicsMultiblockItemStorageMenu>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthHybridPhysicsMultiblockItemStorageMenu::new, "basic_strength_hybrid_physics_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthHybridPhysicsMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthHybridPhysicsMultiblockEnergyInputBusMenu::new, "basic_strength_hybrid_physics_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthHybridPhysicsMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthHybridPhysicsMultiblockEnergyOutputBusMenu::new, "basic_strength_hybrid_physics_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthHybridPhysicsMultiblockItemInputPortMenu>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthHybridPhysicsMultiblockItemInputPortMenu::new, "basic_strength_hybrid_physics_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthHybridPhysicsMultiblockItemOutputPortMenu>> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthHybridPhysicsMultiblockItemOutputPortMenu::new, "basic_strength_hybrid_physics_multiblock_item_output_port_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthImitationMagicEngineeringMultiblockEnergyStorageMenu>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthImitationMagicEngineeringMultiblockEnergyStorageMenu::new, "basic_strength_imitation_magic_engineering_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthImitationMagicEngineeringMultiblockItemStorageMenu>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthImitationMagicEngineeringMultiblockItemStorageMenu::new, "basic_strength_imitation_magic_engineering_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthImitationMagicEngineeringMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthImitationMagicEngineeringMultiblockEnergyInputBusMenu::new, "basic_strength_imitation_magic_engineering_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthImitationMagicEngineeringMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthImitationMagicEngineeringMultiblockEnergyOutputBusMenu::new, "basic_strength_imitation_magic_engineering_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthImitationMagicEngineeringMultiblockItemInputPortMenu>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthImitationMagicEngineeringMultiblockItemInputPortMenu::new, "basic_strength_imitation_magic_engineering_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthImitationMagicEngineeringMultiblockItemOutputPortMenu>> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthImitationMagicEngineeringMultiblockItemOutputPortMenu::new, "basic_strength_imitation_magic_engineering_multiblock_item_output_port_menu");
+
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthJenithVoidScienceMultiblockEnergyStorageMenu>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthJenithVoidScienceMultiblockEnergyStorageMenu::new, "basic_strength_jenith_void_science_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthJenithVoidScienceMultiblockItemStorageMenu>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthJenithVoidScienceMultiblockItemStorageMenu::new, "basic_strength_jenith_void_science_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthJenithVoidScienceMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthJenithVoidScienceMultiblockEnergyInputBusMenu::new, "basic_strength_jenith_void_science_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthJenithVoidScienceMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthJenithVoidScienceMultiblockEnergyOutputBusMenu::new, "basic_strength_jenith_void_science_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthJenithVoidScienceMultiblockItemInputPortMenu>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthJenithVoidScienceMultiblockItemInputPortMenu::new, "basic_strength_jenith_void_science_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthJenithVoidScienceMultiblockItemOutputPortMenu>> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthJenithVoidScienceMultiblockItemOutputPortMenu::new, "basic_strength_jenith_void_science_multiblock_item_output_port_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyStorageMenu>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_MENU =
+            registerMenuType(BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyStorageMenu::new, "basic_strength_kaleidoscopic_reality_science_multiblock_energy_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageMenu>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_MENU =
+            registerMenuType(BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageMenu::new, "basic_strength_kaleidoscopic_reality_science_multiblock_item_storage_menu");
+    public static final RegistryObject<MenuType<BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusMenu>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_MENU =
+            registerMenuType(BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusMenu::new, "basic_strength_kaleidoscopic_reality_science_multiblock_energy_input_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusMenu>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_MENU =
+            registerMenuType(BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusMenu::new, "basic_strength_kaleidoscopic_reality_science_multiblock_energy_output_bus_menu");
+    public static final RegistryObject<MenuType<BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortMenu>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_MENU =
+            registerMenuType(BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortMenu::new, "basic_strength_kaleidoscopic_reality_science_multiblock_item_input_port_menu");
+    public static final RegistryObject<MenuType<BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortMenu>> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_MENU =
+            registerMenuType(BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortMenu::new, "basic_strength_kaleidoscopic_reality_science_multiblock_item_output_port_menu");
+
+
+
+    public static final RegistryObject<MenuType<RedstonePoweredMachineElementManufactureMachineMenu>> REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_MENU =
+            registerMenuType(RedstonePoweredMachineElementManufactureMachineMenu::new, "redstone_powered_machine_element_manufacture_machine_menu");
+
+    public static final RegistryObject<MenuType<RedstonePoweredMachinePartManufactureMachineMenu>> REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_MENU =
+            registerMenuType(RedstonePoweredMachinePartManufactureMachineMenu::new, "redstone_powered_machine_part_manufacture_machine_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicPerformanceAstronomicalTelescopeMenu>> BASIC_PERFORMANCE_ASTROMICAL_TELESCOPE_MENU =
+            registerMenuType(BasicPerformanceAstronomicalTelescopeMenu::new, "basic_performance_astronomical_telescope_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceFineParticleAdsorberMenu>> BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_MENU =
+            registerMenuType(BasicPerformanceFineParticleAdsorberMenu::new, "basic_performance_fine_particle_adsorber_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceStarlightCollectorMenu>> BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_MENU =
+            registerMenuType(BasicPerformanceStarlightCollectorMenu::new, "basic_performance_starlight_collector_menu");
+
+
+    public static final RegistryObject<MenuType<BasicPerformanceBioReactorMenu>> BASIC_PERFORMANCE_BIO_REACTOR_MENU =
+            registerMenuType(BasicPerformanceBioReactorMenu::new, "basic_performance_bio_reactor_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceCellIncubatorMenu>> BASIC_PERFORMANCE_CELL_INCUBATOR_MENU =
+            registerMenuType(BasicPerformanceCellIncubatorMenu::new, "basic_performance_cell_incubator_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceCropCultivatorMenu>> BASIC_PERFORMANCE_CROP_CULTIVATOR_MENU =
+            registerMenuType(BasicPerformanceCropCultivatorMenu::new, "basic_performance_crop_cultivator_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicPerformanceChemicalReactorMenu>> BASIC_PERFORMANCE_CHEMICAL_REACTOR_MENU =
+            registerMenuType(BasicPerformanceChemicalReactorMenu::new, "basic_performance_chemical_reactor_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceCompoundPurifierMenu>> BASIC_PERFORMANCE_COMPOUND_PURIFIER_MENU =
+            registerMenuType(BasicPerformanceCompoundPurifierMenu::new, "basic_performance_compound_purifier_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceElectrolyserMenu>> BASIC_PERFORMANCE_ELECTROLYSER_MENU =
+            registerMenuType(BasicPerformanceElectrolyserMenu::new, "basic_performance_electrolyser_menu");
+
+
+
+
+
+
+    public static final RegistryObject<MenuType<BasicPowerSteamGeneratorMenu>> BASIC_POWER_STEAM_GENERATOR_MENU =
+            registerMenuType(BasicPowerSteamGeneratorMenu::new, "basic_power_steam_generator_menu");
+    public static final RegistryObject<MenuType<BasicTechnologyCompressionCondenserMenu>> BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_MENU =
+            registerMenuType(BasicTechnologyCompressionCondenserMenu::new, "basic_technology_compression_condenser_menu");
+    public static final RegistryObject<MenuType<BasicTechnologyElectromagneticInductorMenu>> BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_MENU =
+            registerMenuType(BasicTechnologyElectromagneticInductorMenu::new, "basic_technology_electromagnetic_inductor_menu");
+
+
+
+
+
+
+
+    public static final RegistryObject<MenuType<BasicTechnologyMachineManufacturerMenu>> BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_MENU =
+            registerMenuType(BasicTechnologyMachineManufacturerMenu::new, "basic_technology_machine_manufacturer_menu");
+    public static final RegistryObject<MenuType<BasicTechnologyMachineElementProcessorMenu>> BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_MENU =
+            registerMenuType(BasicTechnologyMachineElementProcessorMenu::new, "basic_technology_machine_element_processor_menu");
+    public static final RegistryObject<MenuType<BasicTechnologyMachinePartProcessorMenu>> BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_MENU =
+            registerMenuType(BasicTechnologyMachinePartProcessorMenu::new, "basic_technology_machine_part_processor_menu");
+    public static final RegistryObject<MenuType<BasicTechnologyMultiblockEquipmentFabricatorMenu>> BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_MENU =
+            registerMenuType(BasicTechnologyMultiblockEquipmentFabricatorMenu::new, "basic_technology_multiblock_equipment_fabricator_menu");
+
+
+
+
+
+    public static final RegistryObject<MenuType<BasicPerformanceCircuitBuilderMenu>> BASIC_PERFORMANCE_CIRCUIT_BUILDER_MENU =
+            registerMenuType(BasicPerformanceCircuitBuilderMenu::new, "basic_performance_circuit_builder_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceMachineDataInstallerMenu>> BASIC_PERFORMANCE_MACHINE_DARA_INSTALLER_MENU =
+            registerMenuType(BasicPerformanceMachineDataInstallerMenu::new, "basic_performance_machine_data_installer_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceDesignatedDataInjectorMenu>> BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_MENU =
+            registerMenuType(BasicPerformanceDesignatedDataInjectorMenu::new, "basic_performance_designated_data_injector_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicPerformanceOreSorterMenu>> BASIC_PERFORMANCE_ORE_SORTER_MENU =
+            registerMenuType(BasicPerformanceOreSorterMenu::new, "basic_performance_ore_sorter_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceRockCrasherMenu>> BASIC_PERFORMANCE_ROCK_CRASHER_MENU =
+            registerMenuType(BasicPerformanceRockCrasherMenu::new, "basic_performance_rock_crasher_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceSoilPurifierMenu>> BASIC_PERFORMANCE_SOIL_PURIFIER_MENU =
+            registerMenuType(BasicPerformanceSoilPurifierMenu::new, "basic_performance_soil_purifier_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicPerformanceElectricArcFurnaceMenu>> BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_MENU =
+            registerMenuType(BasicPerformanceElectricArcFurnaceMenu::new, "basic_performance_electric_arc_furnace_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceFormingMachineMenu>> BASIC_PERFORMANCE_FORMING_MACHINE_MENU =
+            registerMenuType(BasicPerformanceFormingMachineMenu::new, "basic_performance_forming_machine_menu");
+    public static final RegistryObject<MenuType<BasicPerformanceMaterialSeparatorMenu>> BASIC_PERFORMANCE_MATERIAL_SEPARATOR_MENU =
+            registerMenuType(BasicPerformanceMaterialSeparatorMenu::new, "basic_performance_material_separator_menu");
+
+
+    public static final RegistryObject<MenuType<BasicTechnologyImitationMagicEngraverMenu>> BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_MENU =
+            registerMenuType(BasicTechnologyImitationMagicEngraverMenu::new, "basic_technology_imitation_magic_engraver_menu");
+    public static final RegistryObject<MenuType<BasicTechnologySuspectedMagicCondenserMenu>> BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_MENU =
+            registerMenuType(BasicTechnologySuspectedMagicCondenserMenu::new, "basic_technology_suspected_magic_condenser_menu");
+    public static final RegistryObject<MenuType<BasicTechnologyVirtualSigilProcessorMenu>> BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_MENU =
+            registerMenuType(BasicTechnologyVirtualSigilProcessorMenu::new, "basic_technology_virtual_sigil_processor_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicTechnologyVoidWorldCoordinateRecordingMachineMenu>> BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_MENU =
+            registerMenuType(BasicTechnologyVoidWorldCoordinateRecordingMachineMenu::new, "basic_technology_void_world_coordinate_recording_machine_menu");
+
+
+
+    public static final RegistryObject<MenuType<BasicPerformanceRealityPhaseAdjustmentMachineMenu>> BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_MENU =
+            registerMenuType(BasicPerformanceRealityPhaseAdjustmentMachineMenu::new, "basic_performance_reality_phase_adjustment_machine_menu");
+
+
+
+//    public static final RegistryObject<MenuType<InfinityPoweredAllInOneCompressorMachineMenu>> INFINITY_POWERED_ALL_IN_ONE_COMPRESSOR_MACHINE_BLOCK_MENU =
+//            registerMenuType(InfinityPoweredAllInOneCompressorMachineMenu::new, "infinity_powered_all_in_one_compressor_machine_menu");
+//
+//
+//    public static final RegistryObject<MenuType<SefirahCoreMenu>> SEFIRAH_CORE_MENU =
+//            registerMenuType(SefirahCoreMenu::new, "sefirah_core_menu");
+
+
+    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
+                                                                                                  String name) {
+        return MENUS.register(name, () -> IForgeMenuType.create(factory));
+    }
+
+    public static void register(IEventBus eventBus) {
+        MENUS.register(eventBus);
+    }
+
+
+}
