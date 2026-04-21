@@ -1,11 +1,15 @@
 package net.epitap.degeneracycraft.items;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
+import net.epitap.degeneracycraft.block.DCBlocks;
+import net.epitap.degeneracycraft.datagen.DCBlockTagGenerator;
 import net.epitap.degeneracycraft.datagen.DCItemTagGenerator;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -267,6 +271,56 @@ public class DCCreativeTabs {
                                         .map(ItemStack::new)
                                         .forEach(output::accept);
                             }).build());
+
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_MACHINE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_machine",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get()))
+                    .title(Component.translatable("creativetab.degeneracycraft_machine"))
+                    .displayItems((displayParameters, output) -> {
+                        ForgeRegistries.BLOCKS.getValues().stream()
+                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MACHINES)
+                                        .contains(block))
+                                .map(Block::asItem)
+                                .filter(item -> item != Items.AIR)
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
+                        ForgeRegistries.BLOCKS.getValues().stream()
+                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_ABILITY_BLOCKS)
+                                        .contains(block))
+                                .map(Block::asItem)
+                                .filter(item -> item != Items.AIR)
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_MULTIBLOCK_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_multiblock",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get()))
+                    .title(Component.translatable("creativetab.degeneracycraft_multiblock"))
+                    .displayItems((displayParameters, output) -> {
+                        ForgeRegistries.BLOCKS.getValues().stream()
+                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MULTIBLOCKS)
+                                        .contains(block))
+                                .map(Block::asItem)
+                                .filter(item -> item != Items.AIR)
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_ORE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_ore",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.OVERWORLD_CASSITERITE_ORE.get()))
+                    .title(Component.translatable("creativetab.degeneracycraft_multiblock"))
+                    .displayItems((displayParameters, output) -> {
+                        ForgeRegistries.BLOCKS.getValues().stream()
+                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MULTIBLOCKS)
+                                        .contains(block))
+                                .map(Block::asItem)
+                                .filter(item -> item != Items.AIR)
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
+                    }).build());
 
 
 

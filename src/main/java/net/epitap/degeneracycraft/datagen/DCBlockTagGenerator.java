@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class DCBlockTagGenerator extends BlockTagsProvider {
 
-    public static final TagKey<Block> CASSITERITE_ORE = TagKey.create(Registries.BLOCK,  new ResourceLocation(Degeneracycraft.MOD_ID, "cassiterite_ore"));
+    public static final TagKey<Block> CASSITERITE_ORE = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "cassiterite_ore"));
 
     public static final TagKey<Block> DEGENERACYCRAFT_MULTIBLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_multiblocks"));
     public static final TagKey<Block> DEGENERACYCRAFT_MACHINES = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_machines"));
