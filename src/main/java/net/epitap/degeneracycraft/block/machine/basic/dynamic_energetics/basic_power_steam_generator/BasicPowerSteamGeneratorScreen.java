@@ -1,12 +1,11 @@
 package net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_power_steam_generator;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.epitap.degeneracycraft.block.base.render.EnergyInfoArea;import net.epitap.degeneracycraft.networking.DCMessages;
+import net.epitap.degeneracycraft.block.base.render.EnergyInfoArea;
+import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.networking.packet.DCMachineToggleC2SPacket;
 import net.epitap.degeneracycraft.util.DCMouseUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -55,23 +54,22 @@ public class BasicPowerSteamGeneratorScreen extends AbstractContainerScreen<Basi
     protected void renderLabels(GuiGraphics guiGraphics, int pMouseX, int pMouseY) {
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
-        guiGraphics.drawCenteredString(this.font, Component.translatable("screen." + "degeneracycraft" + ".phase1"),
-                35, 66, 0xffffff);
         guiGraphics.drawCenteredString(this.font, Component.translatable("screen." + "degeneracycraft_besic_power_steam_generator" + ".burntime"),
                 125, 15, 0xffffff);
         guiGraphics.drawCenteredString(this.font, (int) menu.getBurnTime() + " Sec",
                 125, 25, 0xffffff);
         guiGraphics.drawCenteredString(this.font, Component.translatable("screen." + "degeneracycraft_generator" + ".output"),
                 125, 35, 0xffffff);
-        
-        if (menu.isWorking()) {
-            guiGraphics.drawCenteredString(this.font, "Work!",
-                    80, 30, 0x00FF00);
-        } else {
-            guiGraphics.drawCenteredString(this.font, "Stop!",
-                    80, 30, 0xFF0000);
-        }
 
+        if (menu.isWorking()) {
+            guiGraphics.drawString(this.font,
+                    "Work!",
+                    67, 30, 0x00FF00);
+        } else {
+            guiGraphics.drawString(this.font,
+                    "Stop!",
+                    67, 30, 0xFF0000);
+        }
         if (menu.isForceHalt()) {
             guiGraphics.drawCenteredString(this.font, Component.translatable("screen." + "degeneracycraft" + ".halt"),
                     133, 66, 0xFFFFFF);
@@ -99,7 +97,12 @@ public class BasicPowerSteamGeneratorScreen extends AbstractContainerScreen<Basi
             guiGraphics.drawCenteredString(this.font, "OFF",
                     80, 47, 0xFF0000);
         }
-        
+
+        if (menu.isInputLocked()) {
+            guiGraphics.drawCenteredString(this.font, Component.translatable("screen." + "degeneracycraft" + ".lock"),
+                    43, 66, 0xFFFFFF);
+        }
+
         renderPowerOutputTooltips(guiGraphics, pMouseX, pMouseY, x, y);
         renderEnergyAreaTooltips(guiGraphics, pMouseX, pMouseY, x, y);
         renderPowerModifierTooltips(guiGraphics, pMouseX, pMouseY, x, y);

@@ -1104,8 +1104,8 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add(DCBlocks.REINFORCED_PLANKS.get(), "強化木材");
 
-//        add(PipeBlocks.BASIC_ITEM_PIPE_BLOCK, "基本アイテムパイプ");
-//        add(PipeBlocks.BASIC_ENERGY_PIPE_BLOCK, "基本エネルギーパイプ");
+        add(DCBlocks.BASIC_ITEM_PIPE_BLOCK.get(), "基本アイテムパイプ");
+        add(DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get(), "基本エネルギーパイプ");
 
 
         add(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get(), "基本性能天体望遠鏡");
@@ -1414,9 +1414,9 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("jei." + "degeneracycraft_redstone_powered_machine_part_manufacture_machine", "レッドストーン動力機械部品製作機 レシピ");
 
 
-        add("jei." + "basic_performance_astronomical_telescope", "基本性能天体望遠鏡 レシピ");
-        add("jei." + "basic_performance_fine_particle_adsorber", "基本性能微粒子吸着機 レシピ");
-        add("jei." + "basic_performance_starlight_collector", "基本性能星光収集機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "基本性能天体望遠鏡 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "基本性能微粒子吸着機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "基本性能星光収集機 レシピ");
 
 
 
@@ -1460,28 +1460,29 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("jei." + "degeneracycraft_basic_performance_material_separator", "基本性能物質分離機 レシピ");
 
 
-        add("jei." + "basic_technology_imitation_magic_engraver", "基本技術模造魔導刻印機 レシピ");
-        add("jei." + "basic_technology_suspected_magic_condenser", "基本技術疑似魔力凝集機 レシピ");
-        add("jei." + "basic_technology_virtual_sigil_processor", "基本技術仮想印章加工機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "基本技術模造魔導刻印機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "基本技術疑似魔力凝集機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "基本技術仮想印章加工機 レシピ");
 
 
 
-        add("jei." + "basic_technology_void_world_coordinate_recording_machine", "基本性能虚界座標記録機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "基本性能虚界座標記録機 レシピ");
 
 
 
-        add("jei." + "basic_performance_reality_phase_adjustment_machine", "基本性能現実位相調整機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "基本性能現実位相調整機 レシピ");
 
 
 
-        add("itemGroup." + "degeneracycraft_material", "Degeneracy Craft アイテム");
-        add("itemGroup." + "degeneracycraft_machine_elements", "Degeneracy Craft 機械要素");
-        add("itemGroup." + "degeneracycraft_machine_parts", "Degeneracy Craft 機械部品");
+        add("creativetab." + "degeneracycraft_materials", "Degeneracy Craft 素材");
+        add("creativetab." + "degeneracycraft_machine_elements", "Degeneracy Craft 機械要素");
+        add("creativetab." + "degeneracycraft_machine_parts", "Degeneracy Craft 機械部品");
 
-        add("itemGroup." + "degeneracycraft_machine", "Degeneracy Craft 機械");
-        add("itemGroup." + "degeneracycraft_multiplied_ore_material", "Degeneracy Craft 鉱石倍化素材");
-        add("itemGroup." + "degeneracycraft_ingot", "Degeneracy Craft インゴット");
-        add("itemGroup." + "degeneracycraft_ore", "Degeneracy Craft 鉱石");
+        add("creativetab." + "degeneracycraft_machines", "Degeneracy Craft 機械");
+        add("creativetab." + "degeneracycraft_multiplied_ore_materials", "Degeneracy Craft 鉱石倍化素材");
+        add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft インゴット");
+        add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft マルチブロック設備ブロック");
+        add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft 鉱石");
 
         add("screen." + "degeneracycraft" + ".phase0", "Phase 0");
         add("screen." + "degeneracycraft" + ".phase1", "Phase 1");
@@ -1753,7 +1754,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("advancements." + "degeneracycraft" + ".geo_science" + ".title", "地学(Geo Science)");
         add("advancements." + "degeneracycraft" + ".geo_science" + ".description", "目指せ、鉱石探究");
 
-        add("advancements." + "degeneracycraft" + ".hybrid_physics" + ".title", "複合物理学(Hybrids Physics)");
+        add("advancements." + "degeneracycraft" + ".hybrid_physics" + ".title", "複合物理学(Hybrid Physics)");
         add("advancements." + "degeneracycraft" + ".hybrid_physics" + ".description", "目指せ、現象集約");
 
         add("advancements." + "degeneracycraft" + ".imitation_magic_engineering" + ".title", "模造魔導工学(Imitation Magic Engineering)");

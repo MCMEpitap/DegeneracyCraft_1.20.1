@@ -1,0 +1,8 @@
+{
+  "values": [
+    "degeneracycraft:basic_item_pipe_block",
+    "degeneracycraft:basic_energy_pipe_block",
+    "degeneracycraft:low_energy_pipe_block",
+    "degeneracycraft:float_energy_pipe_block"
+  ]
+}

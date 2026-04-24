@@ -102,6 +102,10 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlock;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlock;
 import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeBlock;
+import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeBlock;
+import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeBlock;
+import net.epitap.degeneracycraft.transport.pipe.low.energy.LowEnergyPipeBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -1143,6 +1147,30 @@ public class DCBlocks {
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
 
 
+
+
+
+
+
+    public static final RegistryObject<Block> BASIC_ITEM_PIPE_BLOCK = registerBlock("basic_item_pipe_block", BasicItemPipeBlock::new);
+    public static final RegistryObject<Block> BASIC_ENERGY_PIPE_BLOCK = registerBlock("basic_energy_pipe_block", BasicEnergyPipeBlock::new);
+    public static final RegistryObject<Block> LOW_ENERGY_PIPE_BLOCK = registerBlock("low_energy_pipe_block", LowEnergyPipeBlock::new);
+    public static final RegistryObject<Block> FLOAT_ENERGY_PIPE_BLOCK = registerBlock("float_energy_pipe_block", FloatEnergyPipeBlock::new);
+
+
+//
+//    public static final BasicItemPipeBlock BASIC_ITEM_PIPE_BLOCK = new BasicItemPipeBlock() {
+//    };
+//    public static final BasicEnergyPipeBlock BASIC_ENERGY_PIPE_BLOCK = new BasicEnergyPipeBlock() {
+//    };
+//    public static final LowEnergyPipeBlock LOW_ENERGY_PIPE_BLOCK = new LowEnergyPipeBlock() {
+//    };
+//    public static final FloatEnergyPipeBlock FLOAT_ENERGY_PIPE_BLOCK = new FloatEnergyPipeBlock() {
+//    };
+
+
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
@@ -1250,7 +1278,7 @@ public class DCBlocks {
                         case "imitation_magic_engineering" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.WHITE));
                         case "jenith_void_science" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.BLACK));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.GOLD));
                         case "kaleidoscopic_reality_science" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.GOLD));
                     }

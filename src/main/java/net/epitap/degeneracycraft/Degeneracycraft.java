@@ -8,6 +8,8 @@ import net.epitap.degeneracycraft.integration.jei.DCRecipeTypes;
 import net.epitap.degeneracycraft.items.DCCreativeTabs;
 import net.epitap.degeneracycraft.items.DCItems;
 import net.epitap.degeneracycraft.networking.DCMessages;
+import net.epitap.degeneracycraft.transport.pipe.parametor.PipeModelRegistry;
+import net.epitap.degeneracycraft.transport.pipe.pipebase.PipeBlockClickEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -39,12 +41,15 @@ public class Degeneracycraft {
         DCMenuTypes.register(bus);
         DCMessages.register();
         DCRecipeTypes.register(bus);
+
+        bus.addListener(PipeModelRegistry::onModelRegister);
+        bus.addListener(PipeModelRegistry::onModelBake);
         MinecraftForge.EVENT_BUS.register(this);
         bus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        MinecraftForge.EVENT_BUS.register(new PipeBlockClickEvent());
     }
 
     // Add the example block item to the building blocks tab
@@ -61,7 +66,7 @@ public class Degeneracycraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            DCBlockEntities.clientSetup();
         }
     }
 }

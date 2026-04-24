@@ -40,7 +40,7 @@ public class BasicPerformanceAstronomicalTelescopeRecipeCategory implements IRec
 
     @Override
     public Component getTitle() {
-        return Component.translatable("jei.basic_performance_astronomical_telescope");
+        return Component.translatable("jei.degeneracycraft_basic_performance_astronomical_telescope");
     }
 
     @Override

@@ -1103,8 +1103,8 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add(DCBlocks.REINFORCED_PLANKS.get(), "Reinforced Planks");
 
 
-//        add(PipeBlocks.BASIC_ITEM_PIPE_BLOCK, "Basic Item Pipe");
-//        add(PipeBlocks.BASIC_ENERGY_PIPE_BLOCK, "Basic Energy Pipe");
+        add(DCBlocks.BASIC_ITEM_PIPE_BLOCK.get(), "Basic Item Pipe");
+        add(DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get(), "Basic Energy Pipe");
 
 
 
@@ -1417,8 +1417,8 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
 
         add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "Basic Performance Astronomical Telescope Recipe");
-        add("jei." + "basic_performance_fine_particle_adsorber", "Basic Performance Fine Particle Adsorber Recipe");
-        add("jei." + "basic_performance_starlight_collector", "Basic Performance Starlight Collector Recipe");
+        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "Basic Performance Fine Particle Adsorber Recipe");
+        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "Basic Performance Starlight Collector Recipe");
 
 
 
@@ -1464,28 +1464,27 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("jei." + "degeneracycraft_basic_performance_material_separator", "Basic Performance Material Separator Recipe");
 
 
-        add("jei." + "basic_technology_imitation_magic_engraver", "Basic Technology Imitation Magic Engraver Recipe");
-        add("jei." + "basic_technology_suspected_magic_condenser", "Basic Technology Suspected Magic Condenser Recipe");
-        add("jei." + "basic_technology_virtual_sigil_processor", "Basic Technology Virtual Sigil Processor Recipe");
+        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "Basic Technology Imitation Magic Engraver Recipe");
+        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "Basic Technology Suspected Magic Condenser Recipe");
+        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "Basic Technology Virtual Sigil Processor Recipe");
 
 
 
-        add("jei." + "basic_technology_void_world_coordinate_recording_machine", "Basic Technology Void World Coordinate Recording Machine Recipe");
+        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "Basic Technology Void World Coordinate Recording Machine Recipe");
 
 
 
-        add("jei." + "basic_performance_reality_phase_adjustment_machine", "Basic Performance Reality Phase Adjustment Machine Recipe");
+        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "Basic Performance Reality Phase Adjustment Machine Recipe");
 
+        add("creativetab." + "degeneracycraft_materials", "Degeneracy Craft Materials");
+        add("creativetab." + "degeneracycraft_machine_elements", "Degeneracy Craft Machine Elements");
+        add("creativetab." + "degeneracycraft_machine_parts", "Degeneracy Craft Machine Parts");
 
-
-        add("itemGroup." + "degeneracycraft_material", "Degeneracy Craft Material");
-        add("itemGroup." + "degeneracycraft_machine_elements", "DegeneracyCraft Elements");
-        add("itemGroup." + "degeneracycraft_machine_parts", "DegeneracyCraft Parts");
-
-        add("itemGroup." + "degeneracycraft_machine", "DegeneracyCraft Machines");
-        add("itemGroup." + "degeneracycraft_ingot", "Degeneracy Craft Ingots");
-        add("itemGroup." + "degeneracycraft_multiplied_ore_material", "DegeneracyCraft Multiplied Ore Material");
-        add("itemGroup." + "degeneracycraft_ore", "DegeneracyCraft Ore");
+        add("creativetab." + "degeneracycraft_machines", "Degeneracy Craft Machines");
+        add("creativetab." + "degeneracycraft_multiplied_ore_materials", "Degeneracy Craft Multiplied Ore Materials");
+        add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft Ingots");
+        add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft Multiblock Blocks");
+        add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft Ores");
 
         add("screen." + "degeneracycraft" + ".phase0", "Phase 0");
         add("screen." + "degeneracycraft" + ".phase1", "Phase 1");

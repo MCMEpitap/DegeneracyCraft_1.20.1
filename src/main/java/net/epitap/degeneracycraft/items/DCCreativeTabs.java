@@ -24,9 +24,9 @@ public class DCCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Degeneracycraft.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_MATERIAL_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_material",
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_MATERIAL_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_materials",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCItems.EMPTY_CONTAINER.get()))
-                    .title(Component.translatable("creativetab.degeneracycraft_material"))
+                    .title(Component.translatable("creativetab.degeneracycraft_materials"))
                     .displayItems((displayParameters, output) -> {
                         ForgeRegistries.ITEMS.getValues().stream()
                                 .filter(item -> Objects.requireNonNull(ForgeRegistries.ITEMS.tags())
@@ -148,7 +148,7 @@ public class DCCreativeTabs {
             CREATIVE_MODE_TABS.register("degeneracycraft_multiplied_ore_material",
                     () -> CreativeModeTab.builder()
                             .icon(() -> new ItemStack(DCItems.GRAPHITE_DUST.get()))
-                            .title(Component.translatable("creativetab.degeneracycraft_multiplied_ore_material"))
+                            .title(Component.translatable("creativetab.degeneracycraft_multiplied_ore_materials"))
                             .displayItems((parameters, output) -> {
                                 ForgeRegistries.ITEMS.getValues().stream()
                                         .filter(item -> Objects.requireNonNull(ForgeRegistries.ITEMS.tags())
@@ -272,10 +272,11 @@ public class DCCreativeTabs {
                                         .forEach(output::accept);
                             }).build());
 
-    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_MACHINE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_machine",
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_MACHINE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_machines",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get()))
-                    .title(Component.translatable("creativetab.degeneracycraft_machine"))
+                    .title(Component.translatable("creativetab.degeneracycraft_machines"))
                     .displayItems((displayParameters, output) -> {
+                        output.accept(DCItems.WRENCH.get());
                         ForgeRegistries.BLOCKS.getValues().stream()
                                 .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
                                         .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MACHINES)
@@ -287,6 +288,14 @@ public class DCCreativeTabs {
                         ForgeRegistries.BLOCKS.getValues().stream()
                                 .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
                                         .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_ABILITY_BLOCKS)
+                                        .contains(block))
+                                .map(Block::asItem)
+                                .filter(item -> item != Items.AIR)
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
+                        ForgeRegistries.BLOCKS.getValues().stream()
+                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_PIPES)
                                         .contains(block))
                                 .map(Block::asItem)
                                 .filter(item -> item != Items.AIR)
@@ -308,7 +317,7 @@ public class DCCreativeTabs {
                                 .forEach(output::accept);
                     }).build());
 
-    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_ORE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_ore",
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_ORE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_ores",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.OVERWORLD_CASSITERITE_ORE.get()))
                     .title(Component.translatable("creativetab.degeneracycraft_multiblock"))
                     .displayItems((displayParameters, output) -> {

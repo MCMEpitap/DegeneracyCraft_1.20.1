@@ -22,6 +22,7 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
     public static final TagKey<Block> DEGENERACYCRAFT_MULTIBLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_multiblocks"));
     public static final TagKey<Block> DEGENERACYCRAFT_MACHINES = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_machines"));
     public static final TagKey<Block> DEGENERACYCRAFT_ABILITY_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_ability_blocks"));
+    public static final TagKey<Block> DEGENERACYCRAFT_PIPES = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_pipes"));
 
     public DCBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                                 @Nullable ExistingFileHelper existingFileHelper) {
@@ -215,8 +216,14 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
                 .add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_BLOCK.get())
                 .add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_BLOCK.get())
                 .add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get())
-
         ;
+
+        tag(DEGENERACYCRAFT_PIPES)
+                .add(DCBlocks.BASIC_ITEM_PIPE_BLOCK.get())
+                .add(DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get())
+                .add(DCBlocks.LOW_ENERGY_PIPE_BLOCK.get())
+                .add(DCBlocks.FLOAT_ENERGY_PIPE_BLOCK.get())
+                ;
     }
 
 

@@ -303,43 +303,75 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
             return;
         }
 
+//        if (blockEntity.counter > 0 && blockEntity.waterCounter > 0) {
+//            if (blockEntity.multiblockLevel == 1) {
+//                blockEntity.counter--;
+//                blockEntity.waterCounter--;
+//                blockEntity.ENERGY_STORAGE.receiveEnergyFloat(blockEntity.MACHINE_OUTPUT_POWERED_0, false);
+//                setChanged(level, pos, state);
+//            } else if (blockEntity.multiblockLevel == 0) {
+//                blockEntity.counter--;
+//                blockEntity.waterCounter--;
+//                blockEntity.ENERGY_STORAGE.receiveEnergyFloat(blockEntity.MACHINE_OUTPUT_FORMED, false);
+//                setChanged(level, pos, state);
+//            } else {
+//                blockEntity.counter--;
+//                blockEntity.waterCounter--;
+//                blockEntity.ENERGY_STORAGE.receiveEnergyFloat(blockEntity.MACHINE_OUTPUT, false);
+//                setChanged(level, pos, state);
+//            }
+//
+//            if (blockEntity.counter > 0 && blockEntity.waterCounter <= 0) {
+//                blockEntity.counter--;
+//            }
+//
+//            ItemStack stack = blockEntity.itemHandler.getStackInSlot(0);
+//            int burnTime = ForgeHooks.getBurnTime(stack, RecipeType.SMELTING);
+//            if (burnTime > 0 && blockEntity.counter <= 0) {
+//                blockEntity.itemHandler.extractItem(0, 1, false);
+//                blockEntity.counter = burnTime;
+//            }
+//
+//            if (blockEntity.itemHandler.getStackInSlot(2).is(DCItems.WATER_CONTAINER.get())
+//                    && blockEntity.waterCounter < blockEntity.MACHINE_WATER_CAPACITY - 1000
+//                    && hasNotReachedStackLimit(blockEntity)) {
+//                blockEntity.itemHandler.extractItem(2, 1, false);
+//                blockEntity.waterCounter += 1000;
+//                blockEntity.itemHandler.setStackInSlot(1, new ItemStack(DCItems.EMPTY_CONTAINER.get(),
+//                        blockEntity.itemHandler.getStackInSlot(1).getCount() + 1));
+//            }
+//        }
+
+        ItemStack stack = blockEntity.itemHandler.getStackInSlot(0);
+        int burnTime = ForgeHooks.getBurnTime(stack, RecipeType.SMELTING);
+
+        if (burnTime > 0 && blockEntity.counter <= 0) {
+            blockEntity.itemHandler.extractItem(0, 1, false);
+            blockEntity.counter = burnTime;
+        }
+
+        if (blockEntity.itemHandler.getStackInSlot(2).is(DCItems.WATER_CONTAINER.get())
+                && blockEntity.waterCounter < blockEntity.MACHINE_WATER_CAPACITY - 1000
+                && hasNotReachedStackLimit(blockEntity)) {
+            blockEntity.itemHandler.extractItem(2, 1, false);
+            blockEntity.waterCounter += 1000;
+            blockEntity.itemHandler.setStackInSlot(1, new ItemStack(DCItems.EMPTY_CONTAINER.get(),
+                    blockEntity.itemHandler.getStackInSlot(1).getCount() + 1));
+        }
+
         if (blockEntity.counter > 0 && blockEntity.waterCounter > 0) {
+            blockEntity.counter--;
+            blockEntity.waterCounter--;
+
             if (blockEntity.multiblockLevel == 1) {
-                blockEntity.counter--;
-                blockEntity.waterCounter--;
                 blockEntity.ENERGY_STORAGE.receiveEnergyFloat(blockEntity.MACHINE_OUTPUT_POWERED_0, false);
-                setChanged(level, pos, state);
             } else if (blockEntity.multiblockLevel == 0) {
-                blockEntity.counter--;
-                blockEntity.waterCounter--;
                 blockEntity.ENERGY_STORAGE.receiveEnergyFloat(blockEntity.MACHINE_OUTPUT_FORMED, false);
-                setChanged(level, pos, state);
             } else {
-                blockEntity.counter--;
-                blockEntity.waterCounter--;
                 blockEntity.ENERGY_STORAGE.receiveEnergyFloat(blockEntity.MACHINE_OUTPUT, false);
-                setChanged(level, pos, state);
             }
 
-            if (blockEntity.counter > 0 && blockEntity.waterCounter <= 0) {
-                blockEntity.counter--;
-            }
-
-            ItemStack stack = blockEntity.itemHandler.getStackInSlot(0);
-            int burnTime = ForgeHooks.getBurnTime(stack, RecipeType.SMELTING);
-            if (burnTime > 0 && blockEntity.counter <= 0) {
-                blockEntity.itemHandler.extractItem(0, 1, false);
-                blockEntity.counter = burnTime;
-            }
-
-            if (blockEntity.itemHandler.getStackInSlot(2).is(DCItems.WATER_CONTAINER.get())
-                    && blockEntity.waterCounter < blockEntity.MACHINE_WATER_CAPACITY - 1000
-                    && hasNotReachedStackLimit(blockEntity)) {
-                blockEntity.itemHandler.extractItem(2, 1, false);
-                blockEntity.waterCounter += 1000;
-                blockEntity.itemHandler.setStackInSlot(1, new ItemStack(DCItems.EMPTY_CONTAINER.get(),
-                        blockEntity.itemHandler.getStackInSlot(1).getCount() + 1));
-            }
+            setChanged(level, pos, state);
         }
         setChanged(level, pos, state);
     }

@@ -99,8 +99,19 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortBlockEntity;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlockEntity;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeBlockEntity;
+import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeBlockEntity;
+import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeBlockEntity;
+import net.epitap.degeneracycraft.transport.pipe.low.energy.LowEnergyPipeBlockEntity;
+import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeRenderer;
+import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeRenderer;
+import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeRenderer;
+import net.epitap.degeneracycraft.transport.pipe.low.energy.LowEnergyPipeRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -498,6 +509,44 @@ public class DCBlockEntities {
     public static final RegistryObject<BlockEntityType<BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity>> BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("basic_performance_reality_phase_adjustment_machine_block_entity", () ->
                     BlockEntityType.Builder.of(BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get()).build(null));
+
+
+
+
+
+    public static final RegistryObject<BlockEntityType<BasicItemPipeBlockEntity>> BASIC_ITEM_PIPE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_item_pipe_block_entity", () ->
+            BlockEntityType.Builder.of(BasicItemPipeBlockEntity::new, DCBlocks.BASIC_ITEM_PIPE_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BasicEnergyPipeBlockEntity>> BASIC_ENERGY_PIPE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("basic_energy_pipe_block_entity", () ->
+                    BlockEntityType.Builder.of(BasicEnergyPipeBlockEntity::new, DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<LowEnergyPipeBlockEntity>> LOW_ENERGY_PIPE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("low_energy_pipe_block_entity", () ->
+                    BlockEntityType.Builder.of(LowEnergyPipeBlockEntity::new, DCBlocks.LOW_ENERGY_PIPE_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<FloatEnergyPipeBlockEntity>> FLOAT_ENERGY_PIPE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("float_energy_pipe_block_entity", () ->
+                    BlockEntityType.Builder.of(FloatEnergyPipeBlockEntity::new, DCBlocks.FLOAT_ENERGY_PIPE_BLOCK.get()).build(null));
+
+
+//    LOW_ENERGY_PIPE_BLOCK_ENTITY = BlockEntityType.Builder.of(LowEnergyPipeBlockEntity::new, PipeBlocks.LOW_ENERGY_PIPE_BLOCK).build(null);
+//        LOW_ENERGY_PIPE_BLOCK_ENTITY.setRegistryName(new ResourceLocation(Degeneracycraft.MOD_ID, "low_energy_pipe"));
+//        register.getRegistry().register(LOW_ENERGY_PIPE_BLOCK_ENTITY);
+//
+//        FLOAT_ENERGY_PIPE_BLOCK_ENTITY = BlockEntityType.Builder.of(FloatEnergyPipeBlockEntity::new, PipeBlocks.FLOAT_ENERGY_PIPE_BLOCK).build(null);
+//        FLOAT_ENERGY_PIPE_BLOCK_ENTITY.setRegistryName(new ResourceLocation(Degeneracycraft.MOD_ID, "float_energy_pipe"));
+//        register.getRegistry().register(FLOAT_ENERGY_PIPE_BLOCK_ENTITY);
+//    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void clientSetup() {
+        BlockEntityRenderers.register(BASIC_ITEM_PIPE_BLOCK_ENTITY.get(), BasicItemPipeRenderer::new);
+        BlockEntityRenderers.register(BASIC_ENERGY_PIPE_BLOCK_ENTITY.get(), BasicEnergyPipeRenderer::new);
+        BlockEntityRenderers.register(LOW_ENERGY_PIPE_BLOCK_ENTITY.get(), LowEnergyPipeRenderer::new);
+        BlockEntityRenderers.register(FLOAT_ENERGY_PIPE_BLOCK_ENTITY.get(), FloatEnergyPipeRenderer::new);
+    }
+
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
