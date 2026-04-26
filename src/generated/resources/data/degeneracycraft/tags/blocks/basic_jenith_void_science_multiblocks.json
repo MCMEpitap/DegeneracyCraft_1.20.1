@@ -1,0 +1,12 @@
+{
+  "values": [
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_base_frame_block",
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_machine_frame_block",
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_structure_frame_block",
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_structure_glass_block",
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_energy_input_bus_block",
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_energy_output_bus_block",
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_item_input_port_block",
+    "degeneracycraft:basic_strength_jenith_void_science_multiblock_item_output_port_block"
+  ]
+}

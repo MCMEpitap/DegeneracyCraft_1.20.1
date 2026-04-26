@@ -99,6 +99,7 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortBlockEntity;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlockEntity;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.test.TestMachineBlockEntity;
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeBlockEntity;
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeBlockEntity;
 import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeBlockEntity;
@@ -510,6 +511,11 @@ public class DCBlockEntities {
             BLOCK_ENTITIES.register("basic_performance_reality_phase_adjustment_machine_block_entity", () ->
                     BlockEntityType.Builder.of(BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity::new, DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get()).build(null));
 
+
+
+    public static final RegistryObject<BlockEntityType<TestMachineBlockEntity>> TEST_MACHINE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("test_machine_block_entity", () ->
+                    BlockEntityType.Builder.of(TestMachineBlockEntity::new, DCBlocks.TEST_MACHINE_BLOCK.get()).build(null));
 
 
 

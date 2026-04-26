@@ -63,6 +63,7 @@ import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.o
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortBlockEntity;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlockEntity;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlockEntity;
+import net.epitap.degeneracycraft.block.test.TestMachineBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
@@ -385,6 +386,13 @@ public class DCItemStackSyncS2CPacket {
 
 
             if (Minecraft.getInstance().level.getBlockEntity(pos) instanceof BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity blockEntity) {
+                blockEntity.setHandler(this.itemStackHandler);
+            }
+
+
+
+
+            if (Minecraft.getInstance().level.getBlockEntity(pos) instanceof TestMachineBlockEntity blockEntity) {
                 blockEntity.setHandler(this.itemStackHandler);
             }
         });

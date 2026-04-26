@@ -33,6 +33,7 @@ import net.epitap.degeneracycraft.integration.jei.basic.jenith_void_science.basi
 import net.epitap.degeneracycraft.integration.jei.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineRecipe;
 import net.epitap.degeneracycraft.integration.jei.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineRecipe;
 import net.epitap.degeneracycraft.integration.jei.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineRecipe;
+import net.epitap.degeneracycraft.integration.jei.test.TestMachineRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -151,6 +152,9 @@ public class DCRecipeTypes {
 //    public static final RegistryObject<RecipeSerializer<BasicPowerSteamGeneratorMultiblockStructure>> BASIC_POWER_COMPOSITE_STRUCTURE_TYPE_THERMAL_GENERATOR_MULTIBLOCK_STRUCTURE_SERIALIZER =
 //            SERIALIZERS.register("basic_power_thermal_generator_multiblock_structure", () -> BasicPowerSteamGeneratorMultiblockStructure.Serializer.INSTANCE);
 
+
+    public static final RegistryObject<RecipeSerializer<?>> MACHINE_RECIPE =
+            SERIALIZERS.register("test_machine_recipe", () -> TestMachineRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

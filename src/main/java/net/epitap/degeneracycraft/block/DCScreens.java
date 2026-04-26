@@ -1,6 +1,7 @@
 package net.epitap.degeneracycraft.block;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
+import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineScreen;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineScreen;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineScreen;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeScreen;
@@ -32,7 +33,6 @@ import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineerin
 import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_suspected_magic_condenser.BasicTechnologySuspectedMagicCondenserScreen;
 import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_virtual_sigil_processor.BasicTechnologyVirtualSigilProcessorScreen;
 import net.epitap.degeneracycraft.block.machine.basic.jenith_void_science.basic_technology_void_world_coordinate_recording_machine.BasicTechnologyVoidWorldCoordinateRecordingMachineScreen;
-import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.energy_storage.BasicStrengthAstronomyMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.input_bus.BasicStrengthAstronomyMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.output_bus.BasicStrengthAstronomyMultiblockEnergyOutputBusScreen;
@@ -99,6 +99,7 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortScreen;
+import net.epitap.degeneracycraft.block.test.TestMachineScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -365,6 +366,10 @@ public class DCScreens {
             MenuScreens.register(DCMenuTypes.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_MENU.get(),
                     BasicPerformanceRealityPhaseAdjustmentMachineScreen::new);
 
+
+
+            MenuScreens.register(DCMenuTypes.TEST_MACHINE_MENU.get(),
+                    TestMachineScreen::new);
         });
     }
 }

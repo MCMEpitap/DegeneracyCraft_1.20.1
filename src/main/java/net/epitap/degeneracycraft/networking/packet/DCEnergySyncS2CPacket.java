@@ -126,6 +126,8 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.input_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusMenu;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.output_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusBlockEntity;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.output_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusMenu;
+import net.epitap.degeneracycraft.block.test.TestMachineBlockEntity;
+import net.epitap.degeneracycraft.block.test.TestMachineMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
@@ -687,6 +689,18 @@ public class DCEnergySyncS2CPacket {
             if (Minecraft.getInstance().level.getBlockEntity(pos) instanceof BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity blockEntity) {
                 blockEntity.setEnergyLevel(energy);
                 if (Minecraft.getInstance().player.containerMenu instanceof BasicPerformanceRealityPhaseAdjustmentMachineMenu menu &&
+                        menu.getBlockEntity().getBlockPos().equals(pos)) {
+                    blockEntity.setEnergyLevel(energy);
+                }
+            }
+
+
+
+
+
+            if (Minecraft.getInstance().level.getBlockEntity(pos) instanceof TestMachineBlockEntity blockEntity) {
+                blockEntity.setEnergyLevel(energy);
+                if (Minecraft.getInstance().player.containerMenu instanceof TestMachineMenu menu &&
                         menu.getBlockEntity().getBlockPos().equals(pos)) {
                     blockEntity.setEnergyLevel(energy);
                 }

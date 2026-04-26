@@ -68,6 +68,8 @@ import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineScreen;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineMenu;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineScreen;
+import net.epitap.degeneracycraft.block.test.TestMachineMenu;
+import net.epitap.degeneracycraft.block.test.TestMachineScreen;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipeCategory;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipeTransferHandler;
@@ -163,6 +165,9 @@ import net.epitap.degeneracycraft.integration.jei.initial.redstone_powered_machi
 import net.epitap.degeneracycraft.integration.jei.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineRecipe;
 import net.epitap.degeneracycraft.integration.jei.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineRecipeCategory;
 import net.epitap.degeneracycraft.integration.jei.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineRecipeTransferHandler;
+import net.epitap.degeneracycraft.integration.jei.test.TestMachineRecipe;
+import net.epitap.degeneracycraft.integration.jei.test.TestMachineRecipeCategory;
+import net.epitap.degeneracycraft.integration.jei.test.TestMachineRecipeTransferHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -285,6 +290,9 @@ public class JEIDCPlugin implements IModPlugin {
 //        registration.addRecipeCategories(new
 //                BasicPowerSteamGeneratorMultiblockStructureCategory(registration.getJeiHelpers().getGuiHelper()));
 
+
+        registration.addRecipeCategories(new
+                TestMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 
     }
 
@@ -428,6 +436,11 @@ public class JEIDCPlugin implements IModPlugin {
 //        List<BasicPowerSteamGeneratorMultiblockStructure> basicPowerCompositeStructureTypeThermalGeneratorMultiblockStructures =
 //                rm.getAllRecipesFor(BasicPowerSteamGeneratorMultiblockStructure.Type.INSTANCE);
 //        registration.addRecipes(new RecipeType<>(BasicPowerSteamGeneratorMultiblockStructureCategory.UID, BasicPowerSteamGeneratorMultiblockStructure.class), basicPowerCompositeStructureTypeThermalGeneratorMultiblockStructures);
+
+        List<TestMachineRecipe> testMachineRecipe =
+                rm.getAllRecipesFor(TestMachineRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(TestMachineRecipeCategory.UID, TestMachineRecipe.class), testMachineRecipe);
+
     }
 
     @SuppressWarnings("removal")
@@ -498,6 +511,9 @@ public class JEIDCPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(BasicPerformanceRealityPhaseAdjustmentMachineScreen.class, 64, 20, 29, 8, BasicPerformanceRealityPhaseAdjustmentMachineRecipeCategory.TYPE);
 
+
+        registration.addRecipeClickArea(TestMachineScreen.class, 64, 20, 29, 8, TestMachineRecipeCategory.TYPE);
+
     }
 
     @SuppressWarnings("removal")
@@ -564,8 +580,11 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_BLOCK.get()), BasicTechnologyVoidWorldCoordinateRecordingMachineRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get()), BasicPerformanceRealityPhaseAdjustmentMachineRecipeCategory.TYPE);
+
+
+
+        registration.addRecipeCatalyst(new ItemStack(DCBlocks.TEST_MACHINE_BLOCK.get()), TestMachineRecipeCategory.TYPE);
 
     }
 
@@ -857,6 +876,20 @@ public class JEIDCPlugin implements IModPlugin {
                         10, 36
                 ),
                 BasicPerformanceRealityPhaseAdjustmentMachineRecipeCategory.TYPE
+        );
+
+
+
+
+
+
+        registration.addRecipeTransferHandler(
+                new TestMachineRecipeTransferHandler<>(
+                        TestMachineMenu.class,
+                        0, 5,
+                        8, 36
+                ),
+                TestMachineRecipeCategory.TYPE
         );
     }
 

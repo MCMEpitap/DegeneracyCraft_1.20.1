@@ -1,0 +1,7 @@
+{
+  "values": [
+    "degeneracycraft:basic_purity_circuit_clean_room_block",
+    "degeneracycraft:basic_speed_data_reader_block",
+    "degeneracycraft:basic_speed_calculation_auxiliary_write_device_block"
+  ]
+}

@@ -31,6 +31,7 @@ import net.epitap.degeneracycraft.block.machine.basic.jenith_void_science.basic_
 import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineBlockEntity;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineBlockEntity;
+import net.epitap.degeneracycraft.block.test.TestMachineBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -196,6 +197,14 @@ public class DCTransferRecipeC2SPacket {
 
 
                 if (player.level().getBlockEntity(pos) instanceof BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity blockEntity) {
+                    blockEntity.insertRecipeInputsFromPlayer(player, recipe, shift);
+                }
+
+
+
+
+
+                if (player.level().getBlockEntity(pos) instanceof TestMachineBlockEntity blockEntity) {
                     blockEntity.insertRecipeInputsFromPlayer(player, recipe, shift);
                 }
             });

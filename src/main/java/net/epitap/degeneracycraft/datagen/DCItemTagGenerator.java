@@ -62,6 +62,10 @@ public class DCItemTagGenerator extends ItemTagsProvider {
 
     public static final TagKey<Item> BASIC_MACHINE_CIRCUIT_PARTS =TagKey.create(Registries.ITEM,new ResourceLocation(Degeneracycraft.MOD_ID,"basic_machine_circuit_parts"));
 
+
+
+    public static final TagKey<Item> TEST_ITEMS =TagKey.create(Registries.ITEM,new ResourceLocation(Degeneracycraft.MOD_ID,"test_items"));
+
     public DCItemTagGenerator(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> future,
                                CompletableFuture<TagLookup<Block>> completableFuture, @Nullable ExistingFileHelper existingFileHelper) {
         super(packOutput, future, completableFuture, Degeneracycraft.MOD_ID, existingFileHelper);

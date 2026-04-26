@@ -1,0 +1,205 @@
+package net.epitap.degeneracycraft.integration.jei.test;
+
+import com.google.gson.JsonObject;
+import net.epitap.degeneracycraft.Degeneracycraft;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import org.jetbrains.annotations.Nullable;
+
+public class TestMachineRecipe implements Recipe<SimpleContainer> {
+
+    private final ResourceLocation id;
+    final float energy;
+    final float time;
+    final int phase;
+    final ItemStack input0;
+    final ItemStack input1;
+    final ItemStack input2;
+    final ItemStack input3;
+    final ItemStack input4;
+    final ItemStack output0;
+    final ItemStack output1;
+    final ItemStack output2;
+
+    public TestMachineRecipe(ResourceLocation id, float energy, float time, int phase, ItemStack input0,
+                                                 ItemStack input1, ItemStack input2, ItemStack input3, ItemStack input4,
+                                                 ItemStack output0, ItemStack output1, ItemStack output2) {
+        this.id = id;
+        this.energy = energy;
+        this.time = time;
+        this.phase = phase;
+        this.input0 = input0;
+        this.input1 = input1;
+        this.input2 = input2;
+        this.input3 = input3;
+        this.input4 = input4;
+        this.output0 = output0;
+        this.output1 = output1;
+        this.output2 = output2;
+    }
+
+    @Override
+    public boolean matches(SimpleContainer pContainer, Level level) {
+        return energy == getRequiredEnergy() && time == getRequiredTime()
+                && input0.is(pContainer.getItem(0).getItem())
+                && input1.is(pContainer.getItem(1).getItem())
+                && input2.is(pContainer.getItem(2).getItem())
+                && input3.is(pContainer.getItem(3).getItem())
+                && input4.is(pContainer.getItem(4).getItem());
+    }
+
+    @Override
+    public ItemStack assemble(SimpleContainer simpleContainer, RegistryAccess registryAccess) {
+        return output0;
+    }
+
+    @Override
+    public boolean canCraftInDimensions(int pWidth, int pHeight) {
+        return true;
+    }
+
+    public float getRequiredEnergy() {
+        return energy;
+    }
+
+    public float getRequiredTime() {
+        return time;
+    }
+
+
+    public int getRequiredPhase() {
+        return phase;
+    }
+
+
+    public ItemStack getInput0Item() {
+        return input0;
+    }
+
+    public ItemStack getInput1Item() {
+        return input1;
+    }
+
+    public ItemStack getInput2Item() {
+        return input2;
+    }
+
+    public ItemStack getInput3Item() {
+        return input3;
+    }
+
+    public ItemStack getInput4Item() {
+        return input4;
+    }
+
+    public ItemStack getOutput0Item() {
+        return output0;
+    }
+
+    public ItemStack getOutput1Item() {return output1;}
+
+    public ItemStack getOutput2Item() {
+        return output2;
+    }
+
+
+    @Override
+    public ItemStack getResultItem(RegistryAccess registryAccess) {
+        return output0;
+    }
+
+    @Override
+    public ResourceLocation getId() {
+        return id;
+    }
+
+    @Override
+    public RecipeSerializer<?> getSerializer() {
+        return TestMachineRecipe.Serializer.INSTANCE;
+    }
+
+
+    public static ItemStack itemStackFromJson(JsonObject pStackObject) {
+        return CraftingHelper.getItemStack(pStackObject, true, false);
+    }
+
+    @Override
+    public RecipeType<?> getType() {
+        return TestMachineRecipe.Type.INSTANCE;
+    }
+
+    public static class Type implements RecipeType<TestMachineRecipe> {
+        private Type() {
+        }
+
+        public static final TestMachineRecipe.Type INSTANCE = new TestMachineRecipe.Type();
+        public static final String ID = "test_machine_recipe";
+    }
+
+
+    public static class Serializer implements RecipeSerializer<TestMachineRecipe> {
+        public static final TestMachineRecipe.Serializer INSTANCE = new TestMachineRecipe.Serializer();
+
+        public static final ResourceLocation ID =
+                new ResourceLocation(Degeneracycraft.MOD_ID, "test_machine_recipe");
+
+        public TestMachineRecipe fromJson(ResourceLocation pRecipeId, JsonObject pJson) {
+
+            float energy = GsonHelper.getAsFloat(pJson, "energy", 1);
+            float time = GsonHelper.getAsFloat(pJson, "time", 1);
+            int phase = GsonHelper.getAsInt(pJson, "phase", 1);
+            ItemStack input0 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "input0"));
+            ItemStack input1 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "input1"));
+            ItemStack input2 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "input2"));
+            ItemStack input3 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "input3"));
+            ItemStack input4 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "input4"));
+            ItemStack output0 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "output0"));
+            ItemStack output1 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "output1"));
+            ItemStack output2 = TestMachineRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "output2"));
+
+            return new TestMachineRecipe(pRecipeId, energy, time, phase, input0, input1, input2, input3, input4, output0, output1, output2);
+        }
+
+        @Override
+        public @Nullable TestMachineRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+            float energy = pBuffer.readFloat();
+            float time = pBuffer.readFloat();
+            int phase = pBuffer.readInt();
+            ItemStack input0 = pBuffer.readItem();
+            ItemStack input1 = pBuffer.readItem();
+            ItemStack input2 = pBuffer.readItem();
+            ItemStack input3 = pBuffer.readItem();
+            ItemStack input4 = pBuffer.readItem();
+            ItemStack output0 = pBuffer.readItem();
+            ItemStack output1 = pBuffer.readItem();
+            ItemStack output2 = pBuffer.readItem();
+
+
+            return new TestMachineRecipe(pRecipeId, energy, time, phase, input0, input1, input2, input3, input4, output0, output1, output2);
+        }
+
+        @Override
+        public void toNetwork(FriendlyByteBuf pBuffer, TestMachineRecipe pRecipe) {
+            pBuffer.writeFloat(pRecipe.energy);
+            pBuffer.writeFloat(pRecipe.time);
+            pBuffer.writeInt(pRecipe.phase);
+            pBuffer.writeItem(pRecipe.input0);
+            pBuffer.writeItem(pRecipe.input1);
+            pBuffer.writeItem(pRecipe.input2);
+            pBuffer.writeItem(pRecipe.input3);
+            pBuffer.writeItem(pRecipe.input4);
+            pBuffer.writeItem(pRecipe.output0);
+            pBuffer.writeItem(pRecipe.output1);
+            pBuffer.writeItem(pRecipe.output2);
+        }
+    }
+}

@@ -30,6 +30,7 @@ import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineerin
 import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_virtual_sigil_processor.BasicTechnologyVirtualSigilProcessorBlockEntity;
 import net.epitap.degeneracycraft.block.machine.basic.jenith_void_science.basic_technology_void_world_coordinate_recording_machine.BasicTechnologyVoidWorldCoordinateRecordingMachineBlockEntity;
 import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity;
+import net.epitap.degeneracycraft.block.test.TestMachineBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
@@ -579,6 +580,27 @@ public class DCMachineToggleC2SPacket {
             }
 
             if (blockEntity instanceof BasicPerformanceRealityPhaseAdjustmentMachineBlockEntity machine) {
+
+                if (type == TOGGLE_HOLOGRAM) {
+                    machine.hologramLevel++;
+                    if (machine.hologramLevel > 1) {
+                        machine.hologramLevel = -1;
+                    }
+                }
+
+                if (type == TOGGLE_HALT) {
+                    machine.forceHalt = !machine.forceHalt;
+                }
+                if (type == TOGGLE_LOCK) {
+                    machine.toggleInputLock();
+                }
+                machine.setChanged();
+            }
+
+
+
+
+            if (blockEntity instanceof TestMachineBlockEntity machine) {
 
                 if (type == TOGGLE_HOLOGRAM) {
                     machine.hologramLevel++;

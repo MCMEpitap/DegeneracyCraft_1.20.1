@@ -1,0 +1,7 @@
+{
+  "values": [
+    "degeneracycraft:basic_performance_circuit_builder_block",
+    "degeneracycraft:basic_performance_machine_data_installer_block",
+    "degeneracycraft:basic_performance_designated_data_injector_block"
+  ]
+}

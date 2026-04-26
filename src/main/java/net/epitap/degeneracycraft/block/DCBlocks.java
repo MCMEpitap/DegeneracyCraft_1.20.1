@@ -101,6 +101,7 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortBlock;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlock;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlock;
+import net.epitap.degeneracycraft.block.test.TestMachineBlock;
 import net.epitap.degeneracycraft.items.DCItems;
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeBlock;
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeBlock;
@@ -1158,15 +1159,9 @@ public class DCBlocks {
     public static final RegistryObject<Block> FLOAT_ENERGY_PIPE_BLOCK = registerBlock("float_energy_pipe_block", FloatEnergyPipeBlock::new);
 
 
-//
-//    public static final BasicItemPipeBlock BASIC_ITEM_PIPE_BLOCK = new BasicItemPipeBlock() {
-//    };
-//    public static final BasicEnergyPipeBlock BASIC_ENERGY_PIPE_BLOCK = new BasicEnergyPipeBlock() {
-//    };
-//    public static final LowEnergyPipeBlock LOW_ENERGY_PIPE_BLOCK = new LowEnergyPipeBlock() {
-//    };
-//    public static final FloatEnergyPipeBlock FLOAT_ENERGY_PIPE_BLOCK = new FloatEnergyPipeBlock() {
-//    };
+
+    public static final RegistryObject<Block> TEST_MACHINE_BLOCK = registerBlock("test_machine_block", () ->
+            new TestMachineBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
 
@@ -1260,51 +1255,52 @@ public class DCBlocks {
                     pTooltip.add(Component.translatable("tooltip.degeneracycraft." + machineName).withStyle(ChatFormatting.WHITE));
                     switch (scienceName) {
                         case "astronomy" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.LIGHT_PURPLE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.LIGHT_PURPLE)));
                         case "biology" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.GREEN));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GREEN)));
                         case "chemistry" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BLUE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.BLUE)));
                         case "dynamic_energetics" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.GRAY));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GRAY)));
                         case "engineering" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.DARK_GRAY));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.DARK_GRAY)));
                         case "formal_science" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.AQUA));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.AQUA)));
                         case "geo_science" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.YELLOW));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.YELLOW)));
                         case "hybrid_physics" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.RED));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.RED)));
                         case "imitation_magic_engineering" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.WHITE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.WHITE)));
                         case "jenith_void_science" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.GOLD));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE)));
                         case "kaleidoscopic_reality_science" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.GOLD));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE)));
                     }
                     switch (phase) {
                         case "initial" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.WHITE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.WHITE)));
                         case "basic" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.RED));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.RED)));
                         case "low" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.GOLD));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.GOLD)));
                         case "medium" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.YELLOW));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.YELLOW)));
                         case "high" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.GREEN));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.GREEN)));
                         case "super" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.DARK_GREEN));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.DARK_GREEN)));
                         case "over" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.AQUA));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.AQUA)));
                         case "ultra" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.BLUE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.BLUE)));
                         case "anti" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.DARK_BLUE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.DARK_BLUE)));
                         case "imaginary" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.LIGHT_PURPLE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.LIGHT_PURPLE)));
                         case "infinity" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.DARK_GRAY));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.DARK_GRAY)));
+
                         default -> throw new IllegalStateException("Unexpected value: " + phase);
                     }
                 } else {
@@ -1329,47 +1325,52 @@ public class DCBlocks {
                     pTooltip.add(Component.translatable("tooltip.degeneracycraft.ability" + machineName).withStyle(ChatFormatting.WHITE));
                     switch (scienceName) {
                         case "astronomy" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.LIGHT_PURPLE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.LIGHT_PURPLE)));
                         case "biology" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.GREEN));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GREEN)));
                         case "chemistry" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BLUE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.BLUE)));
                         case "dynamic_energetics" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.GRAY));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GRAY)));
                         case "engineering" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.BLACK));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.DARK_GRAY)));
                         case "formal_science" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.AQUA));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.AQUA)));
                         case "geo_science" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.YELLOW));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.YELLOW)));
                         case "hybrid_physics" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.RED));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.RED)));
                         case "imitation_magic_engineering" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science." + scienceName).withStyle(ChatFormatting.WHITE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.WHITE)));
+                        case "jenith_void_science" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE)));
+                        case "kaleidoscopic_reality_science" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(scienceName).withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.BOLD).withStyle(ChatFormatting.UNDERLINE)));
                     }
                     switch (phase) {
                         case "initial" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.WHITE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.WHITE)));
                         case "basic" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.RED));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.RED)));
                         case "low" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.GOLD));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.GOLD)));
                         case "medium" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.YELLOW));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.YELLOW)));
                         case "high" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.GREEN));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.GREEN)));
                         case "super" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.DARK_GREEN));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.DARK_GREEN)));
                         case "over" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.AQUA));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.AQUA)));
                         case "ultra" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.BLUE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.BLUE)));
                         case "anti" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.DARK_BLUE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.DARK_BLUE)));
                         case "imaginary" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.LIGHT_PURPLE));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.LIGHT_PURPLE)));
                         case "infinity" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(ChatFormatting.DARK_GRAY));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(ChatFormatting.DARK_GRAY).append(Component.translatable(phase).withStyle(ChatFormatting.DARK_GRAY)));
+
                         default -> throw new IllegalStateException("Unexpected value: " + phase);
                     }
                 } else {

@@ -99,6 +99,7 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortMenu;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageMenu;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortMenu;
+import net.epitap.degeneracycraft.block.test.TestMachineMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -393,6 +394,10 @@ public class DCMenuTypes {
     public static final RegistryObject<MenuType<BasicPerformanceRealityPhaseAdjustmentMachineMenu>> BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_MENU =
             registerMenuType(BasicPerformanceRealityPhaseAdjustmentMachineMenu::new, "basic_performance_reality_phase_adjustment_machine_menu");
 
+
+
+    public static final RegistryObject<MenuType<TestMachineMenu>> TEST_MACHINE_MENU =
+            registerMenuType(TestMachineMenu::new, "test_machine_menu");
 
 
 //    public static final RegistryObject<MenuType<InfinityPoweredAllInOneCompressorMachineMenu>> INFINITY_POWERED_ALL_IN_ONE_COMPRESSOR_MACHINE_BLOCK_MENU =

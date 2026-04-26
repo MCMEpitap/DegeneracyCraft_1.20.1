@@ -696,22 +696,22 @@ public class DCLanguageProviderEN extends LanguageProvider {
 //        add(DCItems.INFINITY_CLASS_IRON_SPRING.get(),"Infinity Class Iron Spring");
 
         //Basic Class Machine Component Circuit
-//        add(DCItems.BASIC_PRECISION_BEARING_INSCRIBED_CIRCUIT.get(),"Basic Precision Bearing Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_BOLT_INSCRIBED_CIRCUIT.get(),"Basic Precision Bolt Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_KEY_INSCRIBED_CIRCUIT.get(),"Basic Precision Key Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_CAM_INSCRIBED_CIRCUIT.get(),"Basic Precision Cam Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_CHAIN_INSCRIBED_CIRCUIT.get(),"Basic Precision Chain Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_GEAR_INSCRIBED_CIRCUIT.get(),"Basic Precision Gear Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_JOINT_INSCRIBED_CIRCUIT.get(),"Basic Precision Joint Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_NUT_INSCRIBED_CIRCUIT.get(), "Basic Precision Nut Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_PIPE_INSCRIBED_CIRCUIT.get(), "Basic Precision Pipe Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_PIPEJOINT_INSCRIBED_CIRCUIT.get(), "Basic Precision Pipejoint Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_PLATE_INSCRIBED_CIRCUIT.get(), "Basic Precision Plate Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_ROD_INSCRIBED_CIRCUIT.get(), "Basic Precision Rod Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_SHAFT_INSCRIBED_CIRCUIT.get(), "Basic Precision Shaft Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_SHAFTCOUPLING_INSCRIBED_CIRCUIT.get(), "Basic Precision Shaftcoupling Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_SHAPESTEEL_INSCRIBED_CIRCUIT.get(), "Basic Precision Shapesteel Inscribed Circuit");
-//        add(DCItems.BASIC_PRECISION_SPRING_INSCRIBED_CIRCUIT.get(), "Basic Precision Spring Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_BEARING_INSCRIBED_CIRCUIT.get(),"Bearing Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_BOLT_INSCRIBED_CIRCUIT.get(),"Bolt Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_KEY_INSCRIBED_CIRCUIT.get(),"Key Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_CAM_INSCRIBED_CIRCUIT.get(),"Cam Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_CHAIN_INSCRIBED_CIRCUIT.get(),"Chain Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_GEAR_INSCRIBED_CIRCUIT.get(),"Gear Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_JOINT_INSCRIBED_CIRCUIT.get(),"Joint Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_NUT_INSCRIBED_CIRCUIT.get(), "Nut Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_PIPE_INSCRIBED_CIRCUIT.get(), "Pipe Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_PIPEJOINT_INSCRIBED_CIRCUIT.get(), "Pipejoint Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_PLATE_INSCRIBED_CIRCUIT.get(), "Plate Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_ROD_INSCRIBED_CIRCUIT.get(), "Rod Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_SHAFT_INSCRIBED_CIRCUIT.get(), "Shaft Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_SHAFTCOUPLING_INSCRIBED_CIRCUIT.get(), "Shaftcoupling Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_SHAPESTEEL_INSCRIBED_CIRCUIT.get(), "Shapesteel Inscribed Circuit");
+//        add(DCItems.BASIC_PRECISION_SPRING_INSCRIBED_CIRCUIT.get(), "Spring Inscribed Circuit");
 
         add(DCItems.CHLORINE_GAS.get(), "Chlorine Gas");
         add(DCItems.HYDROGEN_GAS.get(), "Hydrogen Gas");
@@ -754,7 +754,7 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
 
         add(DCItems.MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "Multiblock Structure Hologram Visualizer");
-        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "Basic Technology Multiblock Structure Hologram Visualizer");
+        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "Multiblock Structure Hologram Visualizer");
         add(DCItems.MACHINE_HALT_DEVICE.get(), "Machine Halt Device");
 
 
@@ -838,261 +838,261 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "Nether Cassiterite Ore");
         add(DCBlocks.END_CASSITERITE_ORE.get(), "End Cassiterite Ore");
 
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Astronomy Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Astronomy Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Astronomy Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Astronomy Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Astronomy Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Astronomy Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Astronomy Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Astronomy Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Astronomy Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Astronomy Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Astronomy Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Astronomy Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Astronomy Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Astronomy Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Astronomy Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Astronomy Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Astronomy Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Astronomy Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Astronomy Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Astronomy Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Astronomy Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Astronomy Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Astronomy Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Astronomy Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Astronomy Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Astronomy Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Astronomy Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Astronomy Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Astronomy Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Astronomy Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Astronomy Item Output Port(Hologram)");
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Biology Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Biology Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Biology Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Biology Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Biology Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Biology Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Biology Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Biology Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Biology Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Biology Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Biology Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Biology Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Biology Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Biology Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Biology Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Biology Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Biology Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Biology Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Biology Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Biology Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Biology Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Biology Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Biology Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Biology Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Biology Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Biology Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Biology Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Biology Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Biology Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Biology Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Biology Item Output Port(Hologram)");
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Chemistry Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Chemistry Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Chemistry Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Chemistry Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Chemistry Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Chemistry Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Chemistry Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Chemistry Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Chemistry Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Chemistry Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Chemistry Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Chemistry Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Chemistry Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Chemistry Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Chemistry Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Chemistry Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Chemistry Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Chemistry Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Chemistry Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Chemistry Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Chemistry Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Chemistry Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Chemistry Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Chemistry Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Chemistry Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Chemistry Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Chemistry Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Chemistry Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Chemistry Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Chemistry Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Chemistry Item Output Port(Hologram)");
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Dynamic Energetics Multiblock Item Output Port(Hologram)");
-
-
-
-
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Engineering Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Engineering Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Engineering Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Engineering Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Engineering Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Engineering Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Engineering Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Engineering Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Engineering Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Engineering Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Engineering Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Dynamic Energetics Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Dynamic Energetics Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Dynamic Energetics Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Dynamic Energetics Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Dynamic Energetics Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Dynamic Energetics Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Dynamic Energetics Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Dynamic Energetics Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Dynamic Energetics Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Dynamic Energetics Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Dynamic Energetics Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Dynamic Energetics Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Dynamic Energetics Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Dynamic Energetics Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Dynamic Energetics Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Dynamic Energetics Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Dynamic Energetics Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Dynamic Energetics Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Dynamic Energetics Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Dynamic Energetics Item Output Port(Hologram)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Formal Science Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Formal Science Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Formal Science Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Formal Science Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Formal Science Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Formal Science Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Formal Science Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Formal Science Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Formal Science Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Formal Science Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Formal Science Multiblock Item Output Port(Hologram)");
-
-
-
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Geo Science Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Geo Science Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Geo Science Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Geo Science Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Geo Science Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Geo Science Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Geo Science Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Geo Science Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Geo Science Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Geo Science Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Geo Science Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Engineering Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Engineering Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Engineering Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Engineering Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Engineering Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Engineering Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Engineering Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Engineering Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Engineering Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Engineering Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Engineering Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Engineering Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Engineering Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Engineering Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Engineering Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Engineering Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Engineering Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Engineering Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Engineering Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Engineering Item Output Port(Hologram)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Hybrid Physics Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Formal Science Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Formal Science Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Formal Science Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Formal Science Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Formal Science Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Formal Science Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Formal Science Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Formal Science Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Formal Science Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Formal Science Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Formal Science Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Formal Science Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Formal Science Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Formal Science Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Formal Science Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Formal Science Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Formal Science Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Formal Science Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Formal Science Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Formal Science Item Output Port(Hologram)");
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Imitation Magic Engineering Multiblock Item Output Port(Hologram)");
-
-
-
-
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Jenith Void Science Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Geo Science Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Geo Science Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Geo Science Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Geo Science Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Geo Science Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Geo Science Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Geo Science Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Geo Science Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Geo Science Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Geo Science Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Geo Science Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Geo Science Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Geo Science Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Geo Science Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Geo Science Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Geo Science Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Geo Science Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Geo Science Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Geo Science Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Geo Science Item Output Port(Hologram)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Base Frame");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Base Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Machine Frame");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Machine Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Structure Frame");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Structure Frame (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Structure Glass");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Structure Glass (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Energy Storage");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Energy Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Item Storage");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Item Storage (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Energy Input Bus");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Energy Input Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Energy Output Bus");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Energy Output Bus (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Item Input Port");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Item Input Port (Hologram)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Item Output Port");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Basic Strength Kaleidoscopic Reality Science Multiblock Item Output Port(Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Hybrid Physics Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Hybrid Physics Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Hybrid Physics Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Hybrid Physics Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Hybrid Physics Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Hybrid Physics Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Hybrid Physics Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Hybrid Physics Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Hybrid Physics Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Hybrid Physics Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Hybrid Physics Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Hybrid Physics Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Hybrid Physics Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Hybrid Physics Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Hybrid Physics Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Hybrid Physics Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Hybrid Physics Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Hybrid Physics Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Hybrid Physics Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Hybrid Physics Item Output Port(Hologram)");
+
+
+
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Imitation Magic Engineering Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Imitation Magic Engineering Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Imitation Magic Engineering Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Imitation Magic Engineering Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Imitation Magic Engineering Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Imitation Magic Engineering Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Imitation Magic Engineering Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Imitation Magic Engineering Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Imitation Magic Engineering Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Imitation Magic Engineering Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Imitation Magic Engineering Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Imitation Magic Engineering Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Imitation Magic Engineering Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Imitation Magic Engineering Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Imitation Magic Engineering Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Imitation Magic Engineering Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Imitation Magic Engineering Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Imitation Magic Engineering Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Imitation Magic Engineering Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Imitation Magic Engineering Item Output Port(Hologram)");
+
+
+
+
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Jenith Void Science Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Jenith Void Science Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Jenith Void Science Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Jenith Void Science Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Jenith Void Science Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Jenith Void Science Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Jenith Void Science Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Jenith Void Science Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Jenith Void Science Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Jenith Void Science Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Jenith Void Science Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Jenith Void Science Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Jenith Void Science Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Jenith Void Science Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Jenith Void Science Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Jenith Void Science Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Jenith Void Science Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Jenith Void Science Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Jenith Void Science Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Jenith Void Science Item Output Port(Hologram)");
+
+
+
+
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Kaleidoscopic Reality Science Base Frame");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Base Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Kaleidoscopic Reality Science Machine Frame");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Machine Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "Kaleidoscopic Reality Science Structure Frame");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Structure Frame (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "Kaleidoscopic Reality Science Structure Glass");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Structure Glass (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "Kaleidoscopic Reality Science Energy Storage");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Energy Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "Kaleidoscopic Reality Science Item Storage");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Item Storage (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "Kaleidoscopic Reality Science Energy Input Bus");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Energy Input Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "Kaleidoscopic Reality Science Energy Output Bus");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Energy Output Bus (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "Kaleidoscopic Reality Science Item Input Port");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Item Input Port (Hologram)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "Kaleidoscopic Reality Science Item Output Port");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "Kaleidoscopic Reality Science Item Output Port(Hologram)");
 
 
 
@@ -1111,297 +1111,297 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get(), "Basic Performance Astronomical Telescope");
+        add(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get(), "Astronomical Telescope");
         add("tooltip." + "degeneracycraft." + "basic_performance_astronomical_telescope_block",
                 "Basic Astronomical Telescope. Record information about the stars.");
-        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_BLOCK.get(), "Basic Precision Objective Lens");
+        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_BLOCK.get(), "Objective Lens");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_astronomical_telescope_block",
-                "For Basic Performance Astronomical Telescope");
-        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_HOLO_BLOCK.get(), "Basic Precision Objective Lens (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_CIRCUIT.get(), "Basic Performance Astronomical Telescope Circuit");
+                "For Astronomical Telescope");
+        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_HOLO_BLOCK.get(), "Objective Lens (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_CIRCUIT.get(), "Astronomical Telescope Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get(), "Basic Performance Fine Particle Adsorber");
+        add(DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get(), "Fine Particle Adsorber");
         add("tooltip." + "degeneracycraft." + "basic_performance_fine_particle_adsorber_block",
                 "Basic Fine Particle Adsorber. Collect airborne particles and other materials for use as raw materials.");
-        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_BLOCK.get(), "Basic Efficiency Particle Storage Tank");
+        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_BLOCK.get(), "Particle Storage Tank");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_fine_particle_adsorber_block",
-                "For Basic Performance Fine Particle Adsorber");
-        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_HOLO_BLOCK.get(), "Basic Efficiency Particle Storage Tank (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_CIRCUIT.get(), "Basic Performance Fine Particle Adsorber Circuit");
+                "For Fine Particle Adsorber");
+        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_HOLO_BLOCK.get(), "Particle Storage Tank (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_CIRCUIT.get(), "Fine Particle Adsorber Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK.get(), "Basic Performance Starlight Collector");
+        add(DCBlocks.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK.get(), "Starlight Collector");
         add("tooltip." + "degeneracycraft." + "basic_performance_starlight_collector_block",
                 "Basic Starlight Collector. Collect starlight and utilize it for material processing.");
-        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_BLOCK.get(), "Basic Efficiency Faint Light Receiver");
+        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_BLOCK.get(), "Faint Light Receiver");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_starlight_collector_block",
-                "For Basic Performance Starlight Collector");
-        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_HOLO_BLOCK.get(), "Basic Efficiency Faint Light Receiver (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_CIRCUIT.get(), "Basic Performance Starlight Collector Circuit");
+                "For Starlight Collector");
+        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_HOLO_BLOCK.get(), "Faint Light Receiver (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_CIRCUIT.get(), "Starlight Collector Circuit");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_BIO_REACTOR_BLOCK.get(), "Basic Performance Bio Reactor");
+        add(DCBlocks.BASIC_PERFORMANCE_BIO_REACTOR_BLOCK.get(), "Bio Reactor");
         add("tooltip." + "degeneracycraft." + "basic_performance_bio_reactor_block",
                 "Basic Bio Reactor. Using biological processes to produce materials.");
-        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_BLOCK.get(), "Basic Speed Cultivation Greenhouse");
+        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_BLOCK.get(), "Cultivation Greenhouse");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_bio_reactor_block",
-                "For Basic Performance Bio Reactor");
-        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_HOLO_BLOCK.get(), "Basic Speed Cultivation Greenhouse (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_BIO_REACTOR_CIRCUIT.get(), "Basic Performance Bio Reactor Circuit");
+                "For Bio Reactor");
+        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_HOLO_BLOCK.get(), "Cultivation Greenhouse (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_BIO_REACTOR_CIRCUIT.get(), "Bio Reactor Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_CELL_INCUBATOR_BLOCK.get(), "Basic Performance Cell Incubator");
+        add(DCBlocks.BASIC_PERFORMANCE_CELL_INCUBATOR_BLOCK.get(), "Cell Incubator");
         add("tooltip." + "degeneracycraft." + "basic_performance_cell_incubator_block",
                 "Basic Cell Incubator. Activate and utilize cells.");
-        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_BLOCK.get(), "Basic Durability Incubation Container");
+        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_BLOCK.get(), "Incubation Container");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_cell_incubator_block",
-                "For Basic Performance Cell Incubator");
-        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_HOLO_BLOCK.get(), "Basic Durability Incubation Container (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_CELL_INCUBATOR_CIRCUIT.get(), "Basic Performance Cell Incubator Circuit");
+                "For Cell Incubator");
+        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_HOLO_BLOCK.get(), "Incubation Container (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_CELL_INCUBATOR_CIRCUIT.get(), "Cell Incubator Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_CROP_CULTIVATOR_BLOCK.get(), "Basic Performance Crop Incubator");
+        add(DCBlocks.BASIC_PERFORMANCE_CROP_CULTIVATOR_BLOCK.get(), "Crop Incubator");
         add("tooltip." + "degeneracycraft." + "basic_performance_crop_incubator_block",
                 "Basic Crop Incubator. Cultivate crops and harvest or produce them.");
-        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_BLOCK.get(), "Basic Efficiency Growth Stabilizer");
+        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_BLOCK.get(), "Growth Stabilizer");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_crop_incubator_block",
-                "For Basic Performance Crop Incubator");
-        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_HOLO_BLOCK.get(), "Basic Efficiency Growth Stabilizer (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_CROP_CULTIVATOR_CIRCUIT.get(), "Basic Performance Crop Incubator Circuit");
+                "For Crop Incubator");
+        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_HOLO_BLOCK.get(), "Growth Stabilizer (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_CROP_CULTIVATOR_CIRCUIT.get(), "Crop Incubator Circuit");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_CHEMICAL_REACTOR_BLOCK.get(), "Basic Performance Chemical Reactor");
+        add(DCBlocks.BASIC_PERFORMANCE_CHEMICAL_REACTOR_BLOCK.get(), "Chemical Reactor");
         add("tooltip." + "degeneracycraft." + "basic_performance_chemical_reactor_block",
                 "Basic Chemical Reactor. Create new substances through chemical reactions.");
-        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_BLOCK.get(), "Basic Rate Compound Agitation System");
+        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_BLOCK.get(), "Compound Agitation System");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_chemical_reactor_block",
-                "For Basic Performance Chemical Reactor");
-        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_HOLO_BLOCK.get(), "Basic Rate Compound Agitation System (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_CHEMICAL_REACTOR_CIRCUIT.get(), "Basic Performance Chemical Reactor Circuit");
+                "For Chemical Reactor");
+        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_HOLO_BLOCK.get(), "Compound Agitation System (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_CHEMICAL_REACTOR_CIRCUIT.get(), "Chemical Reactor Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_COMPOUND_PURIFIER_BLOCK.get(), "Basic Performance Compound Purifier");
+        add(DCBlocks.BASIC_PERFORMANCE_COMPOUND_PURIFIER_BLOCK.get(), "Compound Purifier");
         add("tooltip." + "degeneracycraft." + "basic_performance_compound_purifier_block",
                 "Basic Compound Purifier. Refining ore ingots for chemical reaction.");
-        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_BLOCK.get(), "Basic Durable High Speed Chemical Reactor");
+        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_BLOCK.get(), "High Speed Chemical Reactor");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_compound_purifier_block",
-                "For Basic Performance Compound Purifier");
-        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_HOLO_BLOCK.get(), "Basic Durable High Speed Chemical Reactor (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_COMPOUND_PURIFIER_CIRCUIT.get(), "Basic Performance Compound Purifier Circuit");
+                "For Compound Purifier");
+        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_HOLO_BLOCK.get(), "High Speed Chemical Reactor (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_COMPOUND_PURIFIER_CIRCUIT.get(), "Compound Purifier Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_ELECTROLYSER_BLOCK.get(), "Basic Performance Electrolyser");
+        add(DCBlocks.BASIC_PERFORMANCE_ELECTROLYSER_BLOCK.get(), "Electrolyser");
         add("tooltip." + "degeneracycraft." + "basic_performance_electrolyser_block",
                 "Basic Electrolyser. Reacting substances by electrolysis.");
-        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_BLOCK.get(), "Basic Durable Expanded Electrolytic Cell");
+        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_BLOCK.get(), "Expanded Electrolytic Cell");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_electrolyser_block",
-                "For Basic Performance Electrolyser");
-        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_HOLO_BLOCK.get(), "Basic Durable Expanded Electrolytic Cell (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_ELECTROLYSER_CIRCUIT.get(), "Basic Performance Electrolyser Circuit");
+                "For Electrolyser");
+        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_HOLO_BLOCK.get(), "Expanded Electrolytic Cell (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_ELECTROLYSER_CIRCUIT.get(), "Electrolyser Circuit");
 
 
 
-        add(DCBlocks.BASIC_POWER_STEAM_GENERATOR_BLOCK.get(), "Basic Power Steam Generator");
+        add(DCBlocks.BASIC_POWER_STEAM_GENERATOR_BLOCK.get(), "Steam Generator");
         add("tooltip." + "degeneracycraft." + "basic_power_steam_generator_block",
                 "Basic steam generator. Generates electricity from the heat generated when materials are burned.");
-        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_BLOCK.get(), "Basic Endurance High Temperature Combustion Chamber");
+        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_BLOCK.get(), "High Temperature Combustion Chamber");
         add("tooltip." + "degeneracycraft.ability" + "basic_power_steam_generator_block",
-                "For Basic Power Steam Generator");
-        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_HOLO_BLOCK.get(), "Basic Endurance High Temperature Combustion Chamber (Hologram)");
-        add(DCItems.BASIC_POWER_STEAM_GENERATOR_CIRCUIT.get(), "Basic Power Steam Generator Circuit");
+                "For Steam Generator");
+        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_HOLO_BLOCK.get(), "High Temperature Combustion Chamber (Hologram)");
+        add(DCItems.BASIC_POWER_STEAM_GENERATOR_CIRCUIT.get(), "Steam Generator Circuit");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_BLOCK.get(), "Basic TechnologyCompression Condenser");
+        add(DCBlocks.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_BLOCK.get(), "Compression Condenser");
         add("tooltip." + "degeneracycraft." + "basic_technology_compression_condenser_block",
                 "Basic Compression Condenser. Machinery that uses energy for compression.");
-        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_BLOCK.get(), "Basic Technology Compression Condenser");
+        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_BLOCK.get(), "Compression Condenser");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_compression_condenser_block",
-                "For Basic Technology Compression Condenser");
-        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "Basic Technology Compression Condenser (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_CIRCUIT.get(), "Basic TechnologyCompression Condenser Circuit");
+                "For Compression Condenser");
+        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "Compression Condenser (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_CIRCUIT.get(), "Compression Condenser Circuit");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_BLOCK.get(), "Basic Technology Electromagnetic Inductor");
+        add(DCBlocks.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_BLOCK.get(), "Electromagnetic Inductor");
         add("tooltip." + "degeneracycraft." + "basic_technology_electromagnetic_inductor_block",
                 "Basic electromagnetic inductor. Converting electrical power into magnetic force for use in processing.");
-        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_BLOCK.get(), "Basic Durable Insulated Chamber");
+        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_BLOCK.get(), "Insulated Chamber");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_electromagnetic_inductor_block",
-                "For Basic Technology Electromagnetic Inductor");
-        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_HOLO_BLOCK.get(), "Basic Durable Insulated Chamber (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_CIRCUIT.get(), "Basic Technology Electromagnetic Inductor Circuit");
+                "For Electromagnetic Inductor");
+        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_HOLO_BLOCK.get(), "Insulated Chamber (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_CIRCUIT.get(), "Electromagnetic Inductor Circuit");
 
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_BLOCK.get(), "Basic Technology Machine Manufacturer");
+        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_BLOCK.get(), "Machine Manufacturer");
         add("tooltip." + "degeneracycraft." + "basic_technology_machine_manufacturer_block",
                 "Basic machine manufacturer. Without it, more complex machine cannot be made.");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_BLOCK.get(), "Basic Efficiency Machine Processing Chamber");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_BLOCK.get(), "Machine Processing Chamber");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_machine_manufacturer_block",
-                "For Basic Technology Machine Manufacturer");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "Basic Efficiency Machine Processing Chamber (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_CIRCUIT.get(), "Basic Technology Machine Manufacturer Circuit");
+                "For Machine Manufacturer");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "Machine Processing Chamber (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_CIRCUIT.get(), "Machine Manufacturer Circuit");
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_BLOCK.get(), "Basic Technology Machine Element Processor");
+        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_BLOCK.get(), "Machine Element Processor");
         add("tooltip." + "degeneracycraft." + "basic_technology_machine_element_processor_block",
                 "Basic Machine Element Processor. Processing more difficult parts.");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_BLOCK.get(), "Basic Efficiency Machine Element Processing Chamber");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_BLOCK.get(), "Machine Element Processing Chamber");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_machine_element_processor_block",
-                "For Basic Technology Machine Element Processor");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "Basic Efficiency Machine Element Processing Chamber (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_CIRCUIT.get(), "Basic Technology Machine Element Processor Circuit");
+                "For Machine Element Processor");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "Machine Element Processing Chamber (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_CIRCUIT.get(), "Machine Element Processor Circuit");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_BLOCK.get(), "Basic Technology Machine Part Processor");
+        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_BLOCK.get(), "Machine Part Processor");
         add("tooltip." + "degeneracycraft." + "basic_technology_machine_part_processor_block",
                 "Basic Machine Part Processor. Processing more difficult metals.");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_BLOCK.get(), "Basic Efficiency Machine Part Processing Chamber");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_BLOCK.get(), "Machine Part Processing Chamber");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_machine_part_processor_block",
-                "For Basic Technology Machine Part Processor");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "Basic Efficiency Machine Part Processing Chamber (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_CIRCUIT.get(), "Basic Technology Machine Part Processor Circuit");
+                "For Machine Part Processor");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "Machine Part Processing Chamber (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_CIRCUIT.get(), "Machine Part Processor Circuit");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK.get(), "Basic Technology Multiblock Equipment Fabricator");
+        add(DCBlocks.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK.get(), "Multiblock Equipment Fabricator");
         add("tooltip." + "degeneracycraft." + "basic_technology_multiblock_equipment_fabricator_block",
                 "Basic multi-block equipment fabrication machine. Mainly used for fabrication of equipment blocks.");
-        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_BLOCK.get(), "Basic Efficiency Equipment Production Auxiliary System");
+        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_BLOCK.get(), "Equipment Production Auxiliary System");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_multiblock_equipment_fabricator_block",
-                "For Basic Technology Multiblock Equipment Fabricator");
-        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_HOLO_BLOCK.get(), "Basic Efficiency Equipment Production Auxiliary System (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_CIRCUIT.get(), "Basic Technology Multiblock Equipment Fabricator Circuit");
+                "For Multiblock Equipment Fabricator");
+        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_HOLO_BLOCK.get(), "Equipment Production Auxiliary System (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_CIRCUIT.get(), "Multiblock Equipment Fabricator Circuit");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_CIRCUIT_BUILDER_BLOCK.get(), "Basic Performance Circuit Builder");
+        add(DCBlocks.BASIC_PERFORMANCE_CIRCUIT_BUILDER_BLOCK.get(), "Circuit Builder");
         add("tooltip." + "degeneracycraft." + "basic_performance_circuit_builder_block",
                 "Basic Circuit Builder. Machine to fabricate circuits and their components.");
-        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_BLOCK.get(), "Basic Purity Circuit Clean Room");
+        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_BLOCK.get(), "Circuit Clean Room");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_circuit_builder_block",
-                "For Basic Performance Circuit Builder");
-        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_HOLO_BLOCK.get(), "Basic Performance Circuit Builder (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_CIRCUIT_BUILDER_CIRCUIT.get(), "Basic Performance Circuit Builder Circuit");
+                "For Circuit Builder");
+        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_HOLO_BLOCK.get(), "Circuit Clean Room (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_CIRCUIT_BUILDER_CIRCUIT.get(), "Circuit Builder Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_BLOCK.get(), "Basic Performance Machine Data Installer");
+        add(DCBlocks.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_BLOCK.get(), "Machine Data Installer");
         add("tooltip." + "degeneracycraft." + "basic_performance_machine_data_installer_block",
                 "Basic Electric Arc Furnace. Machine that install machine data into memory circuits.");
-        add(DCBlocks.BASIC_SPEED_DATA_READER_BLOCK.get(), "Basic Speed Data Reader");
+        add(DCBlocks.BASIC_SPEED_DATA_READER_BLOCK.get(), "Data Reader");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_machine_data_installer_block",
-                "For Basic Basic Performance Machine Data Installer");
-        add(DCBlocks.BASIC_SPEED_DATA_READER_HOLO_BLOCK.get(), "Basic Speed Data Reader (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_CIRCUIT.get(), "Basic Performance Machine Data Installer Circuit");
+                "For Basic Machine Data Installer");
+        add(DCBlocks.BASIC_SPEED_DATA_READER_HOLO_BLOCK.get(), "Data Reader (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_CIRCUIT.get(), "Machine Data Installer Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_BLOCK.get(), "Basic Performance Designated Data Injector");
+        add(DCBlocks.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_BLOCK.get(), "Designated Data Injector");
         add("tooltip." + "degeneracycraft." + "basic_performance_designated_data_injector_block",
                 "Basic Designated Data Injector. Create data chips for specific applications.");
-        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_BLOCK.get(), "Basic Speed Calculation Auxiliary Write Device");
+        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_BLOCK.get(), "Calculation Auxiliary Write Device");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_designated_data_injector_block",
-                "For Basic Performance Designated Data Injector");
-        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_HOLO_BLOCK.get(), "Basic Speed Calculation Auxiliary Write Device (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_CIRCUIT.get(), "Basic Performance Designated Data Injector Circuit");
+                "For Designated Data Injector");
+        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_HOLO_BLOCK.get(), "Calculation Auxiliary Write Device (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_CIRCUIT.get(), "Designated Data Injector Circuit");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_ORE_SORTER_BLOCK.get(), "Basic Performance Ore Sorter");
+        add(DCBlocks.BASIC_PERFORMANCE_ORE_SORTER_BLOCK.get(), "Ore Sorter");
         add("tooltip." + "degeneracycraft." + "basic_performance_ore_sorter_block",
-                "基本的な鉱石選別機. 鉱石を選別し複数の産出物を得る.");
-        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_BLOCK.get(), "Basic Efficiency Ore Sorting Filter");
+                "Basic Ore Sorter. Classifies ore to produce multiple products.");
+        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_BLOCK.get(), "Ore Sorting Filter");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_ore_sorter_block",
-                "For Basic Performance Ore Sorter");
-        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_HOLO_BLOCK.get(), "Basic Efficiency Ore Sorting Filter (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_ORE_SORTER_CIRCUIT.get(), "Basic Performance Ore Sorter Circuit");
+                "For Ore Sorter");
+        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_HOLO_BLOCK.get(), "Ore Sorting Filter (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_ORE_SORTER_CIRCUIT.get(), "Ore Sorter Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_ROCK_CRASHER_BLOCK.get(), "Basic Performance Rock Crasher");
+        add(DCBlocks.BASIC_PERFORMANCE_ROCK_CRASHER_BLOCK.get(), "Rock Crasher");
         add("tooltip." + "degeneracycraft." + "basic_performance_rock_crasher_block",
                 "Basic Rock Crasher. Effective use of stones.");
         add(DCBlocks.BASIC_CRASHING_BASE_BLOCK.get(), "Basic Crashing Base");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_rock_crasher_block",
-                "For Basic Performance Rock Crasher");
+                "For Rock Crasher");
         add(DCBlocks.BASIC_CRASHING_BASE_HOLO_BLOCK.get(), "Basic Crashing Base (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_ROCK_CRASHER_CIRCUIT.get(), "Basic Performance Rock Crasher Circuit");
+        add(DCItems.BASIC_PERFORMANCE_ROCK_CRASHER_CIRCUIT.get(), "Rock Crasher Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_SOIL_PURIFIER_BLOCK.get(), "Basic Performance Soil Purifier");
+        add(DCBlocks.BASIC_PERFORMANCE_SOIL_PURIFIER_BLOCK.get(), "Soil Purifier");
         add("tooltip." + "degeneracycraft." + "basic_performance_soil_purifier_block",
                 "Basic Soil Purifier. It can also be used for purposes other than soil.");
-        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_BLOCK.get(), "Basic Efficiency Particle Mixing Chamber");
+        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_BLOCK.get(), "Particle Mixing Chamber");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_soil_purifier_block",
-                "For Basic Performance Soil Purifier");
-        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_HOLO_BLOCK.get(), "Basic Efficiency Particle Mixing Chamber (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_SOIL_PURIFIER_CIRCUIT.get(), "Basic Performance Soil Purifier Circuit");
+                "For Soil Purifier");
+        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_HOLO_BLOCK.get(), "Particle Mixing Chamber (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_SOIL_PURIFIER_CIRCUIT.get(), "Soil Purifier Circuit");
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_BLOCK.get(), "Basic Performance Electric Arc Furnace");
+        add(DCBlocks.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_BLOCK.get(), "Electric Arc Furnace");
         add("tooltip." + "degeneracycraft." + "basic_performance_electric_arc_furnace_block",
                 "Basic Electric Arc Furnace. Machine that use electrical discharges to react at high temperatures.");
-        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_BLOCK.get(), "Basic Flow Cooling System");
+        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_BLOCK.get(), "Cooling System");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_electric_arc_furnace_block",
-                "For Basic Performance Electric Arc Furnace");
-        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_HOLO_BLOCK.get(), "Basic Flow Cooling System (Hologram)");
+                "For Electric Arc Furnace");
+        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_HOLO_BLOCK.get(), "Cooling System (Hologram)");
         add(DCItems.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_CIRCUIT.get(), "asic Performance Electric Arc Furnace Circuit");
 
-        add(DCBlocks.BASIC_PERFORMANCE_FORMING_MACHINE_BLOCK.get(), "Basic Performance Forming Machine");
+        add(DCBlocks.BASIC_PERFORMANCE_FORMING_MACHINE_BLOCK.get(), "Forming Machine");
         add("tooltip." + "degeneracycraft." + "basic_performance_forming_machine_block",
                 "Basic Forming Machine. Pressure induced shape change of matter.");
-        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_BLOCK.get(), "Basic Precision Extrusion Assist System");
+        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_BLOCK.get(), "Extrusion Assist System");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_forming_machine_block",
-                "Basic Performance Forming Machine");
-        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "Basic Precision Extrusion Assist System (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_FORMING_MACHINE_CIRCUIT.get(), "Basic Performance Forming Machine Circuit");
+                "Forming Machine");
+        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "Extrusion Assist System (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_FORMING_MACHINE_CIRCUIT.get(), "Forming Machine Circuit");
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_BLOCK.get(), "Basic Performance Material Separator");
+        add(DCBlocks.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_BLOCK.get(), "Material Separator");
         add("tooltip." + "degeneracycraft." + "basic_performance_material_separator_block",
                 "Basic Material Separator. Separates mixtures to obtain items.");
-        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_BLOCK.get(), "Basic Durability Vibration Control Base");
+        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_BLOCK.get(), "Vibration Control Base");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_material_separator_block",
-                "For Basic Performance Material Separator");
-        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_HOLO_BLOCK.get(), "Basic Durability Vibration Control Base (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_CIRCUIT.get(), "Basic Performance Material Separator Circuit");
+                "For Material Separator");
+        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_HOLO_BLOCK.get(), "Vibration Control Base (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_CIRCUIT.get(), "Material Separator Circuit");
 
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_BLOCK.get(), "Basic Technology Imitation Magic Engraver");
+        add(DCBlocks.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_BLOCK.get(), "Imitation Magic Engraver");
         add("tooltip." + "degeneracycraft." + "basic_technology_imitation_magic_engraver_block",
                 "Basic Imitation Magic Engraver. Engrave the metaphysical magical circuitry.");
-        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_BLOCK.get(), "Basic Output Mystic Optical Projection Device");
+        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_BLOCK.get(), "Mystic Optical Projection Device");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_imitation_magic_engraver_block",
-                "For Basic Technology Imitation Magic Engraver");
-        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_HOLO_BLOCK.get(), "Basic Output Mystic Optical Projection Device (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_CIRCUIT.get(), "Basic Technology Imitation Magic Engraver Circuit");
+                "For Imitation Magic Engraver");
+        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_HOLO_BLOCK.get(), "Mystic Optical Projection Device (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_CIRCUIT.get(), "Imitation Magic Engraver Circuit");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_BLOCK.get(), "Basic Technology Suspected Magic Condenser");
+        add(DCBlocks.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_BLOCK.get(), "Suspected Magic Condenser");
         add("tooltip." + "degeneracycraft." + "basic_technology_suspected_magic_condenser_block",
                 "Basic Suspected Magic Condenser. Extract suspected magical power from the item.");
-        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_BLOCK.get(), "Basic Efficiency Sealed Extraction Case");
+        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_BLOCK.get(), "Sealed Extraction Case");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_suspected_magic_condenser_block",
-                "For Basic Technology Suspected Magic Condenser");
-        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_HOLO_BLOCK.get(), "Basic Efficiency Sealed Extraction Case (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_CIRCUIT.get(), "Basic Technology Suspected Magic Condenser回路");
+                "For Suspected Magic Condenser");
+        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_HOLO_BLOCK.get(), "Sealed Extraction Case (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_CIRCUIT.get(), "Suspected Magic Condenser Circuit");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_BLOCK.get(), "Basic Technology Virtual Sigil Processor");
+        add(DCBlocks.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_BLOCK.get(), "Virtual Sigil Processor");
         add("tooltip." + "degeneracycraft." + "basic_technology_virtual_sigil_processor_block",
                 "Basic . Imprinting a virtual seal onto a material.");
-        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_BLOCK.get(), "Basic Speed Pattern Transfer System");
+        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_BLOCK.get(), "Pattern Transfer System");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_virtual_sigil_processor_block",
-                "For Basic Technology Virtual Sigil Processor");
-        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_HOLO_BLOCK.get(), "Basic Speed Pattern Transfer System (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_CIRCUIT.get(), "Basic Technology Virtual Sigil Processor Circuit");
+                "For Virtual Sigil Processor");
+        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_HOLO_BLOCK.get(), "Pattern Transfer System (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_CIRCUIT.get(), "Virtual Sigil Processor Circuit");
 
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_BLOCK.get(), "Basic Technology Void World Coordinate Recording Machine");
+        add(DCBlocks.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_BLOCK.get(), "Void World Coordinate Recording Machine");
         add("tooltip." + "degeneracycraft." + "basic_technology_void_world_coordinate_recording_machine_block",
                 "Basic Void World Coordinate Recording Machine. Machines that engrave coordinates on different axes and utilize them.");
-        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_BLOCK.get(), "Basic Efficiency Void Interference Frame");
+        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_BLOCK.get(), "Void Interference Frame");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_void_world_coordinate_recording_machine_block",
-                "Basic Technology Void World Coordinate Recording Machine");
-        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_HOLO_BLOCK.get(), "Basic Efficiency Void Interference Frame (Hologram)");
-        add(DCItems.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_CIRCUIT.get(), "Basic Technology Void World Coordinate Recording Machine Circuit");
+                "Void World Coordinate Recording Machine");
+        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_HOLO_BLOCK.get(), "Void Interference Frame (Hologram)");
+        add(DCItems.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_CIRCUIT.get(), "Void World Coordinate Recording Machine Circuit");
 
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get(), "Basic Performance Reality Phase Adjustment Machine");
+        add(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get(), "Reality Phase Adjustment Machine");
         add("tooltip." + "degeneracycraft." + "basic_performance_reality_phase_adjustment_machine_block",
                 "Basic Reality Phase Adjustment Machine. Embed parallel processing into the material and perform modifications.");
-        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get(), "Basic Efficiency Phase Stable Frame");
+        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get(), "Phase Stable Frame");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_reality_phase_adjustment_machine_block",
-                "For Basic Performance Reality Phase Adjustment Machine");
-        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_HOLO_BLOCK.get(), "Basic Efficiency Phase Stable Frame (Hologram)");
-        add(DCItems.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_CIRCUIT.get(), "Basic Performance Reality Phase Adjustment Machine Circuit");
+                "For Reality Phase Adjustment Machine");
+        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_HOLO_BLOCK.get(), "Phase Stable Frame (Hologram)");
+        add(DCItems.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_CIRCUIT.get(), "Reality Phase Adjustment Machine Circuit");
 
 
 //        add(DCUniqueBlocks.SIMPLE_TELESCOPE_RIGHT_PILLAR.get(), "Simple Telescope Right Pillar");
@@ -1416,65 +1416,65 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "Basic Performance Astronomical Telescope Recipe");
-        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "Basic Performance Fine Particle Adsorber Recipe");
-        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "Basic Performance Starlight Collector Recipe");
+        add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "Astronomical Telescope Recipe");
+        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "Fine Particle Adsorber Recipe");
+        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "Starlight Collector Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_bio_reactor", "Basic Performance Bio Reactor Recipe");
-        add("jei." + "degeneracycraft_basic_performance_cell_incubator", "Basic Performance Bio Reactor Recipe");
-        add("jei." + "degeneracycraft_basic_performance_crop_cultivator", "Basic Performance Crop Cultivator Recipe");
+        add("jei." + "degeneracycraft_basic_performance_bio_reactor", "Bio Reactor Recipe");
+        add("jei." + "degeneracycraft_basic_performance_cell_incubator", "Bio Reactor Recipe");
+        add("jei." + "degeneracycraft_basic_performance_crop_cultivator", "Crop Cultivator Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_chemical_reactor", "Basic Performance Chemical Reactor Recipe");
-        add("jei." + "degeneracycraft_basic_performance_compound_purifier", "Basic Performance Compound Purifier Recipe");
-        add("jei." + "degeneracycraft_basic_performance_electrolyser", "Basic Performance Electrolyser Recipe");
+        add("jei." + "degeneracycraft_basic_performance_chemical_reactor", "Chemical Reactor Recipe");
+        add("jei." + "degeneracycraft_basic_performance_compound_purifier", "Compound Purifier Recipe");
+        add("jei." + "degeneracycraft_basic_performance_electrolyser", "Electrolyser Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_compression_condenser", "Basic Technology Compression Condenser Recipe");
-        add("jei." + "degeneracycraft_basic_technology_electromagnetic_inductor", "Basic Technology Electromagnetic Inductor Recipe");
+        add("jei." + "degeneracycraft_basic_technology_compression_condenser", "Compression Condenser Recipe");
+        add("jei." + "degeneracycraft_basic_technology_electromagnetic_inductor", "Electromagnetic Inductor Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_machine_manufacturer", "Basic Technology Machine Manufacturer Recipe");
-        add("jei." + "degeneracycraft_basic_technology_machine_element_processor", "Basic Technology Machine Element Processor Recipe");
-        add("jei." + "degeneracycraft_basic_technology_universal_assembler", "Basic Technology Universal Assembler Recipe");
-        add("jei." + "degeneracycraft_basic_technology_machine_part_processor", "Basic Technology Machine Part Processor Recipe");
-        add("jei." + "degeneracycraft_basic_technology_multiblock_equipment_fabricator", "Basic Technology Multiblock Equipment Fabricator Recipe");
+        add("jei." + "degeneracycraft_basic_technology_machine_manufacturer", "Machine Manufacturer Recipe");
+        add("jei." + "degeneracycraft_basic_technology_machine_element_processor", "Machine Element Processor Recipe");
+        add("jei." + "degeneracycraft_basic_technology_universal_assembler", "Universal Assembler Recipe");
+        add("jei." + "degeneracycraft_basic_technology_machine_part_processor", "Machine Part Processor Recipe");
+        add("jei." + "degeneracycraft_basic_technology_multiblock_equipment_fabricator", "Multiblock Equipment Fabricator Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_circuit_builder", "Basic Performance Circuit Builder Recipe");
-        add("jei." + "degeneracycraft_basic_performance_machine_data_installer", "Basic Performance Machine Data Installer Recipe");
-        add("jei." + "degeneracycraft_basic_performance_designated_data_injector", "Basic Performance Designated Data Injector Recipe");
+        add("jei." + "degeneracycraft_basic_performance_circuit_builder", "Circuit Builder Recipe");
+        add("jei." + "degeneracycraft_basic_performance_machine_data_installer", "Machine Data Installer Recipe");
+        add("jei." + "degeneracycraft_basic_performance_designated_data_injector", "Designated Data Injector Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_ore_sorter", "Basic Performance Ore Sorter Recipe");
-        add("jei." + "degeneracycraft_basic_performance_rock_crasher", "Basic Performance Rock Crasher Recipe");
-        add("jei." + "degeneracycraft_basic_performance_soil_purifier", "Basic Performance Soil Purifier Recipe");
+        add("jei." + "degeneracycraft_basic_performance_ore_sorter", "Ore Sorter Recipe");
+        add("jei." + "degeneracycraft_basic_performance_rock_crasher", "Rock Crasher Recipe");
+        add("jei." + "degeneracycraft_basic_performance_soil_purifier", "Soil Purifier Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_electric_arc_furnace", "Basic Performance Electric Arc Furnace Recipe");
-        add("jei." + "degeneracycraft_basic_performance_forming_machine", "Basic Performance Forming Machine Recipe");
-        add("jei." + "degeneracycraft_basic_performance_material_separator", "Basic Performance Material Separator Recipe");
+        add("jei." + "degeneracycraft_basic_performance_electric_arc_furnace", "Electric Arc Furnace Recipe");
+        add("jei." + "degeneracycraft_basic_performance_forming_machine", "Forming Machine Recipe");
+        add("jei." + "degeneracycraft_basic_performance_material_separator", "Material Separator Recipe");
 
 
-        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "Basic Technology Imitation Magic Engraver Recipe");
-        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "Basic Technology Suspected Magic Condenser Recipe");
-        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "Basic Technology Virtual Sigil Processor Recipe");
-
-
-
-        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "Basic Technology Void World Coordinate Recording Machine Recipe");
+        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "Imitation Magic Engraver Recipe");
+        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "Suspected Magic Condenser Recipe");
+        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "Virtual Sigil Processor Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "Basic Performance Reality Phase Adjustment Machine Recipe");
+        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "Void World Coordinate Recording Machine Recipe");
+
+
+
+        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "Reality Phase Adjustment Machine Recipe");
 
         add("creativetab." + "degeneracycraft_materials", "Degeneracy Craft Materials");
         add("creativetab." + "degeneracycraft_machine_elements", "Degeneracy Craft Machine Elements");
@@ -1485,6 +1485,8 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft Ingots");
         add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft Multiblock Blocks");
         add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft Ores");
+
+        add("screen." + "degeneracycraft" + ".phase", "Phase");
 
         add("screen." + "degeneracycraft" + ".phase0", "Phase 0");
         add("screen." + "degeneracycraft" + ".phase1", "Phase 1");
@@ -1523,116 +1525,120 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("tooltip." + "degeneracycraft" + ".wrenchitem", "Show Wrench Detail by shift key");
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Show Material Detail by shift key");
 
-        add("tooltip." + "degeneracycraft." + "ipp." + "initial", "Industrial Progress Phase:Phase0");
-        add("tooltip." + "degeneracycraft." + "ipp." + "basic", "Industrial Progress Phase:Phase1");
-        add("tooltip." + "degeneracycraft." + "ipp." + "low", "Industrial Progress Phase:Phase2");
-        add("tooltip." + "degeneracycraft." + "ipp." + "medium", "Industrial Progress Phase:Phase3");
-        add("tooltip." + "degeneracycraft." + "ipp." + "high", "Industrial Progress Phase:Phase4");
-        add("tooltip." + "degeneracycraft." + "ipp." + "super", "Industrial Progress Phase:Phase5");
-        add("tooltip." + "degeneracycraft." + "ipp." + "Over", "Industrial Progress Phase:Phase6");
-        add("tooltip." + "degeneracycraft." + "ipp." + "ultra", "Industrial Progress Phase:Phase7");
-        add("tooltip." + "degeneracycraft." + "ipp." + "anti", "Industrial Progress Phase:Phase8");
-        add("tooltip." + "degeneracycraft." + "ipp." + "imaginary", "Industrial Progress Phase:Phase9");
-        add("tooltip." + "degeneracycraft." + "ipp." + "infinity", "Industrial Progress Phase:PhaseInf");
+        add("tooltip." + "degeneracycraft." + "ipp", "Phase");
+        add("initial", "Initial");
+        add("basic", "Basic");
+        add("low", "Low");
+        add("medium", "Medium");
+        add("high", "High");
+        add("super", "Super");
+        add("over", "Over");
+        add("ultra", "Ultra");
+        add("anti", "Anti");
+        add("imaginary", "Imaginary");
+        add("infinity", "Infinity");
 
         add("tooltip." + "degeneracycraft." + "multiblock_size.", "Multiblock Size");
-        add("Lv0:3×3×3", "Lv1:3×3×3 Blocks");
-        add("Lv1:3×3×3", "Lv1:3×3×3 Blocks");
-        add("Base:Power 16 FE/t", "Single Block:Power 16 FE/t");
-        add("Lv0:Power 32 FE/t", "Lv0 MultiBlock:Power 32 FE/t");
-        add("Lv1:Power 48 FE/t", "Lv1 MultiBlock:Power 48 FE/t");
-        add("Base:Speed ×1.00,Energy Usage ×1.00", "Single Block:Processing Speed ×1.00 Energy Usage ×1.00");
-        add("Lv0:Speed ×2.00,Energy Usage ×1.50", "Lv0 MultiBlock:Processing Speed ×2.00 Energy Usage ×1.50");
-        add("Lv1:Speed ×3.00,Energy Usage ×2.00", "Lv1 MultiBlock:Processing Speed ×3.00 Energy Usage ×2.00");
-
-        add("tooltip." + "degeneracycraft." + "science." + "astronomy", "Science:Astronomy");
-        add("tooltip." + "degeneracycraft." + "science." + "biology", "Science:Biology");
-        add("tooltip." + "degeneracycraft." + "science." + "chemistry", "Science:Chemistry");
-        add("tooltip." + "degeneracycraft." + "science." + "dynamic_energetics", "Science:Dynamic Energetics");
-        add("tooltip." + "degeneracycraft." + "science." + "engineering", "Science:Engineering");
-        add("tooltip." + "degeneracycraft." + "science." + "formal_science", "Science:Formal Science");
-        add("tooltip." + "degeneracycraft." + "science." + "geo_science", "Science:Geo Science");
-        add("tooltip." + "degeneracycraft." + "science." + "hybrid_physics", "Science:Hybrid Physics");
-        add("tooltip." + "degeneracycraft." + "science." + "imitation_magic_engineering", "Science:Imitation Magic Engineering");        add("tooltip." + "degeneracycraft." + "science." + "zenith_void_science", "Science:Zenith Void Science");
-        add("tooltip." + "degeneracycraft." + "science." + "jenith_void_science", "Science:Jenith Void Science");
-        add("tooltip." + "degeneracycraft." + "science." + "kaleidoscopic_reality_science", "Science:Kaleidoscopic Reality Science");
+        add("Lv0: 3×3×3", "Lv1: 3×3×3 Blocks");
+        add("Lv1: 3×3×3", "Lv1: 3×3×3 Blocks");
+        add("Base: Power 16 FE/t", "Single Block: Power 16 FE/t");
+        add("Lv0: Power 32 FE/t", "Lv0 MultiBlock: Power 32 FE/t");
+        add("Lv1: Power 48 FE/t", "Lv1 MultiBlock: Power 48 FE/t");
+        add("Base: Speed ×1.00,Energy Usage ×1.00", "Single Block: Processing Speed ×1.00 Energy Usage ×1.00");
+        add("Lv0: Speed ×2.00,Energy Usage ×1.50", "Lv0 MultiBlock: Processing Speed ×2.00 Energy Usage ×1.50");
+        add("Lv1: Speed ×3.00,Energy Usage ×2.00", "Lv1 MultiBlock: Processing Speed ×3.00 Energy Usage ×2.00");
 
 
-
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".name", "Element Name:Chlorine");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".number", "Atomic Number:17");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".weight", "Atomic Weight:35.45 g/mol");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".melting", "Melting Point:171.6 K");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".boiling", "Boiling Point:239.1 K");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".formula", "Chemical Formula:Cl");
-
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".name", "Element Name:Hydrogen");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".number", "Atomic Number:1");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".weight", "Atomic Weight:1.008 g/mol");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".melting", "Melting Point:14.01 K");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".boiling", "Boiling Point:20.28 K");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".formula", "Chemical Formula:H");
-
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".name", "Element Name:Oxygen");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".number", "Atomic Number:8");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".weight", "Atomic Weight:16.00 g/mol");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".melting", "Melting Point:54.8 K");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".boiling", "Boiling Point:90.2 K");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".formula", "Chemical Formula:O");
-
-        add("tooltip." + "degeneracycraft." + "gold" + ".name", "Element Name:Gold");
-        add("tooltip." + "degeneracycraft." + "gold" + ".number", "Atomic Number:79");
-        add("tooltip." + "degeneracycraft." + "gold" + ".weight", "Atomic Weight:199.97 g/mol");
-        add("tooltip." + "degeneracycraft." + "gold" + ".melting", "Melting Point:1337 K");
-        add("tooltip." + "degeneracycraft." + "gold" + ".boiling", "Boiling Point:3129 K");
-        add("tooltip." + "degeneracycraft." + "gold" + ".formula", "Chemical Formula:Au");
-
-        add("tooltip." + "degeneracycraft." + "iron" + ".name", "Element Name:Iron");
-        add("tooltip." + "degeneracycraft." + "iron" + ".number", "Atomic Number:26");
-        add("tooltip." + "degeneracycraft." + "iron" + ".weight", "Atomic Weight:55.85 g/mol");
-        add("tooltip." + "degeneracycraft." + "iron" + ".melting", "Melting Point:1811 K");
-        add("tooltip." + "degeneracycraft." + "iron" + ".boiling", "Boiling Point:3134 K");
-        add("tooltip." + "degeneracycraft." + "iron" + ".formula", "Chemical Formula:Fe");
-
-        add("tooltip." + "degeneracycraft." + "silicon" + ".name", "Element Name:Silicon");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".number", "Atomic Number:14");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".weight", "Atomic Weight:28.04 g/mol");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".melting", "Melting Point:1414 K");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".boiling", "Boiling Point:3265 K");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".formula", "Chemical Formula:Si");
-
-        add("tooltip." + "degeneracycraft." + "tin" + ".name", "Element Name:Tin");
-        add("tooltip." + "degeneracycraft." + "tin" + ".number", "Atomic Number:50");
-        add("tooltip." + "degeneracycraft." + "tin" + ".weight", "Atomic Weight:118.7 g/mol");
-        add("tooltip." + "degeneracycraft." + "tin" + ".melting", "Melting Point:505.8 K");
-        add("tooltip." + "degeneracycraft." + "tin" + ".boiling", "Boiling Point:2875 K");
-        add("tooltip." + "degeneracycraft." + "tin" + ".formula", "Chemical Formula:Sn");
+        add("tooltip." + "degeneracycraft." + "science", "science: ");
+        
+        add("astronomy", "Astronomy");
+        add("biology", "Biology");
+        add("chemistry", "Chemistry");
+        add("dynamic_energetics", "Dynamic Energetics");
+        add("engineering", "Engineering");
+        add("formal_science", "Formal Science");
+        add("geo_science", "Geo Science");
+        add("hybrid_physics", "Hybrid Physics");
+        add("imitation_magic_engineering", "Imitation Magic Engineering");       
+        add("jenith_void_science", "Jenith Void Science");
+        add("kaleidoscopic_reality_science", "Kaleidoscopic Reality Science");
 
 
-        add("tooltip." + "degeneracycraft." + "water" + ".formula", "Chemical Formula:H₂O");
 
-        add("tooltip." + "degeneracycraft." + "ammonia" + ".formula", "Chemical Formula:NH₃");
-        add("tooltip." + "degeneracycraft." + "ammonium_sulfate" + ".formula", "Chemical Formula:(NH₄)₂SO₄");
-        add("tooltip." + "degeneracycraft." + "ammonium_hydrogen_sulfate" + ".formula", "Chemical Formula:NH₄HSO₄");
-        add("tooltip." + "degeneracycraft." + "ferric_oxide" + ".formula", "Chemical Formula:Fe₂O₃");
-        add("tooltip." + "degeneracycraft." + "iron_disulfide" + ".formula", "Chemical Formula:FeS₂");
-        add("tooltip." + "degeneracycraft." + "hydrochloric_acid" + ".formula", "Chemical Formula:HCl");
-        add("tooltip." + "degeneracycraft." + "hydrogen_chloride" + ".formula", "Chemical Formula:HCl");
-        add("tooltip." + "degeneracycraft." + "hydrogen_peroxide" + ".formula", "Chemical Formula:H₂O₂");
-        add("tooltip." + "degeneracycraft." + "potassium_chloride" + ".formula", "Chemical Formula:KCl");
-        add("tooltip." + "degeneracycraft." + "potassium_nitrate" + ".formula", "Chemical Formula:KNO₃");
-        add("tooltip." + "degeneracycraft." + "sodium_chloride" + ".formula", "Chemical Formula:NaCl");
-        add("tooltip." + "degeneracycraft." + "sodium_nitrate" + ".formula", "Chemical Formula:NaNO₃");
-        add("tooltip." + "degeneracycraft." + "sulfur_dioxide" + ".formula", "Chemical Formula:SO₂");
-        add("tooltip." + "degeneracycraft." + "sulfuric_acid" + ".formula", "Chemical Formula:H₂SO₄");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".name", "Element Name: Chlorine");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".number", "Atomic Number: 17");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".weight", "Atomic Weight: 35.45 g/mol");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".melting", "Melting Point: 171.6 K");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".boiling", "Boiling Point: 239.1 K");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".formula", "Chemical Formula: Cl");
+
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".name", "Element Name: Hydrogen");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".number", "Atomic Number: 1");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".weight", "Atomic Weight: 1.008 g/mol");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".melting", "Melting Point: 14.01 K");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".boiling", "Boiling Point: 20.28 K");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".formula", "Chemical Formula: H");
+
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".name", "Element Name: Oxygen");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".number", "Atomic Number: 8");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".weight", "Atomic Weight: 16.00 g/mol");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".melting", "Melting Point: 54.8 K");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".boiling", "Boiling Point: 90.2 K");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".formula", "Chemical Formula: O");
+
+        add("tooltip." + "degeneracycraft." + "gold" + ".name", "Element Name: Gold");
+        add("tooltip." + "degeneracycraft." + "gold" + ".number", "Atomic Number: 79");
+        add("tooltip." + "degeneracycraft." + "gold" + ".weight", "Atomic Weight: 199.97 g/mol");
+        add("tooltip." + "degeneracycraft." + "gold" + ".melting", "Melting Point: 1337 K");
+        add("tooltip." + "degeneracycraft." + "gold" + ".boiling", "Boiling Point: 3129 K");
+        add("tooltip." + "degeneracycraft." + "gold" + ".formula", "Chemical Formula: Au");
+
+        add("tooltip." + "degeneracycraft." + "iron" + ".name", "Element Name: Iron");
+        add("tooltip." + "degeneracycraft." + "iron" + ".number", "Atomic Number: 26");
+        add("tooltip." + "degeneracycraft." + "iron" + ".weight", "Atomic Weight: 55.85 g/mol");
+        add("tooltip." + "degeneracycraft." + "iron" + ".melting", "Melting Point: 1811 K");
+        add("tooltip." + "degeneracycraft." + "iron" + ".boiling", "Boiling Point: 3134 K");
+        add("tooltip." + "degeneracycraft." + "iron" + ".formula", "Chemical Formula: Fe");
+
+        add("tooltip." + "degeneracycraft." + "silicon" + ".name", "Element Name: Silicon");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".number", "Atomic Number: 14");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".weight", "Atomic Weight: 28.04 g/mol");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".melting", "Melting Point: 1414 K");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".boiling", "Boiling Point: 3265 K");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".formula", "Chemical Formula: Si");
+
+        add("tooltip." + "degeneracycraft." + "tin" + ".name", "Element Name: Tin");
+        add("tooltip." + "degeneracycraft." + "tin" + ".number", "Atomic Number: 50");
+        add("tooltip." + "degeneracycraft." + "tin" + ".weight", "Atomic Weight: 118.7 g/mol");
+        add("tooltip." + "degeneracycraft." + "tin" + ".melting", "Melting Point: 505.8 K");
+        add("tooltip." + "degeneracycraft." + "tin" + ".boiling", "Boiling Point: 2875 K");
+        add("tooltip." + "degeneracycraft." + "tin" + ".formula", "Chemical Formula: Sn");
+
+
+        add("tooltip." + "degeneracycraft." + "water" + ".formula", "Chemical Formula: H₂O");
+
+        add("tooltip." + "degeneracycraft." + "ammonia" + ".formula", "Chemical Formula: NH₃");
+        add("tooltip." + "degeneracycraft." + "ammonium_sulfate" + ".formula", "Chemical Formula: (NH₄)₂SO₄");
+        add("tooltip." + "degeneracycraft." + "ammonium_hydrogen_sulfate" + ".formula", "Chemical Formula: NH₄HSO₄");
+        add("tooltip." + "degeneracycraft." + "ferric_oxide" + ".formula", "Chemical Formula: Fe₂O₃");
+        add("tooltip." + "degeneracycraft." + "iron_disulfide" + ".formula", "Chemical Formula: FeS₂");
+        add("tooltip." + "degeneracycraft." + "hydrochloric_acid" + ".formula", "Chemical Formula: HCl");
+        add("tooltip." + "degeneracycraft." + "hydrogen_chloride" + ".formula", "Chemical Formula: HCl");
+        add("tooltip." + "degeneracycraft." + "hydrogen_peroxide" + ".formula", "Chemical Formula: H₂O₂");
+        add("tooltip." + "degeneracycraft." + "potassium_chloride" + ".formula", "Chemical Formula: KCl");
+        add("tooltip." + "degeneracycraft." + "potassium_nitrate" + ".formula", "Chemical Formula: KNO₃");
+        add("tooltip." + "degeneracycraft." + "sodium_chloride" + ".formula", "Chemical Formula: NaCl");
+        add("tooltip." + "degeneracycraft." + "sodium_nitrate" + ".formula", "Chemical Formula: NaNO₃");
+        add("tooltip." + "degeneracycraft." + "sulfur_dioxide" + ".formula", "Chemical Formula: SO₂");
+        add("tooltip." + "degeneracycraft." + "sulfuric_acid" + ".formula", "Chemical Formula: H₂SO₄");
 
 
 
 
 
         add("tooltip." + "degeneracycraft" + ".structure" + ".off", "No Multiblock Structure");
-        add("tooltip." + "degeneracycraft" + ".structure" + ".on", "Multiblock Structure:Detected");
-        add("tooltip." + "degeneracycraft" + ".structure" + ".lv1", "Multiblock Structure:Lv1 Detected");
+        add("tooltip." + "degeneracycraft" + ".structure" + ".on", "Multiblock Structure: Detected");
+        add("tooltip." + "degeneracycraft" + ".structure" + ".lv1", "Multiblock Structure: Lv1 Detected");
         add("tooltip." + "degeneracycraft" + ".work", "Machine Working");
         add("tooltip." + "degeneracycraft" + ".stop", "Machine Stopping");
         add("tooltip." + "degeneracycraft" + ".power_modifier_1", "Power Modifier ×1.00");
@@ -1644,92 +1650,92 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("tooltip." + "degeneracycraft" + ".material" + ".chance" + "50", "50% chance of gaining");
         add("tooltip." + "degeneracycraft" + ".material" + ".chance" + "25", "25% chance of gaining");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy.", "Required Energy:");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage.", "Required Energy Usage:");
-        add("tooltip." + "degeneracycraft." + "requiredtime.", "Required time:");
+        add("tooltip." + "degeneracycraft." + "requiredenergy.", "Required Energy: ");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage.", "Required Energy Usage: ");
+        add("tooltip." + "degeneracycraft." + "requiredtime.", "Required time: ");
         add("tooltip." + "degeneracycraft." + "sec.", " Sec");
 
         add("tooltip." + "degeneracycraft." + "night.", "Work in Night");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bearing" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bearing" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bearing" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bearing" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bearing" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bearing" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bearing" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bearing" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bolt" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bolt" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bolt" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bolt" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bolt" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bolt" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bolt" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bolt" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_cam" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_cam" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_cam" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_cam" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_cam" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_cam" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_cam" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_cam" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_chain" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_chain" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_chain" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_chain" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_chain" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_chain" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_chain" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_chain" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_gear" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_gear" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_gear" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_gear" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_gear" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_gear" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_gear" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_gear" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_joint" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_joint" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_joint" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_joint" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_joint" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_joint" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_joint" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_joint" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_key" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_key" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_key" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_key" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_key" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_key" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_key" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_key" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_nut" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_nut" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_nut" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_nut" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_nut" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_nut" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_nut" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_nut" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipe" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipe" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipe" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipe" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipe" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipe" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipe" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipe" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipejoint" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipejoint" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipejoint" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipejoint" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipejoint" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipejoint" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipejoint" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipejoint" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_plate" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_plate" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_plate" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_plate" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_plate" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_plate" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_plate" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_plate" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_rod" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_rod" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_rod" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_rod" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_rod" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_rod" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_rod" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_rod" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaft" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaft" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaft" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaft" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaft" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaft" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaft" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaft" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaftcoupling" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaftcoupling" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaftcoupling" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaftcoupling" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaftcoupling" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaftcoupling" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaftcoupling" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaftcoupling" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shapesteel" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shapesteel" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shapesteel" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shapesteel" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shapesteel" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shapesteel" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shapesteel" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shapesteel" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_spring" + ".phase0", "Required Energy:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_spring" + ".phase0", "Required Energy Usage:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_spring" + ".phase0", "Required time:100 tick (5 sec)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_spring" + ".phase0", "Output Multiplication:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_spring" + ".phase0", "Required Energy: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_spring" + ".phase0", "Required Energy Usage: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_spring" + ".phase0", "Required time: 100 tick (5 sec)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_spring" + ".phase0", "Output Multiplication: ×1 ~ ×1");
 
 
 
@@ -1771,13 +1777,13 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("advancements." + "Awakening with \"The Fool\"" + ".description", "Make a Redstone Powered Machine Component Manufacture Machine");
 
         add("advancements." + "Call of Industry" + ".title", "Call of Industry");
-        add("advancements." + "Call of Industry" + ".description", "Make a Basic Power Steam Generator");
+        add("advancements." + "Call of Industry" + ".description", "Make a Steam Generator");
 
         add("advancements." + "Machine like \"The Magician\"" + ".title", "Machine like \"The Magician\"");
-        add("advancements." + "Machine like \"The Magician\"" + ".description", "Make a Basic Technology Machine Manufacturer");
+        add("advancements." + "Machine like \"The Magician\"" + ".description", "Make a Machine Manufacturer");
 
         add("advancements." + "Assemble! Assemble!" + ".title", "Assemble! Assemble!");
-        add("advancements." + "Assemble! Assemble!" + ".description", "Make a Basic Technology Universal Assembler");
+        add("advancements." + "Assemble! Assemble!" + ".description", "Make a Universal Assembler");
 
 
         add("degeneracycraft_introduction" + ".title", "DegeneracyCraftPedia");

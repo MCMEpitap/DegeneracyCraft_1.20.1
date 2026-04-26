@@ -695,22 +695,22 @@ public class DCLanguageProviderJA extends LanguageProvider {
 //        add(DCItems.INFINITY_CLASS_IRON_SPRING.get(),"無限等級 鉄のバネ");
 //
         //Machine Component Circuit Phase1
-//        add(DCItems.BASIC_PRECISION_BEARING_INSCRIBED_CIRCUIT.get(),"基本精度 軸受刻印回路");
-//        add(DCItems.BASIC_PRECISION_BOLT_INSCRIBED_CIRCUIT.get(),"基本精度 ボルト刻印回路");
-//        add(DCItems.BASIC_PRECISION_CAM_INSCRIBED_CIRCUIT.get(),"基本精度 カム刻印回路");
-//        add(DCItems.BASIC_PRECISION_CHAIN_INSCRIBED_CIRCUIT.get(),"基本精度 チェーン刻印回路");
-//        add(DCItems.BASIC_PRECISION_GEAR_INSCRIBED_CIRCUIT.get(),"基本精度 歯車刻印回路");
-//        add(DCItems.BASIC_PRECISION_JOINT_INSCRIBED_CIRCUIT.get(),"基本精度 継手刻印回路");
-//        add(DCItems.BASIC_PRECISION_KEY_INSCRIBED_CIRCUIT.get(),"基本精度 キー刻印回路");
-//        add(DCItems.BASIC_PRECISION_NUT_INSCRIBED_CIRCUIT.get(), "基本精度 ナット刻印回路");
-//        add(DCItems.BASIC_PRECISION_PIPE_INSCRIBED_CIRCUIT.get(), "基本精度 管刻印回路");
-//        add(DCItems.BASIC_PRECISION_PIPEJOINT_INSCRIBED_CIRCUIT.get(), "基本精度 管継手刻印回路");
-//        add(DCItems.BASIC_PRECISION_PLATE_INSCRIBED_CIRCUIT.get(), "基本精度 板刻印回路");
-//        add(DCItems.BASIC_PRECISION_ROD_INSCRIBED_CIRCUIT.get(), "基本精度 棒刻印回路");
-//        add(DCItems.BASIC_PRECISION_SHAFT_INSCRIBED_CIRCUIT.get(), "基本精度 軸刻印回路");
-//        add(DCItems.BASIC_PRECISION_SHAFTCOUPLING_INSCRIBED_CIRCUIT.get(), "基本精度 軸継手刻印回路");
-//        add(DCItems.BASIC_PRECISION_SHAPESTEEL_INSCRIBED_CIRCUIT.get(), "基本精度 型鋼刻印回路");
-//        add(DCItems.BASIC_PRECISION_SPRING_INSCRIBED_CIRCUIT.get(), "基本精度 バネ刻印回路");
+//        add(DCItems.BASIC_PRECISION_BEARING_INSCRIBED_CIRCUIT.get()," 軸受刻印回路");
+//        add(DCItems.BASIC_PRECISION_BOLT_INSCRIBED_CIRCUIT.get()," ボルト刻印回路");
+//        add(DCItems.BASIC_PRECISION_CAM_INSCRIBED_CIRCUIT.get()," カム刻印回路");
+//        add(DCItems.BASIC_PRECISION_CHAIN_INSCRIBED_CIRCUIT.get()," チェーン刻印回路");
+//        add(DCItems.BASIC_PRECISION_GEAR_INSCRIBED_CIRCUIT.get()," 歯車刻印回路");
+//        add(DCItems.BASIC_PRECISION_JOINT_INSCRIBED_CIRCUIT.get()," 継手刻印回路");
+//        add(DCItems.BASIC_PRECISION_KEY_INSCRIBED_CIRCUIT.get()," キー刻印回路");
+//        add(DCItems.BASIC_PRECISION_NUT_INSCRIBED_CIRCUIT.get(), " ナット刻印回路");
+//        add(DCItems.BASIC_PRECISION_PIPE_INSCRIBED_CIRCUIT.get(), " 管刻印回路");
+//        add(DCItems.BASIC_PRECISION_PIPEJOINT_INSCRIBED_CIRCUIT.get(), " 管継手刻印回路");
+//        add(DCItems.BASIC_PRECISION_PLATE_INSCRIBED_CIRCUIT.get(), " 板刻印回路");
+//        add(DCItems.BASIC_PRECISION_ROD_INSCRIBED_CIRCUIT.get(), " 棒刻印回路");
+//        add(DCItems.BASIC_PRECISION_SHAFT_INSCRIBED_CIRCUIT.get(), " 軸刻印回路");
+//        add(DCItems.BASIC_PRECISION_SHAFTCOUPLING_INSCRIBED_CIRCUIT.get(), " 軸継手刻印回路");
+//        add(DCItems.BASIC_PRECISION_SHAPESTEEL_INSCRIBED_CIRCUIT.get(), " 型鋼刻印回路");
+//        add(DCItems.BASIC_PRECISION_SPRING_INSCRIBED_CIRCUIT.get(), " バネ刻印回路");
 
         add(DCItems.CHLORINE_GAS.get(), "塩素ガス");
         add(DCItems.HYDROGEN_GAS.get(), "水素ガス");
@@ -732,7 +732,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add(DCItems.COMPRESSED_REDSTONE.get(), "圧縮レッドストーン");
 
         add(DCItems.MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "マルチブロック設備ホログラム投影機");
-        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "基本技術マルチブロック設備ホログラム投影機");
+        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "マルチブロック設備ホログラム投影機");
         add(DCItems.MACHINE_HALT_DEVICE.get(), "機械停止デバイス");
 
 
@@ -838,262 +838,262 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "ネザー錫石");
         add(DCBlocks.END_CASSITERITE_ORE.get(), "エンド錫石");
 
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度天文学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度天文学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度天文学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度天文学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度天文学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度天文学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度天文学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度天文学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度天文学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度天文学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度天文学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "天文学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "天文学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "天文学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "天文学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "天文学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "天文学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "天文学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "天文学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "天文学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "天文学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "天文学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "天文学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "天文学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "天文学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "天文学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "天文学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "天文学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "天文学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "天文学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "天文学用アイテム出力ポート(ホログラム)");
 
 
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度生物学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度生物学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度生物学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度生物学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度生物学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度生物学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度生物学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度生物学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度生物学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度生物学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度生物学マルチブロック用アイテム出力ポート(ホログラム)");
-
-
-
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度化学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度化学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度化学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度化学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度化学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度化学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度化学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度化学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度化学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度化学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度化学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度化学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度化学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度化学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度化学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度化学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度化学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度化学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度化学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度化学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "生物学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "生物学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "生物学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "生物学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "生物学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "生物学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "生物学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "生物学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "生物学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "生物学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "生物学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "生物学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "生物学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "生物学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "生物学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "生物学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "生物学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "生物学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "生物学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "生物学用アイテム出力ポート(ホログラム)");
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度動的エネルギー学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度動力変換学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度動力変換学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度動力変換学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度動力変換学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度動力変換学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度動力変換学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度動力変換学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度動力変換学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "化学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "化学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "化学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "化学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "化学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "化学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "化学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "化学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "化学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "化学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "化学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "化学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "化学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "化学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "化学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "化学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "化学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "化学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "化学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "化学用アイテム出力ポート(ホログラム)");
 
 
 
-
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度工学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度工学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度工学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度工学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度工学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度工学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度工学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度工学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度工学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度工学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度工学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度工学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度工学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度工学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度工学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度工学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度工学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度工学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度工学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度工学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "動的エネルギー学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "動的エネルギー学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "動的エネルギー学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "動的エネルギー学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "動的エネルギー学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "動的エネルギー学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "動的エネルギー学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "動的エネルギー学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "動的エネルギー学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "動的エネルギー学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "動的エネルギー学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "動的エネルギー学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "動力変換学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "動力変換学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "動力変換学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "動力変換学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "動力変換学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "動力変換学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "動力変換学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "動力変換学用アイテム出力ポート(ホログラム)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度形式科学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度形式科学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度形式科学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度形式科学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度形式科学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度形式科学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度形式科学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度形式科学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度形式科学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度形式科学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度形式科学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "工学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "工学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "工学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "工学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "工学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "工学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "工学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "工学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "工学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "工学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "工学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "工学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "工学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "工学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "工学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "工学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "工学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "工学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "工学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "工学用アイテム出力ポート(ホログラム)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度地学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度地学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度地学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度地学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度地学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度地学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度地学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度地学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度地学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度地学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度地学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度地学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度地学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度地学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度地学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度地学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度地学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度地学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度地学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度地学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "形式科学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "形式科学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "形式科学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "形式科学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "形式科学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "形式科学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "形式科学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "形式科学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "形式科学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "形式科学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "形式科学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "形式科学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "形式科学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "形式科学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "形式科学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "形式科学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "形式科学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "形式科学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "形式科学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "形式科学用アイテム出力ポート(ホログラム)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度複合物理学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度複合物理学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度複合物理学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度複合物理学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度複合物理学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度複合物理学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度複合物理学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度複合物理学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度複合物理学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度複合物理学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度複合物理学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "地学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "地学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "地学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "地学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "地学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "地学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "地学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "地学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "地学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "地学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "地学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "地学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "地学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "地学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "地学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "地学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "地学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "地学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "地学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "地学用アイテム出力ポート(ホログラム)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度模造魔導工学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度模造魔導工学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度模造魔導工学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度模造魔導工学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度模造魔導工学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度模造魔導工学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度模造魔導工学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度模造魔導工学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度模造魔導工学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度模造魔導工学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度模造魔導工学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "複合物理学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "複合物理学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "複合物理学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "複合物理学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "複合物理学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "複合物理学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "複合物理学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "複合物理学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "複合物理学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "複合物理学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "複合物理学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "複合物理学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "複合物理学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "複合物理学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "複合物理学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "複合物理学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "複合物理学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "複合物理学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "複合物理学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "複合物理学用アイテム出力ポート(ホログラム)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度極点虚界学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度極点虚界学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度極点虚界学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度極点虚界学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度極点虚界学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度極点虚界学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度極点虚界学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度極点虚界学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度極点虚界学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度極点虚界学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度極点虚界学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "模造魔導工学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "模造魔導工学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "模造魔導工学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "模造魔導工学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "模造魔導工学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "模造魔導工学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "模造魔導工学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "模造魔導工学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "模造魔導工学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "模造魔導工学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "模造魔導工学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "模造魔導工学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "模造魔導工学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "模造魔導工学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "模造魔導工学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "模造魔導工学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "模造魔導工学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "模造魔導工学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "模造魔導工学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "模造魔導工学用アイテム出力ポート(ホログラム)");
 
 
 
 
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基本強度多相現実学マルチブロック用基礎フレーム");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用基礎フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "基本強度多相現実学マルチブロック用機械フレーム");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用機械フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "基本強度多相現実学マルチブロック用構造フレーム");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用構造フレーム (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "基本強度多相現実学マルチブロック用ガラス");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用ガラス (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "基本強度多相現実学マルチブロック用エネルギーストレージ");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用エネルギーストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "基本強度多相現実学マルチブロック用アイテムストレージ");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用アイテムストレージ (ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "基本強度多相現実学マルチブロック用エネルギー入力バス");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用エネルギー入力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "基本強度多相現実学マルチブロック用エネルギー出力バス");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用エネルギー出力バス(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "基本強度多相現実学マルチブロック用アイテム入力ポート");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用アイテム入力ポート(ホログラム)");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "基本強度多相現実学マルチブロック用アイテム出力ポート");
-        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "基本強度多相現実学マルチブロック用アイテム出力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "極点虚界学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "極点虚界学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "極点虚界学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "極点虚界学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "極点虚界学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "極点虚界学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "極点虚界学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "極点虚界学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "極点虚界学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "極点虚界学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "極点虚界学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "極点虚界学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "極点虚界学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "極点虚界学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "極点虚界学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "極点虚界学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "極点虚界学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "極点虚界学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "極点虚界学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "極点虚界学用アイテム出力ポート(ホログラム)");
+
+
+
+
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "多相現実学用基礎フレーム");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "多相現実学用基礎フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "多相現実学用機械フレーム");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK.get(), "多相現実学用機械フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK.get(), "多相現実学用構造フレーム");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK.get(), "多相現実学用構造フレーム (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK.get(), "多相現実学用ガラス");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK.get(), "多相現実学用ガラス (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK.get(), "多相現実学用エネルギーストレージ");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_HOLO_BLOCK.get(), "多相現実学用エネルギーストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_BLOCK.get(), "多相現実学用アイテムストレージ");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_STORAGE_HOLO_BLOCK.get(), "多相現実学用アイテムストレージ (ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK.get(), "多相現実学用エネルギー入力バス");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK.get(), "多相現実学用エネルギー入力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK.get(), "多相現実学用エネルギー出力バス");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK.get(), "多相現実学用エネルギー出力バス(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK.get(), "多相現実学用アイテム入力ポート");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_INPUT_PORT_HOLO_BLOCK.get(), "多相現実学用アイテム入力ポート(ホログラム)");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_BLOCK.get(), "多相現実学用アイテム出力ポート");
+        add(DCBlocks.BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ITEM_OUTPUT_PORT_HOLO_BLOCK.get(), "多相現実学用アイテム出力ポート(ホログラム)");
 
 
 
@@ -1108,300 +1108,300 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add(DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get(), "基本エネルギーパイプ");
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get(), "基本性能天体望遠鏡");
+        add(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get(), "天体望遠鏡");
         add("tooltip." + "degeneracycraft." + "basic_performance_astronomical_telescope_block",
                 "基本的な天体望遠鏡. 星々の情報を記録する.");
-        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_BLOCK.get(), "基本精度対物レンズ");
+        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_BLOCK.get(), "対物レンズ");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_astronomical_telescope_block",
-                "基本性能天体望遠鏡用");
-        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_HOLO_BLOCK.get(), "基本精度対物レンズ (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_CIRCUIT.get(), "基本性能天体望遠鏡回路");
+                "天体望遠鏡用");
+        add(DCBlocks.BASIC_PRECISION_OBJECTIVE_LENS_HOLO_BLOCK.get(), "対物レンズ (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_CIRCUIT.get(), "天体望遠鏡回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get(), "基本性能微粒子吸着機");
+        add(DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get(), "微粒子吸着機");
         add("tooltip." + "degeneracycraft." + "basic_performance_fine_particle_adsorber_block",
                 "基本的な微粒子吸着機. 飛来する微粒子などを集め、アイテムとして使用する.");
-        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_BLOCK.get(), "基本効率微粒子蓄積槽");
+        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_BLOCK.get(), "微粒子蓄積槽");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_fine_particle_adsorber_block",
-                "基本性能微粒子吸着機用");
-        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_HOLO_BLOCK.get(), "基本効率微粒子蓄積槽 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_CIRCUIT.get(), "基本性能微粒子吸着機回路");
+                "微粒子吸着機用");
+        add(DCBlocks.BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_HOLO_BLOCK.get(), "微粒子蓄積槽 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_CIRCUIT.get(), "微粒子吸着機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK.get(), "基本性能星光収集機");
+        add(DCBlocks.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK.get(), "星光収集機");
         add("tooltip." + "degeneracycraft." + "basic_performance_starlight_collector_block",
                 "基本的な星光収集機. 恒星の光を集め、素材加工に利用する.");
-        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_BLOCK.get(), "基本効率微光受光台");
+        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_BLOCK.get(), "微光受光台");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_starlight_collector_block",
-                "基本性能星光収集機用");
-        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_HOLO_BLOCK.get(), "基本効率微光受光台 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_CIRCUIT.get(), "基本性能星光収集機回路");
+                "星光収集機用");
+        add(DCBlocks.BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_HOLO_BLOCK.get(), "微光受光台 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_CIRCUIT.get(), "星光収集機回路");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_BIO_REACTOR_BLOCK.get(), "基本性能生体反応機");
+        add(DCBlocks.BASIC_PERFORMANCE_BIO_REACTOR_BLOCK.get(), "生体反応機");
         add("tooltip." + "degeneracycraft." + "basic_performance_bio_reactor_block",
                 "基本的な生体反応機. 生物の力で物質を生成する.");
-        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_BLOCK.get(), "基本速度栽培温室");
+        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_BLOCK.get(), "栽培温室");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_bio_reactor_block",
-                "基本性能生体反応機");
-        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_HOLO_BLOCK.get(), "基本速度栽培温室 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_BIO_REACTOR_CIRCUIT.get(), "基本性能生体反応機回路");
+                "生体反応機");
+        add(DCBlocks.BASIC_SPEED_CULTIVATION_GREENHOUSE_HOLO_BLOCK.get(), "栽培温室 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_BIO_REACTOR_CIRCUIT.get(), "生体反応機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_CELL_INCUBATOR_BLOCK.get(), "基本性能細胞培養機");
+        add(DCBlocks.BASIC_PERFORMANCE_CELL_INCUBATOR_BLOCK.get(), "細胞培養機");
         add("tooltip." + "degeneracycraft." + "basic_performance_cell_incubator_block",
                 "基本的な細胞培養機. 細胞を活性化させ活用する.");
-        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_BLOCK.get(), "基本耐久培養コンテナ");
+        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_BLOCK.get(), "培養コンテナ");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_cell_incubator_block",
-                "基本性能細胞培養機用");
-        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_HOLO_BLOCK.get(), "基本耐久培養コンテナ (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_CELL_INCUBATOR_CIRCUIT.get(), "基本性能細胞培養機回路");
+                "細胞培養機用");
+        add(DCBlocks.BASIC_DURABILITY_INCUBATION_CONTAINER_HOLO_BLOCK.get(), "培養コンテナ (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_CELL_INCUBATOR_CIRCUIT.get(), "細胞培養機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_CROP_CULTIVATOR_BLOCK.get(), "基本性能作物育成機");
+        add(DCBlocks.BASIC_PERFORMANCE_CROP_CULTIVATOR_BLOCK.get(), "作物育成機");
         add("tooltip." + "degeneracycraft." + "basic_performance_crop_incubator_block",
                 "基本的な作物育成機. 作物を育成し収穫や生産を行う.");
-        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_BLOCK.get(), "基本性能生育安定器");
+        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_BLOCK.get(), "生育安定器");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_crop_incubator_block",
-                "基本性能作物育成機用");
-        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_HOLO_BLOCK.get(), "基本性能生育安定器 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_CROP_CULTIVATOR_CIRCUIT.get(), "基本性能作物育成機回路");
+                "作物育成機用");
+        add(DCBlocks.BASIC_EFFICIENCY_GROWTH_STABILIZER_HOLO_BLOCK.get(), "生育安定器 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_CROP_CULTIVATOR_CIRCUIT.get(), "作物育成機回路");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_CHEMICAL_REACTOR_BLOCK.get(), "基本性能化学反応機");
+        add(DCBlocks.BASIC_PERFORMANCE_CHEMICAL_REACTOR_BLOCK.get(), "化学反応機");
         add("tooltip." + "degeneracycraft." + "basic_performance_chemical_reactor_block",
                 "基本的な化学反応機. 化学反応を起こし新たな物質を作り出す.");
-        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_BLOCK.get(), "基本割合化合物混成システム");
+        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_BLOCK.get(), "化合物混成システム");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_chemical_reactor_block",
-                "基本性能化学反応機用");
-        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_HOLO_BLOCK.get(), "基本割合化合物混成システム (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_CHEMICAL_REACTOR_CIRCUIT.get(), "基本性能化学反応機回路");
+                "化学反応機用");
+        add(DCBlocks.BASIC_RATE_COMPOUND_AGITATION_SYSTEM_HOLO_BLOCK.get(), "化合物混成システム (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_CHEMICAL_REACTOR_CIRCUIT.get(), "化学反応機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_COMPOUND_PURIFIER_BLOCK.get(), "基本性能化合物精製機");
+        add(DCBlocks.BASIC_PERFORMANCE_COMPOUND_PURIFIER_BLOCK.get(), "化合物精製機");
         add("tooltip." + "degeneracycraft." + "basic_performance_compound_purifier_block",
                 "基本的な化合物精製機. 鉱石のインゴットを化学反応用に精製する.");
-        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_BLOCK.get(), "基本耐用高速化学反応室");
+        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_BLOCK.get(), "高速化学反応室");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_compound_purifier_block",
-                "基本性能化合物精製機用");
-        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_HOLO_BLOCK.get(), "基本耐用高速化学反応室 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_COMPOUND_PURIFIER_CIRCUIT.get(), "基本性能化合物精製機回路");
+                "化合物精製機用");
+        add(DCBlocks.BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_HOLO_BLOCK.get(), "高速化学反応室 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_COMPOUND_PURIFIER_CIRCUIT.get(), "化合物精製機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_ELECTROLYSER_BLOCK.get(), "基本性能電解槽");
+        add(DCBlocks.BASIC_PERFORMANCE_ELECTROLYSER_BLOCK.get(), "電解槽");
         add("tooltip." + "degeneracycraft." + "basic_performance_electrolyser_block",
                 "基本的な電解槽. 電気分解によって物質を反応させる.");
-        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_BLOCK.get(), "基本耐用拡張電解セル");
+        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_BLOCK.get(), "拡張電解セル");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_electrolyser_block",
-                "基本性能電解槽用");
-        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_HOLO_BLOCK.get(), "基本耐用拡張電解セル (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_ELECTROLYSER_CIRCUIT.get(), "基本性能電解槽回路");
+                "電解槽用");
+        add(DCBlocks.BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_HOLO_BLOCK.get(), "拡張電解セル (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_ELECTROLYSER_CIRCUIT.get(), "電解槽回路");
 
 
 
-        add(DCBlocks.BASIC_POWER_STEAM_GENERATOR_BLOCK.get(), "基本出力蒸気発電機");
+        add(DCBlocks.BASIC_POWER_STEAM_GENERATOR_BLOCK.get(), "蒸気発電機");
         add("tooltip." + "degeneracycraft." + "basic_power_steam_generator_block",
                 "基本的な蒸気発電機. 物質を燃やした時の蒸気で発電する.");
-        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_BLOCK.get(), "基本耐久高温燃焼室");
+        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_BLOCK.get(), "高温燃焼室");
         add("tooltip." + "degeneracycraft.ability" + "basic_power_steam_generator_block",
-                "基本出力蒸気発電機用");
-        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_HOLO_BLOCK.get(), "基本耐久高温燃焼室 (ホログラム)");
-        add(DCItems.BASIC_POWER_STEAM_GENERATOR_CIRCUIT.get(), "基本出力蒸気発電機回路");
+                "蒸気発電機用");
+        add(DCBlocks.BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_HOLO_BLOCK.get(), "高温燃焼室 (ホログラム)");
+        add(DCItems.BASIC_POWER_STEAM_GENERATOR_CIRCUIT.get(), "蒸気発電機回路");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_BLOCK.get(), "基本技術圧縮凝縮機");
+        add(DCBlocks.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_BLOCK.get(), "圧縮凝縮機");
         add("tooltip." + "degeneracycraft." + "basic_technology_compression_condenser_block",
                 "基本的な圧縮凝縮機. エネルギーを圧縮に用いる機械.");
-        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_BLOCK.get(), "基本圧力圧縮補助装置");
+        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_BLOCK.get(), "圧縮補助装置");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_compression_condenser_block",
-                "基本技術圧縮凝縮機用");
-        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "基本圧力圧縮補助装置 (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_CIRCUIT.get(), "基本技術圧縮凝縮機回路");
+                "圧縮凝縮機用");
+        add(DCBlocks.BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "圧縮補助装置 (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_CIRCUIT.get(), "圧縮凝縮機回路");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_BLOCK.get(), "基本技術電磁誘導機");
+        add(DCBlocks.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_BLOCK.get(), "電磁誘導機");
         add("tooltip." + "degeneracycraft." + "basic_technology_electromagnetic_inductor_block",
                 "基本的な電磁誘導機. 電力を磁力に変換し、加工に用いる.");
-        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_BLOCK.get(), "基本耐用断熱室");
+        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_BLOCK.get(), "断熱室");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_electromagnetic_inductor_block",
-                "基本技術電磁誘導機用");
-        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_HOLO_BLOCK.get(), "基本耐用断熱室 (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_CIRCUIT.get(), "基本技術電磁誘導機回路");
+                "電磁誘導機用");
+        add(DCBlocks.BASIC_DURABLE_INSULATED_CHAMBER_HOLO_BLOCK.get(), "断熱室 (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_CIRCUIT.get(), "電磁誘導機回路");
 
 
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_BLOCK.get(), "基本技術機械製造機");
+        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_BLOCK.get(), "機械製造機");
         add("tooltip." + "degeneracycraft." + "basic_technology_machine_manufacturer_block",
                 "基本的な機械製造機. これがないとより複雑な機械を作れない.");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_BLOCK.get(), "基本効率機械加工室");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_BLOCK.get(), "機械加工室");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_machine_manufacturer_block",
-                "基本技術機械製造機用");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "基本効率機械加工室 (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_CIRCUIT.get(), "基本技術機械製造機回路");
+                "機械製造機用");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "機械加工室 (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_CIRCUIT.get(), "機械製造機回路");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_BLOCK.get(), "基本技術機械要素加工機");
+        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_BLOCK.get(), "機械要素加工機");
         add("tooltip." + "degeneracycraft." + "basic_technology_machine_element_processor_block",
                 "基本的な機械要素加工機. より加工難度の高い金属を加工する.");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_BLOCK.get(), "基本効率機械要素加工室");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_BLOCK.get(), "機械要素加工室");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_machine_element_processor_block",
-                "基本技術機械要素加工機用");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "基本効率機械要素加工室 (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_CIRCUIT.get(), "基本技術機械要素加工機回路");
+                "機械要素加工機用");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "機械要素加工室 (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_MACHINE_ELEMENT_PROCESSOR_CIRCUIT.get(), "機械要素加工機回路");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_BLOCK.get(), "基本技術機械部品加工機");
+        add(DCBlocks.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_BLOCK.get(), "機械部品加工機");
         add("tooltip." + "degeneracycraft." + "basic_technology_machine_part_processor_block",
                 "基本的な機械要素加工機. より加工難度の高い部品を加工する.");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_BLOCK.get(), "基本効率機械部品加工室");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_BLOCK.get(), "機械部品加工室");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_machine_part_processor_block",
-                "基本技術機械部品加工機用");
-        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "基本効率機械部品加工室 (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_CIRCUIT.get(), "基本技術機械部品加工機回路");
+                "機械部品加工機用");
+        add(DCBlocks.BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_HOLO_BLOCK.get(), "機械部品加工室 (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_MACHINE_PART_PROCESSOR_CIRCUIT.get(), "機械部品加工機回路");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK.get(), "基本技術マルチブロック設備製作機");
+        add(DCBlocks.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK.get(), "マルチブロック設備製作機");
         add("tooltip." + "degeneracycraft." + "basic_technology_multiblock_equipment_fabricator_block",
                 "基本的なマルチブロック設備製作機. 設備ブロックの製作がメイン.");
-        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_BLOCK.get(), "基本効率設備生産補助システム");
+        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_BLOCK.get(), "設備生産補助システム");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_multiblock_equipment_fabricator_block",
-                "基本技術マルチブロック設備製作機用");
-        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_HOLO_BLOCK.get(), "基本効率設備生産補助システム (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_CIRCUIT.get(), "基本技術マルチブロック設備製作機回路");
+                "マルチブロック設備製作機用");
+        add(DCBlocks.BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_HOLO_BLOCK.get(), "設備生産補助システム (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_CIRCUIT.get(), "マルチブロック設備製作機回路");
 
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_CIRCUIT_BUILDER_BLOCK.get(), "基本性能回路構築機");
+        add(DCBlocks.BASIC_PERFORMANCE_CIRCUIT_BUILDER_BLOCK.get(), "回路構築機");
         add("tooltip." + "degeneracycraft." + "basic_performance_circuit_builder_block",
                 "基本的な回路構築機. 回路やその部品を製作する機械.");
-        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_BLOCK.get(), "基本清浄度回路防塵室");
+        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_BLOCK.get(), "回路防塵室");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_circuit_builder_block",
-                "基本性能回路構築機");
-        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_HOLO_BLOCK.get(), "基本清浄度回路防塵室 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_CIRCUIT_BUILDER_CIRCUIT.get(), "基本性能回路構築機回路");
+                "回路構築機");
+        add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_HOLO_BLOCK.get(), "回路防塵室 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_CIRCUIT_BUILDER_CIRCUIT.get(), "回路構築機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_BLOCK.get(), "基本性能機械データインストーラー");
+        add(DCBlocks.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_BLOCK.get(), "機械データインストーラー");
         add("tooltip." + "degeneracycraft." + "basic_performance_machine_data_installer_block",
                 "基本的な機械データインストーラー. 機械のデータを記憶回路にインストールする機械.");
-        add(DCBlocks.BASIC_SPEED_DATA_READER_BLOCK.get(), "基本速度データ読込機");
+        add(DCBlocks.BASIC_SPEED_DATA_READER_BLOCK.get(), "データ読込機");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_machine_data_installer_block",
-                "基本性能機械データインストーラー用");
-        add(DCBlocks.BASIC_SPEED_DATA_READER_HOLO_BLOCK.get(), "基本速度データ読込機 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_CIRCUIT.get(), "基本性能機械データインストーラー回路");
+                "機械データインストーラー用");
+        add(DCBlocks.BASIC_SPEED_DATA_READER_HOLO_BLOCK.get(), "データ読込機 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_CIRCUIT.get(), "機械データインストーラー回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_BLOCK.get(), "基本性能指定データ注入機");
+        add(DCBlocks.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_BLOCK.get(), "指定データ注入機");
         add("tooltip." + "degeneracycraft." + "basic_performance_designated_data_injector_block",
                 "基本的な指定データ注入機. 特定の用途に使用するためのデータチップを作成する.");
-        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_BLOCK.get(), "基本速度計算補助書込装置");
+        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_BLOCK.get(), "計算補助書込装置");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_designated_data_injector_block",
-                "基本性能指定データ注入機用");
-        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_HOLO_BLOCK.get(), "基本速度計算補助書込装置 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_CIRCUIT.get(), "基本性能指定データ注入機回路");
+                "指定データ注入機用");
+        add(DCBlocks.BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_HOLO_BLOCK.get(), "計算補助書込装置 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_CIRCUIT.get(), "指定データ注入機回路");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_ORE_SORTER_BLOCK.get(), "基本性能鉱石選別機");
+        add(DCBlocks.BASIC_PERFORMANCE_ORE_SORTER_BLOCK.get(), "鉱石選別機");
         add("tooltip." + "degeneracycraft." + "basic_performance_ore_sorter_block",
                 "基本的な鉱石選別機. 鉱石を選別し複数の産出物を得る.");
-        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_BLOCK.get(), "基本効率鉱石選別フィルター");
+        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_BLOCK.get(), "鉱石選別フィルター");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_ore_sorter_block",
-                "基本性能鉱石選別機用");
-        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_HOLO_BLOCK.get(), "基本効率鉱石選別フィルター (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_ORE_SORTER_CIRCUIT.get(), "基本性能鉱石選別機回路");
+                "鉱石選別機用");
+        add(DCBlocks.BASIC_EFFICIENCY_ORE_SORTING_FILTER_HOLO_BLOCK.get(), "鉱石選別フィルター (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_ORE_SORTER_CIRCUIT.get(), "鉱石選別機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_ROCK_CRASHER_BLOCK.get(), "基本性能岩石破砕機");
+        add(DCBlocks.BASIC_PERFORMANCE_ROCK_CRASHER_BLOCK.get(), "岩石破砕機");
         add("tooltip." + "degeneracycraft." + "basic_performance_rock_crasher_block",
                 "基本的な岩石破砕機. 石の有効活用を.");
         add(DCBlocks.BASIC_CRASHING_BASE_BLOCK.get(), "基本破砕ベース");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_rock_crasher_block",
-                "基本性能岩石破砕機用");
+                "岩石破砕機用");
         add(DCBlocks.BASIC_CRASHING_BASE_HOLO_BLOCK.get(), "基本破砕ベース (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_ROCK_CRASHER_CIRCUIT.get(), "基本性能岩石破砕機回路");
+        add(DCItems.BASIC_PERFORMANCE_ROCK_CRASHER_CIRCUIT.get(), "岩石破砕機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_SOIL_PURIFIER_BLOCK.get(), "基本性能土壌精製機");
+        add(DCBlocks.BASIC_PERFORMANCE_SOIL_PURIFIER_BLOCK.get(), "土壌精製機");
         add("tooltip." + "degeneracycraft." + "basic_performance_soil_purifier_block",
                 "基本的な土壌精製機. 土壌以外にも利用することも可能.");
-        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_BLOCK.get(), "基本効率粒子混合室");
+        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_BLOCK.get(), "粒子混合室");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_soil_purifier_block",
-                "基本性能土壌精製機用");
-        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_HOLO_BLOCK.get(), "基本効率粒子混合室 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_SOIL_PURIFIER_CIRCUIT.get(), "基本性能土壌精製機回路");
+                "土壌精製機用");
+        add(DCBlocks.BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_HOLO_BLOCK.get(), "粒子混合室 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_SOIL_PURIFIER_CIRCUIT.get(), "土壌精製機回路");
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_BLOCK.get(), "基本性能電気アーク炉");
+        add(DCBlocks.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_BLOCK.get(), "電気アーク炉");
         add("tooltip." + "degeneracycraft." + "basic_performance_electric_arc_furnace_block",
                 "基本的なアーク炉. 高温で反応させるため、放電を用いる機械.");
-        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_BLOCK.get(), "基本流量冷却機構");
+        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_BLOCK.get(), "冷却機構");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_electric_arc_furnace_block",
-                "基本性能電気アーク炉用");
-        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_HOLO_BLOCK.get(), "基本流量冷却機構 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_CIRCUIT.get(), "基本性能電気アーク炉回路");
+                "電気アーク炉用");
+        add(DCBlocks.BASIC_FLOW_COOLING_SYSTEM_HOLO_BLOCK.get(), "冷却機構 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_CIRCUIT.get(), "電気アーク炉回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_FORMING_MACHINE_BLOCK.get(), "基本性能形成機");
+        add(DCBlocks.BASIC_PERFORMANCE_FORMING_MACHINE_BLOCK.get(), "形成機");
         add("tooltip." + "degeneracycraft." + "basic_performance_forming_machine_block",
                 "基本的な形成機. 圧力により物質を形状変化させる.");
-        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_BLOCK.get(), "基本性能押出補助装置");
+        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_BLOCK.get(), "押出補助装置");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_forming_machine_block",
-                "基本性能形成機用");
-        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "基本性能押出補助装置 (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_FORMING_MACHINE_CIRCUIT.get(), "基本性能形成機回路");
+                "形成機用");
+        add(DCBlocks.BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_HOLO_BLOCK.get(), "押出補助装置 (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_FORMING_MACHINE_CIRCUIT.get(), "形成機回路");
 
-        add(DCBlocks.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_BLOCK.get(), "基本性能物質分離機");
+        add(DCBlocks.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_BLOCK.get(), "物質分離機");
         add("tooltip." + "degeneracycraft." + "basic_performance_material_separator_block",
                 "基本的な物質分離機. 混合物を分離しアイテムを得る.");
-        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_BLOCK.get(), "基本耐久振動制御ベース");
+        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_BLOCK.get(), "振動制御ベース");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_material_separator_block",
-                "基本性能物質分離機用");
-        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_HOLO_BLOCK.get(), "基本耐久振動制御ベース (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_CIRCUIT.get(), "基本性能物質分離機回路");
+                "物質分離機用");
+        add(DCBlocks.BASIC_DURABILITY_VIBRATION_CONTROL_BASE_HOLO_BLOCK.get(), "振動制御ベース (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_MATERIAL_SEPARATOR_CIRCUIT.get(), "物質分離機回路");
 
 
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_BLOCK.get(), "基本技術模造魔導刻印機");
+        add(DCBlocks.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_BLOCK.get(), "模造魔導刻印機");
         add("tooltip." + "degeneracycraft." + "basic_technology_imitation_magic_engraver_block",
                 "基本的な模造魔導刻印機. 形而的な魔導回路を刻印する.");
-        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_BLOCK.get(), "基本出力神秘光学投影装置");
+        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_BLOCK.get(), "神秘光学投影装置");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_imitation_magic_engraver_block",
-                "基本技術模造魔導刻印機用");
-        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_HOLO_BLOCK.get(), "基本出力神秘光学投影装置 (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_CIRCUIT.get(), "基本技術模造魔導刻印機回路");
+                "模造魔導刻印機用");
+        add(DCBlocks.BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_HOLO_BLOCK.get(), "神秘光学投影装置 (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_IMITATION_MAGIC_ENGRAVER_CIRCUIT.get(), "模造魔導刻印機回路");
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_BLOCK.get(), "基本技術疑似魔力凝集機");
+        add(DCBlocks.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_BLOCK.get(), "疑似魔力凝集機");
         add("tooltip." + "degeneracycraft." + "basic_technology_suspected_magic_condenser_block",
                 "基本的な疑似魔力凝集機. アイテムから疑似的な魔力を抽出する.");
-        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_BLOCK.get(), "基本効率封印抽出ケース");
+        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_BLOCK.get(), "封印抽出ケース");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_suspected_magic_condenser_block",
-                "基本技術疑似魔力凝集機用");
-        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_HOLO_BLOCK.get(), "基本効率封印抽出ケース (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_CIRCUIT.get(), "基本技術疑似魔力凝集機回路");
+                "疑似魔力凝集機用");
+        add(DCBlocks.BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_HOLO_BLOCK.get(), "封印抽出ケース (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_SUSPECTED_MAGIC_CONDENSER_CIRCUIT.get(), "疑似魔力凝集機回路");
 
-        add(DCBlocks.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_BLOCK.get(), "基本技術仮想印章加工機");
+        add(DCBlocks.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_BLOCK.get(), "仮想印章加工機");
         add("tooltip." + "degeneracycraft." + "basic_technology_virtual_sigil_processor_block",
                 "基本的な仮想印章加工機. 仮想的な印章を物質に刻む.");
-        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_BLOCK.get(), "基本速度紋様転写システム");
+        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_BLOCK.get(), "紋様転写システム");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_virtual_sigil_processor_block",
-                "基本技術仮想印章加工機用");
-        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_HOLO_BLOCK.get(), "基本速度紋様転写システム (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_CIRCUIT.get(), "基本技術仮想印章加工機回路");
+                "仮想印章加工機用");
+        add(DCBlocks.BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_HOLO_BLOCK.get(), "紋様転写システム (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_CIRCUIT.get(), "仮想印章加工機回路");
 
 
 
-        add(DCBlocks.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_BLOCK.get(), "基本技術虚界座標記録機");
+        add(DCBlocks.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_BLOCK.get(), "虚界座標記録機");
         add("tooltip." + "degeneracycraft." + "basic_technology_void_world_coordinate_recording_machine_block",
                 "基本的な虚界座標記録機. 異なる軸に座標を刻み込み、利用する機械.");
-        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_BLOCK.get(), "基本効率虚空干渉フレーム");
+        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_BLOCK.get(), "虚空干渉フレーム");
         add("tooltip." + "degeneracycraft.ability" + "basic_technology_void_world_coordinate_recording_machine_block",
-                "基本技術虚界座標記録機用");
-        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_HOLO_BLOCK.get(), "基本効率虚空干渉フレーム (ホログラム)");
-        add(DCItems.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_CIRCUIT.get(), "基本技術虚界座標記録機回路");
+                "虚界座標記録機用");
+        add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_HOLO_BLOCK.get(), "虚空干渉フレーム (ホログラム)");
+        add(DCItems.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_CIRCUIT.get(), "虚界座標記録機回路");
 
 
 
 
-        add(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get(), "基本性能現実位相調整機");
+        add(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get(), "現実位相調整機");
         add("tooltip." + "degeneracycraft." + "basic_performance_reality_phase_adjustment_machine_block",
                 "基本的な現実位相調整機. 並列的な処理をアイテムに組み込み、改変を行う.");
-        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get(), "基本効率位相安定フレーム");
+        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get(), "位相安定フレーム");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_reality_phase_adjustment_machine_block",
-                "基本性能現実位相調整機用");
-        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_HOLO_BLOCK.get(), "基本効率位相安定フレーム (ホログラム)");
-        add(DCItems.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_CIRCUIT.get(), "基本性能現実位相調整機回路");
+                "現実位相調整機用");
+        add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_HOLO_BLOCK.get(), "位相安定フレーム (ホログラム)");
+        add(DCItems.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_CIRCUIT.get(), "現実位相調整機回路");
 
 
 //        add(DCUniqueBlocks.SIMPLE_TELESCOPE_RIGHT_PILLAR.get(), "簡易望遠鏡右支柱");
@@ -1414,63 +1414,63 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("jei." + "degeneracycraft_redstone_powered_machine_part_manufacture_machine", "レッドストーン動力機械部品製作機 レシピ");
 
 
-        add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "基本性能天体望遠鏡 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "基本性能微粒子吸着機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "基本性能星光収集機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "天体望遠鏡 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "微粒子吸着機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "星光収集機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_bio_reactor", "基本性能生体反応機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_cell_incubator", "基本性能細胞培養機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_crop_cultivator", "基本性能作物育成機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_bio_reactor", "生体反応機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_cell_incubator", "細胞培養機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_crop_cultivator", "作物育成機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_chemical_reactor", "基本性能化学反応機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_electrolyser", "基本性能電解槽 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_compound_purifier", "基本性能化合物精製機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_chemical_reactor", "化学反応機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_electrolyser", "電解槽 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_compound_purifier", "化合物精製機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_compression_condenser", "基本技術圧縮凝縮機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_electromagnetic_inductor", "基本技術電磁誘導機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_compression_condenser", "圧縮凝縮機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_electromagnetic_inductor", "電磁誘導機 レシピ");
 
 
-        add("jei." + "degeneracycraft_basic_technology_machine_manufacturer", "基本技術機械製造機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_machine_element_processor", "基本技術機械要素加工機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_universal_assembler", "基本技術万能加工機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_machine_part_processor", "基本技術機械部品加工機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_multiblock_equipment_fabricator", "基本技術マルチブロック設備製作機 レシピ");
-
-
-
-        add("jei." + "degeneracycraft_basic_performance_circuit_builder", "基本性能回路構築機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_machine_data_installer", "基本性能機械データインストーラー レシピ");
-        add("jei." + "degeneracycraft_basic_performance_designated_data_injector", "基本性能指定データ注入機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_machine_manufacturer", "機械製造機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_machine_element_processor", "機械要素加工機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_universal_assembler", "万能加工機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_machine_part_processor", "機械部品加工機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_multiblock_equipment_fabricator", "マルチブロック設備製作機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_ore_sorter", "基本性能鉱石選別機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_rock_crasher", "基本性能岩石破砕機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_soil_purifier", "基本性能土壌精製機 レシピ");
-
-
-        add("jei." + "degeneracycraft_basic_performance_electric_arc_furnace", "基本性能電気アーク炉 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_forming_machine", "基本性能形成機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_material_separator", "基本性能物質分離機 レシピ");
-
-
-        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "基本技術模造魔導刻印機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "基本技術疑似魔力凝集機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "基本技術仮想印章加工機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_circuit_builder", "回路構築機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_machine_data_installer", "機械データインストーラー レシピ");
+        add("jei." + "degeneracycraft_basic_performance_designated_data_injector", "指定データ注入機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "基本性能虚界座標記録機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_ore_sorter", "鉱石選別機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_rock_crasher", "岩石破砕機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_soil_purifier", "土壌精製機 レシピ");
+
+
+        add("jei." + "degeneracycraft_basic_performance_electric_arc_furnace", "電気アーク炉 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_forming_machine", "形成機 レシピ");
+        add("jei." + "degeneracycraft_basic_performance_material_separator", "物質分離機 レシピ");
+
+
+        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "模造魔導刻印機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "疑似魔力凝集機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "仮想印章加工機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "基本性能現実位相調整機 レシピ");
+        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "虚界座標記録機 レシピ");
+
+
+
+        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "現実位相調整機 レシピ");
 
 
 
@@ -1483,6 +1483,9 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft インゴット");
         add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft マルチブロック設備ブロック");
         add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft 鉱石");
+
+
+        add("screen." + "degeneracycraft" + ".phase", "Phase");
 
         add("screen." + "degeneracycraft" + ".phase0", "Phase 0");
         add("screen." + "degeneracycraft" + ".phase1", "Phase 1");
@@ -1522,199 +1525,202 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("tooltip." + "degeneracycraft" + ".wrenchitem", "Shiftキーでレンチ詳細展開");
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Shiftキーで物質詳細展開");
 
-        add("tooltip." + "degeneracycraft." + "ipp." + "initial", "工業進展段階:Phase0");
-        add("tooltip." + "degeneracycraft." + "ipp." + "basic", "工業進展段階:Phase1");
-        add("tooltip." + "degeneracycraft." + "ipp." + "low", "工業進展段階:Phase2");
-        add("tooltip." + "degeneracycraft." + "ipp." + "medium", "工業進展段階:Phase3");
-        add("tooltip." + "degeneracycraft." + "ipp." + "high", "工業進展段階:Phase4");
-        add("tooltip." + "degeneracycraft." + "ipp." + "super", "工業進展段階:Phase5");
-        add("tooltip." + "degeneracycraft." + "ipp." + "OVER", "工業進展段階:Phase6");
-        add("tooltip." + "degeneracycraft." + "ipp." + "ultra", "工業進展段階:Phase7");
-        add("tooltip." + "degeneracycraft." + "ipp." + "anti", "工業進展段階:Phase8");
-        add("tooltip." + "degeneracycraft." + "ipp." + "imaginary", "工業進展段階:Phase9");
-        add("tooltip." + "degeneracycraft." + "ipp." + "infinity", "工業進展段階:PhaseInf");
+        add("tooltip." + "degeneracycraft." + "ipp", "技術段階: ");
+        add("initial", "Initial");
+        add("basic", "Basic");
+        add("low", "Low");
+        add("medium", "Medium");
+        add("high", "High");
+        add("super", "Super");
+        add("over", "Over");
+        add("ultra", "Ultra");
+        add("anti", "Anti");
+        add("imaginary", "Imaginary");
+        add("infinity", "Infinity");
 
         add("tooltip." + "degeneracycraft." + "multiblock_size.", "マルチブロックサイズ");
-        add("Lv0:3×3×3", "Lv0:3×3×3ブロック");
-        add("Lv1:3×3×3", "Lv1:3×3×3ブロック");
-        add("Base:Power 16 FE/t", "単ブロック:発電量 16 FE/t");
-        add("Lv0:Power 32 FE/t", "Lv0マルチブロック:発電量 32 FE/t");
-        add("Lv1:Power 48 FE/t", "Lv1マルチブロック:発電量 48 FE/t");
-        add("Base:Speed ×1.00,Energy Usage ×1.00", "単ブロック:加工速度 ×1.00 要求電力量 ×1.00");
-        add("Lv0:Speed ×2.00,Energy Usage ×1.50", "Lv0マルチブロック:加工速度 ×2.00 要求電力量 ×1.50");
-        add("Lv1:Speed ×3.00,Energy Usage ×2.00", "Lv1マルチブロック:加工速度 ×3.00 要求電力量 ×2.00");
+        add("Lv0: 3×3×3", "Lv0: 3×3×3ブロック");
+        add("Lv1: 3×3×3", "Lv1: 3×3×3ブロック");
+        add("Base: Power 16 FE/t", "単ブロック: 発電量 16 FE/t");
+        add("Lv0: Power 32 FE/t", "Lv0マルチブロック: 発電量 32 FE/t");
+        add("Lv1: Power 48 FE/t", "Lv1マルチブロック: 発電量 48 FE/t");
+        add("Base: Speed ×1.00,Energy Usage ×1.00", "単ブロック: 加工速度 ×1.00 要求電力量 ×1.00");
+        add("Lv0: Speed ×2.00,Energy Usage ×1.50", "Lv0マルチブロック: 加工速度 ×2.00 要求電力量 ×1.50");
+        add("Lv1: Speed ×3.00,Energy Usage ×2.00", "Lv1マルチブロック: 加工速度 ×3.00 要求電力量 ×2.00");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy.", "要求電力総量:");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage.", "要求電力使用量:");
-        add("tooltip." + "degeneracycraft." + "requiredtime.", "要求時間:");
+        add("tooltip." + "degeneracycraft." + "requiredenergy.", "要求電力総量: ");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage.", "要求電力使用量: ");
+        add("tooltip." + "degeneracycraft." + "requiredtime.", "要求時間: ");
         add("tooltip." + "degeneracycraft." + "sec.", " 秒");
 
         add("tooltip." + "degeneracycraft." + "night.", "夜に稼働");
 
-        add("tooltip." + "degeneracycraft." + "science." + "astronomy", "科学分野:天文学");
-        add("tooltip." + "degeneracycraft." + "science." + "biology", "科学分野:生物");
-        add("tooltip." + "degeneracycraft." + "science." + "chemistry", "科学分野:化学");
-        add("tooltip." + "degeneracycraft." + "science." + "dynamic_energetics", "科学分野:動力変換学");
-        add("tooltip." + "degeneracycraft." + "science." + "engineering", "科学分野:工学");
-        add("tooltip." + "degeneracycraft." + "science." + "formal_science", "科学分野:形式科学");
-        add("tooltip." + "degeneracycraft." + "science." + "geo_science", "科学分野:地学");
-        add("tooltip." + "degeneracycraft." + "science." + "hybrid_physics", "科学分野:複合物理学");
-        add("tooltip." + "degeneracycraft." + "science." + "imitation_magic_engineering", "科学分野:模造魔導工学");
-        add("tooltip." + "degeneracycraft." + "science." + "jenith_void_science", "科学分野:極点虚界学");
-        add("tooltip." + "degeneracycraft." + "science." + "kaleidoscopic_reality_science", "科学分野:多相現実学");
+        add("tooltip." + "degeneracycraft." + "science", "科学分野: ");
+        
+        add("astronomy", "天文学");
+        add("biology", "生物");
+        add("chemistry", "化学");
+        add("dynamic_energetics", "動力変換学");
+        add("engineering", "工学");
+        add("formal_science", "形式科学");
+        add("geo_science", "地学");
+        add("hybrid_physics", "複合物理学");
+        add("imitation_magic_engineering", "模造魔導工学");
+        add("jenith_void_science", "極点虚界学");
+        add("kaleidoscopic_reality_science", "多相現実学");
 
 
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".name", "元素名:塩素");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".number", "原子番号:17");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".weight", "原子量:35.45 g/mol");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".melting", "融点:171.6 K");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".boiling", "沸点:239.1 K");
-        add("tooltip." + "degeneracycraft." + "chlorine" + ".formula", "化学式:Cl");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".name", "元素名: 塩素");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".number", "原子番号: 17");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".weight", "原子量: 35.45 g/mol");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".melting", "融点: 171.6 K");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".boiling", "沸点: 239.1 K");
+        add("tooltip." + "degeneracycraft." + "chlorine" + ".formula", "化学式: Cl");
 
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".name", "元素名:水素");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".number", "原子番号:1");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".weight", "原子量:1.008 g/mol");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".melting", "融点:14.01 K");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".boiling", "沸点:20.28 K");
-        add("tooltip." + "degeneracycraft." + "hydrogen" + ".formula", "化学式:H");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".name", "元素名: 水素");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".number", "原子番号: 1");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".weight", "原子量: 1.008 g/mol");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".melting", "融点: 14.01 K");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".boiling", "沸点: 20.28 K");
+        add("tooltip." + "degeneracycraft." + "hydrogen" + ".formula", "化学式: H");
 
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".name", "元素名:酸素");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".number", "原子番号:8");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".weight", "原子量:16.00 g/mol");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".melting", "融点:54.8 K");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".boiling", "沸点:90.2 K");
-        add("tooltip." + "degeneracycraft." + "oxygen" + ".formula", "化学式:O");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".name", "元素名: 酸素");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".number", "原子番号: 8");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".weight", "原子量: 16.00 g/mol");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".melting", "融点: 54.8 K");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".boiling", "沸点: 90.2 K");
+        add("tooltip." + "degeneracycraft." + "oxygen" + ".formula", "化学式: O");
 
-        add("tooltip." + "degeneracycraft." + "silicon" + ".name", "元素名:ケイ素");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".number", "原子番号:14");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".weight", "原子量:28.04 g/mol");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".melting", "融点:1414 K");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".boiling", "沸点:3265 K");
-        add("tooltip." + "degeneracycraft." + "silicon" + ".formula", "化学式:Si");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".name", "元素名: ケイ素");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".number", "原子番号: 14");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".weight", "原子量: 28.04 g/mol");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".melting", "融点: 1414 K");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".boiling", "沸点: 3265 K");
+        add("tooltip." + "degeneracycraft." + "silicon" + ".formula", "化学式: Si");
 
-        add("tooltip." + "degeneracycraft." + "gold" + ".name", "物質名:金");
-        add("tooltip." + "degeneracycraft." + "gold" + ".number", "原子番号:79");
-        add("tooltip." + "degeneracycraft." + "gold" + ".weight", "原子量:199.97 g/mol");
-        add("tooltip." + "degeneracycraft." + "gold" + ".melting", "融点:1337 K");
-        add("tooltip." + "degeneracycraft." + "gold" + ".boiling", "沸点:3129 K");
-        add("tooltip." + "degeneracycraft." + "gold" + ".formula", "化学式:Au");
+        add("tooltip." + "degeneracycraft." + "gold" + ".name", "物質名: 金");
+        add("tooltip." + "degeneracycraft." + "gold" + ".number", "原子番号: 79");
+        add("tooltip." + "degeneracycraft." + "gold" + ".weight", "原子量: 199.97 g/mol");
+        add("tooltip." + "degeneracycraft." + "gold" + ".melting", "融点: 1337 K");
+        add("tooltip." + "degeneracycraft." + "gold" + ".boiling", "沸点: 3129 K");
+        add("tooltip." + "degeneracycraft." + "gold" + ".formula", "化学式: Au");
 
-        add("tooltip." + "degeneracycraft." + "iron" + ".name", "物質名:鉄");
-        add("tooltip." + "degeneracycraft." + "iron" + ".number", "原子番号:26");
-        add("tooltip." + "degeneracycraft." + "iron" + ".weight", "原子量:55.85 g/mol");
-        add("tooltip." + "degeneracycraft." + "iron" + ".melting", "融点:1811 K");
-        add("tooltip." + "degeneracycraft." + "iron" + ".boiling", "沸点:3134 K");
-        add("tooltip." + "degeneracycraft." + "iron" + ".formula", "化学式:Fe");
+        add("tooltip." + "degeneracycraft." + "iron" + ".name", "物質名: 鉄");
+        add("tooltip." + "degeneracycraft." + "iron" + ".number", "原子番号: 26");
+        add("tooltip." + "degeneracycraft." + "iron" + ".weight", "原子量: 55.85 g/mol");
+        add("tooltip." + "degeneracycraft." + "iron" + ".melting", "融点: 1811 K");
+        add("tooltip." + "degeneracycraft." + "iron" + ".boiling", "沸点: 3134 K");
+        add("tooltip." + "degeneracycraft." + "iron" + ".formula", "化学式: Fe");
 
-        add("tooltip." + "degeneracycraft." + "tin" + ".name", "物質名:スズ");
-        add("tooltip." + "degeneracycraft." + "tin" + ".number", "原子番号:50");
-        add("tooltip." + "degeneracycraft." + "tin" + ".weight", "原子量:118.7 g/mol");
-        add("tooltip." + "degeneracycraft." + "tin" + ".melting", "融点:505.8 K");
-        add("tooltip." + "degeneracycraft." + "tin" + ".boiling", "沸点:2875 K");
-        add("tooltip." + "degeneracycraft." + "tin" + ".formula", "化学式:Sn");
-
-
-        add("tooltip." + "degeneracycraft." + "water" + ".formula", "化学式:H₂O");
-
-        add("tooltip." + "degeneracycraft." + "ammonia" + ".formula", "化学式:NH₃");
-        add("tooltip." + "degeneracycraft." + "ammonium_sulfate" + ".formula", "化学式:(NH₄)₂SO₄");
-        add("tooltip." + "degeneracycraft." + "ammonium_hydrogen_sulfate" + ".formula", "化学式:NH₄HSO₄");
-        add("tooltip." + "degeneracycraft." + "ferric_oxide" + ".formula", "化学式:Fe₂O₃");
-        add("tooltip." + "degeneracycraft." + "iron_disulfide" + ".formula", "化学式:FeS₂");
-        add("tooltip." + "degeneracycraft." + "hydrochloric_acid" + ".formula", "化学式:HCl");
-        add("tooltip." + "degeneracycraft." + "hydrogen_chloride" + ".formula", "化学式:HCl");
-        add("tooltip." + "degeneracycraft." + "hydrogen_peroxide" + ".formula", "化学式:H₂O₂");
-        add("tooltip." + "degeneracycraft." + "potassium_chloride" + ".formula", "化学式:KCl");
-        add("tooltip." + "degeneracycraft." + "potassium_nitrate" + ".formula", "化学式:KNO₃");
-        add("tooltip." + "degeneracycraft." + "sodium_chloride" + ".formula", "化学式:NaCl");
-        add("tooltip." + "degeneracycraft." + "sodium_nitrate" + ".formula", "化学式:NaNO₃");
-        add("tooltip." + "degeneracycraft." + "sulfur_dioxide" + ".formula", "化学式:SO₂");
-        add("tooltip." + "degeneracycraft." + "sulfuric_acid" + ".formula", "化学式:H₂SO₄");
+        add("tooltip." + "degeneracycraft." + "tin" + ".name", "物質名: スズ");
+        add("tooltip." + "degeneracycraft." + "tin" + ".number", "原子番号: 50");
+        add("tooltip." + "degeneracycraft." + "tin" + ".weight", "原子量: 118.7 g/mol");
+        add("tooltip." + "degeneracycraft." + "tin" + ".melting", "融点: 505.8 K");
+        add("tooltip." + "degeneracycraft." + "tin" + ".boiling", "沸点: 2875 K");
+        add("tooltip." + "degeneracycraft." + "tin" + ".formula", "化学式: Sn");
 
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bearing" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bearing" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bearing" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bearing" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "water" + ".formula", "化学式: H₂O");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bolt" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bolt" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bolt" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bolt" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "ammonia" + ".formula", "化学式: NH₃");
+        add("tooltip." + "degeneracycraft." + "ammonium_sulfate" + ".formula", "化学式: (NH₄)₂SO₄");
+        add("tooltip." + "degeneracycraft." + "ammonium_hydrogen_sulfate" + ".formula", "化学式: NH₄HSO₄");
+        add("tooltip." + "degeneracycraft." + "ferric_oxide" + ".formula", "化学式: Fe₂O₃");
+        add("tooltip." + "degeneracycraft." + "iron_disulfide" + ".formula", "化学式: FeS₂");
+        add("tooltip." + "degeneracycraft." + "hydrochloric_acid" + ".formula", "化学式: HCl");
+        add("tooltip." + "degeneracycraft." + "hydrogen_chloride" + ".formula", "化学式: HCl");
+        add("tooltip." + "degeneracycraft." + "hydrogen_peroxide" + ".formula", "化学式: H₂O₂");
+        add("tooltip." + "degeneracycraft." + "potassium_chloride" + ".formula", "化学式: KCl");
+        add("tooltip." + "degeneracycraft." + "potassium_nitrate" + ".formula", "化学式: KNO₃");
+        add("tooltip." + "degeneracycraft." + "sodium_chloride" + ".formula", "化学式: NaCl");
+        add("tooltip." + "degeneracycraft." + "sodium_nitrate" + ".formula", "化学式: NaNO₃");
+        add("tooltip." + "degeneracycraft." + "sulfur_dioxide" + ".formula", "化学式: SO₂");
+        add("tooltip." + "degeneracycraft." + "sulfuric_acid" + ".formula", "化学式: H₂SO₄");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_cam" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_cam" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_cam" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_cam" + ".phase0", "設備生産倍率:×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_chain" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_chain" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_chain" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_chain" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bearing" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bearing" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bearing" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bearing" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_gear" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_gear" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_gear" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_gear" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_bolt" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_bolt" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_bolt" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_bolt" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_joint" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_joint" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_joint" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_joint" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_cam" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_cam" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_cam" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_cam" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_key" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_key" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_key" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_key" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_chain" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_chain" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_chain" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_chain" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_nut" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_nut" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_nut" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_nut" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_gear" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_gear" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_gear" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_gear" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipe" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipe" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipe" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipe" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_joint" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_joint" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_joint" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_joint" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipejoint" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipejoint" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipejoint" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipejoint" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_key" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_key" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_key" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_key" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_plate" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_plate" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_plate" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_plate" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_nut" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_nut" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_nut" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_nut" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_rod" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_rod" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_rod" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_rod" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipe" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipe" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipe" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipe" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaft" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaft" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaft" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaft" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_pipejoint" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_pipejoint" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_pipejoint" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_pipejoint" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaftcoupling" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaftcoupling" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaftcoupling" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaftcoupling" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_plate" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_plate" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_plate" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_plate" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shapesteel" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shapesteel" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shapesteel" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shapesteel" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_rod" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_rod" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_rod" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_rod" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_spring" + ".phase0", "要求電力総量:0 FE");
-        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_spring" + ".phase0", "要求電力使用量:0 FE/t");
-        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_spring" + ".phase0", "要求時間:100 tick (5 秒)");
-        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_spring" + ".phase0", "設備生産倍率:×1 ~ ×1");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaft" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaft" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaft" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaft" + ".phase0", "設備生産倍率: ×1 ~ ×1");
 
-        add("tooltip." + "degeneracycraft" + ".structure" + ".off", "マルチブロック構造:非検知");
-        add("tooltip." + "degeneracycraft" + ".structure" + ".on", "マルチブロック構造:検知");
-        add("tooltip." + "degeneracycraft" + ".structure" + ".lv1", "マルチブロック構造:Lv1検知");
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shaftcoupling" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shaftcoupling" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shaftcoupling" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shaftcoupling" + ".phase0", "設備生産倍率: ×1 ~ ×1");
+
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_shapesteel" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_shapesteel" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_shapesteel" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_shapesteel" + ".phase0", "設備生産倍率: ×1 ~ ×1");
+
+        add("tooltip." + "degeneracycraft." + "requiredenergy." + "iron_spring" + ".phase0", "要求電力総量: 0 FE");
+        add("tooltip." + "degeneracycraft." + "requiredenergyusage." + "iron_spring" + ".phase0", "要求電力使用量: 0 FE/t");
+        add("tooltip." + "degeneracycraft." + "requiredtime." + "iron_spring" + ".phase0", "要求時間: 100 tick (5 秒)");
+        add("tooltip." + "degeneracycraft." + "msmultiplication." + "iron_spring" + ".phase0", "設備生産倍率: ×1 ~ ×1");
+
+        add("tooltip." + "degeneracycraft" + ".structure" + ".off", "マルチブロック構造: 非検知");
+        add("tooltip." + "degeneracycraft" + ".structure" + ".on", "マルチブロック構造: 検知");
+        add("tooltip." + "degeneracycraft" + ".structure" + ".lv1", "マルチブロック構造: Lv1検知");
 
         add("tooltip." + "degeneracycraft" + ".work", "機械稼働中");
         add("tooltip." + "degeneracycraft" + ".stop", "機械停止中");
@@ -1764,13 +1770,13 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("advancements." + "Awakening with \"The Fool\"" + ".description", "レッドストーン動力機械要素製作機を作成");
 
         add("advancements." + "Call of Industry" + ".title", "工業の呼び声");
-        add("advancements." + "Call of Industry" + ".description", "基本出力蒸気発電機を作成");
+        add("advancements." + "Call of Industry" + ".description", "蒸気発電機を作成");
 
         add("advancements." + "Machine like \"The Magician\"" + ".title", "機械は\"魔術師\"のように");
-        add("advancements." + "Machine like \"The Magician\"" + ".description", "基本技術機械製造機を作成");
+        add("advancements." + "Machine like \"The Magician\"" + ".description", "機械製造機を作成");
 
         add("advancements." + "Assemble! Assemble!" + ".title", "アッセンブル！アッセンブル！");
-        add("advancements." + "Assemble! Assemble!" + ".description", "基本技術万能組立機を作成");
+        add("advancements." + "Assemble! Assemble!" + ".description", "万能組立機を作成");
 
 
         add("degeneracycraft_introduction" + ".title", "DegeneracyCraftPedia");
