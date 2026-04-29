@@ -1,8 +1,8 @@
 {
   "type": "degeneracycraft:basic_power_thermal_generator_multiblock_structure",
   "energy": 1000.0,
-  "time": 5.0,
-  "input0": {
+
+ "phase": 1, "input0": {
     "item": "minecraft:air"
   },
   "input1": {

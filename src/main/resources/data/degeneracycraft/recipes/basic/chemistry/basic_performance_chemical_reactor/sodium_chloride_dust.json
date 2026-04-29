@@ -2,6 +2,7 @@
   "type": "degeneracycraft:basic_performance_chemical_reactor_recipe",
   "energy": 1000.0,
   "time": 10.0,
+  "phase": 1,
   "input0": {
     "item": "degeneracycraft:potassium_chloride_dust"
   },

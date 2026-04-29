@@ -19,14 +19,16 @@ public class BasicPerformanceAstronomicalTelescopeRecipe implements Recipe<Simpl
     private final ResourceLocation id;
     final float energy;
     final float time;
+    final int phase;
     final ItemStack input0;
     final ItemStack input1;
     final ItemStack output0;
 
-    public BasicPerformanceAstronomicalTelescopeRecipe(ResourceLocation id, float energy, float time, ItemStack input0, ItemStack input1, ItemStack output0) {
+    public BasicPerformanceAstronomicalTelescopeRecipe(ResourceLocation id, float energy, float time, int phase, ItemStack input0, ItemStack input1, ItemStack output0) {
         this.id = id;
         this.energy = energy;
         this.time = time;
+        this.phase = phase;
         this.input0 = input0;
         this.input1 = input1;
         this.output0 = output0;
@@ -55,6 +57,10 @@ public class BasicPerformanceAstronomicalTelescopeRecipe implements Recipe<Simpl
 
     public float getRequiredTime() {
         return time;
+    }
+
+    public int getRequiredPhase() {
+        return phase;
     }
 
     public ItemStack getInput0Item() {
@@ -113,28 +119,31 @@ public class BasicPerformanceAstronomicalTelescopeRecipe implements Recipe<Simpl
 
             float energy = GsonHelper.getAsFloat(pJson, "energy", 1);
             float time = GsonHelper.getAsFloat(pJson, "time", 1);
+            int phase = GsonHelper.getAsInt(pJson, "phase", 1);
             ItemStack input0 = BasicPerformanceAstronomicalTelescopeRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "input0"));
             ItemStack input1 = BasicPerformanceAstronomicalTelescopeRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "input1"));
             ItemStack output0 = BasicPerformanceAstronomicalTelescopeRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "output0"));
 
-            return new BasicPerformanceAstronomicalTelescopeRecipe(pRecipeId, energy, time, input0, input1, output0);
+            return new BasicPerformanceAstronomicalTelescopeRecipe(pRecipeId, energy, time, phase, input0, input1, output0);
         }
 
         @Override
         public @Nullable BasicPerformanceAstronomicalTelescopeRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
             float energy = pBuffer.readFloat();
             float time = pBuffer.readFloat();
+            int phase = pBuffer.readInt();
             ItemStack input0 = pBuffer.readItem();
             ItemStack input1 = pBuffer.readItem();
             ItemStack output0 = pBuffer.readItem();
 
-            return new BasicPerformanceAstronomicalTelescopeRecipe(pRecipeId, energy, time, input0, input1,output0);
+            return new BasicPerformanceAstronomicalTelescopeRecipe(pRecipeId, energy, time, phase, input0, input1, output0);
         }
 
         @Override
         public void toNetwork(FriendlyByteBuf pBuffer, BasicPerformanceAstronomicalTelescopeRecipe pRecipe) {
             pBuffer.writeFloat(pRecipe.energy);
             pBuffer.writeFloat(pRecipe.time);
+            pBuffer.writeInt(pRecipe.phase);
             pBuffer.writeItem(pRecipe.input0);
             pBuffer.writeItem(pRecipe.input1);
             pBuffer.writeItem(pRecipe.output0);

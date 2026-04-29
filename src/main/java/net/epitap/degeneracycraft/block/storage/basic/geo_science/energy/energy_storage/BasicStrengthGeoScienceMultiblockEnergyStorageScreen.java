@@ -104,5 +104,6 @@ public class BasicStrengthGeoScienceMultiblockEnergyStorageScreen extends Abstra
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
         renderBackground(guiGraphics);
         super.render(guiGraphics, mouseX, mouseY, delta);
+        renderTooltip(guiGraphics, mouseX, mouseY);
     }
 }

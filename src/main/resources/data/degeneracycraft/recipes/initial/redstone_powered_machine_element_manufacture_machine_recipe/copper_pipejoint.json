@@ -2,6 +2,7 @@
   "type": "degeneracycraft:redstone_powered_machine_element_manufacture_machine_recipe",
   "energy": 0.0,
   "time": 5.0,
+  "phase": 0,
   "input0": {
     "item": "minecraft:copper_ingot"
   },

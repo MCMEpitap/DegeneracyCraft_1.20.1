@@ -2,6 +2,7 @@
   "type": "degeneracycraft:basic_technology_machine_part_processor_recipe",
   "energy": 1000.0,
   "time": 10.0,
+  "phase": 1,
   "input0": {
     "item": "degeneracycraft:iron_plate"
   },

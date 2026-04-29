@@ -1,7 +1,8 @@
 {
   "type": "degeneracycraft:basic_performance_astronomical_telescope_recipe",
   "energy": 10000.0,
-  "time": 100.0,
+  "time": 100.0 ,
+  "phase": 1,
   "input0": {
     "item": "degeneracycraft:simple_astronomy_memory_circuit"
   },

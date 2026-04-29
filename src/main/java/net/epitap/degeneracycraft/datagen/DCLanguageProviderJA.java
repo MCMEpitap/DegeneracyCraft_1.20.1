@@ -1487,8 +1487,9 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add("screen." + "degeneracycraft" + ".phase", "Phase");
 
-        add("screen." + "degeneracycraft" + ".phase0", "Phase 0");
-        add("screen." + "degeneracycraft" + ".phase1", "Phase 1");
+        add("screen." + "degeneracycraft" + ".phase0", "Initial");
+        add("screen." + "degeneracycraft" + ".phase1", "Basic");
+        add("screen." + "degeneracycraft" + ".phase2", "Low");
 
         add("screen." + "degeneracycraft" + ".halt", "停止中");
         add("screen." + "degeneracycraft" + ".lock", "固定中");

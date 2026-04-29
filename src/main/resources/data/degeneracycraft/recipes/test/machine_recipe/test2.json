@@ -2,7 +2,7 @@
   "type": "degeneracycraft:test_machine_recipe",
   "energy": 1000.0,
   "time": 10.0,
-  "phase": 1,
+  "phase": 2,
 
   "inputs": [
     {
@@ -28,7 +28,7 @@
   "outputs": [
     {
       "item": "degeneracycraft:ammonium_sulfate_dust",
-      "count": 2
+      "count": 64
     },
     {
       "item": "degeneracycraft:empty_container",
@@ -36,6 +36,10 @@
     },
     {
       "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:empty_container",
+      "count": 7
     }
   ]
 }

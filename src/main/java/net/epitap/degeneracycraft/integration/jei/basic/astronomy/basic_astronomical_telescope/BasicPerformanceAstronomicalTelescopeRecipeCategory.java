@@ -59,17 +59,18 @@ public class BasicPerformanceAstronomicalTelescopeRecipeCategory implements IRec
 
     @Override
     public void draw(BasicPerformanceAstronomicalTelescopeRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics stack, double mouseX, double mouseY) {
-        drawPhase(stack);
+        drawPhase(recipe, stack);
         drawRequiredEnergy(recipe, stack);
         drawRequiredEnergyUsage(recipe, stack);
         drawRequiredTime(recipe, stack);
         drawRequiredCondition(recipe, stack);
     }
 
-    protected void drawPhase(GuiGraphics guiGraphics) {
+    protected void drawPhase(BasicPerformanceAstronomicalTelescopeRecipe recipe, GuiGraphics guiGraphics) {
         Minecraft minecraft = Minecraft.getInstance();
         Font fontRenderer = minecraft.font;
-        guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase1"), 115, 87, 0xFFFFFF);
+        int phase = recipe.getRequiredPhase();
+        guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFF0000);
     }
 
     protected void drawRequiredEnergy(BasicPerformanceAstronomicalTelescopeRecipe recipe, GuiGraphics guiGraphics) {

@@ -68,7 +68,6 @@ import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineScreen;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineMenu;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineScreen;
-import net.epitap.degeneracycraft.block.test.TestMachineMenu;
 import net.epitap.degeneracycraft.block.test.TestMachineScreen;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipeCategory;
@@ -291,9 +290,11 @@ public class JEIDCPlugin implements IModPlugin {
 //                BasicPowerSteamGeneratorMultiblockStructureCategory(registration.getJeiHelpers().getGuiHelper()));
 
 
-        registration.addRecipeCategories(new
-                TestMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-
+//        registration.addRecipeCategories(
+//                new TestMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()),
+//                new TestMachineRecipeCategory2(registration.getJeiHelpers().getGuiHelper()) );
+        registration.addRecipeCategories(
+                new TestMachineRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -437,6 +438,7 @@ public class JEIDCPlugin implements IModPlugin {
 //                rm.getAllRecipesFor(BasicPowerSteamGeneratorMultiblockStructure.Type.INSTANCE);
 //        registration.addRecipes(new RecipeType<>(BasicPowerSteamGeneratorMultiblockStructureCategory.UID, BasicPowerSteamGeneratorMultiblockStructure.class), basicPowerCompositeStructureTypeThermalGeneratorMultiblockStructures);
 
+
         List<TestMachineRecipe> testMachineRecipe =
                 rm.getAllRecipesFor(TestMachineRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(TestMachineRecipeCategory.UID, TestMachineRecipe.class), testMachineRecipe);
@@ -512,7 +514,8 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipeClickArea(BasicPerformanceRealityPhaseAdjustmentMachineScreen.class, 64, 20, 29, 8, BasicPerformanceRealityPhaseAdjustmentMachineRecipeCategory.TYPE);
 
 
-        registration.addRecipeClickArea(TestMachineScreen.class, 64, 20, 29, 8, TestMachineRecipeCategory.TYPE);
+        registration.addRecipeClickArea(TestMachineScreen.class, 64, 20, 29, 8,
+                TestMachineRecipeCategory.TYPE);
 
     }
 
@@ -523,11 +526,9 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get()), RedstonePoweredMachinePartManufactureMachineRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get()), BasicPerformanceAstronomicalTelescopeRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get()), BasicPerformanceFineParticleAdsorberRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK.get()), BasicPerformanceStarlightCollectorRecipeCategory.TYPE);
-
 
 
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_BIO_REACTOR_BLOCK.get()), BasicPerformanceBioReactorRecipeCategory.TYPE);
@@ -535,16 +536,13 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_CROP_CULTIVATOR_BLOCK.get()), BasicPerformanceCropCultivatorRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_CHEMICAL_REACTOR_BLOCK.get()), BasicPerformanceChemicalReactorRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_COMPOUND_PURIFIER_BLOCK.get()), BasicPerformanceCompoundPurifierRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_ELECTROLYSER_BLOCK.get()), BasicPerformanceElectrolyserRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_TECHNOLOGY_COMPRESSION_CONDENSER_BLOCK.get()), BasicTechnologyCompressionCondenserRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_TECHNOLOGY_ELECTROMAGNETIC_INDUCTOR_BLOCK.get()), BasicTechnologyElectromagneticInductorRecipeCategory.TYPE);
-
 
 
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_TECHNOLOGY_MACHINE_MANUFACTURER_BLOCK.get()), BasicTechnologyMachineManufacturerRecipeCategory.TYPE);
@@ -553,17 +551,14 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK.get()), BasicTechnologyMultiblockEquipmentFabricatorRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_CIRCUIT_BUILDER_BLOCK.get()), BasicPerformanceCircuitBuilderRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_BLOCK.get()), BasicPerformanceMachineDataInstallerRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_BLOCK.get()), BasicPerformanceDesignatedDataInjectorRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_ORE_SORTER_BLOCK.get()), BasicPerformanceOreSorterRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_ROCK_CRASHER_BLOCK.get()), BasicPerformanceRockCrasherRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_SOIL_PURIFIER_BLOCK.get()), BasicPerformanceSoilPurifierRecipeCategory.TYPE);
-
 
 
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_ELECTRIC_ARC_FURNACE_BLOCK.get()), BasicPerformanceElectricArcFurnaceRecipeCategory.TYPE);
@@ -576,16 +571,13 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_TECHNOLOGY_VIRTUAL_SIGIL_PROCESSOR_BLOCK.get()), BasicTechnologyVirtualSigilProcessorRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_TECHNOLOGY_VOID_WORLD_COORDINATE_RECORDING_MACHINE_BLOCK.get()), BasicTechnologyVoidWorldCoordinateRecordingMachineRecipeCategory.TYPE);
 
 
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get()), BasicPerformanceRealityPhaseAdjustmentMachineRecipeCategory.TYPE);
 
 
-
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.TEST_MACHINE_BLOCK.get()), TestMachineRecipeCategory.TYPE);
-
     }
 
     @Override
@@ -883,16 +875,26 @@ public class JEIDCPlugin implements IModPlugin {
 
 
 
-        registration.addRecipeTransferHandler(
-                new TestMachineRecipeTransferHandler<>(
-                        TestMachineMenu.class,
-                        0, 5,
-                        8, 36
+//        registration.addRecipeTransferHandler(
+//                new TestMachineRecipeTransferHandler<>(
+//                        TestMachineMenu.class,
+//                        0, 5,
+//                        8, 36
+//                ),
+//                TestMachineRecipeCategory.TYPE
+//        );
+
+
+            System.out.println("TRANSFER HANDLER REGISTERED");
+
+                registration.addRecipeTransferHandler(
+                new TestMachineRecipeTransferHandler(
+                        36, 5,  // 入力スロット（36〜40）
+                        0, 36
                 ),
                 TestMachineRecipeCategory.TYPE
         );
+        }
     }
 
 
-
-}

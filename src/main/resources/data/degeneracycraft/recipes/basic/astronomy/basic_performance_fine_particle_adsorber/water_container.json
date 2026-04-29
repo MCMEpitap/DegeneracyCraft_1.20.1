@@ -2,6 +2,7 @@
   "type": "degeneracycraft:basic_performance_fine_particle_adsorber_recipe",
   "energy": 500.0,
   "time": 5.0,
+  "phase": 1,
   "input0": {
     "item": "degeneracycraft:empty_container"
   },

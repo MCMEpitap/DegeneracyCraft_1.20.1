@@ -2,6 +2,7 @@
   "type": "degeneracycraft:basic_performance_electric_arc_furnace_recipe",
   "energy": 5000.0,
   "time": 30.0,
+  "phase": 1,
   "input0": {
     "item": "degeneracycraft:purified_graphite_arc_electrode"
   },

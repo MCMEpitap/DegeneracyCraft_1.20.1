@@ -2,6 +2,7 @@
   "type": "degeneracycraft:basic_technology_machine_manufacturer_recipe",
   "energy": 5000.0,
   "time": 60.0,
+  "phase": 1,
   "input0": {
     "item": "degeneracycraft:basic_robot_arm"
   },
