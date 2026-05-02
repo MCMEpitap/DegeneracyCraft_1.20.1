@@ -638,8 +638,10 @@ public class DCItemTagGenerator extends ItemTagsProvider {
                 .add(DCItems.TIN_SHAPESTEEL.get())
                 .add(DCItems.TIN_WIRE.get());
         tag(BASIC_ASTRONOMY_MACHINE_PARTS)
+                .add(DCItems.DESIGNATED_DATA_CHIP_MOON.get())
                 .add(DCItems.SIMPLE_CONCAVE_LENS.get())
                 .add(DCItems.SIMPLE_CONVEX_LENS.get())
+                .add(DCItems.STAR_DATA_STORAGE_MOON.get())
                 ;
         tag(BASIC_BIOLOGY_MACHINE_PARTS)
                 .add(DCItems.SIMPLE_BIOLOGICAL_FIBER.get())

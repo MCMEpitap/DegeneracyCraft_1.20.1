@@ -7,6 +7,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -56,6 +59,9 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if(!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
@@ -357,7 +363,7 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
 
         for (int i = 0; i < playerInv.getSlots() && needed > 0; i++) {
             ItemStack fromSlot = playerInv.getStackInSlot(i);
-            if (!fromSlot.equals(required)) continue;
+             if (!ItemStack.isSameItemSameTags(fromSlot, required)) continue;
 
             int toExtract = Math.min(needed, fromSlot.getCount());
             ItemStack extracted = playerInv.extractItem(i, toExtract, false);
@@ -370,5 +376,15 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
                 needed -= toExtract;
             }
         }
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
     }
 }

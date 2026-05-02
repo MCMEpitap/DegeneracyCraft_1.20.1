@@ -6,8 +6,10 @@ import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.*;
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeBlockEntity;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeMenu;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeScreen;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberBlockEntity;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberMenu;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberScreen;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorMenu;
@@ -68,16 +70,17 @@ import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineScreen;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineMenu;
 import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineScreen;
+import net.epitap.degeneracycraft.block.test.TestMachineMenu;
 import net.epitap.degeneracycraft.block.test.TestMachineScreen;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipe;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipeCategory;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipeTransferHandler;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberRecipe;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberRecipeCategory;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberTransferHandler;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.astronomical_telescope.AstronomicalTelescopeRecipe;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.astronomical_telescope.AstronomicalTelescopeRecipeCategory;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.astronomical_telescope.AstronomicalTelescopeRecipeTransferHandler;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorRecipeCategory;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorRecipeTransferHandler;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.fine_particle_adsorber.FineParticleAdsorberRecipe;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.fine_particle_adsorber.FineParticleAdsorberRecipeCategory;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.fine_particle_adsorber.FineParticleAdsorberRecipeTransferHandler;
 import net.epitap.degeneracycraft.integration.jei.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorRecipeCategory;
 import net.epitap.degeneracycraft.integration.jei.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorRecipeTransferHandler;
@@ -127,16 +130,16 @@ import net.epitap.degeneracycraft.integration.jei.basic.formal_science.basic_per
 import net.epitap.degeneracycraft.integration.jei.basic.formal_science.basic_performance_machine_data_installer.BasicPerformanceMachineDataInstallerRecipeTransferHandler;
 import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_ore_sorter.BasicPerformanceOreSorterRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_ore_sorter.BasicPerformanceOreSorterRecipeCategory;
-import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_ore_sorter.BasicPerformanceOreSorterTransferHandler;
+import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_ore_sorter.BasicPerformanceOreSorterRecipeTransferHandler;
 import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_rock_crasher.BasicPerformanceRockCrasherRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_rock_crasher.BasicPerformanceRockCrasherRecipeCategory;
-import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_rock_crasher.BasicPerformanceRockCrasherTransferHandler;
+import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_rock_crasher.BasicPerformanceRockCrasherRecipeTransferHandler;
 import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_soil_purifier.BasicPerformanceSoilPurifierRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_soil_purifier.BasicPerformanceSoilPurifierRecipeCategory;
 import net.epitap.degeneracycraft.integration.jei.basic.geo_science.basic_performance_soil_purifier.BasicPerformanceSoilPurifierRecipeTransferHandler;
 import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.basic_performance_electric_arc_furnace.BasicPerformanceElectricArcFurnaceRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.basic_performance_electric_arc_furnace.BasicPerformanceElectricArcFurnaceRecipeCategory;
-import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.basic_performance_electric_arc_furnace.BasicPerformanceElectricArcFurnaceTransferHandler;
+import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.basic_performance_electric_arc_furnace.BasicPerformanceElectricArcFurnaceRecipeTransferHandler;
 import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.basic_performance_forming_machine.BasicPerformanceFormingMachineRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.basic_performance_forming_machine.BasicPerformanceFormingMachineRecipeCategory;
 import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.basic_performance_forming_machine.BasicPerformanceFormingMachineRecipeTransferHandler;
@@ -195,9 +198,9 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeCategories(new
-                BasicPerformanceAstronomicalTelescopeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+                AstronomicalTelescopeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new
-                BasicPerformanceFineParticleAdsorberRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+                FineParticleAdsorberRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new
                 BasicPerformanceStarlightCollectorRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 
@@ -309,49 +312,49 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipes(new RecipeType<>(RedstonePoweredMachinePartManufactureMachineRecipeCategory.UID, RedstonePoweredMachinePartManufactureMachineRecipe.class), redstonePoweredMachinePartManufactureMachineRecipes);
 
 
-        List<BasicPerformanceAstronomicalTelescopeRecipe> basicPerformanceAstronomicalTelescopeRecipe =
-                rm.getAllRecipesFor(BasicPerformanceAstronomicalTelescopeRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceAstronomicalTelescopeRecipeCategory.UID, BasicPerformanceAstronomicalTelescopeRecipe.class), basicPerformanceAstronomicalTelescopeRecipe);
-        List<BasicPerformanceFineParticleAdsorberRecipe> basicPerformanceFineParticleAdsorberRecipe =
-                rm.getAllRecipesFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceFineParticleAdsorberRecipeCategory.UID, BasicPerformanceFineParticleAdsorberRecipe.class), basicPerformanceFineParticleAdsorberRecipe);
-        List<BasicPerformanceStarlightCollectorRecipe> basicPerformanceStarlightCollectorRecipe =
+        List<AstronomicalTelescopeRecipe> astronomicalTelescopeRecipe =
+                rm.getAllRecipesFor(AstronomicalTelescopeRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(AstronomicalTelescopeRecipeCategory.UID, AstronomicalTelescopeRecipe.class), astronomicalTelescopeRecipe);
+        List<FineParticleAdsorberRecipe> fineParticleAdsorberRecipe =
+                rm.getAllRecipesFor(FineParticleAdsorberRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(FineParticleAdsorberRecipeCategory.UID, FineParticleAdsorberRecipe.class), fineParticleAdsorberRecipe);
+        List<BasicPerformanceStarlightCollectorRecipe> StarlightCollectorRecipe =
                 rm.getAllRecipesFor(BasicPerformanceStarlightCollectorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceStarlightCollectorRecipeCategory.UID, BasicPerformanceStarlightCollectorRecipe.class), basicPerformanceStarlightCollectorRecipe);
+        registration.addRecipes(new RecipeType<>(BasicPerformanceStarlightCollectorRecipeCategory.UID, BasicPerformanceStarlightCollectorRecipe.class), StarlightCollectorRecipe);
 
 
 
-        List<BasicPerformanceBioReactorRecipe> basicPerformanceBioReactorRecipe =
+        List<BasicPerformanceBioReactorRecipe> BioReactorRecipe =
                 rm.getAllRecipesFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceBioReactorRecipeCategory.UID, BasicPerformanceBioReactorRecipe.class), basicPerformanceBioReactorRecipe);
-        List<BasicPerformanceCellIncubatorRecipe> basicPerformanceCellIncubatorRecipe =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceBioReactorRecipeCategory.UID, BasicPerformanceBioReactorRecipe.class), BioReactorRecipe);
+        List<BasicPerformanceCellIncubatorRecipe> CellIncubatorRecipe =
                 rm.getAllRecipesFor(BasicPerformanceCellIncubatorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceCellIncubatorRecipeCategory.UID, BasicPerformanceCellIncubatorRecipe.class), basicPerformanceCellIncubatorRecipe);
-        List<BasicPerformanceCropCultivatorRecipe> basicPerformanceCropCultivatorRecipe =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceCellIncubatorRecipeCategory.UID, BasicPerformanceCellIncubatorRecipe.class), CellIncubatorRecipe);
+        List<BasicPerformanceCropCultivatorRecipe> CropCultivatorRecipe =
                 rm.getAllRecipesFor(BasicPerformanceCropCultivatorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceCropCultivatorRecipeCategory.UID, BasicPerformanceCropCultivatorRecipe.class), basicPerformanceCropCultivatorRecipe);
+        registration.addRecipes(new RecipeType<>(BasicPerformanceCropCultivatorRecipeCategory.UID, BasicPerformanceCropCultivatorRecipe.class), CropCultivatorRecipe);
 
 
 
-        List<BasicPerformanceChemicalReactorRecipe> basicPerformanceChemicalReactorRecipe =
+        List<BasicPerformanceChemicalReactorRecipe> ChemicalReactorRecipe =
                 rm.getAllRecipesFor(BasicPerformanceChemicalReactorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceChemicalReactorRecipeCategory.UID, BasicPerformanceChemicalReactorRecipe.class), basicPerformanceChemicalReactorRecipe);
-        List<BasicPerformanceCompoundPurifierRecipe> basicPerformanceCompoundPurifierRecipe =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceChemicalReactorRecipeCategory.UID, BasicPerformanceChemicalReactorRecipe.class), ChemicalReactorRecipe);
+        List<BasicPerformanceCompoundPurifierRecipe> CompoundPurifierRecipe =
                 rm.getAllRecipesFor(BasicPerformanceCompoundPurifierRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceCompoundPurifierRecipeCategory.UID, BasicPerformanceCompoundPurifierRecipe.class), basicPerformanceCompoundPurifierRecipe);
-        List<BasicPerformanceElectrolyserRecipe> basicPerformanceElectrolyserRecipe =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceCompoundPurifierRecipeCategory.UID, BasicPerformanceCompoundPurifierRecipe.class), CompoundPurifierRecipe);
+        List<BasicPerformanceElectrolyserRecipe> ElectrolyserRecipe =
                 rm.getAllRecipesFor(BasicPerformanceElectrolyserRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceElectrolyserRecipeCategory.UID, BasicPerformanceElectrolyserRecipe.class), basicPerformanceElectrolyserRecipe);
+        registration.addRecipes(new RecipeType<>(BasicPerformanceElectrolyserRecipeCategory.UID, BasicPerformanceElectrolyserRecipe.class), ElectrolyserRecipe);
 
 
 
 
-        List<BasicTechnologyCompressionCondenserRecipe> basicTechnologyCompressionCondenserRecipe =
+        List<BasicTechnologyCompressionCondenserRecipe> CompressionCondenserRecipe =
                 rm.getAllRecipesFor(BasicTechnologyCompressionCondenserRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologyCompressionCondenserRecipeCategory.UID, BasicTechnologyCompressionCondenserRecipe.class), basicTechnologyCompressionCondenserRecipe);
-        List<BasicTechnologyElectromagneticInductorRecipe> basicTechnologyElectromagneticInductorRecipe =
+        registration.addRecipes(new RecipeType<>(BasicTechnologyCompressionCondenserRecipeCategory.UID, BasicTechnologyCompressionCondenserRecipe.class), CompressionCondenserRecipe);
+        List<BasicTechnologyElectromagneticInductorRecipe> ElectromagneticInductorRecipe =
                 rm.getAllRecipesFor(BasicTechnologyElectromagneticInductorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologyElectromagneticInductorRecipeCategory.UID, BasicTechnologyElectromagneticInductorRecipe.class), basicTechnologyElectromagneticInductorRecipe);
+        registration.addRecipes(new RecipeType<>(BasicTechnologyElectromagneticInductorRecipeCategory.UID, BasicTechnologyElectromagneticInductorRecipe.class), ElectromagneticInductorRecipe);
         List<BasicPowerSteamGeneratorRecipe> basicPowerSteamGeneratorRecipes =
                 rm.getAllRecipesFor(BasicPowerSteamGeneratorRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(BasicPowerSteamGeneratorRecipeCategory.UID, BasicPowerSteamGeneratorRecipe.class), basicPowerSteamGeneratorRecipes);
@@ -359,80 +362,80 @@ public class JEIDCPlugin implements IModPlugin {
 
 
 
-        List<BasicTechnologyMachineManufacturerRecipe> basicTechnologyMachineManufacturerRecipes =
+        List<BasicTechnologyMachineManufacturerRecipe> MachineManufacturerRecipes =
                 rm.getAllRecipesFor(BasicTechnologyMachineManufacturerRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologyMachineManufacturerRecipeCategory.UID, BasicTechnologyMachineManufacturerRecipe.class), basicTechnologyMachineManufacturerRecipes);
+        registration.addRecipes(new RecipeType<>(BasicTechnologyMachineManufacturerRecipeCategory.UID, BasicTechnologyMachineManufacturerRecipe.class), MachineManufacturerRecipes);
         List<BasicTechnologyMachineElementProcessorRecipe> basicMachineElementProcessorRecipes =
                 rm.getAllRecipesFor(BasicTechnologyMachineElementProcessorRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(BasicTechnologyMachineElementProcessorRecipeCategory.UID, BasicTechnologyMachineElementProcessorRecipe.class), basicMachineElementProcessorRecipes);
         List<BasicTechnologyMachinePartProcessorRecipe> basicMachinePartProcessorRecipes =
                 rm.getAllRecipesFor(BasicTechnologyMachinePartProcessorRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(BasicTechnologyMachinePartProcessorRecipeCategory.UID, BasicTechnologyMachinePartProcessorRecipe.class), basicMachinePartProcessorRecipes);
-        List<BasicTechnologyMultiblockEquipmentFabricatorRecipe> basicTechnologyMultiblockEquipmentFabricatorRecipes =
+        List<BasicTechnologyMultiblockEquipmentFabricatorRecipe> MultiblockEquipmentFabricatorRecipes =
                 rm.getAllRecipesFor(BasicTechnologyMultiblockEquipmentFabricatorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologyMultiblockEquipmentFabricatorRecipeCategory.UID, BasicTechnologyMultiblockEquipmentFabricatorRecipe.class), basicTechnologyMultiblockEquipmentFabricatorRecipes);
+        registration.addRecipes(new RecipeType<>(BasicTechnologyMultiblockEquipmentFabricatorRecipeCategory.UID, BasicTechnologyMultiblockEquipmentFabricatorRecipe.class), MultiblockEquipmentFabricatorRecipes);
 
 
 
 
-        List<BasicPerformanceCircuitBuilderRecipe> basicPerformanceCircuitBuilderRecipes =
+        List<BasicPerformanceCircuitBuilderRecipe> CircuitBuilderRecipes =
                 rm.getAllRecipesFor(BasicPerformanceCircuitBuilderRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceCircuitBuilderRecipeCategory.UID, BasicPerformanceCircuitBuilderRecipe.class), basicPerformanceCircuitBuilderRecipes);
-        List<BasicPerformanceMachineDataInstallerRecipe> basicPerformanceMachineDataInstallerRecipes =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceCircuitBuilderRecipeCategory.UID, BasicPerformanceCircuitBuilderRecipe.class), CircuitBuilderRecipes);
+        List<BasicPerformanceMachineDataInstallerRecipe> MachineDataInstallerRecipes =
                 rm.getAllRecipesFor(BasicPerformanceMachineDataInstallerRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceMachineDataInstallerRecipeCategory.UID, BasicPerformanceMachineDataInstallerRecipe.class), basicPerformanceMachineDataInstallerRecipes);
-        List<BasicPerformanceDesignatedDataInjectorRecipe> basicPerformanceDesignatedDataInjectorRecipes =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceMachineDataInstallerRecipeCategory.UID, BasicPerformanceMachineDataInstallerRecipe.class), MachineDataInstallerRecipes);
+        List<BasicPerformanceDesignatedDataInjectorRecipe> DesignatedDataInjectorRecipes =
                 rm.getAllRecipesFor(BasicPerformanceDesignatedDataInjectorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceDesignatedDataInjectorRecipeCategory.UID, BasicPerformanceDesignatedDataInjectorRecipe.class), basicPerformanceDesignatedDataInjectorRecipes);
+        registration.addRecipes(new RecipeType<>(BasicPerformanceDesignatedDataInjectorRecipeCategory.UID, BasicPerformanceDesignatedDataInjectorRecipe.class), DesignatedDataInjectorRecipes);
 
 
 
-        List<BasicPerformanceOreSorterRecipe> basicPerformanceOreSorterRecipe =
+        List<BasicPerformanceOreSorterRecipe> OreSorterRecipe =
                 rm.getAllRecipesFor(BasicPerformanceOreSorterRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceOreSorterRecipeCategory.UID, BasicPerformanceOreSorterRecipe.class), basicPerformanceOreSorterRecipe);
-        List<BasicPerformanceRockCrasherRecipe> basicPerformanceRockCrasherRecipes =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceOreSorterRecipeCategory.UID, BasicPerformanceOreSorterRecipe.class), OreSorterRecipe);
+        List<BasicPerformanceRockCrasherRecipe> RockCrasherRecipes =
                 rm.getAllRecipesFor(BasicPerformanceRockCrasherRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceRockCrasherRecipeCategory.UID, BasicPerformanceRockCrasherRecipe.class), basicPerformanceRockCrasherRecipes);
-        List<BasicPerformanceSoilPurifierRecipe> basicPerformanceSoilPurifierRecipe =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceRockCrasherRecipeCategory.UID, BasicPerformanceRockCrasherRecipe.class), RockCrasherRecipes);
+        List<BasicPerformanceSoilPurifierRecipe> SoilPurifierRecipe =
                 rm.getAllRecipesFor(BasicPerformanceSoilPurifierRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceSoilPurifierRecipeCategory.UID, BasicPerformanceSoilPurifierRecipe.class), basicPerformanceSoilPurifierRecipe);
+        registration.addRecipes(new RecipeType<>(BasicPerformanceSoilPurifierRecipeCategory.UID, BasicPerformanceSoilPurifierRecipe.class), SoilPurifierRecipe);
 
 
 
 
-        List<BasicPerformanceElectricArcFurnaceRecipe> basicPerformanceElectricFurnaceRecipe =
+        List<BasicPerformanceElectricArcFurnaceRecipe> ElectricFurnaceRecipe =
                 rm.getAllRecipesFor(BasicPerformanceElectricArcFurnaceRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceElectricArcFurnaceRecipeCategory.UID, BasicPerformanceElectricArcFurnaceRecipe.class), basicPerformanceElectricFurnaceRecipe);
-        List<BasicPerformanceFormingMachineRecipe> basicPerformanceFormingMachineRecipe =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceElectricArcFurnaceRecipeCategory.UID, BasicPerformanceElectricArcFurnaceRecipe.class), ElectricFurnaceRecipe);
+        List<BasicPerformanceFormingMachineRecipe> FormingMachineRecipe =
                 rm.getAllRecipesFor(BasicPerformanceFormingMachineRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceFormingMachineRecipeCategory.UID, BasicPerformanceFormingMachineRecipe.class), basicPerformanceFormingMachineRecipe);
-        List<BasicPerformanceMaterialSeparatorRecipe> basicPerformanceMaterialSeparatorRecipe =
+        registration.addRecipes(new RecipeType<>(BasicPerformanceFormingMachineRecipeCategory.UID, BasicPerformanceFormingMachineRecipe.class), FormingMachineRecipe);
+        List<BasicPerformanceMaterialSeparatorRecipe> MaterialSeparatorRecipe =
                 rm.getAllRecipesFor(BasicPerformanceMaterialSeparatorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceMaterialSeparatorRecipeCategory.UID, BasicPerformanceMaterialSeparatorRecipe.class), basicPerformanceMaterialSeparatorRecipe);
+        registration.addRecipes(new RecipeType<>(BasicPerformanceMaterialSeparatorRecipeCategory.UID, BasicPerformanceMaterialSeparatorRecipe.class), MaterialSeparatorRecipe);
 
 
 
-        List<BasicTechnologyImitationMagicEngraverRecipe> basicTechnologyImitationMagicEngraverRecipe =
+        List<BasicTechnologyImitationMagicEngraverRecipe> ImitationMagicEngraverRecipe =
                 rm.getAllRecipesFor(BasicTechnologyImitationMagicEngraverRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologyImitationMagicEngraverRecipeCategory.UID, BasicTechnologyImitationMagicEngraverRecipe.class), basicTechnologyImitationMagicEngraverRecipe);
-        List<BasicTechnologySuspectedMagicCondenserRecipe> basicTechnologySuspectedMagicCondenserRecipe =
+        registration.addRecipes(new RecipeType<>(BasicTechnologyImitationMagicEngraverRecipeCategory.UID, BasicTechnologyImitationMagicEngraverRecipe.class), ImitationMagicEngraverRecipe);
+        List<BasicTechnologySuspectedMagicCondenserRecipe> SuspectedMagicCondenserRecipe =
                 rm.getAllRecipesFor(BasicTechnologySuspectedMagicCondenserRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologySuspectedMagicCondenserRecipeCategory.UID, BasicTechnologySuspectedMagicCondenserRecipe.class), basicTechnologySuspectedMagicCondenserRecipe);
-        List<BasicTechnologyVirtualSigilProcessorRecipe> basicTechnologyVirtualSigilProcessorRecipe =
+        registration.addRecipes(new RecipeType<>(BasicTechnologySuspectedMagicCondenserRecipeCategory.UID, BasicTechnologySuspectedMagicCondenserRecipe.class), SuspectedMagicCondenserRecipe);
+        List<BasicTechnologyVirtualSigilProcessorRecipe> VirtualSigilProcessorRecipe =
                 rm.getAllRecipesFor(BasicTechnologyVirtualSigilProcessorRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologyVirtualSigilProcessorRecipeCategory.UID, BasicTechnologyVirtualSigilProcessorRecipe.class), basicTechnologyVirtualSigilProcessorRecipe);
+        registration.addRecipes(new RecipeType<>(BasicTechnologyVirtualSigilProcessorRecipeCategory.UID, BasicTechnologyVirtualSigilProcessorRecipe.class), VirtualSigilProcessorRecipe);
 
 
 
-        List<BasicTechnologyVoidWorldCoordinateRecordingMachineRecipe> basicTechnologyVoidWorldCoordinateRecordingMachineRecipe =
+        List<BasicTechnologyVoidWorldCoordinateRecordingMachineRecipe> VoidWorldCoordinateRecordingMachineRecipe =
                 rm.getAllRecipesFor(BasicTechnologyVoidWorldCoordinateRecordingMachineRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicTechnologyVoidWorldCoordinateRecordingMachineRecipeCategory.UID, BasicTechnologyVoidWorldCoordinateRecordingMachineRecipe.class), basicTechnologyVoidWorldCoordinateRecordingMachineRecipe);
+        registration.addRecipes(new RecipeType<>(BasicTechnologyVoidWorldCoordinateRecordingMachineRecipeCategory.UID, BasicTechnologyVoidWorldCoordinateRecordingMachineRecipe.class), VoidWorldCoordinateRecordingMachineRecipe);
 
 
 
-        List<BasicPerformanceRealityPhaseAdjustmentMachineRecipe> basicPerformanceRealityPhaseAdjustmentMachineRecipe =
+        List<BasicPerformanceRealityPhaseAdjustmentMachineRecipe> RealityPhaseAdjustmentMachineRecipe =
                 rm.getAllRecipesFor(BasicPerformanceRealityPhaseAdjustmentMachineRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(BasicPerformanceRealityPhaseAdjustmentMachineRecipeCategory.UID, BasicPerformanceRealityPhaseAdjustmentMachineRecipe.class), basicPerformanceRealityPhaseAdjustmentMachineRecipe);
+        registration.addRecipes(new RecipeType<>(BasicPerformanceRealityPhaseAdjustmentMachineRecipeCategory.UID, BasicPerformanceRealityPhaseAdjustmentMachineRecipe.class), RealityPhaseAdjustmentMachineRecipe);
 
 //        List<BasicPowerSteamGeneratorMultiblockStructure> basicPowerCompositeStructureTypeThermalGeneratorMultiblockStructures =
 //                rm.getAllRecipesFor(BasicPowerSteamGeneratorMultiblockStructure.Type.INSTANCE);
@@ -453,8 +456,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
 
-        registration.addRecipeClickArea(BasicPerformanceAstronomicalTelescopeScreen.class, 64, 20, 29, 8, BasicPerformanceAstronomicalTelescopeRecipeCategory.TYPE);
-        registration.addRecipeClickArea(BasicPerformanceFineParticleAdsorberScreen.class, 64, 20, 29, 8, BasicPerformanceFineParticleAdsorberRecipeCategory.TYPE);
+        registration.addRecipeClickArea(BasicPerformanceAstronomicalTelescopeScreen.class, 64, 20, 29, 8, AstronomicalTelescopeRecipeCategory.TYPE);
+        registration.addRecipeClickArea(BasicPerformanceFineParticleAdsorberScreen.class, 64, 20, 29, 8, FineParticleAdsorberRecipeCategory.TYPE);
         registration.addRecipeClickArea(BasicPerformanceStarlightCollectorScreen.class, 64, 20, 29, 8, BasicPerformanceStarlightCollectorRecipeCategory.TYPE);
 
 
@@ -526,8 +529,8 @@ public class JEIDCPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get()), RedstonePoweredMachinePartManufactureMachineRecipeCategory.TYPE);
 
 
-        registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get()), BasicPerformanceAstronomicalTelescopeRecipeCategory.TYPE);
-        registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get()), BasicPerformanceFineParticleAdsorberRecipeCategory.TYPE);
+        registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK.get()), AstronomicalTelescopeRecipeCategory.TYPE);
+        registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_BLOCK.get()), FineParticleAdsorberRecipeCategory.TYPE);
         registration.addRecipeCatalyst(new ItemStack(DCBlocks.BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_BLOCK.get()), BasicPerformanceStarlightCollectorRecipeCategory.TYPE);
 
 
@@ -583,7 +586,8 @@ public class JEIDCPlugin implements IModPlugin {
     @Override
     public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
         registration.addRecipeTransferHandler(
-                new RedstonePoweredMachineElementManufactureMachineRecipeTransferHandler<>(
+                new RedstonePoweredMachineElementManufactureMachineRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         RedstonePoweredMachineElementManufactureMachineMenu.class,
                         0, 9,
                         10, 36
@@ -591,7 +595,8 @@ public class JEIDCPlugin implements IModPlugin {
                 RedstonePoweredMachineElementManufactureMachineRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new RedstonePoweredMachinePartManufactureMachineRecipeTransferHandler<>(
+                new RedstonePoweredMachinePartManufactureMachineRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         RedstonePoweredMachinePartManufactureMachineMenu.class,
                         0, 9,
                         10, 36
@@ -600,23 +605,30 @@ public class JEIDCPlugin implements IModPlugin {
         );
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceAstronomicalTelescopeRecipeTransferHandler<>(
+                new AstronomicalTelescopeRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceAstronomicalTelescopeMenu.class,
-                        0, 2,
-                        3, 36
+                        0, BasicPerformanceAstronomicalTelescopeBlockEntity.RECIPE_COUNT,
+                        BasicPerformanceAstronomicalTelescopeBlockEntity.RECIPE_COUNT
+                                + BasicPerformanceAstronomicalTelescopeBlockEntity.OUTPUT_COUNT,
+                        36
                 ),
-                BasicPerformanceAstronomicalTelescopeRecipeCategory.TYPE
+                AstronomicalTelescopeRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceFineParticleAdsorberTransferHandler<>(
+                new FineParticleAdsorberRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceFineParticleAdsorberMenu.class,
-                        0, 1,
-                        4, 36
+                        0, BasicPerformanceFineParticleAdsorberBlockEntity.RECIPE_COUNT,
+                        BasicPerformanceFineParticleAdsorberBlockEntity.RECIPE_COUNT
+                                + BasicPerformanceFineParticleAdsorberBlockEntity.OUTPUT_COUNT,
+                        36
                 ),
-                BasicPerformanceFineParticleAdsorberRecipeCategory.TYPE
+                FineParticleAdsorberRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceStarlightCollectorRecipeTransferHandler<>(
+                new BasicPerformanceStarlightCollectorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceStarlightCollectorMenu.class,
                         0, 2,
                         3, 36
@@ -629,7 +641,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceBioReactorRecipeTransferHandler<>(
+                new BasicPerformanceBioReactorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceBioReactorMenu.class,
                         0, 4,
                         7, 36
@@ -637,7 +650,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceBioReactorRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceCellIncubatorRecipeTransferHandler<>(
+                new BasicPerformanceCellIncubatorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceCellIncubatorMenu.class,
                         0, 4,
                         5, 36
@@ -645,7 +659,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceCellIncubatorRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceCropCultivatorRecipeTransferHandler<>(
+                new BasicPerformanceCropCultivatorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceCropCultivatorMenu.class,
                         0, 3,
                         7, 36
@@ -656,7 +671,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceChemicalReactorRecipeTransferHandler<>(
+                new BasicPerformanceChemicalReactorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceChemicalReactorMenu.class,
                         0, 5,
                         8, 36
@@ -665,7 +681,8 @@ public class JEIDCPlugin implements IModPlugin {
         );
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceCompoundPurifierRecipeTransferHandler<>(
+                new BasicPerformanceCompoundPurifierRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceCompoundPurifierMenu.class,
                         0, 3,
                         5, 36
@@ -673,7 +690,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceCompoundPurifierRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceElectrolyserRecipeTransferHandler<>(
+                new BasicPerformanceElectrolyserRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceElectrolyserMenu.class,
                         0, 3,
                         6, 36
@@ -685,7 +703,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicTechnologyCompressionCondenserRecipeTransferHandler<>(
+                new BasicTechnologyCompressionCondenserRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyCompressionCondenserMenu.class,
                         0, 3,
                         4, 36
@@ -693,7 +712,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicTechnologyCompressionCondenserRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicTechnologyElectromagneticInductorRecipeTransferHandler<>(
+                new BasicTechnologyElectromagneticInductorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyElectromagneticInductorMenu.class,
                         0, 6,
                         7, 36
@@ -707,7 +727,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicTechnologyMachineElementProcessorRecipeTransferHandler<>(
+                new BasicTechnologyMachineElementProcessorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyMachineElementProcessorMenu.class,
                         0, 9,
                         10, 36
@@ -715,7 +736,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicTechnologyMachineElementProcessorRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicTechnologyMachineManufacturerRecipeTransferHandler<>(
+                new BasicTechnologyMachineManufacturerRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyMachineManufacturerMenu.class,
                         0, 9,
                         10, 36
@@ -723,7 +745,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicTechnologyMachineManufacturerRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicTechnologyMachinePartProcessorRecipeTransferHandler<>(
+                new BasicTechnologyMachinePartProcessorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyMachinePartProcessorMenu.class,
                         0, 9,
                         10, 36
@@ -731,7 +754,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicTechnologyMachinePartProcessorRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicTechnologyMultiblockEquipmentFabricatorRecipeTransferHandler<>(
+                new BasicTechnologyMultiblockEquipmentFabricatorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyMultiblockEquipmentFabricatorMenu.class,
                         0, 9,
                         10, 36
@@ -744,7 +768,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceCircuitBuilderRecipeTransferHandler<>(
+                new BasicPerformanceCircuitBuilderRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceCircuitBuilderMenu.class,
                         0, 5,
                         6, 36
@@ -752,7 +777,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceCircuitBuilderRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceDesignatedDataInjectorRecipeTransferHandler<>(
+                new BasicPerformanceDesignatedDataInjectorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceDesignatedDataInjectorMenu.class,
                         0, 5,
                         6, 36
@@ -760,7 +786,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceDesignatedDataInjectorRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceMachineDataInstallerRecipeTransferHandler<>(
+                new BasicPerformanceMachineDataInstallerRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceMachineDataInstallerMenu.class,
                         0, 3,
                         4, 36
@@ -770,7 +797,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceOreSorterTransferHandler<>(
+                new BasicPerformanceOreSorterRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceOreSorterMenu.class,
                         0, 1,
                         4, 36
@@ -778,7 +806,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceOreSorterRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceRockCrasherTransferHandler<>(
+                new BasicPerformanceRockCrasherRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceRockCrasherMenu.class,
                         0, 1,
                         4, 36
@@ -786,7 +815,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceRockCrasherRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceSoilPurifierRecipeTransferHandler<>(
+                new BasicPerformanceSoilPurifierRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceSoilPurifierMenu.class,
                         0, 3,
                         4, 36
@@ -796,7 +826,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceElectricArcFurnaceTransferHandler<>(
+                new BasicPerformanceElectricArcFurnaceRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceElectricArcFurnaceMenu.class,
                         0, 2,
                         4, 36
@@ -804,7 +835,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceElectricArcFurnaceRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceFormingMachineRecipeTransferHandler<>(
+                new BasicPerformanceFormingMachineRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceFormingMachineMenu.class,
                         0, 2,
                         3, 36
@@ -812,7 +844,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicPerformanceFormingMachineRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicPerformanceMaterialSeparatorRecipeTransferHandler<>(
+                new BasicPerformanceMaterialSeparatorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceMaterialSeparatorMenu.class,
                         0, 1,
                         4, 36
@@ -823,7 +856,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicTechnologyImitationMagicEngraverRecipeTransferHandler<>(
+                new BasicTechnologyImitationMagicEngraverRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyImitationMagicEngraverMenu.class,
                         0, 5,
                         6, 36
@@ -831,7 +865,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicTechnologyImitationMagicEngraverRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicTechnologySuspectedMagicCondenserRecipeTransferHandler<>(
+                new BasicTechnologySuspectedMagicCondenserRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologySuspectedMagicCondenserMenu.class,
                         0, 1,
                         2, 36
@@ -839,7 +874,8 @@ public class JEIDCPlugin implements IModPlugin {
                 BasicTechnologySuspectedMagicCondenserRecipeCategory.TYPE
         );
         registration.addRecipeTransferHandler(
-                new BasicTechnologyVirtualSigilProcessorRecipeTransferHandler<>(
+                new BasicTechnologyVirtualSigilProcessorRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyVirtualSigilProcessorMenu.class,
                         0, 5,
                         6, 36
@@ -851,7 +887,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicTechnologyVoidWorldCoordinateRecordingMachineRecipeTransferHandler<>(
+                new BasicTechnologyVoidWorldCoordinateRecordingMachineRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicTechnologyVoidWorldCoordinateRecordingMachineMenu.class,
                         0, 9,
                         10, 36
@@ -862,7 +899,8 @@ public class JEIDCPlugin implements IModPlugin {
 
 
         registration.addRecipeTransferHandler(
-                new BasicPerformanceRealityPhaseAdjustmentMachineRecipeTransferHandler<>(
+                new BasicPerformanceRealityPhaseAdjustmentMachineRecipeTransferHandler(
+                        registration.getTransferHelper(),
                         BasicPerformanceRealityPhaseAdjustmentMachineMenu.class,
                         0, 9,
                         10, 36
@@ -875,25 +913,17 @@ public class JEIDCPlugin implements IModPlugin {
 
 
 
-//        registration.addRecipeTransferHandler(
-//                new TestMachineRecipeTransferHandler<>(
-//                        TestMachineMenu.class,
-//                        0, 5,
-//                        8, 36
-//                ),
-//                TestMachineRecipeCategory.TYPE
-//        );
-
-
-            System.out.println("TRANSFER HANDLER REGISTERED");
-
-                registration.addRecipeTransferHandler(
+        registration.addRecipeTransferHandler(
                 new TestMachineRecipeTransferHandler(
-                        36, 5,  // 入力スロット（36〜40）
-                        0, 36
+                        registration.getTransferHelper(),
+                        TestMachineMenu.class,
+                        0, 5,
+                        8, 36
                 ),
                 TestMachineRecipeCategory.TYPE
         );
+
+
         }
     }
 

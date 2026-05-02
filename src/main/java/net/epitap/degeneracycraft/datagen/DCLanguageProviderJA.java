@@ -714,6 +714,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add(DCItems.CHLORINE_GAS.get(), "塩素ガス");
         add(DCItems.HYDROGEN_GAS.get(), "水素ガス");
+        add(DCItems.OXYGEN_GAS.get(), "酸素ガス");
         add(DCItems.SILICON_INGOT.get(), "ケイ素インゴット");
         add(DCItems.SILICON_NUGGET.get(), "ケイ素塊");
         add(DCBlocks.SILICON_BLOCK.get(), "ケイ素ブロック");

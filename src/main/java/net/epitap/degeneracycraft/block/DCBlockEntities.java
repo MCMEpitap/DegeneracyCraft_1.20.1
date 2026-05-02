@@ -104,22 +104,22 @@ import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeBlo
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeBlockEntity;
 import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeBlockEntity;
 import net.epitap.degeneracycraft.transport.pipe.low.energy.LowEnergyPipeBlockEntity;
-import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeRenderer;
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeRenderer;
-import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeRenderer;
+import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeRenderer;
 import net.epitap.degeneracycraft.transport.pipe.low.energy.LowEnergyPipeRenderer;
+import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class DCBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-            DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, Degeneracycraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Degeneracycraft.MOD_ID);
 
 
     public static final RegistryObject<BlockEntityType<BasicStrengthAstronomyMultiblockEnergyStorageBlockEntity>> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK_ENTITY =
@@ -523,7 +523,6 @@ public class DCBlockEntities {
     public static final RegistryObject<BlockEntityType<BasicItemPipeBlockEntity>> BASIC_ITEM_PIPE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("basic_item_pipe_block_entity", () ->
             BlockEntityType.Builder.of(BasicItemPipeBlockEntity::new, DCBlocks.BASIC_ITEM_PIPE_BLOCK.get()).build(null));
-
     public static final RegistryObject<BlockEntityType<BasicEnergyPipeBlockEntity>> BASIC_ENERGY_PIPE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("basic_energy_pipe_block_entity", () ->
                     BlockEntityType.Builder.of(BasicEnergyPipeBlockEntity::new, DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get()).build(null));
@@ -533,6 +532,7 @@ public class DCBlockEntities {
     public static final RegistryObject<BlockEntityType<FloatEnergyPipeBlockEntity>> FLOAT_ENERGY_PIPE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("float_energy_pipe_block_entity", () ->
                     BlockEntityType.Builder.of(FloatEnergyPipeBlockEntity::new, DCBlocks.FLOAT_ENERGY_PIPE_BLOCK.get()).build(null));
+
 
 
 //    LOW_ENERGY_PIPE_BLOCK_ENTITY = BlockEntityType.Builder.of(LowEnergyPipeBlockEntity::new, PipeBlocks.LOW_ENERGY_PIPE_BLOCK).build(null);
@@ -551,8 +551,6 @@ public class DCBlockEntities {
         BlockEntityRenderers.register(LOW_ENERGY_PIPE_BLOCK_ENTITY.get(), LowEnergyPipeRenderer::new);
         BlockEntityRenderers.register(FLOAT_ENERGY_PIPE_BLOCK_ENTITY.get(), FloatEnergyPipeRenderer::new);
     }
-
-
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

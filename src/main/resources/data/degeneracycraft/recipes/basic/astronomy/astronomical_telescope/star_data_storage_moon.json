@@ -1,0 +1,19 @@
+{
+  "type": "degeneracycraft:astronomical_telescope_recipe",
+  "energy": 10000.0,
+  "time": 100.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:simple_astronomy_memory_circuit"
+    },
+    {
+      "item": "degeneracycraft:designated_data_chip_moon"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:star_data_storage_moon"
+    }
+  ]
+}

@@ -9,6 +9,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -33,8 +36,7 @@ public class BasicStrengthAstronomyMultiblockEnergyStorageBlockEntity extends Bl
         @Override
         public void onEnergyChanged() {
             setChanged();
-            getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
-            DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);            DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));
         }
     };
 

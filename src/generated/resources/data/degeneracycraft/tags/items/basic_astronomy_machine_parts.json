@@ -1,6 +1,8 @@
 {
   "values": [
+    "degeneracycraft:designated_data_chip_moon",
     "degeneracycraft:simple_concave_lens",
-    "degeneracycraft:simple_convex_lens"
+    "degeneracycraft:simple_convex_lens",
+    "degeneracycraft:star_data_storage_moon"
   ]
 }

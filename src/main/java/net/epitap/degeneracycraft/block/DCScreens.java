@@ -1,9 +1,6 @@
 package net.epitap.degeneracycraft.block;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineScreen;
-import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineScreen;
-import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineScreen;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeScreen;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberScreen;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorScreen;
@@ -33,73 +30,75 @@ import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineerin
 import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_suspected_magic_condenser.BasicTechnologySuspectedMagicCondenserScreen;
 import net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineering.basic_technology_virtual_sigil_processor.BasicTechnologyVirtualSigilProcessorScreen;
 import net.epitap.degeneracycraft.block.machine.basic.jenith_void_science.basic_technology_void_world_coordinate_recording_machine.BasicTechnologyVoidWorldCoordinateRecordingMachineScreen;
+import net.epitap.degeneracycraft.block.machine.basic.kaleidoscopic_reality_science.basic_performance_reality_phase_adjustment_machine.BasicPerformanceRealityPhaseAdjustmentMachineScreen;
+import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_element_manufacture_machine.RedstonePoweredMachineElementManufactureMachineScreen;
+import net.epitap.degeneracycraft.block.machine.initial.redstone_powered_machine_part_manufacture_machine.RedstonePoweredMachinePartManufactureMachineScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.energy_storage.BasicStrengthAstronomyMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.input_bus.BasicStrengthAstronomyMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.energy.output_bus.BasicStrengthAstronomyMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.item_storage.BasicStrengthAstronomyMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.input_port.BasicStrengthAstronomyMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.item_storage.BasicStrengthAstronomyMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.astronomy.item.output_port.BasicStrengthAstronomyMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.biology.energy.energy_storage.BasicStrengthBiologyMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.biology.energy.input_bus.BasicStrengthBiologyMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.biology.energy.output_bus.BasicStrengthBiologyMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.biology.item.item_storage.BasicStrengthBiologyMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.biology.item.input_port.BasicStrengthBiologyMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.biology.item.item_storage.BasicStrengthBiologyMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.biology.item.output_port.BasicStrengthBiologyMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.energy_storage.BasicStrengthChemistryMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.input_bus.BasicStrengthChemistryMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.output_bus.BasicStrengthChemistryMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.item_storage.BasicStrengthChemistryMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.input_port.BasicStrengthChemistryMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.item_storage.BasicStrengthChemistryMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.output_port.BasicStrengthChemistryMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.energy_storage.BasicStrengthDynamicEnergeticsMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.input_bus.BasicStrengthDynamicEnergeticsMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.energy.output_bus.BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.item_storage.BasicStrengthDynamicEnergeticsMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.input_port.BasicStrengthDynamicEnergeticsMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.item_storage.BasicStrengthDynamicEnergeticsMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.dynamic_energetics.item.output_port.BasicStrengthDynamicEnergeticsMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.energy_storage.BasicStrengthEngineeringMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.input_bus.BasicStrengthEngineeringMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.engineering.energy.output_bus.BasicStrengthEngineeringMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.engineering.item.item_storage.BasicStrengthEngineeringMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.engineering.item.input_port.BasicStrengthEngineeringMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.engineering.item.item_storage.BasicStrengthEngineeringMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.engineering.item.output_port.BasicStrengthEngineeringMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.energy_storage.BasicStrengthFormalScienceMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.input_bus.BasicStrengthFormalScienceMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.formal_science.energy.output_bus.BasicStrengthFormalScienceMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.item_storage.BasicStrengthFormalScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.input_port.BasicStrengthFormalScienceMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.item_storage.BasicStrengthFormalScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.formal_science.item.output_port.BasicStrengthFormalScienceMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.energy_storage.BasicStrengthGeoScienceMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.input_bus.BasicStrengthGeoScienceMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.output_bus.BasicStrengthGeoScienceMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.item_storage.BasicStrengthGeoScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.input_port.BasicStrengthGeoScienceMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.item_storage.BasicStrengthGeoScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.geo_science.item.output_port.BasicStrengthGeoScienceMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.energy_storage.BasicStrengthHybridPhysicsMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.input_bus.BasicStrengthHybridPhysicsMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.energy.output_bus.BasicStrengthHybridPhysicsMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.item_storage.BasicStrengthHybridPhysicsMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.input_port.BasicStrengthHybridPhysicsMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.item_storage.BasicStrengthHybridPhysicsMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.output_port.BasicStrengthHybridPhysicsMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.energy_storage.BasicStrengthImitationMagicEngineeringMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.input_bus.BasicStrengthImitationMagicEngineeringMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.energy.output_bus.BasicStrengthImitationMagicEngineeringMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.item_storage.BasicStrengthImitationMagicEngineeringMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.input_port.BasicStrengthImitationMagicEngineeringMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.item_storage.BasicStrengthImitationMagicEngineeringMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.output_port.BasicStrengthImitationMagicEngineeringMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.energy_storage.BasicStrengthJenithVoidScienceMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.input_bus.BasicStrengthJenithVoidScienceMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.energy.output_bus.BasicStrengthJenithVoidScienceMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.item_storage.BasicStrengthJenithVoidScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.input_port.BasicStrengthJenithVoidScienceMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.item_storage.BasicStrengthJenithVoidScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.jenith_void_science.item.output_port.BasicStrengthJenithVoidScienceMultiblockItemOutputPortScreen;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.energy_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.input_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyInputBusScreen;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.energy.output_bus.BasicStrengthKaleidoscopicRealityScienceMultiblockEnergyOutputBusScreen;
-import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.input_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemInputPortScreen;
+import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageScreen;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortScreen;
-import net.epitap.degeneracycraft.block.test.TestMachineScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -329,7 +328,7 @@ public class DCScreens {
 
             MenuScreens.register(DCMenuTypes.BASIC_PERFORMANCE_CIRCUIT_BUILDER_MENU.get(),
                     BasicPerformanceCircuitBuilderScreen::new);
-            MenuScreens.register(DCMenuTypes.BASIC_PERFORMANCE_MACHINE_DARA_INSTALLER_MENU.get(),
+            MenuScreens.register(DCMenuTypes.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_MENU.get(),
                     BasicPerformanceMachineDataInstallerScreen::new);
             MenuScreens.register(DCMenuTypes.BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_MENU.get(),
                     BasicPerformanceDesignatedDataInjectorScreen::new);
@@ -368,8 +367,7 @@ public class DCScreens {
 
 
 
-            MenuScreens.register(DCMenuTypes.TEST_MACHINE_MENU.get(),
-                    TestMachineScreen::new);
+
         });
     }
 }

@@ -83,6 +83,9 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if(!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
@@ -99,7 +102,7 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
         @Override
         public void onEnergyChanged() {
             setChanged();
-            getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));
         }
     };
@@ -156,6 +159,10 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
                 return 6;
             }
         };
+
+        for (int i = 0; i < RECIPE_COUNT; i++) {
+            inputLockedRecipe[i] = ItemStack.EMPTY;
+        }
     }
 
     @Override
@@ -226,8 +233,14 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
         nbt.putInt("multiblockLevel", multiblockLevel);
         nbt.putBoolean("inputLocked", inputLocked);
         for (int i = 0; i < inputLockedRecipe.length; i++) {
+            ItemStack stack = inputLockedRecipe[i];
+
+            if (stack == null) {
+                stack = ItemStack.EMPTY;
+            }
+
             CompoundTag itemTag = new CompoundTag();
-            inputLockedRecipe[i].save(itemTag);
+            stack.save(itemTag);
             nbt.put("inputLockedRecipe" + i, itemTag);
         }
     }

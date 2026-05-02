@@ -1,8 +1,8 @@
 package net.epitap.degeneracycraft.integration.jei;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_astronomical_telescope.BasicPerformanceAstronomicalTelescopeRecipe;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberRecipe;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.astronomical_telescope.AstronomicalTelescopeRecipe;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.fine_particle_adsorber.FineParticleAdsorberRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.biology.basic_performance_cell_incubator.BasicPerformanceCellIncubatorRecipe;
@@ -51,10 +51,10 @@ public class DCRecipeTypes {
 
 
 
-    public static final RegistryObject<RecipeSerializer<BasicPerformanceAstronomicalTelescopeRecipe>> BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_SERIALIZER =
-            SERIALIZERS.register("basic_performance_astronomical_telescope_recipe", () -> BasicPerformanceAstronomicalTelescopeRecipe.Serializer.INSTANCE);
-    public static final RegistryObject<RecipeSerializer<BasicPerformanceFineParticleAdsorberRecipe>> BASIC_PERFORMANCE_FINE_PARTICLE_ADSORBER_SERIALIZER =
-            SERIALIZERS.register("basic_performance_fine_particle_adsorber_recipe", () -> BasicPerformanceFineParticleAdsorberRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<AstronomicalTelescopeRecipe>> ASTRONOMICAL_TELESCOPE_SERIALIZER =
+            SERIALIZERS.register("astronomical_telescope_recipe", () -> AstronomicalTelescopeRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<FineParticleAdsorberRecipe>> FINE_PARTICLE_ADSORBER_SERIALIZER =
+            SERIALIZERS.register("fine_particle_adsorber_recipe", () -> FineParticleAdsorberRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<BasicPerformanceStarlightCollectorRecipe>> BASIC_PERFORMANCE_STARLIGHT_COLLECTOR_SERIALIZER =
             SERIALIZERS.register("basic_performance_starlight_collector_recipe", () -> BasicPerformanceStarlightCollectorRecipe.Serializer.INSTANCE);
 
@@ -155,6 +155,7 @@ public class DCRecipeTypes {
 
     public static final RegistryObject<RecipeSerializer<?>> MACHINE_RECIPE =
             SERIALIZERS.register("test_machine_recipe", () -> TestMachineRecipe.Serializer.INSTANCE);
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

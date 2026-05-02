@@ -15,7 +15,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 
 
-public class DCBlockBase extends Block implements EntityBlock {
+public class DCBlockBase extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
     public DCBlockBase(Properties pProperties) {

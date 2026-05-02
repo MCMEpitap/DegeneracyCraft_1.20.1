@@ -715,6 +715,8 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
         add(DCItems.CHLORINE_GAS.get(), "Chlorine Gas");
         add(DCItems.HYDROGEN_GAS.get(), "Hydrogen Gas");
+        add(DCItems.OXYGEN_GAS.get(), "Oxygen Gas");
+
         add(DCItems.SILICON_INGOT.get(), "Silicon Ingot");
         add(DCItems.SILICON_NUGGET.get(), "Silicon Nugget");
         add(DCBlocks.SILICON_BLOCK.get(), "Silicon Block");

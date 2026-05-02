@@ -11,6 +11,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -85,6 +88,9 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if(!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
@@ -100,7 +106,7 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
         @Override
         public void onEnergyChanged() {
             setChanged();
-            getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));
         }
     };
@@ -156,6 +162,10 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
                 return 6;
             }
         };
+
+        for (int i = 0; i < RECIPE_COUNT; i++) {
+            inputLockedRecipe[i] = ItemStack.EMPTY;
+        }
     }
 
 
@@ -225,11 +235,11 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
         nbt.putBoolean("forceHalt", forceHalt);
         nbt.putInt("multiblockLevel", multiblockLevel);
         nbt.putBoolean("inputLocked", inputLocked);
-        for (int i = 0; i < inputLockedRecipe.length; i++) {
-            CompoundTag itemTag = new CompoundTag();
-            inputLockedRecipe[i].save(itemTag);
-            nbt.put("inputLockedRecipe" + i, itemTag);
-        }
+//        for (int i = 0; i < inputLockedRecipe.length; i++) {
+//            CompoundTag itemTag = new CompoundTag();
+//            inputLockedRecipe[i].save(itemTag);
+//            nbt.put("inputLockedRecipe" + i, itemTag);
+//        }
     }
 
     @Override
@@ -243,17 +253,17 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
         forceHalt = nbt.getBoolean("forceHalt");
         multiblockLevel = nbt.getInt("multiblockLevel");
         inputLocked = nbt.getBoolean("inputLocked");
-        for (int i = 0; i < inputLockedRecipe.length; i++) {
-            if (nbt.contains("inputLockedRecipe" + i)) {
-                inputLockedRecipe[i] = ItemStack.of(nbt.getCompound("inputLockedRecipe" + i));
-            } else {
-                inputLockedRecipe[i] = ItemStack.EMPTY;
-            }
-
-            if (inputLockedRecipe[i] == null) {
-                inputLockedRecipe[i] = ItemStack.EMPTY;
-            }
-        }
+//        for (int i = 0; i < inputLockedRecipe.length; i++) {
+//            if (nbt.contains("inputLockedRecipe" + i)) {
+//                inputLockedRecipe[i] = ItemStack.of(nbt.getCompound("inputLockedRecipe" + i));
+//            } else {
+//                inputLockedRecipe[i] = ItemStack.EMPTY;
+//            }
+//
+//            if (inputLockedRecipe[i] == null) {
+//                inputLockedRecipe[i] = ItemStack.EMPTY;
+//            }
+//        }
     }
 
     public void drops() {
@@ -308,8 +318,7 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
             return;
         }
 
-        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity)
-                && canOutput(blockEntity)) {
+        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity) && canOutput(blockEntity)) {
 
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
@@ -588,15 +597,13 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
             ItemStack required = inputs.get(i);
             ItemStack actual = blockEntity.itemHandler.getStackInSlot(i);
 
-            // ✔ 空欄要求（air）の場合
             if (required.isEmpty() || required.getItem() == Items.AIR) {
                 if (!actual.isEmpty()) {
-                    return false; // 空じゃなかったらNG
+                    return false;
                 }
                 continue;
             }
 
-            // ✔ 通常アイテム判定
             if (!ItemStack.isSameItemSameTags(required, actual)
                     || actual.getCount() < required.getCount()) {
                 return false;
@@ -638,27 +645,18 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
-        // =========================
-        // 入力消費
-        // =========================
         for (int i = 0; i < inputs.size(); i++) {
             ItemStack required = inputs.get(i);
-
-            // 空欄は消費しない
             if (required.isEmpty() || required.getItem() == Items.AIR) continue;
 
             blockEntity.itemHandler.extractItem(i, required.getCount(), false);
         }
 
-        // =========================
-        // 出力生成
-        // =========================
-        int OUTPUT_START = inputs.size(); // ←ここ重要（自分で定義）
+        int OUTPUT_START = inputs.size();
 
         for (int i = 0; i < outputs.size(); i++) {
             ItemStack out = outputs.get(i);
 
-            // 空欄は生成しない
             if (out.isEmpty() || out.getItem() == Items.AIR) continue;
 
             int slot = OUTPUT_START + i;
@@ -670,9 +668,6 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
                 existing.grow(out.getCount());
                 blockEntity.itemHandler.setStackInSlot(slot, existing);
             }
-//            else {
-//
-//            }
         }
 
         blockEntity.resetProgress();
@@ -704,21 +699,17 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
         for (int i = 0; i < outputs.size(); i++) {
             ItemStack out = outputs.get(i);
 
-            // 空欄は無視
             if (out.isEmpty() || out.getItem() == Items.AIR) continue;
 
             int slot = OUTPUT_START + i;
             ItemStack existing = blockEntity.itemHandler.getStackInSlot(slot);
 
-            // ✔ 空スロット → OK
             if (existing.isEmpty()) continue;
 
-            // ✔ 同一アイテムでない → NG
             if (!ItemStack.isSameItemSameTags(existing, out)) {
                 return false;
             }
 
-            // ✔ スタック上限チェック
             if (existing.getCount() + out.getCount() > existing.getMaxStackSize()) {
                 return false;
             }
@@ -735,7 +726,6 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
 
                 List<ItemStack> inputs = recipeData.getInputs();
 
-                // 全体カウント（Shift用）
                 Map<Item, Integer> totalCounts = new HashMap<>();
                 if (shift) {
                     for (ItemStack input : inputs) {
@@ -749,11 +739,9 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
                 for (int slot = 0; slot < inputs.size(); slot++) {
                     ItemStack required = inputs.get(slot);
 
-                    // 空白スロットはスキップ（でも位置は維持）
                     if (required.isEmpty() || required.getItem() == Items.AIR) continue;
 
                     if (shift) {
-                        // 同一アイテム数カウント
                         long sameCount = inputs.stream()
                                 .filter(s -> !s.isEmpty()
                                         && s.getItem() != Items.AIR
@@ -797,7 +785,7 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
 
         for (int i = 0; i < playerInv.getSlots() && needed > 0; i++) {
             ItemStack fromSlot = playerInv.getStackInSlot(i);
-            if (!fromSlot.equals(required)) continue;
+             if (!ItemStack.isSameItemSameTags(fromSlot, required)) continue;
 
             int toExtract = Math.min(needed, fromSlot.getCount());
             ItemStack extracted = playerInv.extractItem(i, toExtract, false);
@@ -810,5 +798,16 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
                 needed -= toExtract;
             }
         }
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
     }
 }

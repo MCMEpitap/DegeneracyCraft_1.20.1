@@ -3,7 +3,6 @@
   "energy": 1000.0,
   "time": 10.0,
   "phase": 2,
-
   "inputs": [
     {
       "item": "degeneracycraft:ammonia_gas",
@@ -24,7 +23,6 @@
       "count": 2
     }
   ],
-
   "outputs": [
     {
       "item": "degeneracycraft:ammonium_sulfate_dust",

@@ -4,27 +4,36 @@ import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.transfer.IRecipeTransferError;
 import mezz.jei.api.recipe.transfer.IRecipeTransferHandler;
+import mezz.jei.api.recipe.transfer.IRecipeTransferHandlerHelper;
+import net.epitap.degeneracycraft.block.DCMenuTypes;
 import net.epitap.degeneracycraft.block.machine.basic.chemistry.basic_performance_electrolyser.BasicPerformanceElectrolyserMenu;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.networking.packet.DCTransferRecipeC2SPacket;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
 
-public class BasicPerformanceElectrolyserRecipeTransferHandler<T extends BasicPerformanceElectrolyserMenu, R extends BasicPerformanceElectrolyserRecipe>
-        implements IRecipeTransferHandler<T, BasicPerformanceElectrolyserRecipe> {
+public class BasicPerformanceElectrolyserRecipeTransferHandler
+        implements IRecipeTransferHandler<BasicPerformanceElectrolyserMenu, BasicPerformanceElectrolyserRecipe> {
 
-    private final Class<T> containerClass;
+    private final Class containerClass;
     private final int recipeSlotStart;
     private final int recipeSlotCount;
     private final int inventorySlotStart;
     private final int inventorySlotCount;
+    private final IRecipeTransferHandlerHelper helper;
 
-    public BasicPerformanceElectrolyserRecipeTransferHandler(Class<T> containerClass,
-                                                             int recipeSlotStart, int recipeSlotCount,
-                                                             int inventorySlotStart, int inventorySlotCount) {
+    public BasicPerformanceElectrolyserRecipeTransferHandler(
+            IRecipeTransferHandlerHelper helper,
+            Class containerClass,
+            int recipeSlotStart, int recipeSlotCount,
+            int inventorySlotStart, int inventorySlotCount
+    ) {
+        this.helper = helper;
         this.containerClass = containerClass;
         this.recipeSlotStart = recipeSlotStart;
         this.recipeSlotCount = recipeSlotCount;
@@ -33,19 +42,54 @@ public class BasicPerformanceElectrolyserRecipeTransferHandler<T extends BasicPe
     }
 
     @Override
-    public Class<T> getContainerClass() {
+    public Class<BasicPerformanceElectrolyserMenu> getContainerClass() {
         return containerClass;
     }
 
     @Override
-    public Optional<MenuType<T>> getMenuType() {
-        return Optional.empty();
+    public Optional<MenuType<BasicPerformanceElectrolyserMenu>> getMenuType() {
+        return Optional.of(DCMenuTypes.BASIC_PERFORMANCE_ELECTROLYSER_MENU.get());
     }
 
     @Override
     public RecipeType<BasicPerformanceElectrolyserRecipe> getRecipeType() {
         return BasicPerformanceElectrolyserRecipeCategory.TYPE;
     }
+
+    private boolean hasAllItems(Player player, BasicPerformanceElectrolyserRecipe recipe, boolean maxTransfer) {
+        int[] required = new int[recipeSlotCount];
+
+        ItemStack[] inputs = new ItemStack[]{
+                recipe.getInput0Item(),
+                recipe.getInput1Item(),
+                recipe.getInput2Item()
+        };
+
+        for (int i = 0; i < inputs.length; i++) {
+            if (inputs[i].isEmpty()) continue;
+            required[i] = inputs[i].getCount();
+        }
+
+        int[] found = new int[recipeSlotCount];
+
+        for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+            ItemStack stack = player.getInventory().getItem(i);
+            if (stack.isEmpty()) continue;
+
+            for (int j = 0; j < inputs.length; j++) {
+                if (!inputs[j].isEmpty() && ItemStack.isSameItemSameTags(stack, inputs[j])) {
+                    found[j] += stack.getCount();
+                }
+            }
+        }
+
+        for (int i = 0; i < required.length; i++) {
+            if (found[i] < required[i]) return false;
+        }
+
+        return true;
+    }
+
 
     @Override
     public @Nullable IRecipeTransferError transferRecipe(
@@ -57,10 +101,18 @@ public class BasicPerformanceElectrolyserRecipeTransferHandler<T extends BasicPe
             boolean doTransfer
     ) {
         if (!doTransfer) {
+            if (!hasAllItems(player, recipe, maxTransfer)) {
+                return helper.createUserErrorWithTooltip(Component.translatable("jei.tooltip.error.recipe.transfer.missing"));
+            }
             return null;
         }
 
-        DCMessages.sendToServer(new DCTransferRecipeC2SPacket(container.blockEntity.getBlockPos(),recipe.getId(),maxTransfer)
+        DCMessages.sendToServer(
+                new DCTransferRecipeC2SPacket(
+                        container.blockEntity.getBlockPos(),
+                        recipe.getId(),
+                        maxTransfer
+                )
         );
 
         return null;

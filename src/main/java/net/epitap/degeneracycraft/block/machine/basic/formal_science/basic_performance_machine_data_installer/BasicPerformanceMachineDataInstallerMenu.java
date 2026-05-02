@@ -32,7 +32,7 @@ public class BasicPerformanceMachineDataInstallerMenu extends AbstractContainerM
     }
 
     public BasicPerformanceMachineDataInstallerMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(DCMenuTypes.BASIC_PERFORMANCE_MACHINE_DARA_INSTALLER_MENU.get(), id);
+        super(DCMenuTypes.BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_MENU.get(), id);
         blockEntity = (BasicPerformanceMachineDataInstallerBlockEntity) entity;
         this.level = inv.player.level();
         this.data = data;

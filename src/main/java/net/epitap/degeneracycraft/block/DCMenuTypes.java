@@ -353,11 +353,10 @@ public class DCMenuTypes {
 
     public static final RegistryObject<MenuType<BasicPerformanceCircuitBuilderMenu>> BASIC_PERFORMANCE_CIRCUIT_BUILDER_MENU =
             registerMenuType(BasicPerformanceCircuitBuilderMenu::new, "basic_performance_circuit_builder_menu");
-    public static final RegistryObject<MenuType<BasicPerformanceMachineDataInstallerMenu>> BASIC_PERFORMANCE_MACHINE_DARA_INSTALLER_MENU =
-            registerMenuType(BasicPerformanceMachineDataInstallerMenu::new, "basic_performance_machine_data_installer_menu");
     public static final RegistryObject<MenuType<BasicPerformanceDesignatedDataInjectorMenu>> BASIC_PERFORMANCE_DESIGNATED_DATA_INJECTOR_MENU =
             registerMenuType(BasicPerformanceDesignatedDataInjectorMenu::new, "basic_performance_designated_data_injector_menu");
-
+    public static final RegistryObject<MenuType<BasicPerformanceMachineDataInstallerMenu>> BASIC_PERFORMANCE_MACHINE_DATA_INSTALLER_MENU =
+            registerMenuType(BasicPerformanceMachineDataInstallerMenu::new, "basic_performance_machine_data_installer_menu");
 
 
     public static final RegistryObject<MenuType<BasicPerformanceOreSorterMenu>> BASIC_PERFORMANCE_ORE_SORTER_MENU =
@@ -397,7 +396,7 @@ public class DCMenuTypes {
 
 
     public static final RegistryObject<MenuType<TestMachineMenu>> TEST_MACHINE_MENU =
-            registerMenuType(TestMachineMenu::new, "test_machine_menu");
+            testRegisterMenuType("test_machine_menu",TestMachineMenu::new);
 
 
 //    public static final RegistryObject<MenuType<InfinityPoweredAllInOneCompressorMachineMenu>> INFINITY_POWERED_ALL_IN_ONE_COMPRESSOR_MACHINE_BLOCK_MENU =
@@ -410,6 +409,10 @@ public class DCMenuTypes {
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                   String name) {
+        return MENUS.register(name, () -> IForgeMenuType.create(factory));
+    }
+
+    private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> testRegisterMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }
 

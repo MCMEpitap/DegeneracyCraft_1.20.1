@@ -11,6 +11,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -83,6 +86,9 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if(!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
@@ -98,7 +104,7 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
         @Override
         public void onEnergyChanged() {
             setChanged();
-            getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));
         }
     };
@@ -155,6 +161,10 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
                 return 6;
             }
         };
+
+        for (int i = 0; i < RECIPE_COUNT; i++) {
+            inputLockedRecipe[i] = ItemStack.EMPTY;
+        }
     }
 
     @Override
@@ -226,8 +236,14 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
         nbt.putInt("multiblockLevel", multiblockLevel);
         nbt.putBoolean("inputLocked", inputLocked);
         for (int i = 0; i < inputLockedRecipe.length; i++) {
+            ItemStack stack = inputLockedRecipe[i];
+
+            if (stack == null) {
+                stack = ItemStack.EMPTY;
+            }
+
             CompoundTag itemTag = new CompoundTag();
-            inputLockedRecipe[i].save(itemTag);
+            stack.save(itemTag);
             nbt.put("inputLockedRecipe" + i, itemTag);
         }
     }
@@ -734,7 +750,7 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
 
         for (int i = 0; i < playerInv.getSlots() && needed > 0; i++) {
             ItemStack fromSlot = playerInv.getStackInSlot(i);
-            if (!fromSlot.equals(required)) continue;
+             if (!ItemStack.isSameItemSameTags(fromSlot, required)) continue;
 
             int toExtract = Math.min(needed, fromSlot.getCount());
             ItemStack extracted = playerInv.extractItem(i, toExtract, false);
@@ -747,6 +763,16 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
                 needed -= toExtract;
             }
         }
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
     }
 }
 

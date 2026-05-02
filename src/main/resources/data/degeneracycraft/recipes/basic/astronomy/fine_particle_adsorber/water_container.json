@@ -1,0 +1,22 @@
+{
+  "type": "degeneracycraft:fine_particle_adsorber_recipe",
+  "energy": 500.0,
+  "time": 5.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:empty_container"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:water_container"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ]
+}

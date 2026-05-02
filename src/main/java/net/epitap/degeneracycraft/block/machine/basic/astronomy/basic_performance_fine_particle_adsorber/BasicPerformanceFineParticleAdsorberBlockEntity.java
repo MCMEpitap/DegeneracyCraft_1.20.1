@@ -3,7 +3,7 @@ package net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performan
 import net.epitap.degeneracycraft.block.DCBlockEntities;
 import net.epitap.degeneracycraft.energy.DCEnergyStorageFloatBase;
 import net.epitap.degeneracycraft.energy.DCIEnergyStorageFloat;
-import net.epitap.degeneracycraft.integration.jei.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberRecipe;
+import net.epitap.degeneracycraft.integration.jei.basic.astronomy.fine_particle_adsorber.FineParticleAdsorberRecipe;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.networking.packet.DCEnergySyncS2CPacket;
 import net.epitap.degeneracycraft.util.DCWrappedHandler;
@@ -11,6 +11,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -20,6 +23,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -66,10 +70,8 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
     public static final int DATA_MULTIBLOCK   = 4;
     public static final int DATA_RECIPE_LOCK   = 5;
 
-    public static final int IN_0   = 0;
-    public static final int OUT_0   = 1;
-    public static final int OUT_1   = 2;
-    public static final int OUT_2   = 3;
+    public final int IN_0 = 0;
+    public final int OUT_0 = 1, OUT_1 = 2, OUT_2 = 3;
 
     private final List<DCIEnergyStorageFloat> energyInputs = new ArrayList<>();
     private final List<DCIEnergyStorageFloat> energyOutputs = new ArrayList<>();
@@ -80,6 +82,9 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if(!level.isClientSide()) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
@@ -95,7 +100,7 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
         @Override
         public void onEnergyChanged() {
             setChanged();
-            getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));
         }
     };
@@ -151,6 +156,10 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
                 return 6;
             }
         };
+
+        for (int i = 0; i < RECIPE_COUNT; i++) {
+            inputLockedRecipe[i] = ItemStack.EMPTY;
+        }
     }
 
     @Override
@@ -222,8 +231,14 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
         nbt.putInt("multiblockLevel", multiblockLevel);
         nbt.putBoolean("inputLocked", inputLocked);
         for (int i = 0; i < inputLockedRecipe.length; i++) {
+            ItemStack stack = inputLockedRecipe[i];
+
+            if (stack == null) {
+                stack = ItemStack.EMPTY;
+            }
+
             CompoundTag itemTag = new CompoundTag();
-            inputLockedRecipe[i].save(itemTag);
+            stack.save(itemTag);
             nbt.put("inputLockedRecipe" + i, itemTag);
         }
     }
@@ -293,8 +308,8 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
+        Optional<FineParticleAdsorberRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
 
         if (blockEntity.forceHalt) {
             blockEntity.resetProgress();
@@ -302,8 +317,7 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
             return;
         }
 
-        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasAmountEnergyRecipe(blockEntity)
-                && hasNotReachedStackLimit(blockEntity) && canInsertItemIntoOutputSlot(blockEntity)) {
+        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity) && canOutput(blockEntity)) {
             if (blockEntity.multiblockLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
                 blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
@@ -531,19 +545,6 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
         }
     }
 
-    private static boolean hasAmountEnergyRecipe(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
-
-        return blockEntity.getEnergyStorage().getEnergyStoredFloat() >= match.get().getRequiredEnergy() / (match.get().getRequiredTime() * 20F);
-    }
-
     public static boolean craftCheck(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
         Level level = blockEntity.level;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
@@ -551,11 +552,11 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
+        Optional<FineParticleAdsorberRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
 
         if (match.isPresent()) {
-            return blockEntity.data.get(0) > match.get().getRequiredTime() * 20;
+            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
         }
         return false;
     }
@@ -567,119 +568,198 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
+        Optional<FineParticleAdsorberRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent();
     }
 
-    public static boolean hasAmountRecipe(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
+    private static boolean hasAmountRecipe(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
+        Level level = blockEntity.level;
+        if (level == null) return false;
+
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<FineParticleAdsorberRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
+
+        if (match.isEmpty()) return false;
+
+        FineParticleAdsorberRecipe recipe = match.get();
+        List<ItemStack> inputs = recipe.getInputs();
+
+        for (int i = 0; i < inputs.size(); i++) {
+            ItemStack required = inputs.get(i);
+            ItemStack actual = blockEntity.itemHandler.getStackInSlot(i);
+
+            if (required.isEmpty() || required.getItem() == Items.AIR) {
+                if (!actual.isEmpty()) {
+                    return false;
+                }
+                continue;
+            }
+
+            if (!ItemStack.isSameItemSameTags(required, actual)
+                    || actual.getCount() < required.getCount()) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static boolean hasEnergyRecipe(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
         Level level = blockEntity.level;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
+        Optional<FineParticleAdsorberRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
 
-        return blockEntity.itemHandler.getStackInSlot(0).getCount() >= match.get().getInput0Item().getCount();
+        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F;
     }
-
 
     private static void craftItem(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
         Level level = blockEntity.level;
+        if (level == null) return;
+
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
+        Optional<FineParticleAdsorberRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            blockEntity.itemHandler.extractItem(IN_0, match.get().getInput0Item().getCount(), false);
-            blockEntity.itemHandler.setStackInSlot(OUT_0, new ItemStack(match.get().getOutput0Item().getItem(),
-                    blockEntity.itemHandler.getStackInSlot(OUT_0).getCount() + match.get().getOutput0Item().getCount()));
-            blockEntity.itemHandler.setStackInSlot(OUT_1, new ItemStack(match.get().getOutput1Item().getItem(),
-                    blockEntity.itemHandler.getStackInSlot(OUT_1).getCount() + match.get().getOutput1Item().getCount()));
-            blockEntity.itemHandler.setStackInSlot(OUT_2, new ItemStack(match.get().getOutput2Item().getItem(),
-                    blockEntity.itemHandler.getStackInSlot(OUT_2).getCount() + match.get().getOutput2Item().getCount()));
+        if (match.isEmpty()) return;
 
-            blockEntity.resetProgress();
+        FineParticleAdsorberRecipe recipe = match.get();
+
+        List<ItemStack> inputs = recipe.getInputs();
+        List<ItemStack> outputs = recipe.getOutputs();
+
+        for (int i = 0; i < inputs.size(); i++) {
+            ItemStack required = inputs.get(i);
+            if (required.isEmpty() || required.getItem() == Items.AIR) continue;
+
+            blockEntity.itemHandler.extractItem(i, required.getCount(), false);
         }
+
+        int OUTPUT_START = inputs.size();
+
+        for (int i = 0; i < outputs.size(); i++) {
+            ItemStack out = outputs.get(i);
+
+            if (out.isEmpty() || out.getItem() == Items.AIR) continue;
+
+            int slot = OUTPUT_START + i;
+            ItemStack existing = blockEntity.itemHandler.getStackInSlot(slot);
+
+            if (existing.isEmpty()) {
+                blockEntity.itemHandler.setStackInSlot(slot, out.copy());
+            } else if (ItemStack.isSameItemSameTags(existing, out)) {
+                existing.grow(out.getCount());
+                blockEntity.itemHandler.setStackInSlot(slot, existing);
+            }
+        }
+
+        blockEntity.resetProgress();
     }
 
     public void resetProgress() {
         this.counter = 0;
     }
 
-    private static boolean hasNotReachedStackLimit(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
+    private static boolean canOutput(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
         Level level = blockEntity.level;
+        if (level == null) return false;
+
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
+        Optional<FineParticleAdsorberRecipe> match = level.getRecipeManager()
+                .getRecipeFor(FineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
 
-        return (blockEntity.itemHandler.getStackInSlot(OUT_0).getCount() + match.get().getOutput0Item().getCount() <= blockEntity.itemHandler.getStackInSlot(OUT_0).getMaxStackSize())
-                && (blockEntity.itemHandler.getStackInSlot(OUT_1).getCount() + match.get().getOutput1Item().getCount() <= blockEntity.itemHandler.getStackInSlot(OUT_1).getMaxStackSize())
-                && (blockEntity.itemHandler.getStackInSlot(OUT_2).getCount() + match.get().getOutput2Item().getCount() <= blockEntity.itemHandler.getStackInSlot(OUT_2).getMaxStackSize());
-    }
+        if (match.isEmpty()) return false;
 
-    private static boolean canInsertItemIntoOutputSlot(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        FineParticleAdsorberRecipe recipe = match.get();
+        List<ItemStack> inputs = recipe.getInputs();
+        List<ItemStack> outputs = recipe.getOutputs();
+
+        int OUTPUT_START = inputs.size();
+
+        for (int i = 0; i < outputs.size(); i++) {
+            ItemStack out = outputs.get(i);
+
+            if (out.isEmpty() || out.getItem() == Items.AIR) continue;
+
+            int slot = OUTPUT_START + i;
+            ItemStack existing = blockEntity.itemHandler.getStackInSlot(slot);
+
+            if (existing.isEmpty()) continue;
+
+            if (!ItemStack.isSameItemSameTags(existing, out)) {
+                return false;
+            }
+
+            if (existing.getCount() + out.getCount() > existing.getMaxStackSize()) {
+                return false;
+            }
         }
 
-        Optional<BasicPerformanceFineParticleAdsorberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceFineParticleAdsorberRecipe.Type.INSTANCE, inventory, level);
-
-        return (blockEntity.itemHandler.getStackInSlot(OUT_0).getItem() == match.get().getOutput0Item().getItem() || blockEntity.itemHandler.getStackInSlot(OUT_0).isEmpty())
-                && (blockEntity.itemHandler.getStackInSlot(OUT_1).getItem() == match.get().getOutput1Item().getItem() || blockEntity.itemHandler.getStackInSlot(OUT_1).isEmpty())
-                && (blockEntity.itemHandler.getStackInSlot(OUT_2).getItem() == match.get().getOutput2Item().getItem() || blockEntity.itemHandler.getStackInSlot(OUT_2).isEmpty());
+        return true;
     }
 
     public void insertRecipeInputsFromPlayer(Player player, Recipe<?> recipe, boolean shift) {
-        if (!(recipe instanceof BasicPerformanceFineParticleAdsorberRecipe recipeData)) return;
+        if (!(recipe instanceof FineParticleAdsorberRecipe recipeData)) return;
 
         player.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(playerInv -> {
             this.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(machineInv -> {
 
-                ItemStack[] recipeInputs = new ItemStack[]{
-                        recipeData.getInput0Item()
-                };
+                List<ItemStack> inputs = recipeData.getInputs();
 
                 Map<Item, Integer> totalCounts = new HashMap<>();
                 if (shift) {
-                    for (ItemStack input : recipeInputs) {
-                        if (!input.isEmpty()) {
+                    for (ItemStack input : inputs) {
+                        if (!input.isEmpty() && input.getItem() != Items.AIR) {
                             int count = countItemInInventory(playerInv, input.getItem());
                             totalCounts.put(input.getItem(), count);
                         }
                     }
                 }
 
-                for (int slot = 0; slot < recipeInputs.length; slot++) {
-                    ItemStack required = recipeInputs[slot];
-                    if (required.isEmpty()) continue;
+                for (int slot = 0; slot < inputs.size(); slot++) {
+                    ItemStack required = inputs.get(slot);
+
+                    if (required.isEmpty() || required.getItem() == Items.AIR) continue;
 
                     if (shift) {
-                        long sameCount = Arrays.stream(recipeInputs)
-                                .filter(itemStack -> !itemStack.isEmpty() && itemStack.getItem() == required.getItem())
+                        long sameCount = inputs.stream()
+                                .filter(s -> !s.isEmpty()
+                                        && s.getItem() != Items.AIR
+                                        && s.getItem() == required.getItem())
                                 .count();
 
                         int total = totalCounts.getOrDefault(required.getItem(), 0);
+
                         int perSlot = sameCount > 0 ? total / (int) sameCount : total;
                         perSlot = Math.max(1, perSlot);
 
-                        insertItemFromPlayer(playerInv, machineInv, new ItemStack(required.getItem(), perSlot), slot);
+                        insertItemFromPlayer(playerInv, machineInv,
+                                new ItemStack(required.getItem(), perSlot),
+                                slot);
+
                     } else {
-                        insertItemFromPlayer(playerInv, machineInv, required.copy(), slot);
+                        insertItemFromPlayer(playerInv, machineInv,
+                                required.copy(),
+                                slot);
                     }
                 }
             });
@@ -704,7 +784,7 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
 
         for (int i = 0; i < playerInv.getSlots() && needed > 0; i++) {
             ItemStack fromSlot = playerInv.getStackInSlot(i);
-            if (!fromSlot.equals(required)) continue;
+            if (!ItemStack.isSameItemSameTags(fromSlot, required)) continue;
 
             int toExtract = Math.min(needed, fromSlot.getCount());
             ItemStack extracted = playerInv.extractItem(i, toExtract, false);
@@ -718,6 +798,18 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
             }
         }
     }
+
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
+    }
+    
+    
 
 }
 
