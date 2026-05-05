@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:basic_technology_machine_manufacturer_recipe",
+  "energy": 5000.0,
+  "time": 60.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:iron_pipe"
+    },
+    {
+      "item": "degeneracycraft:basic_machine_screen"
+    },
+    {
+      "item": "degeneracycraft:iron_pipe"
+    },
+    {
+      "item": "degeneracycraft:basic_turbine"
+    },
+    {
+      "item": "degeneracycraft:basic_motor"
+    },
+    {
+      "item": "degeneracycraft:basic_circuit"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:basic_redstone_battery"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_power_composite_structure_type_thermal_generator_block"
+    }
+  ]
+}

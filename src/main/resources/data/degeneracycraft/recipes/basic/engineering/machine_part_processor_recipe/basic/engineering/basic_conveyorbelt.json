@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:copper_shaft"
+    },
+    {
+      "item": "degeneracycraft:basic_drivechain"
+    },
+    {
+      "item": "degeneracycraft:copper_shaft"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_conveyorbelt"
+    }
+  ]
+}

@@ -89,8 +89,8 @@ public class BasicStrengthGeoScienceMultiblockEnergyStorageScreen extends Abstra
                     this.font,
                     energyInfoArea.getTooltips(),
                     Optional.empty(),
-                    mouseX,
-                    mouseY
+                    mouseX - x,
+                    mouseY - y
             );
         }
     }

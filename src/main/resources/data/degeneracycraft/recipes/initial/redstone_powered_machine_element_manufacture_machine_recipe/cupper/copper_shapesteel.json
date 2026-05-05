@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_element_processor_recipe",
+  "energy": 0.0,
+  "time": 5.0,
+  "phase": 0,
+  "inputs": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "outputs": [
+    {
+    "item": "degeneracycraft:copper_shapesteel"
+    }
+  ]
+}

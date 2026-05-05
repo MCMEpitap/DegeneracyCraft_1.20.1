@@ -4,14 +4,12 @@ import com.mojang.logging.LogUtils;
 import net.epitap.degeneracycraft.block.DCBlockEntities;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.block.DCMenuTypes;
-import net.epitap.degeneracycraft.block.test.TestMachineScreen;
 import net.epitap.degeneracycraft.integration.jei.DCRecipeTypes;
 import net.epitap.degeneracycraft.items.DCCreativeTabs;
 import net.epitap.degeneracycraft.items.DCItems;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.transport.pipe.parametor.PipeModelRegistry;
 import net.epitap.degeneracycraft.transport.pipe.pipebase.PipeBlockClickEvent;
-import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -69,8 +67,8 @@ public class Degeneracycraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            DCBlocks.clientSetup();
             DCBlockEntities.clientSetup();
-            MenuScreens.register(DCMenuTypes.TEST_MACHINE_MENU.get(), TestMachineScreen::new);
         }
     }
 }

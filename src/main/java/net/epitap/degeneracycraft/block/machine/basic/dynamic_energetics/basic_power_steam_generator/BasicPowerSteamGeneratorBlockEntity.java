@@ -420,8 +420,8 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
         };
 
         this.minZ = switch (multiblockLevel){
-            case 0 -> BasicPowerSteamGeneratorStructure.maxZ0;
-            case 1 -> BasicPowerSteamGeneratorStructure.maxZ1;
+            case 0 -> BasicPowerSteamGeneratorStructure.minZ0;
+            case 1 -> BasicPowerSteamGeneratorStructure.minZ1;
             default -> 0;
         };
 

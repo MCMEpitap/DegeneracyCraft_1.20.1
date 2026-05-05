@@ -1,0 +1,25 @@
+{
+  "type": "degeneracycraft:rock_crasher_recipe",
+  "energy": 500.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "minecraft:clay",
+      "count": 16
+    }
+  ],
+  "outputs": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 4
+    },
+    {
+      "item": "minecraft:raw_gold",
+      "count": 2
+    }
+  ]
+}

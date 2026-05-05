@@ -740,6 +740,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add(DCItems.SIMPLE_CONVEX_LENS.get(), "簡易凸レンズ");
         add(DCItems.SIMPLE_CONCAVE_LENS.get(), "簡易凹レンズ");
+        add(DCItems.SIMPLE_STARLIGHT_SPLITTER_PRISM.get(), "簡易星光分光プリズム");
 
 
 
@@ -1411,67 +1412,67 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add("message." + "degeneracycraft_redstone_powered_machine_element_manufacture_machine", "Phase 0 まずこれを");
         add("screen." + "degeneracycraft_pulverizer", "粉砕機 画面");
-        add("jei." + "degeneracycraft_redstone_powered_machine_element_manufacture_machine", "レッドストーン動力機械要素製作機 レシピ");
-        add("jei." + "degeneracycraft_redstone_powered_machine_part_manufacture_machine", "レッドストーン動力機械部品製作機 レシピ");
+//        add("jei." + "degeneracycraft_redstone_powered_machine_element_manufacture_machine", "レッドストーン動力機械要素製作機 レシピ");
+//        add("jei." + "degeneracycraft_redstone_powered_machine_part_manufacture_machine", "レッドストーン動力機械部品製作機 レシピ");
 
 
-        add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "天体望遠鏡 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "微粒子吸着機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "星光収集機 レシピ");
-
-
-
-        add("jei." + "degeneracycraft_basic_performance_bio_reactor", "生体反応機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_cell_incubator", "細胞培養機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_crop_cultivator", "作物育成機 レシピ");
+        add("jei." + "degeneracycraft_astronomical_telescope", "天体望遠鏡 レシピ");
+        add("jei." + "degeneracycraft_fine_particle_adsorber", "微粒子吸着機 レシピ");
+        add("jei." + "degeneracycraft_starlight_collector", "星光収集機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_chemical_reactor", "化学反応機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_electrolyser", "電解槽 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_compound_purifier", "化合物精製機 レシピ");
+        add("jei." + "degeneracycraft_bio_reactor", "生体反応機 レシピ");
+        add("jei." + "degeneracycraft_cell_incubator", "細胞培養機 レシピ");
+        add("jei." + "degeneracycraft_crop_cultivator", "作物育成機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_compression_condenser", "圧縮凝縮機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_electromagnetic_inductor", "電磁誘導機 レシピ");
-
-
-        add("jei." + "degeneracycraft_basic_technology_machine_manufacturer", "機械製造機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_machine_element_processor", "機械要素加工機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_universal_assembler", "万能加工機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_machine_part_processor", "機械部品加工機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_multiblock_equipment_fabricator", "マルチブロック設備製作機 レシピ");
+        add("jei." + "degeneracycraft_chemical_reactor", "化学反応機 レシピ");
+        add("jei." + "degeneracycraft_electrolyser", "電解槽 レシピ");
+        add("jei." + "degeneracycraft_compound_purifier", "化合物精製機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_circuit_builder", "回路構築機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_machine_data_installer", "機械データインストーラー レシピ");
-        add("jei." + "degeneracycraft_basic_performance_designated_data_injector", "指定データ注入機 レシピ");
+        add("jei." + "degeneracycraft_compression_condenser", "圧縮凝縮機 レシピ");
+        add("jei." + "degeneracycraft_electromagnetic_inductor", "電磁誘導機 レシピ");
+
+
+        add("jei." + "degeneracycraft_machine_manufacturer", "機械製造機 レシピ");
+        add("jei." + "degeneracycraft_machine_element_processor", "機械要素加工機 レシピ");
+        add("jei." + "degeneracycraft_universal_assembler", "万能加工機 レシピ");
+        add("jei." + "degeneracycraft_machine_part_processor", "機械部品加工機 レシピ");
+        add("jei." + "degeneracycraft_multiblock_equipment_fabricator", "マルチブロック設備製作機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_ore_sorter", "鉱石選別機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_rock_crasher", "岩石破砕機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_soil_purifier", "土壌精製機 レシピ");
-
-
-        add("jei." + "degeneracycraft_basic_performance_electric_arc_furnace", "電気アーク炉 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_forming_machine", "形成機 レシピ");
-        add("jei." + "degeneracycraft_basic_performance_material_separator", "物質分離機 レシピ");
-
-
-        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "模造魔導刻印機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "疑似魔力凝集機 レシピ");
-        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "仮想印章加工機 レシピ");
+        add("jei." + "degeneracycraft_circuit_builder", "回路構築機 レシピ");
+        add("jei." + "degeneracycraft_machine_data_installer", "機械データインストーラー レシピ");
+        add("jei." + "degeneracycraft_designated_data_injector", "指定データ注入機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "虚界座標記録機 レシピ");
+        add("jei." + "degeneracycraft_ore_sorter", "鉱石選別機 レシピ");
+        add("jei." + "degeneracycraft_rock_crasher", "岩石破砕機 レシピ");
+        add("jei." + "degeneracycraft_soil_purifier", "土壌精製機 レシピ");
+
+
+        add("jei." + "degeneracycraft_electric_arc_furnace", "電気アーク炉 レシピ");
+        add("jei." + "degeneracycraft_forming_machine", "形成機 レシピ");
+        add("jei." + "degeneracycraft_material_separator", "物質分離機 レシピ");
+
+
+        add("jei." + "degeneracycraft_imitation_magic_engraver", "模造魔導刻印機 レシピ");
+        add("jei." + "degeneracycraft_suspected_magic_condenser", "疑似魔力凝集機 レシピ");
+        add("jei." + "degeneracycraft_virtual_sigil_processor", "仮想印章加工機 レシピ");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "現実位相調整機 レシピ");
+        add("jei." + "degeneracycraft_void_world_coordinate_recording_machine", "虚界座標記録機 レシピ");
+
+
+
+        add("jei." + "degeneracycraft_reality_phase_adjustment_machine", "現実位相調整機 レシピ");
 
 
 

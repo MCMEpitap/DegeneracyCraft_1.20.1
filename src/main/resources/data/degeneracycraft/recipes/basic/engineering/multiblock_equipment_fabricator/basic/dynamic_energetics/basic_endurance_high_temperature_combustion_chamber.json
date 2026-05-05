@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:multiblock_equipment_fabricator_recipe",
+  "energy": 5000.0,
+  "time": 50.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    },
+    {
+      "item": "degeneracycraft:simple_tempered_glass"
+    },
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    },
+    {
+      "item": "degeneracycraft:simple_tempered_glass"
+    },
+    {
+      "item": "degeneracycraft:basic_equipment_container"
+    },
+    {
+      "item": "degeneracycraft:simple_tempered_glass"
+    },
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    },
+    {
+      "item": "degeneracycraft:simple_tempered_glass"
+    },
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_endurance_high_temperature_combustion_chamber_block"
+    }
+  ]
+}

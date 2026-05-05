@@ -89,8 +89,8 @@ public class BasicStrengthAstronomyMultiblockEnergyStorageScreen extends Abstrac
                     this.font,
                     energyInfoArea.getTooltips(),
                     Optional.empty(),
-                    mouseX,
-                    mouseY
+                    mouseX - x,
+                    mouseY - y
             );
         }
     }

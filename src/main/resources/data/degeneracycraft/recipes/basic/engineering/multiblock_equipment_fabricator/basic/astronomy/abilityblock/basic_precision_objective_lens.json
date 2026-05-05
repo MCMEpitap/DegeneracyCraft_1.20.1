@@ -1,0 +1,44 @@
+{
+  "type": "degeneracycraft:multiblock_equipment_fabricator_recipe",
+  "energy": 10000.0,
+  "time": 50.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:iron_wire",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:simple_concave_lens"
+    },
+    {
+      "item": "degeneracycraft:iron_wire",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:basic_fixed_frame"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:basic_fixed_frame"
+    },
+    {
+      "item": "degeneracycraft:iron_wire",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:simple_convex_lens"
+    },
+    {
+      "item": "degeneracycraft:iron_wire",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+    "item": "degeneracycraft:basic_precision_objective_lens_block"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:iron_bolt"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_bolt"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_nut"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_nut"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_equipment_container"
+    }
+  ]
+}

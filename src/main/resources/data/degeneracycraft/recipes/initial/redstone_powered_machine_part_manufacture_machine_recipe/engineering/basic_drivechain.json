@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 0,
+  "inputs": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:iron_chain"
+    },
+    {
+      "item": "degeneracycraft:iron_gear"
+    },
+    {
+      "item": "degeneracycraft:iron_chain"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:iron_chain"
+    },
+    {
+      "item": "degeneracycraft:iron_gear"
+    },
+    {
+      "item": "degeneracycraft:iron_chain"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_drivechain"
+    }
+  ]
+}

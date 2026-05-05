@@ -1,0 +1,46 @@
+{
+  "type": "degeneracycraft:multiblock_equipment_fabricator_recipe",
+  "energy": 10000.0,
+  "time": 20.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:tin_plate",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:iron_pipe",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:tin_plate",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:basic_equipment_container"
+    },
+    {
+      "item": "degeneracycraft:basic_strength_formal_science_multiblock_machine_frame_block"
+    },
+    {
+      "item": "degeneracycraft:basic_equipment_container"
+    },
+    {
+      "item": "degeneracycraft:tin_plate",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:iron_pipe",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:tin_plate",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_strength_formal_science_multiblock_item_storage_block"
+    }
+  ]
+}

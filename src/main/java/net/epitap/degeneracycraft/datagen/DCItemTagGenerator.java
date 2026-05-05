@@ -641,6 +641,7 @@ public class DCItemTagGenerator extends ItemTagsProvider {
                 .add(DCItems.DESIGNATED_DATA_CHIP_MOON.get())
                 .add(DCItems.SIMPLE_CONCAVE_LENS.get())
                 .add(DCItems.SIMPLE_CONVEX_LENS.get())
+                .add(DCItems.SIMPLE_STARLIGHT_SPLITTER_PRISM.get())
                 .add(DCItems.STAR_DATA_STORAGE_MOON.get())
                 ;
         tag(BASIC_BIOLOGY_MACHINE_PARTS)

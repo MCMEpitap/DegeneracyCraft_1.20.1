@@ -127,13 +127,11 @@ public class FineParticleAdsorberRecipe implements Recipe<SimpleContainer> {
         return CraftingHelper.getItemStack(obj, true, false);
     }
 
-    // ===== Type =====
     public static class Type implements RecipeType<FineParticleAdsorberRecipe> {
         public static final FineParticleAdsorberRecipe.Type INSTANCE = new FineParticleAdsorberRecipe.Type();
         public static final String ID = "fine_particle_adsorber_recipe";
     }
 
-    // ===== Serializer =====
     public static class Serializer implements RecipeSerializer<FineParticleAdsorberRecipe> {
         public static final FineParticleAdsorberRecipe.Serializer INSTANCE = new FineParticleAdsorberRecipe.Serializer();
 
@@ -147,14 +145,12 @@ public class FineParticleAdsorberRecipe implements Recipe<SimpleContainer> {
             float time = GsonHelper.getAsFloat(json, "time", 1);
             int phase = GsonHelper.getAsInt(json, "phase", 1);
 
-            // inputs
             List<ItemStack> inputs = new ArrayList<>();
             JsonArray inputArray = GsonHelper.getAsJsonArray(json, "inputs");
             for (JsonElement e : inputArray) {
                 inputs.add(itemStackFromJson(e.getAsJsonObject()));
             }
 
-            // outputs
             List<ItemStack> outputs = new ArrayList<>();
             JsonArray outputArray = GsonHelper.getAsJsonArray(json, "outputs");
             for (JsonElement e : outputArray) {

@@ -1,0 +1,32 @@
+{
+  "type": "degeneracycraft:bio_reactor_recipe",
+  "energy": 1000.0,
+  "time": 100.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:dirt"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "minecraft:grass",
+      "count": 2
+    },
+    {
+      "item": "minecraft:rooted_dirt"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ]
+}

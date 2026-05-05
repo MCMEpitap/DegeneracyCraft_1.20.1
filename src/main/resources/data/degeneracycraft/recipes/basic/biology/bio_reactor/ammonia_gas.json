@@ -1,0 +1,33 @@
+{
+  "type": "degeneracycraft:bio_reactor_recipe",
+  "energy": 2000.0,
+  "time": 100.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:empty_container",
+      "count": 4
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:ammonia_gas",
+      "count": 4
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ]
+}

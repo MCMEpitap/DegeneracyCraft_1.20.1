@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:basic_technology_machine_manufacturer_recipe",
+  "energy": 20000.0,
+  "time": 60.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:basic_machine_screen"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "degeneracycraft:basic_machine_screen"
+    },
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    },
+    {
+      "item": "degeneracycraft:basic_redstone_battery"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "degeneracycraft:basic_redstone_battery"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_performance_astronomical_telescope_block"
+    }
+  ]
+}

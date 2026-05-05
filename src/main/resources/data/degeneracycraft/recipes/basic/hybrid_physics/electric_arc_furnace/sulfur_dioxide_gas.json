@@ -1,0 +1,26 @@
+{
+  "type": "degeneracycraft:electric_arc_furnace_recipe",
+  "energy": 3000.0,
+  "time": 20.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:iron_disulfide_dust",
+      "count": 4
+    },
+    {
+      "item": "degeneracycraft:oxygen_gas",
+      "count": 11
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:sulfur_dioxide_gas",
+      "count": 8
+    },
+    {
+      "item": "degeneracycraft:empty_container",
+      "count": 7
+    }
+  ]
+}

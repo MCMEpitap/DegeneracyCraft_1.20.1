@@ -127,13 +127,11 @@ public class AstronomicalTelescopeRecipe implements Recipe<SimpleContainer> {
         return CraftingHelper.getItemStack(obj, true, false);
     }
 
-    // ===== Type =====
     public static class Type implements RecipeType<AstronomicalTelescopeRecipe> {
         public static final AstronomicalTelescopeRecipe.Type INSTANCE = new AstronomicalTelescopeRecipe.Type();
         public static final String ID = "astronomical_telescope_recipe";
     }
 
-    // ===== Serializer =====
     public static class Serializer implements RecipeSerializer<AstronomicalTelescopeRecipe> {
         public static final AstronomicalTelescopeRecipe.Serializer INSTANCE = new AstronomicalTelescopeRecipe.Serializer();
 
@@ -147,14 +145,12 @@ public class AstronomicalTelescopeRecipe implements Recipe<SimpleContainer> {
             float time = GsonHelper.getAsFloat(json, "time", 1);
             int phase = GsonHelper.getAsInt(json, "phase", 1);
 
-            // inputs
             List<ItemStack> inputs = new ArrayList<>();
             JsonArray inputArray = GsonHelper.getAsJsonArray(json, "inputs");
             for (JsonElement e : inputArray) {
                 inputs.add(itemStackFromJson(e.getAsJsonObject()));
             }
 
-            // outputs
             List<ItemStack> outputs = new ArrayList<>();
             JsonArray outputArray = GsonHelper.getAsJsonArray(json, "outputs");
             for (JsonElement e : outputArray) {

@@ -1,7 +1,6 @@
 package net.epitap.degeneracycraft.items;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -19,8 +18,6 @@ import java.util.List;
 public class DCItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Degeneracycraft.MOD_ID);
     public static final RegistryObject<Item> GRAVITATION_INGOT = ITEMS.register("gravitation_ingot",()-> new Item(new Item.Properties()));
-
-
 
     public static final RegistryObject<Item> RAW_BAUXITE_ORE = ITEMS.register("raw_bauxite_ore",()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BAUXITE_DUST = ITEMS.register("bauxite_dust",()-> new Item(new Item.Properties()));
@@ -609,6 +606,7 @@ public class DCItems {
 
     public static final RegistryObject<Item> SIMPLE_CONCAVE_LENS = ITEMS.register("simple_concave_lens", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SIMPLE_CONVEX_LENS = ITEMS.register("simple_convex_lens", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SIMPLE_STARLIGHT_SPLITTER_PRISM = ITEMS.register("simple_starlight_splitter_prism", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SIMPLE_BIOLOGICAL_FIBER = ITEMS.register("simple_biological_fiber", () -> new Item(new Item.Properties()));
 

@@ -1,0 +1,28 @@
+{
+  "type": "degeneracycraft:basic_performance_circuit_builder_recipe",
+  "energy": 6000.0,
+  "time": 20.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:basic_recording_medium"
+    },
+    {
+      "item": "degeneracycraft:tin_wire"
+    },
+    {
+      "item": "degeneracycraft:basic_dynamic_energetics_circuit"
+    },
+    {
+      "item": "degeneracycraft:tin_wire"
+    },
+    {
+      "item": "degeneracycraft:basic_condenser"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:simple_dynamic_energetics_memory_circuit"
+    }
+  ]
+}

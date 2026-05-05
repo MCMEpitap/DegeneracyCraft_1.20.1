@@ -82,6 +82,7 @@ public class BasicStrengthAstronomyMultiblockEnergyInputBusScreen
         renderEnergyAreaTooltips(guiGraphics, mouseX, mouseY);
     }
 
+
     private void renderEnergyAreaTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY) {
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
@@ -91,8 +92,8 @@ public class BasicStrengthAstronomyMultiblockEnergyInputBusScreen
                     this.font,
                     energyInfoArea.getTooltips(),
                     Optional.empty(),
-                    mouseX,
-                    mouseY
+                    mouseX - x,
+                    mouseY - y
             );
         }
     }

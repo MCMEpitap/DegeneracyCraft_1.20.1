@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:copper_joint"
+    },
+    {
+      "item": "degeneracycraft:iron_wire"
+    },
+    {
+      "item": "degeneracycraft:copper_joint"
+    },
+    {
+      "item": "degeneracycraft:iron_rod"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_rod"
+    },
+    {
+      "item": "degeneracycraft:iron_joint"
+    },
+    {
+      "item": "degeneracycraft:iron_wire"
+    },
+    {
+      "item": "degeneracycraft:iron_joint"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_machine_screen"
+    }
+  ]
+}

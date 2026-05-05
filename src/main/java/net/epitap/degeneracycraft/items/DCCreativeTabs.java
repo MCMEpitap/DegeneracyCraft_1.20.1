@@ -279,6 +279,14 @@ public class DCCreativeTabs {
                         output.accept(DCItems.WRENCH.get());
                         ForgeRegistries.BLOCKS.getValues().stream()
                                 .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+                                        .getTag(DCBlockTagGenerator.INITIAL_MACHINES)
+                                        .contains(block))
+                                .map(Block::asItem)
+                                .filter(item -> item != Items.AIR)
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
+                        ForgeRegistries.BLOCKS.getValues().stream()
+                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
                                         .getTag(DCBlockTagGenerator.BASIC_ASTRONOMY_MACHINES)
                                         .contains(block))
                                 .map(Block::asItem)

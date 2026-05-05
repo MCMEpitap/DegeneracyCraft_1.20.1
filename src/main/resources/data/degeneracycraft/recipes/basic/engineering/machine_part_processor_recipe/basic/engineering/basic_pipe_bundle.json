@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:iron_pipe"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:iron_pipe"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:iron_pipe"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:iron_pipe"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_pipe_bundle"
+    }
+  ]
+}

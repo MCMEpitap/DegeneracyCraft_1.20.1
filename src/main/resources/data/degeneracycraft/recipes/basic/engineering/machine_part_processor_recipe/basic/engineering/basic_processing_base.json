@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:copper_key"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:copper_key"
+    },
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:basic_reinforced_plate"
+    },
+    {
+      "item": "degeneracycraft:copper_rivet"
+    },
+    {
+      "item": "degeneracycraft:copper_rod"
+    },
+    {
+      "item": "degeneracycraft:copper_rivet"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_processing_base"
+    }
+  ]
+}

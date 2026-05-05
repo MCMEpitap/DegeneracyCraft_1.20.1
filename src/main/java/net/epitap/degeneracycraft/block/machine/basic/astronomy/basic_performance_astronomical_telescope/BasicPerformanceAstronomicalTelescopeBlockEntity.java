@@ -61,6 +61,8 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
     public boolean forceHalt = false;
     public static final int RECIPE_COUNT = 2;
     public static final int OUTPUT_COUNT = 1;
+    public static final int MACHINE_COUNT     = RECIPE_COUNT + OUTPUT_COUNT;
+
     private final ItemStack[] inputLockedRecipe = new ItemStack[RECIPE_COUNT];
     public boolean inputLocked = false;
 
@@ -78,7 +80,7 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
     public final int IN_0 = 0, IN_1 = 1;
     public final int OUT_0  = 2;
 
-    public final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+    public final ItemStackHandler itemHandler = new ItemStackHandler(MACHINE_COUNT) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -375,8 +377,8 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
         };
 
         this.minZ = switch (multiblockLevel) {
-            case 0 -> BasicPerformanceAstronomicalTelescopeStructure.maxZ0;
-            case 1 -> BasicPerformanceAstronomicalTelescopeStructure.maxZ1;
+            case 0 -> BasicPerformanceAstronomicalTelescopeStructure.minZ0;
+            case 1 -> BasicPerformanceAstronomicalTelescopeStructure.minZ1;
             default -> 0;
         };
 

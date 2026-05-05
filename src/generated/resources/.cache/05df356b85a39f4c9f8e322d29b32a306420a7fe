@@ -1,4 +1,4 @@
-// 1.20.1	2026-04-21T19:20:31.4892374	Item Models: degeneracycraft
+// 1.20.1	2026-05-02T12:46:51.9056919	Item Models: degeneracycraft
 4f0386661cf48db2b48b69997650f6d1a8cf17b8 assets/degeneracycraft/models/item/ammonia_gas.json
 bac3372dff6e3c94811331eaa8cb7c6019d03565 assets/degeneracycraft/models/item/ammonium_hydrogen_sulfate_dust.json
 8652a25f108df858e780c79ce0eeed24fee86a64 assets/degeneracycraft/models/item/ammonium_sulfate_dust.json
@@ -772,6 +772,7 @@ a45e19a0735b1dbdf5436fb45554358a50bf04b5 assets/degeneracycraft/models/item/simp
 ea72c3989358cd5c6c9351789b8c531b3f1e9e56 assets/degeneracycraft/models/item/simple_pseudo_magic_thunder_crystal.json
 c3f319e921c2e8b0e8f276969edf92c775f68ffd assets/degeneracycraft/models/item/simple_pseudo_magic_water_crystal.json
 3ba52001b756498e2ca15ce4abb691901ee8434c assets/degeneracycraft/models/item/simple_pseudo_magic_wind_crystal.json
+9d15761e41926fb3f326aa6584fe64dfd766c07a assets/degeneracycraft/models/item/simple_starlight_splitter_prism.json
 446cbde328e8e8cc62cb2591c2524797c711012c assets/degeneracycraft/models/item/simple_tempered_glass.json
 1305bf7cdca0e1c58b6725209b086a78d0be2b58 assets/degeneracycraft/models/item/sodium_chloride_dust.json
 f4952df30ad11d8e23df6a1a7168766f331e71f7 assets/degeneracycraft/models/item/sodium_nitrate_dust.json

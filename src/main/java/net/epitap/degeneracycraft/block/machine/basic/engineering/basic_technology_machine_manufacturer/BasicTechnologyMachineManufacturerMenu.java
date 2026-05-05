@@ -24,6 +24,17 @@ public class BasicTechnologyMachineManufacturerMenu extends AbstractContainerMen
     private static final int VANILLA_FIRST_SLOT_INDEX = 0;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
     private static final int TE_INVENTORY_SLOT_COUNT = 10;
+    public static int IN_X_0 = 8, IN_Y_0 = 7;
+    public static int IN_X_1 = 26, IN_Y_1 = 7;
+    public static int IN_X_2 = 44, IN_Y_2 = 7;
+    public static int IN_X_3 = 8, IN_Y_3 = 25;
+    public static int IN_X_4 = 26, IN_Y_4 = 25;
+    public static int IN_X_5 = 44, IN_Y_5 = 25;
+    public static int IN_X_6 = 8, IN_Y_6 = 43;
+    public static int IN_X_7 = 26, IN_Y_7 = 43;
+    public static int IN_X_8 = 44, IN_Y_8 = 43;
+    public static int OUT_X_0 = 116, OUT_Y_0 = 25;
+
     public final BasicTechnologyMachineManufacturerBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
@@ -42,13 +53,16 @@ public class BasicTechnologyMachineManufacturerMenu extends AbstractContainerMen
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-
-            for (int i = 0; i < 3; ++i) {
-                for (int l = 0; l < 3; ++l) {
-                    this.addSlot(new SlotItemHandler(handler, (l + i * 3), 8 + l * 18, 7 + i * 18));
-                }
-            }
-            this.addSlot(new SlotItemHandler(handler, 9, 116, 25));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_0, IN_X_0, IN_Y_0));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_1, IN_X_1, IN_Y_1));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_2, IN_X_2, IN_Y_2));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_3, IN_X_3, IN_Y_3));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_4, IN_X_4, IN_Y_4));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_5, IN_X_5, IN_Y_5));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_6, IN_X_6, IN_Y_6));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_7, IN_X_7, IN_Y_7));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_8, IN_X_8, IN_Y_8));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.OUT_0, OUT_X_0, OUT_Y_0));
         });
 
         addDataSlots(data);

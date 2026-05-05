@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 5000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:copper_wire"
+    },
+    {
+      "item": "degeneracycraft:basic_diode"
+    },
+    {
+      "item": "degeneracycraft:copper_wire"
+    },
+    {
+      "item": "degeneracycraft:basic_circuit"
+    },
+    {
+      "item": "degeneracycraft:copper_plate"
+    },
+    {
+      "item": "degeneracycraft:basic_circuit"
+    },
+    {
+      "item": "degeneracycraft:copper_wire"
+    },
+    {
+      "item": "degeneracycraft:basic_diode"
+    },
+    {
+      "item": "degeneracycraft:copper_wire"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_astronomy_circuit"
+    }
+  ]
+}

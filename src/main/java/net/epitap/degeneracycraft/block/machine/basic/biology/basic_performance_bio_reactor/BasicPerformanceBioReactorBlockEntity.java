@@ -3,7 +3,7 @@ package net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance
 import net.epitap.degeneracycraft.block.DCBlockEntities;
 import net.epitap.degeneracycraft.energy.DCEnergyStorageFloatBase;
 import net.epitap.degeneracycraft.energy.DCIEnergyStorageFloat;
-import net.epitap.degeneracycraft.integration.jei.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorRecipe;
+import net.epitap.degeneracycraft.integration.jei.basic.biology.bio_reactor.BioReactorRecipe;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.networking.packet.DCEnergySyncS2CPacket;
 import net.epitap.degeneracycraft.util.DCWrappedHandler;
@@ -23,6 +23,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -59,6 +60,7 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
     public boolean forceHalt = false;
     public static final int RECIPE_COUNT      = 4;
     public static final int OUTPUT_COUNT      = 3;
+    public static final int MACHINE_COUNT     = RECIPE_COUNT + OUTPUT_COUNT;
 
     private final ItemStack[] inputLockedRecipe = new ItemStack[RECIPE_COUNT];
     public boolean inputLocked = false;
@@ -70,20 +72,15 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
     public static final int DATA_MULTIBLOCK   = 4;
     public static final int DATA_RECIPE_LOCK   = 5;
 
-    public static final int IN_0   = 0;
-    public static final int IN_1   = 1;
-    public static final int IN_2   = 2;
-    public static final int IN_3   = 3;
-    public static final int OUT_0   = 4;
-    public static final int OUT_1   = 5;
-    public static final int OUT_2   = 6;
+    public final int IN_0 = 0, IN_1 = 1, IN_2 = 2, IN_3 = 3;
+    public final int OUT_0 = 4, OUT_1 = 5, OUT_2 = 6;
 
     private final List<DCIEnergyStorageFloat> energyInputs = new ArrayList<>();
     private final List<DCIEnergyStorageFloat> energyOutputs = new ArrayList<>();
     private final List<IItemHandler> itemInputs = new ArrayList<>();
     private final List<IItemHandler> itemOutputs = new ArrayList<>();
 
-    public final ItemStackHandler itemHandler = new ItemStackHandler(7) {
+    public final ItemStackHandler itemHandler = new ItemStackHandler(MACHINE_COUNT) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -313,8 +310,8 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
+        Optional<BioReactorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(BioReactorRecipe.Type.INSTANCE, inventory, level);
 
         if (blockEntity.forceHalt) {
             blockEntity.resetProgress();
@@ -322,8 +319,7 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
             return;
         }
 
-        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity)
-                && hasNotReachedStackLimit(blockEntity) && canInsertItemIntoOutputSlot(blockEntity)) {
+        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity) && canOutput(blockEntity)) {
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
                 blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
@@ -379,8 +375,8 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
         };
 
         this.minZ = switch (multiblockLevel){
-            case 0 -> BasicPerformanceBioReactorStructure.maxZ0;
-            case 1 -> BasicPerformanceBioReactorStructure.maxZ1;
+            case 0 -> BasicPerformanceBioReactorStructure.minZ0;
+            case 1 -> BasicPerformanceBioReactorStructure.minZ1;
             default -> 0;
         };
 
@@ -558,8 +554,8 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
+        Optional<BioReactorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(BioReactorRecipe.Type.INSTANCE, inventory, level);
 
         if (match.isPresent()) {
             return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
@@ -574,26 +570,47 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
+        Optional<BioReactorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(BioReactorRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent();
     }
 
     private static boolean hasAmountRecipe(BasicPerformanceBioReactorBlockEntity blockEntity) {
         Level level = blockEntity.level;
+        if (level == null) return false;
+
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
+        Optional<BioReactorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(BioReactorRecipe.Type.INSTANCE, inventory, level);
 
-        return blockEntity.itemHandler.getStackInSlot(IN_0).getCount() >= match.get().getInput0Item().getCount()
-                && blockEntity.itemHandler.getStackInSlot(IN_1).getCount() >= match.get().getInput1Item().getCount()
-                && blockEntity.itemHandler.getStackInSlot(IN_2).getCount() >= match.get().getInput2Item().getCount()
-                && blockEntity.itemHandler.getStackInSlot(IN_3).getCount() >= match.get().getInput3Item().getCount();
+        if (match.isEmpty()) return false;
+
+        BioReactorRecipe recipe = match.get();
+        List<ItemStack> inputs = recipe.getInputs();
+
+        for (int i = 0; i < inputs.size(); i++) {
+            ItemStack required = inputs.get(i);
+            ItemStack actual = blockEntity.itemHandler.getStackInSlot(i);
+
+            if (required.isEmpty() || required.getItem() == Items.AIR) {
+                if (!actual.isEmpty()) {
+                    return false;
+                }
+                continue;
+            }
+
+            if (!ItemStack.isSameItemSameTags(required, actual)
+                    || actual.getCount() < required.getCount()) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private static boolean hasEnergyRecipe(BasicPerformanceBioReactorBlockEntity blockEntity) {
@@ -603,109 +620,148 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
+        Optional<BioReactorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(BioReactorRecipe.Type.INSTANCE, inventory, level);
 
         return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F;
     }
 
     private static void craftItem(BasicPerformanceBioReactorBlockEntity blockEntity) {
         Level level = blockEntity.level;
+        if (level == null) return;
+
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
+        Optional<BioReactorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(BioReactorRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            blockEntity.itemHandler.extractItem(IN_0, match.get().getInput0Item().getCount(), false);
-            blockEntity.itemHandler.extractItem(IN_1, match.get().getInput1Item().getCount(), false);
-            blockEntity.itemHandler.extractItem(IN_2, match.get().getInput2Item().getCount(), false);
-            blockEntity.itemHandler.extractItem(IN_3, match.get().getInput3Item().getCount(), false);
-            blockEntity.itemHandler.setStackInSlot(OUT_0, new ItemStack(match.get().getOutput0Item().getItem(),
-                    blockEntity.itemHandler.getStackInSlot(OUT_0).getCount() + match.get().getOutput0Item().getCount()));
-            blockEntity.itemHandler.setStackInSlot(OUT_1, new ItemStack(match.get().getOutput1Item().getItem(),
-                    blockEntity.itemHandler.getStackInSlot(OUT_1).getCount() + match.get().getOutput1Item().getCount()));
-            blockEntity.itemHandler.setStackInSlot(OUT_2, new ItemStack(match.get().getOutput2Item().getItem(),
-                    blockEntity.itemHandler.getStackInSlot(OUT_2).getCount() + match.get().getOutput2Item().getCount()));
-            blockEntity.resetProgress();
+        if (match.isEmpty()) return;
+
+        BioReactorRecipe recipe = match.get();
+
+        List<ItemStack> inputs = recipe.getInputs();
+        List<ItemStack> outputs = recipe.getOutputs();
+
+        for (int i = 0; i < inputs.size(); i++) {
+            ItemStack required = inputs.get(i);
+            if (required.isEmpty() || required.getItem() == Items.AIR) continue;
+
+            blockEntity.itemHandler.extractItem(i, required.getCount(), false);
         }
+
+        int OUTPUT_START = inputs.size();
+
+        for (int i = 0; i < outputs.size(); i++) {
+            ItemStack out = outputs.get(i);
+
+            if (out.isEmpty() || out.getItem() == Items.AIR) continue;
+
+            int slot = OUTPUT_START + i;
+            ItemStack existing = blockEntity.itemHandler.getStackInSlot(slot);
+
+            if (existing.isEmpty()) {
+                blockEntity.itemHandler.setStackInSlot(slot, out.copy());
+            } else if (ItemStack.isSameItemSameTags(existing, out)) {
+                existing.grow(out.getCount());
+                blockEntity.itemHandler.setStackInSlot(slot, existing);
+            }
+        }
+
+        blockEntity.resetProgress();
     }
 
     public void resetProgress() {
         this.counter = 0;
     }
 
-    private static boolean hasNotReachedStackLimit(BasicPerformanceBioReactorBlockEntity blockEntity) {
+    private static boolean canOutput(BasicPerformanceBioReactorBlockEntity blockEntity) {
         Level level = blockEntity.level;
+        if (level == null) return false;
+
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
+        Optional<BioReactorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(BioReactorRecipe.Type.INSTANCE, inventory, level);
 
-        return blockEntity.itemHandler.getStackInSlot(OUT_0).getCount() + match.get().getOutput0Item().getCount() <= blockEntity.itemHandler.getStackInSlot(OUT_0).getMaxStackSize()
-                && blockEntity.itemHandler.getStackInSlot(OUT_1).getCount() + match.get().getOutput1Item().getCount() <= blockEntity.itemHandler.getStackInSlot(OUT_1).getMaxStackSize()
-                && blockEntity.itemHandler.getStackInSlot(OUT_2).getCount() + match.get().getOutput2Item().getCount() <= blockEntity.itemHandler.getStackInSlot(OUT_2).getMaxStackSize();
+        if (match.isEmpty()) return false;
 
-    }
+        BioReactorRecipe recipe = match.get();
+        List<ItemStack> inputs = recipe.getInputs();
+        List<ItemStack> outputs = recipe.getOutputs();
 
-    private static boolean canInsertItemIntoOutputSlot(BasicPerformanceBioReactorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        int OUTPUT_START = inputs.size();
+
+        for (int i = 0; i < outputs.size(); i++) {
+            ItemStack out = outputs.get(i);
+
+            if (out.isEmpty() || out.getItem() == Items.AIR) continue;
+
+            int slot = OUTPUT_START + i;
+            ItemStack existing = blockEntity.itemHandler.getStackInSlot(slot);
+
+            if (existing.isEmpty()) continue;
+
+            if (!ItemStack.isSameItemSameTags(existing, out)) {
+                return false;
+            }
+
+            if (existing.getCount() + out.getCount() > existing.getMaxStackSize()) {
+                return false;
+            }
         }
 
-        Optional<BasicPerformanceBioReactorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(BasicPerformanceBioReactorRecipe.Type.INSTANCE, inventory, level);
-
-        return (blockEntity.itemHandler.getStackInSlot(OUT_0).getItem() == match.get().getOutput0Item().getItem() || blockEntity.itemHandler.getStackInSlot(OUT_0).isEmpty())
-                && (blockEntity.itemHandler.getStackInSlot(OUT_1).getItem() == match.get().getOutput1Item().getItem() || blockEntity.itemHandler.getStackInSlot(OUT_1).isEmpty())
-                && (blockEntity.itemHandler.getStackInSlot(OUT_2).getItem() == match.get().getOutput2Item().getItem() || blockEntity.itemHandler.getStackInSlot(OUT_2).isEmpty());
+        return true;
     }
 
     public void insertRecipeInputsFromPlayer(Player player, Recipe<?> recipe, boolean shift) {
-        if (!(recipe instanceof BasicPerformanceBioReactorRecipe recipeData)) return;
+        if (!(recipe instanceof BioReactorRecipe recipeData)) return;
 
         player.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(playerInv -> {
             this.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(machineInv -> {
 
-                ItemStack[] recipeInputs = new ItemStack[]{
-                        recipeData.getInput0Item(), recipeData.getInput1Item(), recipeData.getInput2Item(),
-                        recipeData.getInput3Item()
-                };
+                List<ItemStack> inputs = recipeData.getInputs();
 
                 Map<Item, Integer> totalCounts = new HashMap<>();
                 if (shift) {
-                    for (ItemStack input : recipeInputs) {
-                        if (!input.isEmpty()) {
+                    for (ItemStack input : inputs) {
+                        if (!input.isEmpty() && input.getItem() != Items.AIR) {
                             int count = countItemInInventory(playerInv, input.getItem());
                             totalCounts.put(input.getItem(), count);
                         }
                     }
                 }
 
-                for (int slot = 0; slot < recipeInputs.length; slot++) {
-                    ItemStack required = recipeInputs[slot];
-                    if (required.isEmpty()) continue;
+                for (int slot = 0; slot < inputs.size(); slot++) {
+                    ItemStack required = inputs.get(slot);
+
+                    if (required.isEmpty() || required.getItem() == Items.AIR) continue;
 
                     if (shift) {
-                        long sameCount = Arrays.stream(recipeInputs)
-                                .filter(itemStack -> !itemStack.isEmpty() && itemStack.getItem() == required.getItem())
+                        long sameCount = inputs.stream()
+                                .filter(s -> !s.isEmpty()
+                                        && s.getItem() != Items.AIR
+                                        && s.getItem() == required.getItem())
                                 .count();
 
                         int total = totalCounts.getOrDefault(required.getItem(), 0);
+
                         int perSlot = sameCount > 0 ? total / (int) sameCount : total;
                         perSlot = Math.max(1, perSlot);
 
-                        insertItemFromPlayer(playerInv, machineInv, new ItemStack(required.getItem(), perSlot), slot);
+                        insertItemFromPlayer(playerInv, machineInv,
+                                new ItemStack(required.getItem(), perSlot),
+                                slot);
+
                     } else {
-                        insertItemFromPlayer(playerInv, machineInv, required.copy(), slot);
+                        insertItemFromPlayer(playerInv, machineInv,
+                                required.copy(),
+                                slot);
                     }
                 }
             });
@@ -730,7 +786,7 @@ public class BasicPerformanceBioReactorBlockEntity extends BlockEntity implement
 
         for (int i = 0; i < playerInv.getSlots() && needed > 0; i++) {
             ItemStack fromSlot = playerInv.getStackInSlot(i);
-             if (!ItemStack.isSameItemSameTags(fromSlot, required)) continue;
+            if (!ItemStack.isSameItemSameTags(fromSlot, required)) continue;
 
             int toExtract = Math.min(needed, fromSlot.getCount());
             ItemStack extracted = playerInv.extractItem(i, toExtract, false);

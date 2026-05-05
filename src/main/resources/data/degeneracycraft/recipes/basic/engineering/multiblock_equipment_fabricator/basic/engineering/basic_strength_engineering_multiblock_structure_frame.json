@@ -1,0 +1,44 @@
+{
+  "type": "degeneracycraft:multiblock_equipment_fabricator_recipe",
+  "energy": 10000.0,
+  "time": 20.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:iron_rivet",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:iron_bolt"
+    },
+    {
+      "item": "degeneracycraft:iron_rivet",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:basic_strength_engineering_multiblock_machine_frame_block"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_rivet",
+      "count": 2
+    },
+    {
+      "item": "degeneracycraft:iron_nut"
+    },
+    {
+      "item": "degeneracycraft:iron_rivet",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:basic_strength_engineering_multiblock_structure_frame_block"
+    }
+  ]
+}

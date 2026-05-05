@@ -233,7 +233,4 @@ public class BasicPerformanceAstronomicalTelescopeStructure {
             default -> basePos;
         };
     }
-
-
-
 }

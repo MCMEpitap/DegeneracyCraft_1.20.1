@@ -23,6 +23,11 @@ public class BasicPerformanceMachineDataInstallerMenu extends AbstractContainerM
     private static final int VANILLA_SLOT_COUNT = HOTBAR_SLOT_COUNT + PLAYER_INVENTORY_SLOT_COUNT;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
     private static final int TE_INVENTORY_SLOT_COUNT = 4;
+    public static int IN_X_0 = 26, IN_Y_0 = 7;
+    public static int IN_X_1 = 26, IN_Y_1 = 25;
+    public static int IN_X_2 = 26, IN_Y_2 = 43;
+    public static int OUT_X_0 = 116, OUT_Y_0 = 25;
+
     public final BasicPerformanceMachineDataInstallerBlockEntity blockEntity;
     public final Level level;
     public final ContainerData data;
@@ -40,10 +45,10 @@ public class BasicPerformanceMachineDataInstallerMenu extends AbstractContainerM
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 26, 7));
-            this.addSlot(new SlotItemHandler(handler, 1, 26, 25));
-            this.addSlot(new SlotItemHandler(handler, 2, 26, 43));
-            this.addSlot(new SlotItemHandler(handler, 3, 116, 25));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_0, IN_X_0, IN_Y_0));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_1, IN_X_1, IN_Y_1));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_2, IN_X_2, IN_Y_2));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.OUT_0, OUT_X_0, OUT_Y_0));
         });
         addDataSlots(data);
     }

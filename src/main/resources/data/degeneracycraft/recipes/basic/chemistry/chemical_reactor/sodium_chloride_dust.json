@@ -1,0 +1,34 @@
+{
+  "type": "degeneracycraft:chemical_reactor_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:potassium_chloride_dust"
+    },
+    {
+      "item": "degeneracycraft:sodium_nitrate_dust"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:potassium_nitrate_dust"
+    },
+    {
+      "item": "degeneracycraft:sodium_chloride_dust"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ]
+}

@@ -91,8 +91,8 @@ public class BasicStrengthBiologyMultiblockEnergyOutputBusScreen
                     this.font,
                     energyInfoArea.getTooltips(),
                     Optional.empty(),
-                    mouseX,
-                    mouseY
+                    mouseX - x,
+                    mouseY - y
             );
         }
     }

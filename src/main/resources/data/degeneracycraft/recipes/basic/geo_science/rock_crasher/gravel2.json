@@ -1,0 +1,26 @@
+{
+  "type": "degeneracycraft:rock_crasher_recipe",
+  "energy": 500.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "minecraft:cobbled_deepslate",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "item": "minecraft:gravel",
+      "count": 32
+    },
+    {
+      "item": "minecraft:coal",
+      "count": 16
+    },
+    {
+      "item": "minecraft:raw_iron",
+      "count": 8
+    }
+  ]
+}

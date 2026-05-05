@@ -23,6 +23,14 @@ public class BasicPerformanceBioReactorMenu extends AbstractContainerMenu {
     private static final int VANILLA_SLOT_COUNT = HOTBAR_SLOT_COUNT + PLAYER_INVENTORY_SLOT_COUNT;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
     private static final int TE_INVENTORY_SLOT_COUNT = 7;
+    public static int IN_X_0 = 8, IN_Y_0 = 25;
+    public static int IN_X_1 = 26, IN_Y_1 = 25;
+    public static int IN_X_2 = 44, IN_Y_2 = 25;
+    public static int IN_X_3 = 26, IN_Y_3 = 43;
+    public static int OUT_X_0 = 98, OUT_Y_0 = 25;
+    public static int OUT_X_1 = 116, OUT_Y_1 = 25;
+    public static int OUT_X_2 = 134, OUT_Y_2 = 25;
+
     public final BasicPerformanceBioReactorBlockEntity blockEntity;
     public final Level level;
     public final ContainerData data;
@@ -40,13 +48,13 @@ public class BasicPerformanceBioReactorMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 8, 25));
-            this.addSlot(new SlotItemHandler(handler, 1, 26, 25));
-            this.addSlot(new SlotItemHandler(handler, 2, 44, 25));
-            this.addSlot(new SlotItemHandler(handler, 3, 26, 43));
-            this.addSlot(new SlotItemHandler(handler, 4, 98, 25));
-            this.addSlot(new SlotItemHandler(handler, 5, 116, 25));
-            this.addSlot(new SlotItemHandler(handler, 6, 134, 25));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_0, IN_X_0, IN_Y_0));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_1, IN_X_1, IN_Y_1));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_2, IN_X_2, IN_Y_2));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_3, IN_X_3, IN_Y_3));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.OUT_0, OUT_X_0, OUT_Y_0));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.OUT_1, OUT_X_1, OUT_Y_1));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.OUT_2, OUT_X_2, OUT_Y_2));
         });
         addDataSlots(data);
     }

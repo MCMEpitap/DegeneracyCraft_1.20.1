@@ -598,7 +598,7 @@ public class DCItemModelGenerator extends ItemModelProvider {
 
         basicPartAstronomyItem(DCItems.SIMPLE_CONVEX_LENS.get());
         basicPartAstronomyItem(DCItems.SIMPLE_CONCAVE_LENS.get());
-
+        basicPartAstronomyItem(DCItems.SIMPLE_STARLIGHT_SPLITTER_PRISM.get());
 
 
         basicPartBiologyItem(DCItems.SIMPLE_BIOLOGICAL_FIBER.get());

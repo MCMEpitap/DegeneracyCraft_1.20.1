@@ -37,8 +37,8 @@ public class BasicStrengthGeoScienceMultiblockEnergyOutputBusBlockEntity extends
         @Override
         public void onEnergyChanged() {
             setChanged();
-            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);            DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));
-        }
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3); 
+            DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));        }
     };
 
     public DCIEnergyStorageFloat getEnergyStorage() {

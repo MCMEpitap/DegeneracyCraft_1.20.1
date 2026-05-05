@@ -59,6 +59,7 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
     public boolean forceHalt = false;
     public static final int RECIPE_COUNT      = 1;
     public static final int OUTPUT_COUNT      = 3;
+    public static final int MACHINE_COUNT     = RECIPE_COUNT + OUTPUT_COUNT;
 
     private final ItemStack[] inputLockedRecipe = new ItemStack[RECIPE_COUNT];
     public boolean inputLocked = false;
@@ -78,7 +79,7 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
     private final List<IItemHandler> itemInputs = new ArrayList<>();
     private final List<IItemHandler> itemOutputs = new ArrayList<>();
 
-    public final ItemStackHandler itemHandler = new ItemStackHandler(4) {
+    public final ItemStackHandler itemHandler = new ItemStackHandler(MACHINE_COUNT) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -373,8 +374,8 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
         };
 
         this.minZ = switch (multiblockLevel){
-            case 0 -> BasicPerformanceFineParticleAdsorberStructure.maxZ0;
-            case 1 -> BasicPerformanceFineParticleAdsorberStructure.maxZ1;
+            case 0 -> BasicPerformanceFineParticleAdsorberStructure.minZ0;
+            case 1 -> BasicPerformanceFineParticleAdsorberStructure.minZ1;
             default -> 0;
         };
 

@@ -1,0 +1,25 @@
+{
+  "type": "degeneracycraft:compound_purifier_recipe",
+  "energy": 1000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:pyrite_ingot"
+    },
+    {
+      "item": "degeneracycraft:water_container"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:iron_disulfide_dust"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ]
+}

@@ -763,6 +763,7 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
         add(DCItems.SIMPLE_CONVEX_LENS.get(), "Simple Convex Lens");
         add(DCItems.SIMPLE_CONCAVE_LENS.get(), "Simple Concave Lens");
+        add(DCItems.SIMPLE_STARLIGHT_SPLITTER_PRISM.get(), "Simple Starlight Splitter Prism");
 
 
         add(DCItems.SIMPLE_BIOLOGICAL_FIBER.get(), "Simple Biological Fiber");
@@ -1418,65 +1419,65 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_astronomical_telescope", "Astronomical Telescope Recipe");
-        add("jei." + "degeneracycraft_basic_performance_fine_particle_adsorber", "Fine Particle Adsorber Recipe");
-        add("jei." + "degeneracycraft_basic_performance_starlight_collector", "Starlight Collector Recipe");
+        add("jei." + "degeneracycraft_astronomical_telescope", "Astronomical Telescope Recipe");
+        add("jei." + "degeneracycraft_fine_particle_adsorber", "Fine Particle Adsorber Recipe");
+        add("jei." + "degeneracycraft_starlight_collector", "Starlight Collector Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_bio_reactor", "Bio Reactor Recipe");
-        add("jei." + "degeneracycraft_basic_performance_cell_incubator", "Bio Reactor Recipe");
-        add("jei." + "degeneracycraft_basic_performance_crop_cultivator", "Crop Cultivator Recipe");
+        add("jei." + "degeneracycraft_bio_reactor", "Bio Reactor Recipe");
+        add("jei." + "degeneracycraft_cell_incubator", "Bio Reactor Recipe");
+        add("jei." + "degeneracycraft_crop_cultivator", "Crop Cultivator Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_chemical_reactor", "Chemical Reactor Recipe");
-        add("jei." + "degeneracycraft_basic_performance_compound_purifier", "Compound Purifier Recipe");
-        add("jei." + "degeneracycraft_basic_performance_electrolyser", "Electrolyser Recipe");
+        add("jei." + "degeneracycraft_chemical_reactor", "Chemical Reactor Recipe");
+        add("jei." + "degeneracycraft_compound_purifier", "Compound Purifier Recipe");
+        add("jei." + "degeneracycraft_electrolyser", "Electrolyser Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_compression_condenser", "Compression Condenser Recipe");
-        add("jei." + "degeneracycraft_basic_technology_electromagnetic_inductor", "Electromagnetic Inductor Recipe");
+        add("jei." + "degeneracycraft_compression_condenser", "Compression Condenser Recipe");
+        add("jei." + "degeneracycraft_electromagnetic_inductor", "Electromagnetic Inductor Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_technology_machine_manufacturer", "Machine Manufacturer Recipe");
-        add("jei." + "degeneracycraft_basic_technology_machine_element_processor", "Machine Element Processor Recipe");
-        add("jei." + "degeneracycraft_basic_technology_universal_assembler", "Universal Assembler Recipe");
-        add("jei." + "degeneracycraft_basic_technology_machine_part_processor", "Machine Part Processor Recipe");
-        add("jei." + "degeneracycraft_basic_technology_multiblock_equipment_fabricator", "Multiblock Equipment Fabricator Recipe");
+        add("jei." + "degeneracycraft_machine_manufacturer", "Machine Manufacturer Recipe");
+        add("jei." + "degeneracycraft_machine_element_processor", "Machine Element Processor Recipe");
+        add("jei." + "degeneracycraft_universal_assembler", "Universal Assembler Recipe");
+        add("jei." + "degeneracycraft_machine_part_processor", "Machine Part Processor Recipe");
+        add("jei." + "degeneracycraft_multiblock_equipment_fabricator", "Multiblock Equipment Fabricator Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_circuit_builder", "Circuit Builder Recipe");
-        add("jei." + "degeneracycraft_basic_performance_machine_data_installer", "Machine Data Installer Recipe");
-        add("jei." + "degeneracycraft_basic_performance_designated_data_injector", "Designated Data Injector Recipe");
+        add("jei." + "degeneracycraft_circuit_builder", "Circuit Builder Recipe");
+        add("jei." + "degeneracycraft_machine_data_installer", "Machine Data Installer Recipe");
+        add("jei." + "degeneracycraft_designated_data_injector", "Designated Data Injector Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_ore_sorter", "Ore Sorter Recipe");
-        add("jei." + "degeneracycraft_basic_performance_rock_crasher", "Rock Crasher Recipe");
-        add("jei." + "degeneracycraft_basic_performance_soil_purifier", "Soil Purifier Recipe");
+        add("jei." + "degeneracycraft_ore_sorter", "Ore Sorter Recipe");
+        add("jei." + "degeneracycraft_rock_crasher", "Rock Crasher Recipe");
+        add("jei." + "degeneracycraft_soil_purifier", "Soil Purifier Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_electric_arc_furnace", "Electric Arc Furnace Recipe");
-        add("jei." + "degeneracycraft_basic_performance_forming_machine", "Forming Machine Recipe");
-        add("jei." + "degeneracycraft_basic_performance_material_separator", "Material Separator Recipe");
+        add("jei." + "degeneracycraft_electric_arc_furnace", "Electric Arc Furnace Recipe");
+        add("jei." + "degeneracycraft_forming_machine", "Forming Machine Recipe");
+        add("jei." + "degeneracycraft_material_separator", "Material Separator Recipe");
 
 
-        add("jei." + "degeneracycraft_basic_technology_imitation_magic_engraver", "Imitation Magic Engraver Recipe");
-        add("jei." + "degeneracycraft_basic_technology_suspected_magic_condenser", "Suspected Magic Condenser Recipe");
-        add("jei." + "degeneracycraft_basic_technology_virtual_sigil_processor", "Virtual Sigil Processor Recipe");
-
-
-
-        add("jei." + "degeneracycraft_basic_technology_void_world_coordinate_recording_machine", "Void World Coordinate Recording Machine Recipe");
+        add("jei." + "degeneracycraft_imitation_magic_engraver", "Imitation Magic Engraver Recipe");
+        add("jei." + "degeneracycraft_suspected_magic_condenser", "Suspected Magic Condenser Recipe");
+        add("jei." + "degeneracycraft_virtual_sigil_processor", "Virtual Sigil Processor Recipe");
 
 
 
-        add("jei." + "degeneracycraft_basic_performance_reality_phase_adjustment_machine", "Reality Phase Adjustment Machine Recipe");
+        add("jei." + "degeneracycraft_void_world_coordinate_recording_machine", "Void World Coordinate Recording Machine Recipe");
+
+
+
+        add("jei." + "degeneracycraft_reality_phase_adjustment_machine", "Reality Phase Adjustment Machine Recipe");
 
         add("creativetab." + "degeneracycraft_materials", "Degeneracy Craft Materials");
         add("creativetab." + "degeneracycraft_machine_elements", "Degeneracy Craft Machine Elements");

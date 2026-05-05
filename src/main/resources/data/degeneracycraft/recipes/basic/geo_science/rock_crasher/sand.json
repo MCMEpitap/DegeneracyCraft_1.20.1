@@ -1,0 +1,26 @@
+{
+  "type": "degeneracycraft:rock_crasher_recipe",
+  "energy": 500.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "minecraft:gravel",
+      "count": 32
+    }
+  ],
+  "outputs": [
+    {
+      "item": "minecraft:sand",
+      "count": 32
+    },
+    {
+      "item": "minecraft:flint",
+      "count": 4
+    },
+    {
+      "item": "minecraft:raw_copper",
+      "count": 4
+    }
+  ]
+}

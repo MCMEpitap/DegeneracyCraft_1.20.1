@@ -89,8 +89,8 @@ public class BasicStrengthBiologyMultiblockEnergyStorageScreen extends AbstractC
                     this.font,
                     energyInfoArea.getTooltips(),
                     Optional.empty(),
-                    mouseX,
-                    mouseY
+                    mouseX - x,
+                    mouseY - y
             );
         }
     }

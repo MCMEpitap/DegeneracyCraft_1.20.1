@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_part_processor_recipe",
+  "energy": 10000.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:copper_rod"
+    },
+    {
+      "item": "degeneracycraft:tin_plate"
+    },
+    {
+      "item": "degeneracycraft:copper_rod"
+    },
+    {
+      "item": "degeneracycraft:tin_plate"
+    },
+    {
+      "item": "degeneracycraft:iron_plate"
+    },
+    {
+      "item": "degeneracycraft:tin_plate"
+    },
+    {
+      "item": "degeneracycraft:copper_rod"
+    },
+    {
+      "item": "degeneracycraft:tin_plate"
+    },
+    {
+      "item": "degeneracycraft:copper_rod"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:simple_crystallization_substrate_plate"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "degeneracycraft:electric_arc_furnace_recipe",
+  "energy": 10000.0,
+  "time": 50.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "degeneracycraft:gold_wire",
+      "count": 8
+    },
+    {
+      "item": "degeneracycraft:basic_equipment_container"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "degeneracycraft:simple_chemical_container"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ]
+}

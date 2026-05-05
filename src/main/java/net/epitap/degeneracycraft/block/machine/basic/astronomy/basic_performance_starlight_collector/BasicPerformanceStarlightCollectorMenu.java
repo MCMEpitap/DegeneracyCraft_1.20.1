@@ -24,6 +24,10 @@ public class BasicPerformanceStarlightCollectorMenu extends AbstractContainerMen
     private static final int VANILLA_FIRST_SLOT_INDEX = 0;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
     private static final int TE_INVENTORY_SLOT_COUNT = 3;
+    public static int IN_X_0 = 26, IN_Y_0 = 7;
+    public static int IN_X_1 = 26, IN_Y_1 = 25;
+    public static int OUT_X_0 = 116, OUT_Y_0 = 25;
+
     public final BasicPerformanceStarlightCollectorBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
@@ -43,9 +47,9 @@ public class BasicPerformanceStarlightCollectorMenu extends AbstractContainerMen
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
 
-            this.addSlot(new SlotItemHandler(handler, 0, 26, 7));
-            this.addSlot(new SlotItemHandler(handler, 1, 26, 25));
-            this.addSlot(new SlotItemHandler(handler, 2, 116, 25));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_0, IN_X_0, IN_Y_0));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.IN_1, IN_X_1, IN_Y_1));
+            this.addSlot(new SlotItemHandler(handler, blockEntity.OUT_0, OUT_X_0, OUT_Y_0));
         });
 
         addDataSlots(data);
