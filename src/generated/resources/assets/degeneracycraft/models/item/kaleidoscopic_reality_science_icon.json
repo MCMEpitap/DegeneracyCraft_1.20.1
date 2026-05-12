@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "degeneracycraft:item/icon/science/kaleidoscopic_reality_science_icon"
+  }
+}

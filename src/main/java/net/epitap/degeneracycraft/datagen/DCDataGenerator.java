@@ -23,6 +23,7 @@ public class DCDataGenerator {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        generator.addProvider(event.includeServer(), new DCRecipeProvider(packOutput));
 
         BlockTagsProvider blockTagsProvider = new DCBlockTagGenerator(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeClient(), new DCBlockStateProvider(packOutput, existingFileHelper));

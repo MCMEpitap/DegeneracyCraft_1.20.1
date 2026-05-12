@@ -2,6 +2,7 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
+import net.epitap.degeneracycraft.items.DCIcons;
 import net.epitap.degeneracycraft.items.DCItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -14,6 +15,30 @@ public class DCLanguageProviderEN extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup." + "degeneracycraft", "DegeneracyCraft");
+
+        add(DCIcons.ASTRONOMY_ICON.get(), "Astronomy");
+        add(DCIcons.BIOLOGY_ICON.get(), "Biology");
+        add(DCIcons.CHEMISTRY_ICON.get(), "Chemistry");
+        add(DCIcons.DYNAMIC_ENERGETICS_ICON.get(), "Dynamic Energetics");
+        add(DCIcons.ENGINEERING_ICON.get(), "Engineering");
+        add(DCIcons.FORMAL_SCIENCE_ICON.get(), "Formal Science");
+        add(DCIcons.GEO_SCIENCE_ICON.get(), "Geo Science");
+        add(DCIcons.HYBRID_PHYSICS_ICON.get(), "Hybrid Physics");
+        add(DCIcons.IMITATION_MAGIC_ENGINEERING_ICON.get(), "Imitation Magic Engineering");
+        add(DCIcons.JEHITH_VOID_SCIENCE_ICON.get(), "Jenith Void Science");
+        add(DCIcons.KALEIDOSCOPIC_REALITY_SCIENCE_ICON.get(), "Kaleidoscopic Reality Science");
+
+        add(DCIcons.INITIAL_ICON.get(), "Phase: Initial");
+        add(DCIcons.BASIC_ICON.get(), "Phase: Basic");
+        add(DCIcons.LOW_ICON.get(), "Phase: Low");
+        add(DCIcons.MEDIUM_ICON.get(), "Phase: Medium");
+        add(DCIcons.HIGH_ICON.get(), "Phase: High");
+        add(DCIcons.SUPER_ICON.get(), "Phase: Super");
+        add(DCIcons.OVER_ICON.get(), "Phase: Over");
+        add(DCIcons.ULTRA_ICON.get(), "Phase: Ultra");
+        add(DCIcons.ANTI_ICON.get(), "Phase: Anti");
+        add(DCIcons.IMAGINARY_ICON.get(), "Phase: Imaginary");
+        add(DCIcons.INFINITY_ICON.get(), "Phase: Infinity");
 
         add(DCItems.RAW_BAUXITE_ORE.get(), "Bauxite Raw Chunk");
         add(DCItems.BAUXITE_DUST.get(),"Bauxite Dust");
@@ -1100,8 +1125,12 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
 
 
-        add(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get(), "Redstone Powered Machine Component Manufacture Machine");
+        add(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get(), "Machine Element Manufacture Machine");
+        add("tooltip." + "degeneracycraft." + "redstone_powered_machine_element_manufacture_machine",
+                "Initial Machine Element Manufacture Machine. Redstone-powered machines. Let’s start with this: Part 1.");
         add(DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get(), "Redstone Powered Machine Part Manufacture Machine");
+        add("tooltip." + "degeneracycraft." + "redstone_powered_machine_part_manufacture_machine",
+                "Initial Machine Part Manufacture Machine. Redstone-powered machines. Let’s start with this: Part 2.");
 
         add(DCBlocks.REINFORCED_PLANKS.get(), "Reinforced Planks");
 

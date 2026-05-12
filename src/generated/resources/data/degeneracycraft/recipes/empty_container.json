@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "g": {
+      "item": "minecraft:glass_pane"
+    },
+    "i": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "igi",
+    "g g",
+    "igi"
+  ],
+  "result": {
+    "item": "degeneracycraft:empty_container"
+  },
+  "show_notification": true
+}

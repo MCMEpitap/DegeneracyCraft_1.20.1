@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "c": {
+      "item": "minecraft:crafting_table"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " i ",
+    "IcI",
+    " R "
+  ],
+  "result": {
+    "item": "degeneracycraft:redstone_powered_machine_element_manufacture_machine_block"
+  },
+  "show_notification": true
+}

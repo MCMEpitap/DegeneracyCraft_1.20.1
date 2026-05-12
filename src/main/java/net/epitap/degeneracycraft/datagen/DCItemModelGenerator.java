@@ -2,6 +2,7 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
+import net.epitap.degeneracycraft.items.DCIcons;
 import net.epitap.degeneracycraft.items.DCItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -19,16 +20,29 @@ public class DCItemModelGenerator extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        iconItem(DCAdvancementIcon.ASTRONOMY_ICON.get());
-//        iconItem(DCAdvancementIcon.BIOLOGY_ICON.get());
-//        iconItem(DCAdvancementIcon.CHEMISTRY_ICON.get());
-//        iconItem(DCAdvancementIcon.DEGENERACYCRAFT_ICON.get());
-//        iconItem(DCAdvancementIcon.ENGINEERING_ICON.get());
-//        iconItem(DCAdvancementIcon.FORMAL_SCIENCE_ICON.get());
-//        iconItem(DCAdvancementIcon.GEO_SCIENCE_ICON.get());
-//        iconItem(DCAdvancementIcon.HYBRID_PHYSICS_ICON.get());
-//        iconItem(DCAdvancementIcon.IMITATION_MAGIC_ENGINEERING_ICON.get());
+        scienceIconItem(DCIcons.ASTRONOMY_ICON.get());
+        scienceIconItem(DCIcons.BIOLOGY_ICON.get());
+        scienceIconItem(DCIcons.CHEMISTRY_ICON.get());
+        scienceIconItem(DCIcons.DYNAMIC_ENERGETICS_ICON.get());
+        scienceIconItem(DCIcons.ENGINEERING_ICON.get());
+        scienceIconItem(DCIcons.FORMAL_SCIENCE_ICON.get());
+        scienceIconItem(DCIcons.GEO_SCIENCE_ICON.get());
+        scienceIconItem(DCIcons.HYBRID_PHYSICS_ICON.get());
+        scienceIconItem(DCIcons.IMITATION_MAGIC_ENGINEERING_ICON.get());
+        scienceIconItem(DCIcons.JEHITH_VOID_SCIENCE_ICON.get());
+        scienceIconItem(DCIcons.KALEIDOSCOPIC_REALITY_SCIENCE_ICON.get());
 
+        phaseIconItem(DCIcons.INITIAL_ICON.get());
+        phaseIconItem(DCIcons.BASIC_ICON.get());
+        phaseIconItem(DCIcons.LOW_ICON.get());
+        phaseIconItem(DCIcons.MEDIUM_ICON.get());
+        phaseIconItem(DCIcons.HIGH_ICON.get());
+        phaseIconItem(DCIcons.SUPER_ICON.get());
+        phaseIconItem(DCIcons.OVER_ICON.get());
+        phaseIconItem(DCIcons.ULTRA_ICON.get());
+        phaseIconItem(DCIcons.ANTI_ICON.get());
+        phaseIconItem(DCIcons.IMAGINARY_ICON.get());
+        phaseIconItem(DCIcons.INFINITY_ICON.get());
 
         //
         ingotMaterialItem(DCItems.BAUXITE_INGOT.get());
@@ -1455,6 +1469,17 @@ public class DCItemModelGenerator extends ItemModelProvider {
 
     }
 
+    private void scienceIconItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/icon/science/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));}
+    
+    private void phaseIconItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/icon/phase/"
+                        + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));}
 
 
 

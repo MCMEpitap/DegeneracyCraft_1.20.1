@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "degeneracycraft:redstone_powered_machine_element_manufacture_machine_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "ingots/iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "ingots/iron",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "degeneracycraft:redstone_powered_machine_element_manufacture_machine_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

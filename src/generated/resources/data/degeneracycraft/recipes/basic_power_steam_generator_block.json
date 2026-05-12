@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "B": {
+      "item": "degeneracycraft:basic_redstone_battery"
+    },
+    "C": {
+      "item": "degeneracycraft:basic_circuit"
+    },
+    "M": {
+      "item": "degeneracycraft:basic_motor"
+    },
+    "S": {
+      "item": "degeneracycraft:basic_machine_screen"
+    },
+    "T": {
+      "item": "degeneracycraft:basic_turbine"
+    },
+    "i": {
+      "item": "degeneracycraft:iron_pipe"
+    },
+    "p": {
+      "item": "degeneracycraft:iron_plate"
+    }
+  },
+  "pattern": [
+    "iSi",
+    "TMC",
+    "pBp"
+  ],
+  "result": {
+    "item": "degeneracycraft:basic_power_steam_generator_block"
+  },
+  "show_notification": true
+}

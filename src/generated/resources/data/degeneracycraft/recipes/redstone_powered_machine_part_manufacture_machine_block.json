@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "b": {
+      "item": "degeneracycraft:iron_bolt"
+    },
+    "c": {
+      "item": "minecraft:crafting_table"
+    },
+    "g": {
+      "item": "degeneracycraft:iron_gear"
+    },
+    "n": {
+      "item": "degeneracycraft:iron_nut"
+    },
+    "p": {
+      "item": "degeneracycraft:iron_plate"
+    },
+    "r": {
+      "item": "degeneracycraft:iron_bearing"
+    }
+  },
+  "pattern": [
+    "bgb",
+    "pcp",
+    "nrn"
+  ],
+  "result": {
+    "item": "degeneracycraft:redstone_powered_machine_part_manufacture_machine_block"
+  },
+  "show_notification": true
+}

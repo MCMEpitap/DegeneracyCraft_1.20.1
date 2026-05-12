@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "W": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "W W",
+    "W W",
+    "WWW"
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:barrel"
+  },
+  "show_notification": true
+}

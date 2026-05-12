@@ -2,6 +2,7 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
+import net.epitap.degeneracycraft.items.DCIcons;
 import net.epitap.degeneracycraft.items.DCItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -14,7 +15,29 @@ public class DCLanguageProviderJA extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup." + "degeneracycraft", "Degeneracy Craft");
+        add(DCIcons.ASTRONOMY_ICON.get(), "天文学");
+        add(DCIcons.BIOLOGY_ICON.get(), "生物学");
+        add(DCIcons.CHEMISTRY_ICON.get(), "化学");
+        add(DCIcons.DYNAMIC_ENERGETICS_ICON.get(), "動力変換学");
+        add(DCIcons.ENGINEERING_ICON.get(), "工学");
+        add(DCIcons.FORMAL_SCIENCE_ICON.get(), "形式科学");
+        add(DCIcons.GEO_SCIENCE_ICON.get(), "地学");
+        add(DCIcons.HYBRID_PHYSICS_ICON.get(), "複合物理学");
+        add(DCIcons.IMITATION_MAGIC_ENGINEERING_ICON.get(), "模造魔導工学");
+        add(DCIcons.JEHITH_VOID_SCIENCE_ICON.get(), "極点虚界学");
+        add(DCIcons.KALEIDOSCOPIC_REALITY_SCIENCE_ICON.get(), "多相現実学");
 
+        add(DCIcons.INITIAL_ICON.get(), "技術段階: Initial");
+        add(DCIcons.BASIC_ICON.get(), "技術段階: Basic");
+        add(DCIcons.LOW_ICON.get(), "技術段階: Low");
+        add(DCIcons.MEDIUM_ICON.get(), "技術段階: Medium");
+        add(DCIcons.HIGH_ICON.get(), "技術段階: High");
+        add(DCIcons.SUPER_ICON.get(), "技術段階: Super");
+        add(DCIcons.OVER_ICON.get(), "技術段階: Over");
+        add(DCIcons.ULTRA_ICON.get(), "技術段階: Ultra");
+        add(DCIcons.ANTI_ICON.get(), "技術段階: Anti");
+        add(DCIcons.IMAGINARY_ICON.get(), "技術段階: Imaginary");
+        add(DCIcons.INFINITY_ICON.get(), "技術段階: Infinity");
 
         add(DCItems.RAW_BAUXITE_ORE.get(), "鉄ばん土鉱の原石");
         add(DCItems.BAUXITE_DUST.get(),"鉄ばん土鉱の粉");
@@ -1100,9 +1123,12 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
 
 
-        add(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get(), "レッドストーン動力機械要素製作機");
-        add(DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get(), "レッドストーン動力機械部品製作機");
-
+        add(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get(), "機械要素製作機");
+        add("tooltip." + "degeneracycraft." + "redstone_powered_machine_element_manufacture_machine",
+                "最初の機械要素製作機. レッドストーン動力の機械。まずはこれからその1.");
+        add(DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get(), "機械部品製作機");
+        add("tooltip." + "degeneracycraft." + "redstone_powered_machine_part_manufacture_machine",
+                "最初の機械部品製作機. レッドストーン動力の機械。まずはこれからその2.");
 
         add(DCBlocks.REINFORCED_PLANKS.get(), "強化木材");
 

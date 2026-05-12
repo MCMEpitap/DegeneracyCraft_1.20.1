@@ -569,14 +569,14 @@ public class DCCreativeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.OVERWORLD_CASSITERITE_ORE.get()))
                     .title(Component.translatable("creativetab.degeneracycraft_multiblock"))
                     .displayItems((displayParameters, output) -> {
-                        ForgeRegistries.BLOCKS.getValues().stream()
-                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
-                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MULTIBLOCKS)
-                                        .contains(block))
-                                .map(Block::asItem)
-                                .filter(item -> item != Items.AIR)
-                                .map(ItemStack::new)
-                                .forEach(output::accept);
+//                        ForgeRegistries.BLOCKS.getValues().stream()
+//                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+//                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MULTIBLOCKS)
+//                                        .contains(block))
+//                                .map(Block::asItem)
+//                                .filter(item -> item != Items.AIR)
+//                                .map(ItemStack::new)
+//                                .forEach(output::accept);
                     }).build());
 
 

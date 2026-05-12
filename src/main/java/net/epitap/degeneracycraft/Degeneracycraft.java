@@ -6,6 +6,7 @@ import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.block.DCMenuTypes;
 import net.epitap.degeneracycraft.integration.jei.DCRecipeTypes;
 import net.epitap.degeneracycraft.items.DCCreativeTabs;
+import net.epitap.degeneracycraft.items.DCIcons;
 import net.epitap.degeneracycraft.items.DCItems;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.transport.pipe.parametor.PipeModelRegistry;
@@ -41,6 +42,7 @@ public class Degeneracycraft {
         DCMenuTypes.register(bus);
         DCMessages.register();
         DCRecipeTypes.register(bus);
+        DCIcons.register(bus);
 
         bus.addListener(PipeModelRegistry::onModelRegister);
         bus.addListener(PipeModelRegistry::onModelBake);
