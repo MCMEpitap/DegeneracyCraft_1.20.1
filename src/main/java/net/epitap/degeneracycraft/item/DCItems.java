@@ -1,8 +1,10 @@
-package net.epitap.degeneracycraft.items;
+package net.epitap.degeneracycraft.item;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
+import net.epitap.degeneracycraft.item.tool.WrenchItem;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -600,7 +602,6 @@ public class DCItems {
     public static final RegistryObject<Item> MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER = ITEMS.register("multiblock_structure_hologram_visualizer", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BASIC_TECHNOLOGY_MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER = ITEMS.register("basic_technology_multiblock_structure_hologram_visualizer", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COMPRESSED_PLANKS = ITEMS.register("compressed_planks", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COMPRESSED_REDSTONE = ITEMS.register("compressed_redstone", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MACHINE_HALT_DEVICE = ITEMS.register("machine_halt_device", () -> new Item(new Item.Properties()));
 
 
@@ -622,6 +623,7 @@ public class DCItems {
 
     public static final RegistryObject<Item> BASIC_CIRCUIT = ITEMS.register("basic_circuit", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BASIC_COMBINEDSHAFT = ITEMS.register("basic_combinedshaft", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BASIC_COMPRESSED_REDSTONE = ITEMS.register("basic_compressed_redstone", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BASIC_CONDENSER = ITEMS.register("basic_condenser", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BASIC_CONDUCTOR_WIRE = ITEMS.register("basic_conductor_wire", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BASIC_CONVEYORBELT = ITEMS.register("basic_conveyorbelt", () -> new Item(new Item.Properties()));
@@ -759,32 +761,85 @@ public class DCItems {
 
     private static <T extends Item> RegistryObject<Item> registerSubstanceItem(String name, String SubstanceName, String phase) {
         return DCItems.ITEMS.register(name, () -> new Item(new Item.Properties()) {
+
+            private static final int[] RAINBOW = {
+                    0xFF0000, 0xFFFF00, 0x00FF00,
+                    0x00FFFF, 0x0000FF, 0xFF00FF
+            };
+
+            private static final int[] GLAY_SCALE = {
+                    0x404040, 0x808080, 0xFFFFFF
+            };
+
+            private static Component rainbowText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * RAINBOW.length / len;
+
+                    int color = RAINBOW[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
+
+            private static Component grayText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * GLAY_SCALE.length / len;
+
+                    int color = GLAY_SCALE[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level level, List<Component> pTooltip, TooltipFlag pFlag) {
                 if (Screen.hasShiftDown()) {
                     switch (phase) {
                         case "initial" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFFFFFF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFFFF))));
                         case "basic" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF0000)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF0000))));
                         case "low" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF8000)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFF00))));
                         case "medium" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFFFF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FF00))));
                         case "high" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x80FF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FFFF))));
                         case "super" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x00FF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x0000FF))));
                         case "over" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x00FFFF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF00FF))));
                         case "ultra" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x0080FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x808080))));
                         case "anti" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x0000FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x404040))));
                         case "imaginary" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF00FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(grayText(Component.translatable(phase).getString())));
                         case "infinity" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x808080)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(rainbowText(Component.translatable(phase).getString())));
                         default -> throw new IllegalStateException("Unexpected value: " + phase);
                     }
                     pTooltip.add(Component.translatable("tooltip.degeneracycraft." + SubstanceName + ".formula").withStyle(style -> style.withColor(0x00FFFF)));
@@ -797,32 +852,86 @@ public class DCItems {
 
     private static <T extends Item> RegistryObject<Item> registerAtomicItem(String name, String atomicName, String phase) {
         return DCItems.ITEMS.register(name, () -> new Item(new Item.Properties()) {
+
+            private static final int[] RAINBOW = {
+                    0xFF0000, 0xFFFF00, 0x00FF00,
+                    0x00FFFF, 0x0000FF, 0xFF00FF
+            };
+
+            private static final int[] GLAY_SCALE = {
+                    0x404040, 0x808080, 0xFFFFFF
+            };
+
+            private static Component rainbowText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * RAINBOW.length / len;
+
+                    int color = RAINBOW[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
+
+            private static Component grayText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * GLAY_SCALE.length / len;
+
+                    int color = GLAY_SCALE[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
+
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level level, List<Component> pTooltip, TooltipFlag pFlag) {
                 if (Screen.hasShiftDown()) {
                     switch (phase) {
                         case "initial" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFFFFFF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFFFF))));
                         case "basic" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF0000)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF0000))));
                         case "low" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF8000)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFF00))));
                         case "medium" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFFFF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FF00))));
                         case "high" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x80FF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FFFF))));
                         case "super" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x00FF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x0000FF))));
                         case "over" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x00FFFF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF00FF))));
                         case "ultra" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x0080FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x808080))));
                         case "anti" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x0000FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x404040))));
                         case "imaginary" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF00FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(grayText(Component.translatable(phase).getString())));
                         case "infinity" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x808080)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(rainbowText(Component.translatable(phase).getString())));
                         default -> throw new IllegalStateException("Unexpected value: " + phase);
                     }
                     pTooltip.add(Component.translatable("tooltip.degeneracycraft." + atomicName + ".name").withStyle(style -> style.withColor(0xFFFFFF)));
@@ -840,32 +949,87 @@ public class DCItems {
 
     private static <T extends Item> RegistryObject<Item> registerCircuitItem(String name, String SubstanceName, String phase) {
         return DCItems.ITEMS.register(name, () -> new Item(new Item.Properties()) {
+
+            private static final int[] RAINBOW = {
+                    0xFF0000, 0xFFFF00, 0x00FF00,
+                    0x00FFFF, 0x0000FF, 0xFF00FF
+            };
+
+            private static final int[] GLAY_SCALE = {
+                    0x404040, 0x808080, 0xFFFFFF
+            };
+
+            private static Component rainbowText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * RAINBOW.length / len;
+
+                    int color = RAINBOW[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
+
+            private static Component grayText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * GLAY_SCALE.length / len;
+
+                    int color = GLAY_SCALE[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
+
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level level, List<Component> pTooltip, TooltipFlag pFlag) {
                 if (Screen.hasShiftDown()) {
                     switch (phase) {
                         case "initial" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFFFFFF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFFFF))));
                         case "basic" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF0000)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF0000))));
                         case "low" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF8000)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFF00))));
                         case "medium" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFFFF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FF00))));
                         case "high" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x80FF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FFFF))));
                         case "super" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x00FF00)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x0000FF))));
                         case "over" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x00FFFF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF00FF))));
                         case "ultra" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x0080FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x808080))));
                         case "anti" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x0000FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x404040))));
                         case "imaginary" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0xFF00FF)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(grayText(Component.translatable(phase).getString())));
                         case "infinity" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp." + phase).withStyle(style -> style.withColor(0x808080)));
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(rainbowText(Component.translatable(phase).getString())));
+
                         default -> throw new IllegalStateException("Unexpected value: " + phase);
                     }
                     pTooltip.add(Component.translatable("tooltip.degeneracycraft." + SubstanceName + ".formula").withStyle(style -> style.withColor(0x00FFFF)));

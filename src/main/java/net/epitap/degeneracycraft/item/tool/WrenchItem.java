@@ -1,6 +1,6 @@
-package net.epitap.degeneracycraft.items;
+package net.epitap.degeneracycraft.item.tool;
 
-import net.minecraft.ChatFormatting;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;

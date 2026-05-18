@@ -2,6 +2,7 @@
   "values": [
     "degeneracycraft:basic_circuit",
     "degeneracycraft:basic_combinedshaft",
+    "degeneracycraft:basic_compressed_redstone",
     "degeneracycraft:basic_condenser",
     "degeneracycraft:basic_conductor_wire",
     "degeneracycraft:basic_conveyorbelt",

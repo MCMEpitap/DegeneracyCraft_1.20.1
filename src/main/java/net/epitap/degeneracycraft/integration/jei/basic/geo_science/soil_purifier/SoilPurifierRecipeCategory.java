@@ -16,6 +16,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -126,7 +127,32 @@ public class SoilPurifierRecipeCategory implements IRecipeCategory<SoilPurifierR
         Minecraft minecraft = Minecraft.getInstance();
         Font fontRenderer = minecraft.font;
         int phase = recipe.getRequiredPhase();
-        guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFF0000);
+
+        switch (phase) {
+            case 0 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFFFFFF);
+            case 1 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFF0000);
+            case 2 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFFFF00);
+            case 3 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x00FF00);
+            case 4 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x00FFFF);
+            case 5 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x0000FF);
+            case 6 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFF00FF);
+            case 7 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x808080);
+            case 8 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x404040);
+            case 9 ->
+                    guiGraphics.drawString(fontRenderer, grayText(Component.translatable("screen.degeneracycraft.phase" + phase).getString()), 115, 87, 0xFFFFFF);
+            case 10 ->
+                    guiGraphics.drawString(fontRenderer, rainbowText(Component.translatable("screen.degeneracycraft.phase" + phase).getString()), 115, 87, 0xFFFFFF);
+            default -> throw new IllegalStateException("Unexpected value: " + phase);
+        }
     }
 
     protected void drawRequiredEnergy(SoilPurifierRecipe recipe, GuiGraphics guiGraphics) {
@@ -204,6 +230,59 @@ public class SoilPurifierRecipeCategory implements IRecipeCategory<SoilPurifierR
             builder.addSlot(RecipeIngredientRole.OUTPUT, outputPos[i][0], outputPos[i][1])
                     .addItemStack(outputs.get(i));
         }
+    }
+
+    private static final int[] RAINBOW = {
+            0xFF0000, 0xFFFF00, 0x00FF00,
+            0x00FFFF, 0x0000FF, 0xFF00FF
+    };
+
+    private static final int[] GLAY_SCALE = {
+            0x404040, 0x808080, 0xFFFFFF
+    };
+
+    private static Component rainbowText(String text) {
+        MutableComponent result = Component.empty();
+
+        int len = text.length();
+
+        for (int i = 0; i < len; i++) {
+            int index = i * RAINBOW.length / len;
+
+            int color = RAINBOW[index];
+
+            result.append(
+                    Component.literal(String.valueOf(text.charAt(i)))
+                            .withStyle(style -> style
+                                    .withColor(color)
+                                    .withBold(true)
+                                    .withUnderlined(true))
+            );
+        }
+
+        return result;
+    }
+
+    private static Component grayText(String text) {
+        MutableComponent result = Component.empty();
+
+        int len = text.length();
+
+        for (int i = 0; i < len; i++) {
+            int index = i * GLAY_SCALE.length / len;
+
+            int color = GLAY_SCALE[index];
+
+            result.append(
+                    Component.literal(String.valueOf(text.charAt(i)))
+                            .withStyle(style -> style
+                                    .withColor(color)
+                                    .withBold(true)
+                                    .withUnderlined(true))
+            );
+        }
+
+        return result;
     }
 }
 

@@ -1,9 +1,10 @@
-package net.epitap.degeneracycraft.items;
+package net.epitap.degeneracycraft.item;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.datagen.DCBlockTagGenerator;
 import net.epitap.degeneracycraft.datagen.DCItemTagGenerator;
+import net.epitap.degeneracycraft.item.icon.DCIcons;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -579,6 +580,33 @@ public class DCCreativeTabs {
 //                                .forEach(output::accept);
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_ICON_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_icons",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCIcons.INITIAL_ICON.get()))
+                    .title(Component.translatable("creativetab.degeneracycraft_icons"))
+                    .displayItems((displayParameters, output) -> {
+                        output.accept(DCIcons.ASTRONOMY_ICON.get());
+                        output.accept(DCIcons.BIOLOGY_ICON.get());
+                        output.accept(DCIcons.CHEMISTRY_ICON.get());
+                        output.accept(DCIcons.DYNAMIC_ENERGETICS_ICON.get());
+                        output.accept(DCIcons.ENGINEERING_ICON.get());
+                        output.accept(DCIcons.FORMAL_SCIENCE_ICON.get());
+                        output.accept(DCIcons.GEO_SCIENCE_ICON.get());
+                        output.accept(DCIcons.HYBRID_PHYSICS_ICON.get());
+                        output.accept(DCIcons.IMITATION_MAGIC_ENGINEERING_ICON.get());
+                        output.accept(DCIcons.JEHITH_VOID_SCIENCE_ICON.get());
+                        output.accept(DCIcons.KALEIDOSCOPIC_REALITY_SCIENCE_ICON.get());
+                        output.accept(DCIcons.INITIAL_ICON.get());
+                        output.accept(DCIcons.BASIC_ICON.get());
+                        output.accept(DCIcons.LOW_ICON.get());
+                        output.accept(DCIcons.MEDIUM_ICON.get());
+                        output.accept(DCIcons.HIGH_ICON.get());
+                        output.accept(DCIcons.SUPER_ICON.get());
+                        output.accept(DCIcons.OVER_ICON.get());
+                        output.accept(DCIcons.ULTRA_ICON.get());
+                        output.accept(DCIcons.ANTI_ICON.get());
+                        output.accept(DCIcons.IMAGINARY_ICON.get());
+                        output.accept(DCIcons.INFINITY_ICON.get());
+                    }).build());
 
 
     public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_TESTS = CREATIVE_MODE_TABS.register("degeneracycraft_tests",

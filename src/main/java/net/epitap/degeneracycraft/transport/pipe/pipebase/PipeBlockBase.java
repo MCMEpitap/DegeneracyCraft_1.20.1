@@ -1,6 +1,6 @@
 package net.epitap.degeneracycraft.transport.pipe.pipebase;
 
-import net.epitap.degeneracycraft.items.WrenchItem;
+import net.epitap.degeneracycraft.item.tool.WrenchItem;
 import net.epitap.degeneracycraft.transport.pipe.parametor.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

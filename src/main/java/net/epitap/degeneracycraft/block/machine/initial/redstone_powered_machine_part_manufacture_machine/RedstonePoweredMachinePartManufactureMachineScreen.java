@@ -34,8 +34,6 @@ public class RedstonePoweredMachinePartManufactureMachineScreen extends Abstract
 
     @Override
     public void renderLabels(GuiGraphics guiGraphics,int pMouseX, int pMouseY) {
-        guiGraphics.drawCenteredString(this.font, Component.translatable("screen." + "degeneracycraft" + ".phase0"),
-                35, 67, 0xFFFFFF);
         if (menu.isWorking()) {
             guiGraphics.drawCenteredString(this.font, "Work!",
                     80, 30, 0x00FF00);

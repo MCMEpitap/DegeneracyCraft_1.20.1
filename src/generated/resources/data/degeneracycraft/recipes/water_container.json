@@ -11,8 +11,7 @@
     }
   },
   "pattern": [
-    "we",
-    "  "
+    "we"
   ],
   "result": {
     "item": "degeneracycraft:water_container"

@@ -8,25 +8,25 @@
       "item": "minecraft:redstone"
     },
     {
-      "item": "degeneracycraft:copper_wire"
+      "item": "minecraft:coal"
     },
     {
       "item": "minecraft:redstone"
     },
     {
-      "item": "degeneracycraft:iron_wire"
-    },
-    {
-      "item": "degeneracycraft:iron_plate"
-    },
-    {
-      "item": "degeneracycraft:iron_wire"
+      "item": "minecraft:coal"
     },
     {
       "item": "minecraft:redstone"
     },
     {
-      "item": "degeneracycraft:copper_wire"
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:coal"
     },
     {
       "item": "minecraft:redstone"
@@ -34,7 +34,7 @@
   ],
   "outputs": [
     {
-      "item": "degeneracycraft:basic_circuit"
+      "item": "degeneracycraft:basic_compressed_redstone"
     }
   ]
 }

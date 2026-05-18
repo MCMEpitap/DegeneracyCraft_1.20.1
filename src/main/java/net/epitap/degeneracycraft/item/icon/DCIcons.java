@@ -1,4 +1,4 @@
-package net.epitap.degeneracycraft.items;
+package net.epitap.degeneracycraft.item.icon;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.minecraft.world.item.Item;

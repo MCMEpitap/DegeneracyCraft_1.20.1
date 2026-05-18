@@ -1,9 +1,9 @@
-// 1.20.1	2026-05-02T12:46:51.9036763	Item Tags
+// 1.20.1	2026-05-16T12:35:03.7387397	Item Tags
 cbbbba0b51c41c2fcae23d924d454532aa8a73ee data/degeneracycraft/tags/items/basic_astronomy_machine_parts.json
 024b8781657e2ab511799195868985bd1f017f35 data/degeneracycraft/tags/items/basic_biology_machine_parts.json
 54fd29685d1261b5b01df7ad77535f88e3e696ed data/degeneracycraft/tags/items/basic_chemistry_machine_parts.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/degeneracycraft/tags/items/basic_dynamic_energetics_machine_parts.json
-225f555795d2b7c71ed28eadf17f956c9b6286d7 data/degeneracycraft/tags/items/basic_engineering_machine_parts.json
+ceab3ad1e1f1ad584f760edcdd1579501c603749 data/degeneracycraft/tags/items/basic_engineering_machine_parts.json
 12588598a0dee48f187b548c21937bbc6e3491d4 data/degeneracycraft/tags/items/basic_formal_science_machine_parts.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/degeneracycraft/tags/items/basic_geo_science_machine_parts.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/degeneracycraft/tags/items/basic_hybrid_physics_machine_parts.json

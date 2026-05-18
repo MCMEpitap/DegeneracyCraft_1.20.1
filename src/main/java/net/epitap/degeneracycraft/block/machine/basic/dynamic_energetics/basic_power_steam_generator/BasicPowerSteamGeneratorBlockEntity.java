@@ -3,7 +3,7 @@ package net.epitap.degeneracycraft.block.machine.basic.dynamic_energetics.basic_
 import net.epitap.degeneracycraft.block.DCBlockEntities;
 import net.epitap.degeneracycraft.energy.DCEnergyStorageFloatBase;
 import net.epitap.degeneracycraft.energy.DCIEnergyStorageFloat;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.networking.packet.DCEnergySyncS2CPacket;
 import net.epitap.degeneracycraft.util.DCWrappedHandler;

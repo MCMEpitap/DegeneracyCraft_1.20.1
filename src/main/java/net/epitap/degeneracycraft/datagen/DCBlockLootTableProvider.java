@@ -1,7 +1,7 @@
 package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.block.DCBlocks;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;

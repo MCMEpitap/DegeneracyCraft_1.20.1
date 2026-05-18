@@ -17,6 +17,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -48,6 +49,7 @@ public class MachinePartProcessorRecipeCategory implements IRecipeCategory<Machi
     public final static ResourceLocation TEXTURE10 =
             new ResourceLocation(Degeneracycraft.MOD_ID, "textures/gui/infinity/engineering/infinity_technology_machine_part_processor/infinity_technology_machine_part_processor_uid.png");
 
+    private final IDrawable background0;
     private final IDrawable background1;
     private final IDrawable background2;
     private final IDrawable background3;
@@ -65,6 +67,7 @@ public class MachinePartProcessorRecipeCategory implements IRecipeCategory<Machi
     public BasicTechnologyMachinePartProcessorMenu menu1;
 
     public MachinePartProcessorRecipeCategory(IGuiHelper helper) {
+        this.background0 = helper.createDrawable(TEXTURE0, 0, 0, 176, 154);
         this.background1 = helper.createDrawable(TEXTURE1, 0, 0, 176, 154);
         this.background2 = helper.createDrawable(TEXTURE2, 0, 0, 176, 154);
         this.background3 = helper.createDrawable(TEXTURE3, 0, 0, 176, 154);
@@ -106,6 +109,7 @@ public class MachinePartProcessorRecipeCategory implements IRecipeCategory<Machi
     public void draw(MachinePartProcessorRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics stack, double mouseX, double mouseY) {
         int phase = recipe.getRequiredPhase();
         switch (phase) {
+            case 0 -> background0.draw(stack);
             case 1 -> background1.draw(stack);
             case 2 -> background2.draw(stack);
             case 3 -> background3.draw(stack);
@@ -129,7 +133,32 @@ public class MachinePartProcessorRecipeCategory implements IRecipeCategory<Machi
         Minecraft minecraft = Minecraft.getInstance();
         Font fontRenderer = minecraft.font;
         int phase = recipe.getRequiredPhase();
-        guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFF0000);
+
+        switch (phase) {
+            case 0 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFFFFFF);
+            case 1 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFF0000);
+            case 2 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFFFF00);
+            case 3 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x00FF00);
+            case 4 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x00FFFF);
+            case 5 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x0000FF);
+            case 6 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0xFF00FF);
+            case 7 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x808080);
+            case 8 ->
+                    guiGraphics.drawString(fontRenderer, Component.translatable("screen." + "degeneracycraft" + ".phase" + phase), 115, 87, 0x404040);
+            case 9 ->
+                    guiGraphics.drawString(fontRenderer, grayText(Component.translatable("screen.degeneracycraft.phase" + phase).getString()), 115, 87, 0xFFFFFF);
+            case 10 ->
+                    guiGraphics.drawString(fontRenderer, rainbowText(Component.translatable("screen.degeneracycraft.phase" + phase).getString()), 115, 87, 0xFFFFFF);
+            default -> throw new IllegalStateException("Unexpected value: " + phase);
+        }
     }
 
     protected void drawRequiredEnergy(MachinePartProcessorRecipe recipe, GuiGraphics guiGraphics) {
@@ -230,6 +259,59 @@ public class MachinePartProcessorRecipeCategory implements IRecipeCategory<Machi
             builder.addSlot(RecipeIngredientRole.OUTPUT, outputPos[i][0], outputPos[i][1])
                     .addItemStack(outputs.get(i));
         }
+    }
+
+    private static final int[] RAINBOW = {
+            0xFF0000, 0xFFFF00, 0x00FF00,
+            0x00FFFF, 0x0000FF, 0xFF00FF
+    };
+
+    private static final int[] GLAY_SCALE = {
+            0x404040, 0x808080, 0xFFFFFF
+    };
+
+    private static Component rainbowText(String text) {
+        MutableComponent result = Component.empty();
+
+        int len = text.length();
+
+        for (int i = 0; i < len; i++) {
+            int index = i * RAINBOW.length / len;
+
+            int color = RAINBOW[index];
+
+            result.append(
+                    Component.literal(String.valueOf(text.charAt(i)))
+                            .withStyle(style -> style
+                                    .withColor(color)
+                                    .withBold(true)
+                                    .withUnderlined(true))
+            );
+        }
+
+        return result;
+    }
+
+    private static Component grayText(String text) {
+        MutableComponent result = Component.empty();
+
+        int len = text.length();
+
+        for (int i = 0; i < len; i++) {
+            int index = i * GLAY_SCALE.length / len;
+
+            int color = GLAY_SCALE[index];
+
+            result.append(
+                    Component.literal(String.valueOf(text.charAt(i)))
+                            .withStyle(style -> style
+                                    .withColor(color)
+                                    .withBold(true)
+                                    .withUnderlined(true))
+            );
+        }
+
+        return result;
     }
 }
 

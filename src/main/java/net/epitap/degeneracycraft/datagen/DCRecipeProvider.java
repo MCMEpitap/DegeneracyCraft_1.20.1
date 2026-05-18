@@ -1,7 +1,7 @@
 package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.block.DCBlocks;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -80,13 +80,12 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCItems.WATER_CONTAINER.get())
                 .pattern("we")
-                .pattern("  ")
                 .define('w', Items.WATER_BUCKET)
                 .define('e', DCItems.EMPTY_CONTAINER.get())
                 .group("degeneracycraft")
-                .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
-                .save(pWriter)
-        ;
+                .unlockedBy("ingots/iron",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get())
                 .pattern(" i ")

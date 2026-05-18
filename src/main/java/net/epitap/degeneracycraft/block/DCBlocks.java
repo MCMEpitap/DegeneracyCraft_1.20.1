@@ -102,7 +102,7 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlock;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlock;
 import net.epitap.degeneracycraft.block.test.TestMachineBlock;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeBlock;
 import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeBlock;
 import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeBlock;
@@ -1474,23 +1474,23 @@ public class DCBlocks {
                         case "basic" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF0000))));
                         case "low" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF8000))));
-                        case "medium" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFF00))));
-                        case "high" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x80FF00))));
-                        case "super" ->
+                        case "medium" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FF00))));
-                        case "over" ->
+                        case "high" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FFFF))));
-                        case "ultra" ->
-                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x0080FF))));
-                        case "anti" ->
+                        case "super" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x0000FF))));
-                        case "imaginary" ->
+                        case "over" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF00FF))));
-                        case "infinity" ->
+                        case "ultra" ->
                                 pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x808080))));
+                        case "anti" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x404040))));
+                        case "imaginary" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(grayText(Component.translatable(phase).getString())));
+                        case "infinity" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(rainbowText(Component.translatable(phase).getString())));
 
                         default -> throw new IllegalStateException("Unexpected value: " + phase);
                     }

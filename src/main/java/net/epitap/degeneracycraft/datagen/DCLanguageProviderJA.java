@@ -2,8 +2,8 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
-import net.epitap.degeneracycraft.items.DCIcons;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.icon.DCIcons;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -753,7 +753,6 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
 
         add(DCItems.COMPRESSED_PLANKS.get(), "圧縮木材");
-        add(DCItems.COMPRESSED_REDSTONE.get(), "圧縮レッドストーン");
 
         add(DCItems.MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "マルチブロック設備ホログラム投影機");
         add(DCItems.BASIC_TECHNOLOGY_MULTIBLOCK_STRUCTURE_HOLOGRAM_VISUALIZER.get(), "マルチブロック設備ホログラム投影機");
@@ -780,6 +779,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add(DCItems.BASIC_CIRCUIT.get(), "基本回路");
         add(DCItems.BASIC_COMBINEDSHAFT.get(), "基本結合シャフト");
+        add(DCItems.BASIC_COMPRESSED_REDSTONE.get(), "基本圧縮レッドストーン");
         add(DCItems.BASIC_CONDENSER.get(), "基本コンデンサー");
         add(DCItems.BASIC_CONDUCTOR_WIRE.get(), "基本導線");
         add(DCItems.BASIC_CONVEYORBELT.get(), "基本ベルトコンベアー");
@@ -1511,6 +1511,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft インゴット");
         add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft マルチブロック設備ブロック");
         add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft 鉱石");
+        add("creativetab." + "degeneracycraft_icons", "Degeneracy Craft アイコン");
 
 
         add("screen." + "degeneracycraft" + ".phase", "Phase");

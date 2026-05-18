@@ -2,8 +2,8 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
-import net.epitap.degeneracycraft.items.DCIcons;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.icon.DCIcons;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -758,7 +758,6 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
 
         add(DCItems.COMPRESSED_PLANKS.get(), "Compressed Planks");
-        add(DCItems.COMPRESSED_REDSTONE.get(), "Compressed Redstone");
 
 
         add(DCItems.EMPTY_CONTAINER.get(), "Empty Container");
@@ -805,6 +804,7 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
         add(DCItems.BASIC_CIRCUIT.get(), "Basic Circuit");
         add(DCItems.BASIC_COMBINEDSHAFT.get(), "Basic Combined Shaft");
+        add(DCItems.BASIC_COMPRESSED_REDSTONE.get(), "Basic Compressed Redstone");
         add(DCItems.BASIC_CONDENSER.get(), "Basic Condenser");
         add(DCItems.BASIC_CONDUCTOR_WIRE.get(), "Basic Conductor Wire");
         add(DCItems.BASIC_CONVEYORBELT.get(), "Basic Conveyor Belt");
@@ -1517,6 +1517,7 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft Ingots");
         add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft Multiblock Blocks");
         add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft Ores");
+        add("creativetab." + "degeneracycraft_icons", "Degeneracy Craft Icons");
 
         add("screen." + "degeneracycraft" + ".phase", "Phase");
 

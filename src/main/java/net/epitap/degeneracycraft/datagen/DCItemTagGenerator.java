@@ -1,7 +1,7 @@
 package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -659,6 +659,7 @@ public class DCItemTagGenerator extends ItemTagsProvider {
         tag(BASIC_ENGINEERING_MACHINE_PARTS)
                 .add(DCItems.BASIC_CIRCUIT.get())
                 .add(DCItems.BASIC_COMBINEDSHAFT.get())
+                .add(DCItems.BASIC_COMPRESSED_REDSTONE.get())
                 .add(DCItems.BASIC_CONDENSER.get())
                 .add(DCItems.BASIC_CONDUCTOR_WIRE.get())
                 .add(DCItems.BASIC_CONVEYORBELT.get())

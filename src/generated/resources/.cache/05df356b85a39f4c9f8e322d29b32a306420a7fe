@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-12T02:05:33.1157197	Item Models: degeneracycraft
+// 1.20.1	2026-05-16T12:35:03.741083	Item Models: degeneracycraft
 4f0386661cf48db2b48b69997650f6d1a8cf17b8 assets/degeneracycraft/models/item/ammonia_gas.json
 bac3372dff6e3c94811331eaa8cb7c6019d03565 assets/degeneracycraft/models/item/ammonium_hydrogen_sulfate_dust.json
 8652a25f108df858e780c79ce0eeed24fee86a64 assets/degeneracycraft/models/item/ammonium_sulfate_dust.json
@@ -9,6 +9,7 @@ bac3372dff6e3c94811331eaa8cb7c6019d03565 assets/degeneracycraft/models/item/ammo
 9f6abbb93651abe58e47d340c34530ae06b1ed8f assets/degeneracycraft/models/item/basic_chemistry_circuit.json
 b2ef00fd989fe2e713ca88123e07e582b73c7dbd assets/degeneracycraft/models/item/basic_circuit.json
 906d9731f08718b1aac52d0c9f95d6deb9ae90df assets/degeneracycraft/models/item/basic_combinedshaft.json
+4705cb712ee41c39a7c5a79513f48b8b5b5a63ee assets/degeneracycraft/models/item/basic_compressed_redstone.json
 37813f16a3ec3d9aeba714ad7c5d000752a816c2 assets/degeneracycraft/models/item/basic_condenser.json
 62e13a76497d514f2660c4e390b613000d01af7f assets/degeneracycraft/models/item/basic_conductor_wire.json
 9c586d7d7465b10f1e37c65b729da07da297c36d assets/degeneracycraft/models/item/basic_conveyorbelt.json
@@ -466,7 +467,6 @@ d0bcbdc0b3f65a35c0b43592eba20a82af35ece5 assets/degeneracycraft/models/item/chro
 2c98d6fa2ca806736f5a153523d6fccbb9debde6 assets/degeneracycraft/models/item/chromite_ultrahotplasma.json
 a4746aec9e5d24bbb955104ebd79b9f333d82324 assets/degeneracycraft/models/item/chromite_washeddust.json
 55590b083fe2c79d918e1d5b8d974d5159e5a7f6 assets/degeneracycraft/models/item/compressed_planks.json
-df6986a9e6335792fa35840fea8476f08beae318 assets/degeneracycraft/models/item/compressed_redstone.json
 f0cf367c6fa9ed26bc973e8c61f073cdbb88ea21 assets/degeneracycraft/models/item/copper_bearing.json
 5405dfeb4ceb9f30d1a11cb91c9586c630d0fb6e assets/degeneracycraft/models/item/copper_bolt.json
 9d19eb218497f0b5746e5e9d3d7e345c42020d22 assets/degeneracycraft/models/item/copper_cam.json

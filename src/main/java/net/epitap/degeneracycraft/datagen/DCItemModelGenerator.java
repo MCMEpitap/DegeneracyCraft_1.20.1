@@ -2,8 +2,8 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
-import net.epitap.degeneracycraft.items.DCIcons;
-import net.epitap.degeneracycraft.items.DCItems;
+import net.epitap.degeneracycraft.item.icon.DCIcons;
+import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -605,7 +605,6 @@ public class DCItemModelGenerator extends ItemModelProvider {
         basicMaterialHybridPhysicsItem(DCItems.PURIFIED_GRAPHITE_ARC_ELECTRODE.get());
 
         basicMaterialCommonItem(DCItems.COMPRESSED_PLANKS.get());
-        basicMaterialCommonItem(DCItems.COMPRESSED_REDSTONE.get());
 
 
 
@@ -629,6 +628,7 @@ public class DCItemModelGenerator extends ItemModelProvider {
         basicPartEngineeringItem(DCItems.BASIC_CIRCUIT.get());
         basicPartEngineeringItem(DCItems.BASIC_CONDENSER.get());
         basicPartEngineeringItem(DCItems.BASIC_COMBINEDSHAFT.get());
+        basicPartEngineeringItem(DCItems.BASIC_COMPRESSED_REDSTONE.get());
         basicPartEngineeringItem(DCItems.BASIC_CONDUCTOR_WIRE.get());
         basicPartEngineeringItem(DCItems.BASIC_CONVEYORBELT.get());
         basicPartEngineeringItem(DCItems.BASIC_CYLINDER.get());
