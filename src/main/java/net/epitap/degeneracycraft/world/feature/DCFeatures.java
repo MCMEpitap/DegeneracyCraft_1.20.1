@@ -19,7 +19,7 @@ public class DCFeatures {
         FEATURES.register("veins", () -> new VeinFeature(NoneFeatureConfiguration.CODEC));
     }
 
-    public static void Register(IEventBus eventBus) {
+    public static void register(IEventBus eventBus) {
         FEATURES.register(eventBus);
     }
 }

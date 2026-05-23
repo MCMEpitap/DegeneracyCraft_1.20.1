@@ -2,6 +2,7 @@ package net.epitap.degeneracycraft.world.feature.vein.veinbase;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -10,10 +11,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Objects;
 
 public class VeinSerializerUtils {
     public static @NotNull BlockState fromString(@Nullable String string) {
@@ -62,17 +61,24 @@ public class VeinSerializerUtils {
         return ret;
     }
 
-    public static JsonArray deconstructMultiBlockMap(HashMap<BlockState, Float> in) {
-        JsonArray ret = new JsonArray();
+    public static JsonArray deconstructMultiBlockMap(HashMap<BlockState, Float> map) {
+        JsonArray array = new JsonArray();
 
-        for (Entry<BlockState, Float> e : in.entrySet()) {
+        for (Map.Entry<BlockState, Float> entry : map.entrySet()) {
             JsonObject obj = new JsonObject();
-            obj.addProperty("block", VeinBlockUtils.getRegistryName(e.getKey().getBlock()));
-            obj.addProperty("chance", e.getValue());
-            ret.add(obj);
+            BlockState state = entry.getKey();
+
+            if (state == null) {
+                obj.add("block", JsonNull.INSTANCE);
+            } else {
+                ResourceLocation id = ForgeRegistries.BLOCKS.getKey(state.getBlock());
+                obj.addProperty("block", id.toString());
+            }
+            obj.addProperty("chance", entry.getValue());
+            array.add(obj);
         }
 
-        return ret;
+        return array;
     }
 
     public static HashMap<String, HashMap<BlockState, Float>> buildMultiBlockMatcherMap(JsonObject obj) {
@@ -96,5 +102,23 @@ public class VeinSerializerUtils {
         }
 
         return ret;
+    }
+
+    public static JsonArray deconstructBlockStateList(Set<BlockState> states) {
+        JsonArray array = new JsonArray();
+
+        for (BlockState state : states) {
+            if (state == null) {
+                continue;
+            }
+
+            ResourceLocation id = ForgeRegistries.BLOCKS.getKey(state.getBlock());
+
+            if (id != null) {
+                array.add(id.toString());
+            }
+        }
+
+        return array;
     }
 }

@@ -34,5 +34,9 @@ public class DCDataGenerator {
         generator.addProvider(event.includeServer(), new DCItemModelGenerator(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new DCLanguageProviderEN(packOutput, "en_us"));
         generator.addProvider(event.includeClient(), new DCLanguageProviderJA(packOutput, "ja_jp"));
+
+        generator.addProvider(event.includeClient(), new DCVeinGenerator(packOutput));
+//        generator.addProvider(event.includeClient(), new DCConfiguredFeatureGenerator(packOutput));
+
     }
 }

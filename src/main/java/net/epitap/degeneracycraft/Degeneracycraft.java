@@ -63,7 +63,7 @@ public class Degeneracycraft {
         DCMessages.register();
         DCRecipeTypes.register(bus);
         DCIcons.register(bus);
-        DCFeatures.Register(bus);
+        DCFeatures.register(bus);
 
         bus.addListener(PipeModelRegistry::onModelRegister);
         bus.addListener(PipeModelRegistry::onModelBake);

@@ -25,15 +25,31 @@ import java.util.Set;
 public class DenseVein extends AbstractVein {
     public static final String JSON_TYPE = "degeneracycraft:vein_dense";
 
+    private String name;
     private final int yMin;
     private final int yMax;
     private final int size;
 
-    public DenseVein(HashMap<String, HashMap<BlockState, Float>> matcherToOreWeightPair, HashMap<BlockState, Float> outcropWeightPair, int yMin, int yMax, int size, int generationWeight, TagKey<Biome> biomeKey, HashSet<BlockState> matchers, Set<ResourceLocation> dimensions) {
+    public DenseVein(
+            HashMap<String, HashMap<BlockState, Float>> matcherToOreWeightPair,
+            HashMap<BlockState, Float> outcropWeightPair,
+            int yMin,
+            int yMax,
+            int size,
+            int generationWeight,
+            TagKey<Biome> biomeKey,
+            HashSet<BlockState> matchers,
+            Set<ResourceLocation> dimensions
+    ) {
         super(matcherToOreWeightPair, outcropWeightPair, biomeKey, matchers, generationWeight, dimensions);
+
         this.yMin = yMin;
         this.yMax = yMax;
         this.size = size;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -171,11 +187,13 @@ public class DenseVein extends AbstractVein {
 
         config.add("blocks", VeinSerializerUtils.deconstructMultiBlockMatcherMap(this.matcherToOreWeightPair));
         config.add("outcrops", VeinSerializerUtils.deconstructMultiBlockMap(this.outcropWeightPair));
+        config.add("blockStateMatchers",
+                VeinSerializerUtils.deconstructBlockStateList(this.getMatchers()));
         config.addProperty("yMin", this.yMin);
         config.addProperty("yMax", this.yMax);
         config.addProperty("size", this.size);
         config.addProperty("generationWeight", this.generationWeight);
-        config.addProperty("biomeTag", this.biomeKey.location().toString());
+        config.addProperty("biomeTag", "#" + this.biomeKey.location());
         json.addProperty("type", JSON_TYPE);
         json.add("config", config);
         JsonArray dimArray = new JsonArray();
