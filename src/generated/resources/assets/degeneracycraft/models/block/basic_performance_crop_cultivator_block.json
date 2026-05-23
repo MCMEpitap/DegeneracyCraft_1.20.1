@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/machine/basic/biology/basic_performance_crop_cultivator/basic_performance_crop_cultivator_down",
+    "east": "degeneracycraft:block/machine/basic/biology/basic_performance_crop_cultivator/basic_performance_crop_cultivator_side",
+    "north": "degeneracycraft:block/machine/basic/biology/basic_performance_crop_cultivator/basic_performance_crop_cultivator_front",
+    "particle": "degeneracycraft:block/machine/basic/biology/basic_performance_crop_cultivator/basic_performance_crop_cultivator_front",
+    "south": "degeneracycraft:block/machine/basic/biology/basic_performance_crop_cultivator/basic_performance_crop_cultivator_side",
+    "up": "degeneracycraft:block/machine/basic/biology/basic_performance_crop_cultivator/basic_performance_crop_cultivator_up",
+    "west": "degeneracycraft:block/machine/basic/biology/basic_performance_crop_cultivator/basic_performance_crop_cultivator_side"
+  }
+}

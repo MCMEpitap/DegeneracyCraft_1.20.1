@@ -1,0 +1,45 @@
+{
+  "type": "degeneracycraft:vein_dense",
+  "config": {
+    "biomeTag": "#minecraft:is_overworld",
+    "blockStateMatchers": [
+      "minecraft:stone",
+      "minecraft:deepslate"
+    ],
+    "blocks": {
+      "default": [
+        {
+          "block": "minecraft:stone",
+          "chance": 0.15
+        },
+        {
+          "block": "minecraft:gold_ore",
+          "chance": 0.85
+        }
+      ],
+      "minecraft:deepslate": [
+        {
+          "block": "minecraft:deepslate_gold_ore",
+          "chance": 0.85
+        },
+        {
+          "block": "minecraft:deepslate",
+          "chance": 0.15
+        }
+      ]
+    },
+    "dimensions": [
+      "minecraft:overworld"
+    ],
+    "generationWeight": 4,
+    "outcrops": [
+      {
+        "block": "minecraft:gold_ore",
+        "chance": 1.0
+      }
+    ],
+    "size": 50,
+    "yMax": 64,
+    "yMin": 32
+  }
+}

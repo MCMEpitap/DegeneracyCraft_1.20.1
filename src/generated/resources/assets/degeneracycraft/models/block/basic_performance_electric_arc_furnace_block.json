@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/machine/basic/hybrid_physics/basic_performance_electric_arc_furnace/basic_performance_electric_arc_furnace_down",
+    "east": "degeneracycraft:block/machine/basic/hybrid_physics/basic_performance_electric_arc_furnace/basic_performance_electric_arc_furnace_side",
+    "north": "degeneracycraft:block/machine/basic/hybrid_physics/basic_performance_electric_arc_furnace/basic_performance_electric_arc_furnace_front",
+    "particle": "degeneracycraft:block/machine/basic/hybrid_physics/basic_performance_electric_arc_furnace/basic_performance_electric_arc_furnace_front",
+    "south": "degeneracycraft:block/machine/basic/hybrid_physics/basic_performance_electric_arc_furnace/basic_performance_electric_arc_furnace_side",
+    "up": "degeneracycraft:block/machine/basic/hybrid_physics/basic_performance_electric_arc_furnace/basic_performance_electric_arc_furnace_up",
+    "west": "degeneracycraft:block/machine/basic/hybrid_physics/basic_performance_electric_arc_furnace/basic_performance_electric_arc_furnace_side"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/machine/basic/formal_science/basic_performance_machine_data_installer/basic_performance_machine_data_installer_down",
+    "east": "degeneracycraft:block/machine/basic/formal_science/basic_performance_machine_data_installer/basic_performance_machine_data_installer_side",
+    "north": "degeneracycraft:block/machine/basic/formal_science/basic_performance_machine_data_installer/basic_performance_machine_data_installer_front",
+    "particle": "degeneracycraft:block/machine/basic/formal_science/basic_performance_machine_data_installer/basic_performance_machine_data_installer_front",
+    "south": "degeneracycraft:block/machine/basic/formal_science/basic_performance_machine_data_installer/basic_performance_machine_data_installer_side",
+    "up": "degeneracycraft:block/machine/basic/formal_science/basic_performance_machine_data_installer/basic_performance_machine_data_installer_up",
+    "west": "degeneracycraft:block/machine/basic/formal_science/basic_performance_machine_data_installer/basic_performance_machine_data_installer_side"
+  }
+}

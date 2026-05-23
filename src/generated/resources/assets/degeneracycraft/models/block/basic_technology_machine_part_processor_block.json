@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_part_processor/basic_technology_machine_part_processor_down",
+    "east": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_part_processor/basic_technology_machine_part_processor_side",
+    "north": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_part_processor/basic_technology_machine_part_processor_front",
+    "particle": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_part_processor/basic_technology_machine_part_processor_front",
+    "south": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_part_processor/basic_technology_machine_part_processor_side",
+    "up": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_part_processor/basic_technology_machine_part_processor_up",
+    "west": "degeneracycraft:block/machine/basic/engineering/basic_technology_machine_part_processor/basic_technology_machine_part_processor_side"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/machine/basic/dynamic_energetics/basic_power_steam_generator/basic_power_steam_generator_down",
+    "east": "degeneracycraft:block/machine/basic/dynamic_energetics/basic_power_steam_generator/basic_power_steam_generator_side",
+    "north": "degeneracycraft:block/machine/basic/dynamic_energetics/basic_power_steam_generator/basic_power_steam_generator_front",
+    "particle": "degeneracycraft:block/machine/basic/dynamic_energetics/basic_power_steam_generator/basic_power_steam_generator_front",
+    "south": "degeneracycraft:block/machine/basic/dynamic_energetics/basic_power_steam_generator/basic_power_steam_generator_side",
+    "up": "degeneracycraft:block/machine/basic/dynamic_energetics/basic_power_steam_generator/basic_power_steam_generator_up",
+    "west": "degeneracycraft:block/machine/basic/dynamic_energetics/basic_power_steam_generator/basic_power_steam_generator_side"
+  }
+}
