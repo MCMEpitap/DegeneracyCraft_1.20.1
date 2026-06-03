@@ -22,7 +22,7 @@ public abstract class AbstractVein {
     protected final HashMap<BlockState, Float> outcropWeightPair;
     protected final TagKey<Biome> biomeKey;
     protected final HashSet<BlockState> matchers;
-    protected final int generationWeight;
+    protected final float generationWeight;
     protected final Set<ResourceLocation> dimensions;
 
     public AbstractVein(
@@ -30,7 +30,7 @@ public abstract class AbstractVein {
             HashMap<BlockState, Float> outcropWeightPair,
             TagKey<Biome> biomeKey,
             HashSet<BlockState> matchers,
-            int generationWeight,
+            float generationWeight,
             Set<ResourceLocation> dimensions
     ) {
         this.matcherToOreWeightPair = matcherToOreWeightPair;
@@ -63,7 +63,7 @@ public abstract class AbstractVein {
         return VeinUtils.pick(this.outcropWeightPair, rand);
     }
 
-    public int getGenerationWeight() {
+    public float getGenerationWeight() {
         return this.generationWeight;
     }
 

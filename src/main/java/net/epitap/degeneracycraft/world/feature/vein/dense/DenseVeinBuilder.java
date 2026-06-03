@@ -16,7 +16,7 @@ public class DenseVeinBuilder {
     private int yMin;
     private int yMax;
     private int size;
-    private int generationWeight;
+    private float generationWeight;
 
     private TagKey<Biome> biomeTag;
 
@@ -44,7 +44,7 @@ public class DenseVeinBuilder {
         return this;
     }
 
-    public DenseVeinBuilder weight(int generationWeight) {
+    public DenseVeinBuilder weight(float generationWeight) {
         this.generationWeight = generationWeight;
         return this;
     }
@@ -63,6 +63,7 @@ public class DenseVeinBuilder {
         this.matchers.add(block.defaultBlockState());
         return this;
     }
+
 
     public DenseVeinBuilder defaultOre(Block block, float chance) {
         oreBlocks.computeIfAbsent("default", k -> new HashMap<>())

@@ -1,0 +1,7 @@
+// 1.20.1	2026-05-24T17:23:26.3441858	DegeneracyCraft Feature Generator
+d46e823c614ddb5a2e301640ff28bc27575b9df4 data/degeneracycraft/forge/biome_modifier/nether_biome_vein.json
+c768accdd469fb2a543dce486b168f8b5dfd6b6c data/degeneracycraft/forge/biome_modifier/overworld_biome_vein.json
+6d1532c388781cda1a52832a6e3bf0ece9835076 data/degeneracycraft/veins/gold_vein.json
+43bf314cfe851ad762688e094cd83b654d61629e data/degeneracycraft/veins/nether_gold_vein.json
+76cc7ce4f5bc2c59029cf93d6240096b200e72b2 data/degeneracycraft/worldgen/configured_feature/veins_type.json
+f04b7fe3db1f33bdab51a830e9583a47a3b6f4c6 data/degeneracycraft/worldgen/placed_feature/veins.json

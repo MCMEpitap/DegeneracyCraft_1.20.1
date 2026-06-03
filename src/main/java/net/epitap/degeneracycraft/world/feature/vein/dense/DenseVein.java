@@ -36,7 +36,7 @@ public class DenseVein extends AbstractVein {
             int yMin,
             int yMax,
             int size,
-            int generationWeight,
+            float generationWeight,
             TagKey<Biome> biomeKey,
             HashSet<BlockState> matchers,
             Set<ResourceLocation> dimensions
@@ -127,7 +127,7 @@ public class DenseVein extends AbstractVein {
     @Override
     public void afterGen(WorldGenLevel level, BlockPos pos, IVeinCapability veins, IVeinGeneratedCapability chunksGenerated) {
         ChunkPos thisChunk = new ChunkPos(pos);
-        int maxOutcropCnt = Math.min(10, (this.size / 10) + (this.size % 10));
+        int maxOutcropCnt = Math.min(3, (this.size / 3) + (this.size % 3));
         for (int i = 0; i < maxOutcropCnt; i++) {
             BlockState tmp = this.getOutcrop(level.getRandom());
             if (tmp == null) {
@@ -159,7 +159,7 @@ public class DenseVein extends AbstractVein {
             int yMin = json.get("yMin").getAsInt();
             int yMax = json.get("yMax").getAsInt();
             int size = json.get("size").getAsInt();
-            int genWt = json.get("generationWeight").getAsInt();
+            float genWt = json.get("generationWeight").getAsFloat();
             TagKey<Biome> biomeTag = TagKey.create(Registries.BIOME, new ResourceLocation(json.get("biomeTag").getAsString().replace("#", "")));
 
             HashSet<BlockState> blockStateMatchers = VeinUtils.getDefaultMatchers();

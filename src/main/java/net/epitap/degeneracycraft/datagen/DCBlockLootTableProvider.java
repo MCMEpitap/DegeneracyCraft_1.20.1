@@ -21,8 +21,8 @@ public class DCBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(DCBlocks.OVERWORLD_CASSITERITE_ORE.get(), (Block) -> createOreDrop(DCBlocks.OVERWORLD_CASSITERITE_ORE.get(), DCItems.RAW_CASSITERITE_ORE.get()));
         this.add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get(), (Block) -> createOreDrop(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get(), DCItems.RAW_CASSITERITE_ORE.get()));
-        this.add(DCBlocks.NETHER_CASSITERITE_ORE.get(), (Block) -> createOreDrop(DCBlocks.NETHER_CASSITERITE_ORE.get(), DCItems.RAW_CASSITERITE_ORE.get()));
-        this.add(DCBlocks.END_CASSITERITE_ORE.get(), (Block) -> createOreDrop(DCBlocks.END_CASSITERITE_ORE.get(), DCItems.RAW_CASSITERITE_ORE.get()));
+//        this.add(DCBlocks.NETHER_CASSITERITE_ORE.get(), (Block) -> createOreDrop(DCBlocks.NETHER_CASSITERITE_ORE.get(), DCItems.RAW_CASSITERITE_ORE.get()));
+//        this.add(DCBlocks.END_CASSITERITE_ORE.get(), (Block) -> createOreDrop(DCBlocks.END_CASSITERITE_ORE.get(), DCItems.RAW_CASSITERITE_ORE.get()));
 
         this.add(DCBlocks.SILICON_BLOCK.get(), block -> createSingleItemTable(DCBlocks.SILICON_BLOCK.get()));
         this.add(DCBlocks.TIN_BLOCK.get(), block -> createSingleItemTable(DCBlocks.TIN_BLOCK.get()));

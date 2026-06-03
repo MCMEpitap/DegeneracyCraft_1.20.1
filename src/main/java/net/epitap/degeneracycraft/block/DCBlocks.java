@@ -138,8 +138,8 @@ public class DCBlocks {
 
     public static final RegistryObject<Block> OVERWORLD_CASSITERITE_ORE = registerBlock("overworld_cassiterite_ore", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(4.0f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_CASSITERITE_ORE = registerBlock("deepslate_cassiterite_ore", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(4.0f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> NETHER_CASSITERITE_ORE = registerBlock("nether_cassiterite_ore", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(4.0f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> END_CASSITERITE_ORE = registerBlock("end_cassiterite_ore", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(4.0f).requiresCorrectToolForDrops()));
+//    public static final RegistryObject<Block> NETHER_CASSITERITE_ORE = registerBlock("nether_cassiterite_ore", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(4.0f).requiresCorrectToolForDrops()));
+//    public static final RegistryObject<Block> END_CASSITERITE_ORE = registerBlock("end_cassiterite_ore", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(4.0f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SILICON_BLOCK = registerTooltipMeterialElementBlock("silicon_block", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f, 10.0f)),"silicon", "basic");
     public static final RegistryObject<Block> TIN_BLOCK = registerTooltipMeterialElementBlock("tin_block", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f, 10.0f)),"tin", "basic");

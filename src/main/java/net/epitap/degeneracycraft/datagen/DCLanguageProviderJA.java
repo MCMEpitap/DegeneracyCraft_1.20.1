@@ -860,8 +860,8 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add(DCBlocks.OVERWORLD_GRAVITATION_ORE.get(),"重力波鉱石");
         add(DCBlocks.OVERWORLD_CASSITERITE_ORE.get(), "錫石");
         add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get(), "深層錫石");
-        add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "ネザー錫石");
-        add(DCBlocks.END_CASSITERITE_ORE.get(), "エンド錫石");
+//        add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "ネザー錫石");
+//        add(DCBlocks.END_CASSITERITE_ORE.get(), "エンド錫石");
 
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基礎フレーム");
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基礎フレーム (ホログラム)");

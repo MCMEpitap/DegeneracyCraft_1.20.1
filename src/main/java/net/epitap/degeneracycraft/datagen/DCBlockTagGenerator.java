@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -64,8 +65,9 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
     public static final TagKey<Block> BASIC_KALEIDOSCOPIC_REALITY_SCIENCE_ABILITY_BLOCKS =TagKey.create(Registries.BLOCK,new ResourceLocation(Degeneracycraft.MOD_ID,"basic_kaleidoscopic_reality_science_ability_blocks"));
 
 
-    
-    
+    public static final TagKey<Block> OVERWORLD_UNDERGRAUND_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_overworld_undergrad_blocks"));
+
+
     public static final TagKey<Block> TEST_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_test_blocks"));
 
     public DCBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
@@ -81,14 +83,15 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
                 .add(DCBlocks.OVERWORLD_GRAVITATION_ORE.get())
                 .add(DCBlocks.OVERWORLD_CASSITERITE_ORE.get())
                 .add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get())
-                .add(DCBlocks.NETHER_CASSITERITE_ORE.get())
-                .add(DCBlocks.END_CASSITERITE_ORE.get());
+//                .add(DCBlocks.NETHER_CASSITERITE_ORE.get())
+//                .add(DCBlocks.END_CASSITERITE_ORE.get())
+        ;
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(DCBlocks.OVERWORLD_CASSITERITE_ORE.get())
-                .add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get())
-                .add(DCBlocks.NETHER_CASSITERITE_ORE.get())
-                .add(DCBlocks.END_CASSITERITE_ORE.get());
+                .add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get());
+//                .add(DCBlocks.NETHER_CASSITERITE_ORE.get())
+//                .add(DCBlocks.END_CASSITERITE_ORE.get());
 
 //        tag(DCTags.Blocks.NEEDS_CAMMDA_TIER1)
 //                .add(DCBlocks.OVERWORLD_GRAVITATION_ORE.get());
@@ -99,9 +102,9 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
 
         tag(CASSITERITE_ORE)
                 .add(DCBlocks.OVERWORLD_CASSITERITE_ORE.get())
-                .add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get())
-                .add(DCBlocks.NETHER_CASSITERITE_ORE.get())
-                .add(DCBlocks.END_CASSITERITE_ORE.get());
+                .add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get());
+//                .add(DCBlocks.NETHER_CASSITERITE_ORE.get())
+//                .add(DCBlocks.END_CASSITERITE_ORE.get());
 
         tag(DEGENERACYCRAFT_MULTIBLOCKS)
                 .add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get())
@@ -511,7 +514,15 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
                 .add(DCBlocks.FLOAT_ENERGY_PIPE_BLOCK.get())
                 ;
 
-
+        tag(OVERWORLD_UNDERGRAUND_BLOCKS)
+                .add(Blocks.STONE)
+                .add(Blocks.SANDSTONE)
+                .add(Blocks.RED_SANDSTONE)
+                .add(Blocks.ANDESITE)
+                .add(Blocks.GRANITE)
+                .add(Blocks.DIORITE)
+                .add(Blocks.DEEPSLATE)
+        ;
 
 
 

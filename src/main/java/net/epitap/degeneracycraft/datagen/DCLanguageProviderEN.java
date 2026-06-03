@@ -863,8 +863,8 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add(DCBlocks.OVERWORLD_GRAVITATION_ORE.get(),"Gravitation Ore");
         add(DCBlocks.OVERWORLD_CASSITERITE_ORE.get(), "Cassiterite Ore");
         add(DCBlocks.DEEPSLATE_CASSITERITE_ORE.get(), "DeepSlate Cassiterite Ore");
-        add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "Nether Cassiterite Ore");
-        add(DCBlocks.END_CASSITERITE_ORE.get(), "End Cassiterite Ore");
+//        add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "Nether Cassiterite Ore");
+//        add(DCBlocks.END_CASSITERITE_ORE.get(), "End Cassiterite Ore");
 
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Base Frame");
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Base Frame (Hologram)");

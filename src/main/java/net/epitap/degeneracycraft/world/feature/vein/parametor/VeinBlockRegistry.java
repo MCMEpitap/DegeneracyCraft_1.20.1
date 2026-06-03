@@ -27,7 +27,6 @@ public class VeinBlockRegistry {
     public AbstractVein pick(WorldGenLevel level, BlockPos pos) {
         @SuppressWarnings("unchecked")
         ArrayList<AbstractVein> choices = (ArrayList<AbstractVein>) this.veins.clone();
-//        choices.removeIf((biome) -> !biome.canPlaceInBiome(level.getBiome(pos)));
         ResourceLocation dimension = level.getLevel().dimension().location();
 
         choices.removeIf(dep ->
@@ -39,14 +38,14 @@ public class VeinBlockRegistry {
             return null;
         }
 
-        int totalWt = 0;
+        float totalWt = 0;
         for (AbstractVein vein : choices) {
             totalWt += vein.getGenerationWeight();
         }
 
-        int ran = level.getRandom().nextInt(totalWt);
+        float ran = level.getRandom().nextFloat() * totalWt;
         for (AbstractVein vein : choices) {
-            int wt = vein.getGenerationWeight();
+            float wt = vein.getGenerationWeight();
             if (ran < wt) {
                 return vein;
             }

@@ -26,8 +26,8 @@ public class DCBlockStateProvider extends BlockStateProvider {
         registerOverworldGravitationOre();
         registerOverworldCassiteriteOre();
         registerDeepslateCassiteriteOre();
-        registerNetherCassiteriteOre();
-        registerEndCassiteriteOre();
+//        registerNetherCassiteriteOre();
+//        registerEndCassiteriteOre();
 
         registerSiliconBlock();
         registerTinBlock();
@@ -490,33 +490,33 @@ public class DCBlockStateProvider extends BlockStateProvider {
                 state -> model);
     }
 
-    private void registerNetherCassiteriteOre() {
-        BlockModelBuilder model = models().getBuilder("block/nether_cassiterite_ore_block");
-        model.parent(models().getExistingFile(mcLoc("cube")));
-        model.texture("down", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
-        model.texture("up", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
-        model.texture("north", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
-        model.texture("south", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
-        model.texture("east", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
-        model.texture("west", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
-        model.texture("particle", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
-        orientedBlock(DCBlocks.NETHER_CASSITERITE_ORE.get(),
-                state -> model);
-    }
-
-    private void registerEndCassiteriteOre() {
-        BlockModelBuilder model = models().getBuilder("block/end_cassiterite_ore_block");
-        model.parent(models().getExistingFile(mcLoc("cube")));
-        model.texture("down", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
-        model.texture("up", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
-        model.texture("north", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
-        model.texture("south", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
-        model.texture("east", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
-        model.texture("west", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
-        model.texture("particle", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
-        orientedBlock(DCBlocks.END_CASSITERITE_ORE.get(),
-                state -> model);
-    }
+//    private void registerNetherCassiteriteOre() {
+//        BlockModelBuilder model = models().getBuilder("block/nether_cassiterite_ore_block");
+//        model.parent(models().getExistingFile(mcLoc("cube")));
+//        model.texture("down", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
+//        model.texture("up", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
+//        model.texture("north", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
+//        model.texture("south", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
+//        model.texture("east", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
+//        model.texture("west", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
+//        model.texture("particle", modLoc("block/ore/cassiterite/nether_cassiterite_ore"));
+//        orientedBlock(DCBlocks.NETHER_CASSITERITE_ORE.get(),
+//                state -> model);
+//    }
+//
+//    private void registerEndCassiteriteOre() {
+//        BlockModelBuilder model = models().getBuilder("block/end_cassiterite_ore_block");
+//        model.parent(models().getExistingFile(mcLoc("cube")));
+//        model.texture("down", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
+//        model.texture("up", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
+//        model.texture("north", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
+//        model.texture("south", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
+//        model.texture("east", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
+//        model.texture("west", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
+//        model.texture("particle", modLoc("block/ore/cassiterite/end_cassiterite_ore"));
+//        orientedBlock(DCBlocks.END_CASSITERITE_ORE.get(),
+//                state -> model);
+//    }
 
     private void registerSiliconBlock() {
         BlockModelBuilder model = models().getBuilder("block/silicon_block");

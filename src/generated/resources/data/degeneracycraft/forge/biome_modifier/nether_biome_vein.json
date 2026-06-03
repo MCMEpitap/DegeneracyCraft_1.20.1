@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "degeneracycraft:veins",
+  "step": "underground_ores"
+}

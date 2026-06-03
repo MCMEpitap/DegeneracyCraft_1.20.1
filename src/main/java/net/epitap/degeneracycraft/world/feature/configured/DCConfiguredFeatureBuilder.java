@@ -4,40 +4,40 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-public class ConfiguredFeatureBuilder {
+public class DCConfiguredFeatureBuilder {
     private final String type;
 
     private final JsonObject config = new JsonObject();
 
-    private ConfiguredFeatureBuilder(String type) {
+    private DCConfiguredFeatureBuilder(String type) {
         this.type = type;
     }
 
-    public static ConfiguredFeatureBuilder create(String type) {
-        return new ConfiguredFeatureBuilder(type);
+    public static DCConfiguredFeatureBuilder create(String type) {
+        return new DCConfiguredFeatureBuilder(type);
     }
 
-    public ConfiguredFeatureBuilder property(String key, String value) {
+    public DCConfiguredFeatureBuilder property(String key, String value) {
         config.addProperty(key, value);
         return this;
     }
 
-    public ConfiguredFeatureBuilder property(String key, Number value) {
+    public DCConfiguredFeatureBuilder property(String key, Number value) {
         config.addProperty(key, value);
         return this;
     }
 
-    public ConfiguredFeatureBuilder property(String key, Boolean value) {
+    public DCConfiguredFeatureBuilder property(String key, Boolean value) {
         config.addProperty(key, value);
         return this;
     }
 
-    public ConfiguredFeatureBuilder json(String key, JsonElement element) {
+    public DCConfiguredFeatureBuilder json(String key, JsonElement element) {
         config.add(key, element);
         return this;
     }
 
-    public ConfiguredFeatureBuilder array(String key, String... values) {
+    public DCConfiguredFeatureBuilder array(String key, String... values) {
 
         JsonArray array = new JsonArray();
 

@@ -3,20 +3,20 @@ package net.epitap.degeneracycraft.world.feature.placed;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-public class PlacedFeatureBuilder {
+public class DCPlacedFeatureBuilder {
     private final String feature;
 
     private final JsonArray placement = new JsonArray();
 
-    private PlacedFeatureBuilder(String feature) {
+    private DCPlacedFeatureBuilder(String feature) {
         this.feature = feature;
     }
 
-    public static PlacedFeatureBuilder create(String feature) {
-        return new PlacedFeatureBuilder(feature);
+    public static DCPlacedFeatureBuilder create(String feature) {
+        return new DCPlacedFeatureBuilder(feature);
     }
 
-    public PlacedFeatureBuilder biome() {
+    public DCPlacedFeatureBuilder biome() {
 
         JsonObject obj = new JsonObject();
         obj.addProperty("type", "minecraft:biome");
@@ -26,7 +26,7 @@ public class PlacedFeatureBuilder {
         return this;
     }
 
-    public PlacedFeatureBuilder inSquare() {
+    public DCPlacedFeatureBuilder inSquare() {
 
         JsonObject obj = new JsonObject();
         obj.addProperty("type", "minecraft:in_square");
@@ -36,7 +36,7 @@ public class PlacedFeatureBuilder {
         return this;
     }
 
-    public PlacedFeatureBuilder count(int count) {
+    public DCPlacedFeatureBuilder count(int count) {
 
         JsonObject obj = new JsonObject();
 
@@ -48,7 +48,7 @@ public class PlacedFeatureBuilder {
         return this;
     }
 
-    public PlacedFeatureBuilder rarity(int chance) {
+    public DCPlacedFeatureBuilder rarity(int chance) {
 
         JsonObject obj = new JsonObject();
 
@@ -60,7 +60,8 @@ public class PlacedFeatureBuilder {
         return this;
     }
 
-    public PlacedFeatureBuilder heightRange(String distribution, int min, int max) {
+
+    public DCPlacedFeatureBuilder heightRange(String distribution, int min, int max) {
 
         JsonObject height = new JsonObject();
 
