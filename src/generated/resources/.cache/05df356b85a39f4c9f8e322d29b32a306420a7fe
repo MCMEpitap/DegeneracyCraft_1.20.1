@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-24T16:01:43.9720218	Item Models: degeneracycraft
+// 1.20.1	2026-06-10T10:45:23.1612997	Item Models: degeneracycraft
 4f0386661cf48db2b48b69997650f6d1a8cf17b8 assets/degeneracycraft/models/item/ammonia_gas.json
 bac3372dff6e3c94811331eaa8cb7c6019d03565 assets/degeneracycraft/models/item/ammonium_hydrogen_sulfate_dust.json
 8652a25f108df858e780c79ce0eeed24fee86a64 assets/degeneracycraft/models/item/ammonium_sulfate_dust.json
@@ -613,6 +613,8 @@ e6dc717eb08765594aa638a41f85458b1af51fe2 assets/degeneracycraft/models/item/lime
 38bb0ebe6648ac964e9070b4a4fbda8f21c8fe96 assets/degeneracycraft/models/item/low_icon.json
 724654bcedef989a7e576badf9ef9e4c7519fbdd assets/degeneracycraft/models/item/machine_halt_device.json
 ee36d3bb41c05273c40c5da5a7f4f0a81fec2bdb assets/degeneracycraft/models/item/medium_icon.json
+2de8f4857a4c00024619471929fb8f6e233bcf68 assets/degeneracycraft/models/item/moon_regolith.json
+c681e0649701b609506ea93d53f8a5d8cc1ac6fc assets/degeneracycraft/models/item/moon_stone.json
 1b4b5bbdafb62078ab25bb5b12f8ccbb2d43ff33 assets/degeneracycraft/models/item/multiblock_structure_hologram_visualizer.json
 8db0e18cc0a59024d9c1381485e6784883c39a94 assets/degeneracycraft/models/item/nitratine_antimatter.json
 8dea18b74d3c0a9f5825ad3c88c3c9f46cbc2552 assets/degeneracycraft/models/item/nitratine_concentrate.json

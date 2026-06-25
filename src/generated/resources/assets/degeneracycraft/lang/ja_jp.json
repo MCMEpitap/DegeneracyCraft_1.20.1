@@ -354,6 +354,8 @@
   "block.degeneracycraft.basic_technology_virtual_sigil_processor_block": "仮想印章加工機",
   "block.degeneracycraft.basic_technology_void_world_coordinate_recording_machine_block": "虚界座標記録機",
   "block.degeneracycraft.deepslate_cassiterite_ore": "深層錫石",
+  "block.degeneracycraft.moon_regolith": "月のレゴリス",
+  "block.degeneracycraft.moon_stone": "月の石",
   "block.degeneracycraft.overworld_cassiterite_ore": "錫石",
   "block.degeneracycraft.overworld_gravitation_ore_block": "重力波鉱石",
   "block.degeneracycraft.redstone_powered_machine_element_manufacture_machine_block": "機械要素製作機",

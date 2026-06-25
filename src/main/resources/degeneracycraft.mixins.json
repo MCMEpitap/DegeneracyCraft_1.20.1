@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.epitap.degeneracycraft.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "degeneracycraft.refmap.json",
+  "mixins": [
+    "DebugMixin",
+    "LevelMixin",
+    "ServerLevelMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1432,7 +1432,11 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add(DCItems.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_CIRCUIT.get(), "現実位相調整機回路");
 
 
-//        add(DCUniqueBlocks.SIMPLE_TELESCOPE_RIGHT_PILLAR.get(), "簡易望遠鏡右支柱");
+
+        add(DCBlocks.MOON_REGOLITH.get(), "月のレゴリス");
+        add(DCBlocks.MOON_STONE.get(), "月の石");
+
+        //        add(DCUniqueBlocks.SIMPLE_TELESCOPE_RIGHT_PILLAR.get(), "簡易望遠鏡右支柱");
 //        add(DCUniqueBlocks.SIMPLE_TELESCOPE_LEFT_PILLAR.get(), "簡易望遠鏡左支柱");
 
 

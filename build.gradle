@@ -4,6 +4,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
 
 }
 
@@ -72,9 +73,9 @@ repositories {
     }
 
     maven { url = "https://maven.architectury.dev/" }
-    maven {
-        url = "https://maven.ftb.dev/releases"
-    }
+    maven {url = "https://maven.ftb.dev/releases"}
+    maven {url = "https://repo.spongepowered.org/repository/maven-public/"}
+
     mavenCentral()
 }
 
@@ -85,7 +86,16 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
+}
+mixin {
+    add sourceSets.main, "degeneracycraft.refmap.json"
+
+    config "degeneracycraft.mixins.json"
+
+    debug.verbose = true
+    debug.export = true
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -117,7 +127,9 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_authors,
-                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+
+                'MixinConfigs'            : 'degeneracycraft.mixins.json'
         ])
     }
 

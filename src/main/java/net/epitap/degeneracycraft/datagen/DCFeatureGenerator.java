@@ -6,8 +6,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.world.feature.biome.DCBiomeModifierBuilder;
-import net.epitap.degeneracycraft.world.feature.configured.DCConfiguredFeatureBuilder;
-import net.epitap.degeneracycraft.world.feature.placed.DCPlacedFeatureBuilder;
 import net.epitap.degeneracycraft.world.feature.vein.dense.DenseVein;
 import net.epitap.degeneracycraft.world.feature.vein.dense.DenseVeinBuilder;
 import net.minecraft.data.CachedOutput;
@@ -45,18 +43,18 @@ public class DCFeatureGenerator implements DataProvider {
     }
 
     private void registerVeins(CachedOutput cache) {
-        JsonObject vein = DCConfiguredFeatureBuilder
-                .create("degeneracycraft:veins")
-                .build();
-        configured(cache, "veins_type", vein);
-
-        JsonObject overworldVein = DCPlacedFeatureBuilder
-                .create("degeneracycraft:veins_type")
-                .heightRange("minecraft:trapezoid", -64, 320)
-                .biome()
-                .rarity(10)
-                .build();
-        placed(cache, "veins", overworldVein);
+//        JsonObject vein = DCConfiguredFeatureBuilder
+//                .create("degeneracycraft:veins")
+//                .build();
+//        configured(cache, "veins_type", vein);
+//
+//        JsonObject overworldVein = DCPlacedFeatureBuilder
+//                .create("degeneracycraft:veins_type")
+//                .heightRange("minecraft:trapezoid", -64, 320)
+//                .biome()
+//                .rarity(10)
+//                .build();
+//        placed(cache, "veins", overworldVein);
 
         DenseVein gold_Vein = DenseVeinBuilder.create()
                 .yRange(32, 64)

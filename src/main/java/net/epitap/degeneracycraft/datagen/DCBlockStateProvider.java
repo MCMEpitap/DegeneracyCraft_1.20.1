@@ -429,6 +429,11 @@ public class DCBlockStateProvider extends BlockStateProvider {
 
 
 
+
+        registerMoonRegolith();
+        registerMoonStone();
+
+
 //        registerTestBus();
     }
 
@@ -4967,6 +4972,36 @@ public class DCBlockStateProvider extends BlockStateProvider {
         model.texture("west", modLoc("block/multiblock/basic/kaleidoscopic_reality_science/abilityblock/basic_efficiency_phase_stable_frame/basic_efficiency_phase_stable_frame_holo_block"));
         model.texture("particle", modLoc("block/multiblock/basic/kaleidoscopic_reality_science/abilityblock/basic_efficiency_phase_stable_frame/basic_efficiency_phase_stable_frame_holo_block"));
         orientedBlock(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_HOLO_BLOCK.get(),
+                state -> model);
+    }
+
+
+
+    private void registerMoonRegolith() {
+        BlockModelBuilder model = models().getBuilder("block/moon_regolith");
+        model.parent(models().getExistingFile(mcLoc("cube")));
+        model.texture("down", modLoc("block/world/moon/moon_regolith"));
+        model.texture("up", modLoc("block/world/moon/moon_regolith"));
+        model.texture("north", modLoc("block/world/moon/moon_regolith"));
+        model.texture("south", modLoc("block/world/moon/moon_regolith"));
+        model.texture("east", modLoc("block/world/moon/moon_regolith"));
+        model.texture("west", modLoc("block/world/moon/moon_regolith"));
+        model.texture("particle", modLoc("block/world/moon/moon_regolith"));
+        orientedBlock(DCBlocks.MOON_REGOLITH.get(),
+                state -> model);
+    }
+
+    private void registerMoonStone() {
+        BlockModelBuilder model = models().getBuilder("block/moon_stone");
+        model.parent(models().getExistingFile(mcLoc("cube")));
+        model.texture("down", modLoc("block/world/moon/moon_stone"));
+        model.texture("up", modLoc("block/world/moon/moon_stone"));
+        model.texture("north", modLoc("block/world/moon/moon_stone"));
+        model.texture("south", modLoc("block/world/moon/moon_stone"));
+        model.texture("east", modLoc("block/world/moon/moon_stone"));
+        model.texture("west", modLoc("block/world/moon/moon_stone"));
+        model.texture("particle", modLoc("block/world/moon/moon_stone"));
+        orientedBlock(DCBlocks.MOON_STONE.get(),
                 state -> model);
     }
 

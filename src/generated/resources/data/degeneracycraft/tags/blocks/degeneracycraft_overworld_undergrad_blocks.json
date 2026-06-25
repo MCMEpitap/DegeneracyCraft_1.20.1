@@ -1,11 +1,6 @@
 {
   "values": [
-    "minecraft:stone",
-    "minecraft:sandstone",
-    "minecraft:red_sandstone",
-    "minecraft:andesite",
-    "minecraft:granite",
-    "minecraft:diorite",
-    "minecraft:deepslate"
+    "degeneracycraft:moon_regolith",
+    "degeneracycraft:moon_stone"
   ]
 }

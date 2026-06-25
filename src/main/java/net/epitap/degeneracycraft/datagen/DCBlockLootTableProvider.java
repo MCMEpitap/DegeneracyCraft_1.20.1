@@ -431,6 +431,9 @@ public class DCBlockLootTableProvider extends BlockLootSubProvider {
         this.add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get(), block -> createSingleItemTable(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get()));
         this.add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_HOLO_BLOCK.get(), block -> noDrop());
 
+        this.add(DCBlocks.MOON_REGOLITH.get(), block -> createSingleItemTable(DCBlocks.MOON_REGOLITH.get()));
+        this.add(DCBlocks.MOON_STONE.get(), block -> createSingleItemTable(DCBlocks.MOON_STONE.get()));
+
     }
 
     @Override

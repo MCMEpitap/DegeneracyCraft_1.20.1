@@ -1436,6 +1436,12 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add(DCItems.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_CIRCUIT.get(), "Reality Phase Adjustment Machine Circuit");
 
 
+
+
+        add(DCBlocks.MOON_REGOLITH.get(), "Moon Regolith");
+        add(DCBlocks.MOON_STONE.get(), "Moon Stone");
+
+
 //        add(DCUniqueBlocks.SIMPLE_TELESCOPE_RIGHT_PILLAR.get(), "Simple Telescope Right Pillar");
 //        add(DCUniqueBlocks.SIMPLE_TELESCOPE_LEFT_PILLAR.get(), "Simple Telescope Left Pillar");
 

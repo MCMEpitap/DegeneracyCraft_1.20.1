@@ -36,6 +36,6 @@ public class DCDataGenerator {
         generator.addProvider(event.includeClient(), new DCLanguageProviderJA(packOutput, "ja_jp"));
 
         generator.addProvider(event.includeClient(), new DCFeatureGenerator(packOutput));
-
+        generator.addProvider(event.includeServer(), new DCWorldGenProvider(packOutput, lookupProvider));
     }
 }

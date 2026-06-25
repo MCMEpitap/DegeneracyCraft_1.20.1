@@ -2,6 +2,7 @@ package net.epitap.degeneracycraft.block;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.base.DCBlockBase;
+import net.epitap.degeneracycraft.block.base.DCFallingBlockBase;
 import net.epitap.degeneracycraft.block.base.DCGlassBlockBase;
 import net.epitap.degeneracycraft.block.base.DCHoloBlockBase;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeBlock;
@@ -1165,7 +1166,9 @@ public class DCBlocks {
 
 
 
-
+    public static final RegistryObject<Block> MOON_REGOLITH = registerBlock("moon_regolith", () ->
+            new DCFallingBlockBase(BlockBehaviour.Properties.copy(Blocks.SAND).strength(2.0f, 3.0f)));
+    public static final RegistryObject<Block> MOON_STONE = registerBlock("moon_stone", () -> new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0f, 5.0f)));
 
 
 

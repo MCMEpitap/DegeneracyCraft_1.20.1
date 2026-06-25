@@ -1467,6 +1467,15 @@ public class DCItemModelGenerator extends ItemModelProvider {
                 modLoc("block/basic_efficiency_phase_stable_frame_holo_block"));
         basicMachineCircuitKaleidoscopicRealityScienceItem(DCItems.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_CIRCUIT.get());
 
+
+
+
+
+
+        withExistingParent(DCBlocks.MOON_REGOLITH.getId().getPath(),
+                modLoc("block/moon_regolith"));
+        withExistingParent(DCBlocks.MOON_STONE.getId().getPath(),
+                modLoc("block/moon_stone"));
     }
 
     private void scienceIconItem(Item item) {

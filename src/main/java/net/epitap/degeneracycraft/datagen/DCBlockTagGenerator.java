@@ -65,8 +65,9 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
     public static final TagKey<Block> BASIC_KALEIDOSCOPIC_REALITY_SCIENCE_ABILITY_BLOCKS =TagKey.create(Registries.BLOCK,new ResourceLocation(Degeneracycraft.MOD_ID,"basic_kaleidoscopic_reality_science_ability_blocks"));
 
 
-    public static final TagKey<Block> OVERWORLD_UNDERGRAUND_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_overworld_undergrad_blocks"));
+    public static final TagKey<Block> OVERWORLD_UNDERGROUND_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_overworld_underground_blocks"));
 
+    public static final TagKey<Block> MOON_CARVER_REPLACEABLES = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_overworld_undergrad_blocks"));
 
     public static final TagKey<Block> TEST_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_test_blocks"));
 
@@ -514,7 +515,7 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
                 .add(DCBlocks.FLOAT_ENERGY_PIPE_BLOCK.get())
                 ;
 
-        tag(OVERWORLD_UNDERGRAUND_BLOCKS)
+        tag(OVERWORLD_UNDERGROUND_BLOCKS)
                 .add(Blocks.STONE)
                 .add(Blocks.SANDSTONE)
                 .add(Blocks.RED_SANDSTONE)
@@ -525,6 +526,10 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
         ;
 
 
+        tag(MOON_CARVER_REPLACEABLES)
+                .add(DCBlocks.MOON_REGOLITH.get())
+                .add(DCBlocks.MOON_STONE.get())
+        ;
 
 
 

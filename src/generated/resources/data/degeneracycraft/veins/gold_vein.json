@@ -3,14 +3,14 @@
   "config": {
     "biomeTag": "#minecraft:is_overworld",
     "blockStateMatchers": [
-      "minecraft:granite",
-      "minecraft:deepslate",
       "minecraft:andesite",
-      "minecraft:diorite",
       "minecraft:stone",
       "minecraft:red_sandstone",
+      "minecraft:gravel",
+      "minecraft:granite",
       "minecraft:sandstone",
-      "minecraft:gravel"
+      "minecraft:diorite",
+      "minecraft:deepslate"
     ],
     "blocks": {
       "default": [
@@ -25,12 +25,12 @@
       ],
       "minecraft:deepslate": [
         {
-          "block": "minecraft:deepslate",
-          "chance": 0.15
-        },
-        {
           "block": "minecraft:deepslate_gold_ore",
           "chance": 0.85
+        },
+        {
+          "block": "minecraft:deepslate",
+          "chance": 0.15
         }
       ]
     },

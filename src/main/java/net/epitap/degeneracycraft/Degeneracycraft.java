@@ -11,6 +11,9 @@ import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.transport.pipe.parametor.PipeModelRegistry;
 import net.epitap.degeneracycraft.transport.pipe.pipebase.PipeBlockClickEvent;
 import net.epitap.degeneracycraft.world.feature.DCFeatures;
+import net.epitap.degeneracycraft.world.feature.dimention.DCDimensionEffects;
+import net.epitap.degeneracycraft.world.feature.dimention.DCSkyRenderers;
+import net.epitap.degeneracycraft.world.feature.dimention.moon.MoonDimensionEffects;
 import net.epitap.degeneracycraft.world.feature.vein.veinbase.VeinCapability;
 import net.epitap.degeneracycraft.world.feature.vein.veinbase.VeinGeneratedCapability;
 import net.epitap.degeneracycraft.world.feature.vein.veinbase.VeinWorldGenDataLoader;
@@ -19,6 +22,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterDimensionSpecialEffectsEvent;
+import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
@@ -46,11 +51,11 @@ public class Degeneracycraft {
     public static final String MOD_ID = "degeneracycraft";
     public static Logger LOGGER = LogManager.getLogger();
     private static Degeneracycraft instance;
-    public final DCFeatures REGISTRY;
+//    public final DCFeatures REGISTRY;
 
     public Degeneracycraft() {
         instance = this;
-        REGISTRY = new DCFeatures();
+//        REGISTRY = new DCFeatures();
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -98,6 +103,14 @@ public class Degeneracycraft {
     }
 
     @SubscribeEvent
+    public static void registerDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
+        event.register(
+                new ResourceLocation(Degeneracycraft.MOD_ID, "moon"),
+                new MoonDimensionEffects()
+        );
+    }
+
+    @SubscribeEvent
     public void veinEvents(AttachCapabilitiesEvent<Level> event) {
 
         if (event.getObject().isClientSide()) {
@@ -142,5 +155,30 @@ public class Degeneracycraft {
 
         event.addCapability(id, provider);
         event.addListener(instance::invalidate);
+    }
+
+
+    @Mod.EventBusSubscriber(modid = Degeneracycraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public class DCClientEvents {
+        @SubscribeEvent
+        public static void registerDimensionEffects(
+                RegisterDimensionSpecialEffectsEvent event
+        ) {
+            DCDimensionEffects.register(event);
+        }
+    }
+
+    @Mod.EventBusSubscriber(modid = Degeneracycraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+    public class DCForgeClientEvents {
+
+        @SubscribeEvent
+        public static void onRenderSky(RenderLevelStageEvent event) {
+
+            if(event.getStage() != RenderLevelStageEvent.Stage.AFTER_SKY) {
+                return;
+            }
+
+            DCSkyRenderers.renderSky(event.getPoseStack(), event.getPartialTick());
+        }
     }
 }
