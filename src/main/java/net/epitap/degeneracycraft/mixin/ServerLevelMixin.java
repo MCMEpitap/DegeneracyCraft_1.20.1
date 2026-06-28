@@ -23,10 +23,13 @@ public class ServerLevelMixin {
             return;
         }
 
+        DCDimensionTimes.tick(level, DCDimensionTimes.MOON_DAY_MODIFIER);
 
-        if (level.dimension().equals(DCDimensions.MOON_LEVEL)) {
-            DCDimensionTimes.tick(level, 10);
-        }
+//        if (level.dimension().equals(DCDimensions.MOON_LEVEL)) {
+//            DCDimensionTimes.tick(level, 10);
+//        }
+
+
 //        DCTimeSavedData.get(level)
 //                .addMoonTime(10);
 //        System.out.println(

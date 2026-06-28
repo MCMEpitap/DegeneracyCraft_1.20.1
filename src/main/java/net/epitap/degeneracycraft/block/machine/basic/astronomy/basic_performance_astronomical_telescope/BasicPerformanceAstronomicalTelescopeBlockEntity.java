@@ -65,14 +65,16 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
 
     private final ItemStack[] inputLockedRecipe = new ItemStack[RECIPE_COUNT];
     public boolean inputLocked = false;
+    public boolean working = false;
 
-    public static final int DATA_COUNTER = 0;
-    public static final int DATA_PROGRESS = 1;
-    public static final int DATA_HOLOGRAM = 2;
-    public static final int DATA_FORCE_STOP = 3;
-    public static final int DATA_MULTIBLOCK = 4;
-    public static final int DATA_RECIPE_LOCK = 5;
-
+    public static final int DATA_COUNTER      = 0;
+    public static final int DATA_PROGRESS     = 1;
+    public static final int DATA_HOLOGRAM     = 2;
+    public static final int DATA_FORCE_STOP   = 3;
+    public static final int DATA_MULTIBLOCK   = 4;
+    public static final int DATA_RECIPE_LOCK   = 5;
+    public static final int DATA_WORKING       = 6;
+    
     private final List<DCIEnergyStorageFloat> energyInputs = new ArrayList<>();
     private final List<DCIEnergyStorageFloat> energyOutputs = new ArrayList<>();
     private final List<IItemHandler> itemInputs = new ArrayList<>();
@@ -131,12 +133,13 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case DATA_COUNTER -> counter;
-                    case DATA_PROGRESS -> getProgressPercent;
-                    case DATA_HOLOGRAM -> hologramLevel;
+                    case DATA_COUNTER    -> counter;
+                    case DATA_PROGRESS   -> getProgressPercent;
+                    case DATA_HOLOGRAM   -> hologramLevel;
                     case DATA_FORCE_STOP -> forceHalt ? 1 : 0;
-                    case DATA_MULTIBLOCK -> multiblockLevel;
-                    case DATA_RECIPE_LOCK -> inputLocked ? 1 : 0;
+                    case DATA_MULTIBLOCK   -> multiblockLevel;
+                    case DATA_RECIPE_LOCK   -> inputLocked ? 1 : 0;
+                    case DATA_WORKING -> working ? 1 : 0;
                     default -> 0;
                 };
             }
@@ -150,12 +153,13 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
                     case DATA_FORCE_STOP -> forceHalt = value != 0;
                     case DATA_MULTIBLOCK -> multiblockLevel = value;
                     case DATA_RECIPE_LOCK -> inputLocked = value != 0;
+                    case DATA_WORKING -> working = value != 0;
                 }
             }
 
             @Override
             public int getCount() {
-                return 6;
+                return 7;
             }
         };
 
@@ -232,6 +236,7 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
         nbt.putBoolean("forceHalt", forceHalt);
         nbt.putInt("multiblockLevel", multiblockLevel);
         nbt.putBoolean("inputLocked", inputLocked);
+        nbt.putBoolean("working", working);
         for (int i = 0; i < inputLockedRecipe.length; i++) {
             ItemStack stack = inputLockedRecipe[i];
 
@@ -256,6 +261,7 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
         forceHalt = nbt.getBoolean("forceHalt");
         multiblockLevel = nbt.getInt("multiblockLevel");
         inputLocked = nbt.getBoolean("inputLocked");
+        working = nbt.getBoolean("working");
         for (int i = 0; i < inputLockedRecipe.length; i++) {
             if (nbt.contains("inputLockedRecipe" + i)) {
                 inputLockedRecipe[i] = ItemStack.of(nbt.getCompound("inputLockedRecipe" + i));
@@ -318,32 +324,42 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
             return;
         }
 
-        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity) && canOutput(blockEntity)) {
-            if (isTime(blockEntity) && isAboveAirBlock(blockEntity)) {
-                if (blockEntity.multiblockLevel == 1) {
-                    blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
-                    blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
-                            * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
-                } else if (blockEntity.multiblockLevel == 0) {
-                    blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_FORMED;
-                    blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_FORMED
-                            * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
-                } else {
-                    blockEntity.counter++;
-                    blockEntity.ENERGY_STORAGE.extractEnergyFloat(match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20, false);
-                }
-                blockEntity.getProgressPercent = (int) (blockEntity.counter / (match.get().getRequiredTime() * 20F) * 100F);
+        if (match.isEmpty()) {
+            blockEntity.working = false;
+            return;
+        }
+
+        AstronomicalTelescopeRecipe recipe = match.get();
+
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe)
+                        && isTime(blockEntity) && isAboveAirBlock(blockEntity);
+        
+        if (blockEntity.working) {
+            if (blockEntity.multiblockLevel == 1) {
+                blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
+            } else if (blockEntity.multiblockLevel == 0) {
+                blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_FORMED;
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_FORMED
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
+            } else {
+                blockEntity.counter++;
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20, false);
             }
-            if (craftCheck(blockEntity)) {
-                craftItem(blockEntity);
+            blockEntity.getProgressPercent = (int) (blockEntity.counter / (recipe.getRequiredTime() * 20F) * 100F);
+
+            if (craftCheck(blockEntity, recipe)) {
+                craftItem(blockEntity, recipe);
             }
-            setChanged(level, pos, state);
+
         } else {
             blockEntity.resetProgress();
             setChanged(level, pos, state);
         }
-        setChanged(level, pos, state);
+            setChanged(level, pos, state);
     }
+
 
 
     private void scanMultiblockStorages(Level level) {
@@ -553,7 +569,8 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
         if (level != null) {
             blockEntity.getTime = level.getDayTime();
         }
-        return 12000 <= blockEntity.getTime && blockEntity.getTime <= 23999;
+
+        return  blockEntity.getTime % 24000L >= 12000L;
     }
 
     private static boolean isAboveAirBlock(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity) {
@@ -574,50 +591,16 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
         return true;
     }
 
-    public static boolean craftCheck(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<AstronomicalTelescopeRecipe> match = level.getRecipeManager()
-                .getRecipeFor(AstronomicalTelescopeRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+    public static boolean craftCheck(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity,
+                                     AstronomicalTelescopeRecipe recipe) {
+        return blockEntity.data.get(0) >= recipe.getRequiredTime() * 20;
     }
 
-    private static boolean hasRecipe(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<AstronomicalTelescopeRecipe> match = level.getRecipeManager()
-                .getRecipeFor(AstronomicalTelescopeRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent();
-    }
-
-    private static boolean hasAmountRecipe(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity) {
+    private static boolean hasAmountRecipe(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity,
+                                           AstronomicalTelescopeRecipe recipe) {
         Level level = blockEntity.level;
         if (level == null) return false;
 
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<AstronomicalTelescopeRecipe> match = level.getRecipeManager()
-                .getRecipeFor(AstronomicalTelescopeRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        AstronomicalTelescopeRecipe recipe = match.get();
         List<ItemStack> inputs = recipe.getInputs();
 
         for (int i = 0; i < inputs.size(); i++) {
@@ -640,35 +623,13 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
         return true;
     }
 
-    private static boolean hasEnergyRecipe(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<AstronomicalTelescopeRecipe> match = level.getRecipeManager()
-                .getRecipeFor(AstronomicalTelescopeRecipe.Type.INSTANCE, inventory, level);
-
-        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F;
+    private static boolean hasEnergyRecipe(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity,
+                                           AstronomicalTelescopeRecipe recipe) {
+        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
-    private static void craftItem(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<AstronomicalTelescopeRecipe> match = level.getRecipeManager()
-                .getRecipeFor(AstronomicalTelescopeRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return;
-
-        AstronomicalTelescopeRecipe recipe = match.get();
-
+    private static void craftItem(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity,
+                                  AstronomicalTelescopeRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
@@ -704,21 +665,8 @@ public class BasicPerformanceAstronomicalTelescopeBlockEntity extends BlockEntit
         this.counter = 0;
     }
 
-    private static boolean canOutput(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<AstronomicalTelescopeRecipe> match = level.getRecipeManager()
-                .getRecipeFor(AstronomicalTelescopeRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        AstronomicalTelescopeRecipe recipe = match.get();
+    private static boolean canOutput(BasicPerformanceAstronomicalTelescopeBlockEntity blockEntity,
+                                     AstronomicalTelescopeRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 

@@ -64,7 +64,7 @@ public class RedstonePoweredMachinePartManufactureMachineMenu extends AbstractCo
     }
 
     public boolean isWorking() {
-        return data.get(0) > 0;
+        return data.get(6) != 0;
     }
 
     public int getProgressPercent() {

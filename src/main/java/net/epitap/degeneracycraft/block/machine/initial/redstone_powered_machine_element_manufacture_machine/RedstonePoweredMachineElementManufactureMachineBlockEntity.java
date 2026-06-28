@@ -43,6 +43,7 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
     public int counter = 0;
     public int getProgressPercent;
     
+    
     public static final int RECIPE_COUNT      = 9;
     public static final int OUTPUT_COUNT      = 1;
     public static final int MACHINE_COUNT     = RECIPE_COUNT + OUTPUT_COUNT;

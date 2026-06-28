@@ -32,7 +32,7 @@ public abstract class LevelMixin {
 
         cir.setReturnValue(
                 DCTimeSavedData.get(server)
-                        .getMoonTime()
+                        .getTime(server.dimension())
         );
     }
 }

@@ -35,7 +35,7 @@ public class BasicPerformanceCircuitBuilderMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public BasicPerformanceCircuitBuilderMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(7));
     }
 
     public BasicPerformanceCircuitBuilderMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -60,7 +60,7 @@ public class BasicPerformanceCircuitBuilderMenu extends AbstractContainerMenu {
     }
 
     public boolean isWorking() {
-        return data.get(0) > 0;
+        return data.get(6) != 0;
     }
 
     public int getProgressPercent() {

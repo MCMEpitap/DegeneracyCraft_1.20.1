@@ -1,14 +1,21 @@
 package net.epitap.degeneracycraft.world.feature.dimention;
 
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.saveddata.SavedData;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class DCTimeSavedData extends SavedData {
 
     private static final String NAME = "dc_time";
 
-    private long moonTime;
+    private final Map<ResourceLocation, Long> times =
+            new HashMap<>();
 
     public DCTimeSavedData() {
     }
@@ -17,7 +24,15 @@ public class DCTimeSavedData extends SavedData {
 
         DCTimeSavedData data = new DCTimeSavedData();
 
-        data.moonTime = tag.getLong("MoonTime");
+        CompoundTag timesTag = tag.getCompound("Times");
+
+        for (String key : timesTag.getAllKeys()) {
+
+            data.times.put(
+                    new ResourceLocation(key),
+                    timesTag.getLong(key)
+            );
+        }
 
         return data;
     }
@@ -25,25 +40,50 @@ public class DCTimeSavedData extends SavedData {
     @Override
     public CompoundTag save(CompoundTag tag) {
 
-        tag.putLong("MoonTime", moonTime);
+        CompoundTag timesTag = new CompoundTag();
+
+        for (Map.Entry<ResourceLocation, Long> entry
+                : times.entrySet()) {
+
+            timesTag.putLong(
+                    entry.getKey().toString(),
+                    entry.getValue()
+            );
+        }
+
+        tag.put("Times", timesTag);
 
         return tag;
     }
 
-    public long getMoonTime() {
-        return moonTime;
+    public long getTime(ResourceKey<Level> dimension) {
+
+        return times.getOrDefault(
+                dimension.location(),
+                0L
+        );
     }
 
-    public void addMoonTime(long add) {
+    public void addTime(
+            ResourceKey<Level> dimension,
+            long add) {
 
-        moonTime += add;
+        times.put(
+                dimension.location(),
+                getTime(dimension) + add
+        );
 
         setDirty();
     }
 
-    public void setMoonTime(long time) {
+    public void setTime(
+            ResourceKey<Level> dimension,
+            long time) {
 
-        moonTime = time;
+        times.put(
+                dimension.location(),
+                time
+        );
 
         setDirty();
     }

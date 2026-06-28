@@ -33,7 +33,7 @@ public class BasicPerformanceStarlightCollectorMenu extends AbstractContainerMen
     private final ContainerData data;
 
     public BasicPerformanceStarlightCollectorMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(7));
     }
 
     public BasicPerformanceStarlightCollectorMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -56,7 +56,7 @@ public class BasicPerformanceStarlightCollectorMenu extends AbstractContainerMen
     }
 
     public boolean isWorking() {
-        return data.get(0) > 0;
+        return data.get(6) != 0;
     }
 
     public int getProgressPercent() {

@@ -28,7 +28,7 @@ public class BasicPowerSteamGeneratorMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public BasicPowerSteamGeneratorMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(7));
     }
 
     public BasicPowerSteamGeneratorMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {

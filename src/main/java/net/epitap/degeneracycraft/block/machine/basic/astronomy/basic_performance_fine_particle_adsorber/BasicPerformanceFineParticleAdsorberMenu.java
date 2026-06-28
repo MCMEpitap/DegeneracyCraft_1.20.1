@@ -34,7 +34,7 @@ public class BasicPerformanceFineParticleAdsorberMenu extends AbstractContainerM
     private final ContainerData data;
 
     public BasicPerformanceFineParticleAdsorberMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(7));
     }
 
     public BasicPerformanceFineParticleAdsorberMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -58,7 +58,7 @@ public class BasicPerformanceFineParticleAdsorberMenu extends AbstractContainerM
     }
 
     public boolean isWorking() {
-        return data.get(0) > 0;
+        return data.get(6) != 0;
     }
 
     public int getProgressPercent() {

@@ -49,6 +49,7 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
     public final ContainerData data;
     public int counter;
     public int getProgressPercent;
+    
 
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
@@ -64,12 +65,14 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
 
     private final ItemStack[] inputLockedRecipe = new ItemStack[RECIPE_COUNT];
     public boolean inputLocked = false;
+    public boolean working = false;
     public static final int DATA_COUNTER      = 0;
     public static final int DATA_PROGRESS     = 1;
     public static final int DATA_HOLOGRAM     = 2;
     public static final int DATA_FORCE_STOP   = 3;
     public static final int DATA_MULTIBLOCK   = 4;
     public static final int DATA_RECIPE_LOCK   = 5;
+    public static final int DATA_WORKING       = 6;
 
     public final int IN_0 = 0, IN_1 = 1, IN_2 = 2;
     public final int OUT_0 = 3;
@@ -135,6 +138,7 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
                     case DATA_FORCE_STOP -> forceHalt ? 1 : 0;
                     case DATA_MULTIBLOCK   -> multiblockLevel;
                     case DATA_RECIPE_LOCK   -> inputLocked ? 1 : 0;
+                    case DATA_WORKING -> working ? 1 : 0;
                     default -> 0;
                 };
             }
@@ -148,12 +152,13 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
                     case DATA_FORCE_STOP -> forceHalt = value != 0;
                     case DATA_MULTIBLOCK -> multiblockLevel = value;
                     case DATA_RECIPE_LOCK -> inputLocked = value != 0;
+                    case DATA_WORKING -> working = value != 0;
                 }
             }
 
             @Override
             public int getCount() {
-                return 6;
+                return 7;
             }
         };
 
@@ -218,8 +223,8 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
         lazyEnergyHandler.invalidate();
     }
 
-    @Override
-    protected void saveAdditional(CompoundTag nbt) {
+        @Override
+    protected void saveAdditional(@NotNull CompoundTag nbt) {
         super.saveAdditional(nbt);
         nbt.put("inventory", itemHandler.serializeNBT());
         nbt.putFloat("energy", ENERGY_STORAGE.getEnergyStoredFloat());
@@ -229,6 +234,7 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
         nbt.putBoolean("forceHalt", forceHalt);
         nbt.putInt("multiblockLevel", multiblockLevel);
         nbt.putBoolean("inputLocked", inputLocked);
+        nbt.putBoolean("working", working);
         for (int i = 0; i < inputLockedRecipe.length; i++) {
             ItemStack stack = inputLockedRecipe[i];
 
@@ -253,6 +259,7 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
         forceHalt = nbt.getBoolean("forceHalt");
         multiblockLevel = nbt.getInt("multiblockLevel");
         inputLocked = nbt.getBoolean("inputLocked");
+        working = nbt.getBoolean("working");
         for (int i = 0; i < inputLockedRecipe.length; i++) {
             if (nbt.contains("inputLockedRecipe" + i)) {
                 inputLockedRecipe[i] = ItemStack.of(nbt.getCompound("inputLockedRecipe" + i));
@@ -317,7 +324,9 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
             return;
         }
 
-        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity) && canOutput(blockEntity)) {
+        blockEntity.working = !(hasRecipe(blockEntity) || hasAmountRecipe(blockEntity) || hasEnergyRecipe(blockEntity) || canOutput(blockEntity));
+
+        if (blockEntity.working) {
 
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;

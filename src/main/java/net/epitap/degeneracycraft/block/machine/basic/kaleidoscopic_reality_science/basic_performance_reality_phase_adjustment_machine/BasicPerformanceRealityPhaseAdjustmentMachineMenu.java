@@ -39,7 +39,7 @@ public class BasicPerformanceRealityPhaseAdjustmentMachineMenu extends AbstractC
     public final ContainerData data;
 
     public BasicPerformanceRealityPhaseAdjustmentMachineMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(7));
     }
 
     public BasicPerformanceRealityPhaseAdjustmentMachineMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -66,7 +66,7 @@ public class BasicPerformanceRealityPhaseAdjustmentMachineMenu extends AbstractC
     }
 
     public boolean isWorking() {
-        return data.get(0) > 0;
+        return data.get(6) != 0;
     }
 
     public int getProgressPercent() {

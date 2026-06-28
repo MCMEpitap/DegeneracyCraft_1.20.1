@@ -1,63 +1,70 @@
 package net.epitap.degeneracycraft.world.feature.dimention;
 
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.server.ServerLifecycleHooks;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class DCDimensionTimes {
 
     public static final float BASIC_DAY_LENGTH = 24000f;
-    private static double moonBuffer = 0.0;
+    private static final Map<ResourceKey<Level>, Double> BUFFER = new HashMap<>();
+    public static final float MOON_DAY_MODIFIER = 1 / 0.05f;
 
-    public static void tick(ServerLevel level, double speed) {
+    public static void tick(
+            ServerLevel level,
+            double speed) {
 
-        moonBuffer += speed;
+        ResourceKey<Level> dim =
+                level.dimension();
 
-        long add = (long) moonBuffer;
+        double buffer =
+                BUFFER.getOrDefault(dim, 0.0);
 
-        moonBuffer -= add;
+        buffer += speed;
+
+        long add = (long) buffer;
+
+        buffer -= add;
+
+        BUFFER.put(dim, buffer);
 
         if (add > 0) {
 
             DCTimeSavedData.get(level)
-                    .addMoonTime(add);
+                    .addTime(dim, add);
         }
-
-        System.out.println(
-                "Buffer=" + moonBuffer +
-                        " Add=" + add
-        );
     }
+
+    public static boolean usesCustomTime(ResourceKey<Level> dim) {
+        return dim.equals(DCDimensions.MOON_LEVEL);
+    }
+
     public static float getCelestialAngle(Level level, float partialTick) {
 
-        long time;
+        long time = level.getDayTime();
 
-        if (level.dimension().equals(DCDimensions.MOON_LEVEL)) {
+        if (usesCustomTime(level.dimension())) {
+
             MinecraftServer server =
                     ServerLifecycleHooks.getCurrentServer();
 
             if (server != null) {
 
-                ServerLevel moon =
-                        server.getLevel(DCDimensions.MOON_LEVEL);
+                ServerLevel serverLevel =
+                        server.getLevel(level.dimension());
 
-                if (moon != null) {
+                if (serverLevel != null) {
 
                     time = DCTimeSavedData
-                            .get(moon)
-                            .getMoonTime();
-
-                } else {
-                    time = level.getDayTime();
+                            .get(serverLevel)
+                            .getTime(level.dimension());
                 }
-
-            } else {
-                time = level.getDayTime();
             }
-
-        } else {
-            time = level.getDayTime();
         }
 
         double d0 =

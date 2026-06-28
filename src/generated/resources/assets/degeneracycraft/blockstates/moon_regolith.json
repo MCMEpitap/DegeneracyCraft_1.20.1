@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "degeneracycraft:block/moon_regolith",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "degeneracycraft:block/moon_regolith",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "degeneracycraft:block/moon_regolith"
+    },
+    "facing=south": {
+      "model": "degeneracycraft:block/moon_regolith",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "degeneracycraft:block/moon_regolith",
+      "x": -90
+    },
+    "facing=west": {
+      "model": "degeneracycraft:block/moon_regolith",
+      "y": 270
+    }
+  }
+}

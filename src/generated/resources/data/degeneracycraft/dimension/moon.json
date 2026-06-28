@@ -1,0 +1,11 @@
+{
+  "type": "degeneracycraft:moon",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "degeneracycraft:moon_biome"
+    },
+    "settings": "degeneracycraft:moon"
+  }
+}

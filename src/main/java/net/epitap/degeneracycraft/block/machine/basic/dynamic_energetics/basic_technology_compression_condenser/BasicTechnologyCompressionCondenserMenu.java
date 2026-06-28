@@ -33,7 +33,7 @@ public class BasicTechnologyCompressionCondenserMenu extends AbstractContainerMe
     public final ContainerData data;
 
     public BasicTechnologyCompressionCondenserMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(7));
     }
 
     public BasicTechnologyCompressionCondenserMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -54,7 +54,7 @@ public class BasicTechnologyCompressionCondenserMenu extends AbstractContainerMe
     }
 
     public boolean isWorking() {
-        return data.get(0) > 0;
+        return data.get(6) != 0;
     }
 
     public int getProgressPercent() {

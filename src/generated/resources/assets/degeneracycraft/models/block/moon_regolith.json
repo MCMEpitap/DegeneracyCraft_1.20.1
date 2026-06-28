@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/world/moon/moon_regolith",
+    "east": "degeneracycraft:block/world/moon/moon_regolith",
+    "north": "degeneracycraft:block/world/moon/moon_regolith",
+    "particle": "degeneracycraft:block/world/moon/moon_regolith",
+    "south": "degeneracycraft:block/world/moon/moon_regolith",
+    "up": "degeneracycraft:block/world/moon/moon_regolith",
+    "west": "degeneracycraft:block/world/moon/moon_regolith"
+  }
+}

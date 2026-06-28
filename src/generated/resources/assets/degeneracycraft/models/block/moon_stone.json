@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "degeneracycraft:block/world/moon/moon_stone",
+    "east": "degeneracycraft:block/world/moon/moon_stone",
+    "north": "degeneracycraft:block/world/moon/moon_stone",
+    "particle": "degeneracycraft:block/world/moon/moon_stone",
+    "south": "degeneracycraft:block/world/moon/moon_stone",
+    "up": "degeneracycraft:block/world/moon/moon_stone",
+    "west": "degeneracycraft:block/world/moon/moon_stone"
+  }
+}

@@ -63,6 +63,7 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
 
     private final ItemStack[] inputLockedRecipe = new ItemStack[RECIPE_COUNT];
     public boolean inputLocked = false;
+    public boolean working = false;
     public static final int DATA_COUNTER      = 0;
     public static final int DATA_WATER        = 1;
     public static final int DATA_HOLOGRAM     = 2;

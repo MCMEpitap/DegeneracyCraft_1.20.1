@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "degeneracycraft:block/moon_stone",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "degeneracycraft:block/moon_stone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "degeneracycraft:block/moon_stone"
+    },
+    "facing=south": {
+      "model": "degeneracycraft:block/moon_stone",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "degeneracycraft:block/moon_stone",
+      "x": -90
+    },
+    "facing=west": {
+      "model": "degeneracycraft:block/moon_stone",
+      "y": 270
+    }
+  }
+}
