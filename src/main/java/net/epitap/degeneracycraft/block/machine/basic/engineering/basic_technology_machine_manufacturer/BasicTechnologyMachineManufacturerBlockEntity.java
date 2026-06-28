@@ -570,10 +570,7 @@ public class BasicTechnologyMachineManufacturerBlockEntity extends BlockEntity i
         Optional<MachineManufacturerRecipe> match = level.getRecipeManager()
                 .getRecipeFor(MachineManufacturerRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(BasicTechnologyMachineManufacturerBlockEntity blockEntity) {

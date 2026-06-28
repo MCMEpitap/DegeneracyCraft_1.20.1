@@ -568,10 +568,7 @@ public class BasicTechnologyVoidWorldCoordinateRecordingMachineBlockEntity exten
         Optional<VoidWorldCoordinateRecordingMachineRecipe> match = level.getRecipeManager()
                 .getRecipeFor(VoidWorldCoordinateRecordingMachineRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(BasicTechnologyVoidWorldCoordinateRecordingMachineBlockEntity blockEntity) {

@@ -572,10 +572,7 @@ public class BasicPerformanceRockCrasherBlockEntity extends BlockEntity implemen
         Optional<RockCrasherRecipe> match = level.getRecipeManager()
                 .getRecipeFor(RockCrasherRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(BasicPerformanceRockCrasherBlockEntity blockEntity) {

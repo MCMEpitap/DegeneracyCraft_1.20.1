@@ -332,27 +332,35 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
             return;
         }
 
-        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && hasEnergyRecipe(blockEntity) && canOutput(blockEntity)) {
-            if(isTime(blockEntity) && isAboveAirBlock(blockEntity)) {
-                if (blockEntity.multiblockLevel == 1) {
-                    blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
-                    blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
-                            * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
-                } else if (blockEntity.multiblockLevel == 0) {
-                    blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_FORMED;
-                    blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_FORMED
-                            * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
-                } else {
-                    blockEntity.counter++;
-                    blockEntity.ENERGY_STORAGE.extractEnergyFloat(match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20, false);
-                }
-                blockEntity.getProgressPercent = (int) (blockEntity.counter / (match.get().getRequiredTime() * 20F) * 100F);
-            }
-            if (craftCheck(blockEntity)) {
-                craftItem(blockEntity);
-            }
+        if (match.isEmpty()) {
+            blockEntity.working = false;
+            return;
+        }
 
-            setChanged(level, pos, state);
+        StarlightCollectorRecipe recipe = match.get();
+
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe)
+                && isTime(blockEntity) && isAboveAirBlock(blockEntity);
+
+
+        if (blockEntity.working) {
+            if (blockEntity.multiblockLevel == 1) {
+                blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
+            } else if (blockEntity.multiblockLevel == 0) {
+                blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_FORMED;
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_FORMED
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
+            } else {
+                blockEntity.counter++;
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20, false);
+            }
+            blockEntity.getProgressPercent = (int) (blockEntity.counter / (recipe.getRequiredTime() * 20F) * 100F);
+
+            if (craftCheck(blockEntity, recipe)) {
+                craftItem(blockEntity, recipe);
+            }
 
         } else {
             blockEntity.resetProgress();
@@ -590,50 +598,13 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
         return true;
     }
 
-    public static boolean craftCheck(BasicPerformanceStarlightCollectorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<StarlightCollectorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(StarlightCollectorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+    public static boolean craftCheck(BasicPerformanceStarlightCollectorBlockEntity blockEntity,
+                                     StarlightCollectorRecipe recipe) {
+        return blockEntity.data.get(0) >= recipe.getRequiredTime() * 20;
     }
 
-    private static boolean hasRecipe(BasicPerformanceStarlightCollectorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<StarlightCollectorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(StarlightCollectorRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent();
-    }
-
-    private static boolean hasAmountRecipe(BasicPerformanceStarlightCollectorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<StarlightCollectorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(StarlightCollectorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        StarlightCollectorRecipe recipe = match.get();
+    private static boolean hasAmountRecipe(BasicPerformanceStarlightCollectorBlockEntity blockEntity,
+                                           StarlightCollectorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
 
         for (int i = 0; i < inputs.size(); i++) {
@@ -656,35 +627,13 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
         return true;
     }
 
-    private static boolean hasEnergyRecipe(BasicPerformanceStarlightCollectorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<StarlightCollectorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(StarlightCollectorRecipe.Type.INSTANCE, inventory, level);
-
-        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F;
+    private static boolean hasEnergyRecipe(BasicPerformanceStarlightCollectorBlockEntity blockEntity,
+                                           StarlightCollectorRecipe recipe) {
+        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
-    private static void craftItem(BasicPerformanceStarlightCollectorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<StarlightCollectorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(StarlightCollectorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return;
-
-        StarlightCollectorRecipe recipe = match.get();
-
+    private static void craftItem(BasicPerformanceStarlightCollectorBlockEntity blockEntity,
+                                  StarlightCollectorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
@@ -720,21 +669,8 @@ public class BasicPerformanceStarlightCollectorBlockEntity extends BlockEntity i
         this.counter = 0;
     }
 
-    private static boolean canOutput(BasicPerformanceStarlightCollectorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<StarlightCollectorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(StarlightCollectorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        StarlightCollectorRecipe recipe = match.get();
+    private static boolean canOutput(BasicPerformanceStarlightCollectorBlockEntity blockEntity,
+                                     StarlightCollectorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 

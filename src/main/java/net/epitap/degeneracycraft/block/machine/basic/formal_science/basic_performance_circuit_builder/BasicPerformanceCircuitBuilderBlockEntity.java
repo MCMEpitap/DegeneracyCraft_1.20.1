@@ -568,10 +568,7 @@ public class BasicPerformanceCircuitBuilderBlockEntity extends BlockEntity imple
         Optional<CircuitBuilderRecipe> match = level.getRecipeManager()
                 .getRecipeFor(CircuitBuilderRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(BasicPerformanceCircuitBuilderBlockEntity blockEntity) {

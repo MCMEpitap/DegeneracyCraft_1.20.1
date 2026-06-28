@@ -567,10 +567,7 @@ public class BasicTechnologyElectromagneticInductorBlockEntity extends BlockEnti
         Optional<ElectromagneticInductorRecipe> match = level.getRecipeManager()
                 .getRecipeFor(ElectromagneticInductorRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(BasicTechnologyElectromagneticInductorBlockEntity blockEntity) {

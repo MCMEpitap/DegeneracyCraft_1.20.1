@@ -326,25 +326,31 @@ public class BasicPerformanceCompoundPurifierBlockEntity extends BlockEntity imp
             return;
         }
 
-        blockEntity.working = !(hasRecipe(blockEntity) || hasAmountRecipe(blockEntity) || hasEnergyRecipe(blockEntity) || canOutput(blockEntity));
+        if (match.isEmpty()) {
+            blockEntity.working = false;
+            return;
+        }
+
+        CompoundPurifierRecipe recipe = match.get();
+
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
 
         if (blockEntity.working) {
-
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
                 blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
-                        * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
             } else if (blockEntity.hologramLevel == 0) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_FORMED;
                 blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_FORMED
-                        * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
             } else {
                 blockEntity.counter++;
-                blockEntity.ENERGY_STORAGE.extractEnergyFloat(match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20, false);
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20, false);
             }
-            blockEntity.getProgressPercent = (int) (blockEntity.counter / (match.get().getRequiredTime() * 20F) * 100F);
-            if (craftCheck(blockEntity)) {
-                craftItem(blockEntity);
+            blockEntity.getProgressPercent = (int) (blockEntity.counter / (recipe.getRequiredTime() * 20F) * 100F);
+            if (craftCheck(blockEntity, recipe)) {
+                craftItem(blockEntity, recipe);
             }
             setChanged(level, pos, state);
         } else {
@@ -557,50 +563,13 @@ public class BasicPerformanceCompoundPurifierBlockEntity extends BlockEntity imp
         }
     }
 
-    public static boolean craftCheck(BasicPerformanceCompoundPurifierBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<CompoundPurifierRecipe> match = level.getRecipeManager()
-                .getRecipeFor(CompoundPurifierRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+    public static boolean craftCheck(BasicPerformanceCompoundPurifierBlockEntity blockEntity,
+                                     CompoundPurifierRecipe recipe) {
+        return blockEntity.data.get(0) >= recipe.getRequiredTime() * 20;
     }
 
-    private static boolean hasRecipe(BasicPerformanceCompoundPurifierBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<CompoundPurifierRecipe> match = level.getRecipeManager()
-                .getRecipeFor(CompoundPurifierRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent();
-    }
-
-    private static boolean hasAmountRecipe(BasicPerformanceCompoundPurifierBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<CompoundPurifierRecipe> match = level.getRecipeManager()
-                .getRecipeFor(CompoundPurifierRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        CompoundPurifierRecipe recipe = match.get();
+    private static boolean hasAmountRecipe(BasicPerformanceCompoundPurifierBlockEntity blockEntity,
+                                           CompoundPurifierRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
 
         for (int i = 0; i < inputs.size(); i++) {
@@ -623,35 +592,13 @@ public class BasicPerformanceCompoundPurifierBlockEntity extends BlockEntity imp
         return true;
     }
 
-    private static boolean hasEnergyRecipe(BasicPerformanceCompoundPurifierBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<CompoundPurifierRecipe> match = level.getRecipeManager()
-                .getRecipeFor(CompoundPurifierRecipe.Type.INSTANCE, inventory, level);
-
-        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F;
+    private static boolean hasEnergyRecipe(BasicPerformanceCompoundPurifierBlockEntity blockEntity,
+                                           CompoundPurifierRecipe recipe) {
+        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
-    private static void craftItem(BasicPerformanceCompoundPurifierBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<CompoundPurifierRecipe> match = level.getRecipeManager()
-                .getRecipeFor(CompoundPurifierRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return;
-
-        CompoundPurifierRecipe recipe = match.get();
-
+    private static void craftItem(BasicPerformanceCompoundPurifierBlockEntity blockEntity,
+                                  CompoundPurifierRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
@@ -687,21 +634,8 @@ public class BasicPerformanceCompoundPurifierBlockEntity extends BlockEntity imp
         this.counter = 0;
     }
 
-    private static boolean canOutput(BasicPerformanceCompoundPurifierBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<CompoundPurifierRecipe> match = level.getRecipeManager()
-                .getRecipeFor(CompoundPurifierRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        CompoundPurifierRecipe recipe = match.get();
+    private static boolean canOutput(BasicPerformanceCompoundPurifierBlockEntity blockEntity,
+                                     CompoundPurifierRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 

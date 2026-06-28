@@ -565,10 +565,7 @@ public class BasicPerformanceSoilPurifierBlockEntity extends BlockEntity impleme
         Optional<SoilPurifierRecipe> match = level.getRecipeManager()
                 .getRecipeFor(SoilPurifierRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(BasicPerformanceSoilPurifierBlockEntity blockEntity) {

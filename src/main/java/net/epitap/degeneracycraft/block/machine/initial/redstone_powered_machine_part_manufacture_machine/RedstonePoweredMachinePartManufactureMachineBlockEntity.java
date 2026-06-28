@@ -203,10 +203,7 @@ public class RedstonePoweredMachinePartManufactureMachineBlockEntity extends Blo
         Optional<MachinePartProcessorRecipe> match = level.getRecipeManager()
                 .getRecipeFor(MachinePartProcessorRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(RedstonePoweredMachinePartManufactureMachineBlockEntity blockEntity) {

@@ -567,10 +567,7 @@ public class BasicPerformanceMaterialSeparatorBlockEntity extends BlockEntity im
         Optional<MaterialSeparatorRecipe> match = level.getRecipeManager()
                 .getRecipeFor(MaterialSeparatorRecipe.Type.INSTANCE, inventory, level);
 
-        if (match.isPresent()) {
-            return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-        }
-        return false;
+        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
     }
 
     private static boolean hasRecipe(BasicPerformanceMaterialSeparatorBlockEntity blockEntity) {
