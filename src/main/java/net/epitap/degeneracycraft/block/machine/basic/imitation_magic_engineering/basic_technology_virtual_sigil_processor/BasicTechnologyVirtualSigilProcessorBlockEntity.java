@@ -326,25 +326,31 @@ public class BasicTechnologyVirtualSigilProcessorBlockEntity extends BlockEntity
             return;
         }
 
-        blockEntity.working = !(hasRecipe(blockEntity) || hasAmountRecipe(blockEntity) || hasEnergyRecipe(blockEntity) || canOutput(blockEntity));
+        if (match.isEmpty()) {
+            blockEntity.working = false;
+            return;
+        }
+
+        VirtualSigilProcessorRecipe recipe = match.get();
+
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
 
         if (blockEntity.working) {
-
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
                 blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_POWERED_1
-                        * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
             } else if (blockEntity.hologramLevel == 0) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_FORMED;
                 blockEntity.ENERGY_STORAGE.extractEnergyFloat(blockEntity.MACHINE_MANUFACTURING_ENERGY_USAGE_MODIFIER_FORMED
-                        * match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F, false);
+                        * recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F, false);
             } else {
                 blockEntity.counter++;
-                blockEntity.ENERGY_STORAGE.extractEnergyFloat(match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20, false);
+                blockEntity.ENERGY_STORAGE.extractEnergyFloat(recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20, false);
             }
-            blockEntity.getProgressPercent = (int) (blockEntity.counter / (match.get().getRequiredTime() * 20F) * 100F);
-            if (craftCheck(blockEntity)) {
-                craftItem(blockEntity);
+            blockEntity.getProgressPercent = (int) (blockEntity.counter / (recipe.getRequiredTime() * 20F) * 100F);
+            if (craftCheck(blockEntity, recipe)) {
+                craftItem(blockEntity, recipe);
             }
             setChanged(level, pos, state);
         } else {
@@ -557,47 +563,13 @@ public class BasicTechnologyVirtualSigilProcessorBlockEntity extends BlockEntity
         }
     }
 
-    public static boolean craftCheck(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<VirtualSigilProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VirtualSigilProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
+    public static boolean craftCheck(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity,
+                                     VirtualSigilProcessorRecipe recipe) {
+        return blockEntity.data.get(0) >= recipe.getRequiredTime() * 20;
     }
 
-    private static boolean hasRecipe(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<VirtualSigilProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VirtualSigilProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent();
-    }
-
-    private static boolean hasAmountRecipe(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<VirtualSigilProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VirtualSigilProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        VirtualSigilProcessorRecipe recipe = match.get();
+    private static boolean hasAmountRecipe(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity,
+                                           VirtualSigilProcessorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
 
         for (int i = 0; i < inputs.size(); i++) {
@@ -620,35 +592,13 @@ public class BasicTechnologyVirtualSigilProcessorBlockEntity extends BlockEntity
         return true;
     }
 
-    private static boolean hasEnergyRecipe(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<VirtualSigilProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VirtualSigilProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= match.get().getRequiredEnergy() / match.get().getRequiredTime() / 20F;
+    private static boolean hasEnergyRecipe(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity,
+                                           VirtualSigilProcessorRecipe recipe) {
+        return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
-    private static void craftItem(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<VirtualSigilProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VirtualSigilProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return;
-
-        VirtualSigilProcessorRecipe recipe = match.get();
-
+    private static void craftItem(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity,
+                                  VirtualSigilProcessorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
@@ -684,21 +634,8 @@ public class BasicTechnologyVirtualSigilProcessorBlockEntity extends BlockEntity
         this.counter = 0;
     }
 
-    private static boolean canOutput(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<VirtualSigilProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VirtualSigilProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        VirtualSigilProcessorRecipe recipe = match.get();
+    private static boolean canOutput(BasicTechnologyVirtualSigilProcessorBlockEntity blockEntity,
+                                     VirtualSigilProcessorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
