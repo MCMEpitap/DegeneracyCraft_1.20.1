@@ -8,7 +8,7 @@ plugins {
 
 }
 
-version = '0.2.1'
+version = '0.3.0'
 group = 'net.epitap.degeneracycraft'
 base {
     archivesName = 'DC-Forge1.20.1'
