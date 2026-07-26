@@ -141,6 +141,16 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .group("degeneracycraft")
                 .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCTools.WRENCH.get())
+                .pattern("  G")
+                .pattern(" J ")
+                .pattern("R  ")
+                .define('G', DCItems.IRON_GEAR.get())
+                .define('J', DCItems.IRON_JOINT.get())
+                .define('R', DCItems.IRON_ROD.get())
+                .group("degeneracycraft")
+                .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCTools.PROTOTYPE_MECHANICAL_AXE.get())
                 .pattern("PG ")
                 .pattern("PR ")

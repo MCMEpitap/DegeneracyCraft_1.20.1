@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "G": {
+      "item": "degeneracycraft:iron_gear"
+    },
+    "J": {
+      "item": "degeneracycraft:iron_joint"
+    },
+    "R": {
+      "item": "degeneracycraft:iron_rod"
+    }
+  },
+  "pattern": [
+    "  G",
+    " J ",
+    "R  "
+  ],
+  "result": {
+    "item": "degeneracycraft:wrench"
+  },
+  "show_notification": true
+}
