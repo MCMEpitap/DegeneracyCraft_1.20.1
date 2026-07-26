@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "B": {
+      "item": "degeneracycraft:iron_bolt"
+    },
+    "G": {
+      "item": "degeneracycraft:iron_gear"
+    },
+    "P": {
+      "item": "degeneracycraft:iron_plate"
+    },
+    "R": {
+      "item": "degeneracycraft:iron_rod"
+    }
+  },
+  "pattern": [
+    "PGB",
+    " R ",
+    " R "
+  ],
+  "result": {
+    "item": "degeneracycraft:prototype_mechanical_pickaxe"
+  },
+  "show_notification": true
+}

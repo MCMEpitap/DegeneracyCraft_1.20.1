@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "G": {
+      "item": "degeneracycraft:iron_gear"
+    },
+    "P": {
+      "item": "degeneracycraft:iron_plate"
+    },
+    "R": {
+      "item": "degeneracycraft:iron_rod"
+    }
+  },
+  "pattern": [
+    " P ",
+    " G ",
+    " R "
+  ],
+  "result": {
+    "item": "degeneracycraft:prototype_mechanical_shovel"
+  },
+  "show_notification": true
+}

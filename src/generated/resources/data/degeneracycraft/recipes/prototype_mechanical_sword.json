@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "degeneracycraft",
+  "key": {
+    "G": {
+      "item": "degeneracycraft:iron_gear"
+    },
+    "R": {
+      "item": "degeneracycraft:iron_rod"
+    }
+  },
+  "pattern": [
+    " R ",
+    " G ",
+    " R "
+  ],
+  "result": {
+    "item": "degeneracycraft:prototype_mechanical_sword"
+  },
+  "show_notification": true
+}

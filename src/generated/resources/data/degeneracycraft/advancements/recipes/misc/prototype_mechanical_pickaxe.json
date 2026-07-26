@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "degeneracycraft:prototype_mechanical_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "ingots/iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "ingots/iron",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "degeneracycraft:prototype_mechanical_pickaxe"
+    ]
+  },
+  "sends_telemetry_event": false
+}
