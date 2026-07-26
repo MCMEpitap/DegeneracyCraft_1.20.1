@@ -1,6 +1,5 @@
 package net.epitap.degeneracycraft.item.tool;
 
-import net.epitap.degeneracycraft.item.DCItems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
@@ -11,6 +10,7 @@ import net.minecraft.world.level.Level;
 
 import javax.annotation.Nullable;
 import java.util.List;
+
 public class WrenchItem extends Item {
 
     public WrenchItem(Properties properties) {
@@ -28,7 +28,7 @@ public class WrenchItem extends Item {
     }
 
     public static boolean isWrench(ItemStack stack) {
-        return stack.is(DCItems.WRENCH.get());
+        return stack.is(DCTools.WRENCH.get());
     }
 
     public static boolean isHoldingWrench(Player player) {

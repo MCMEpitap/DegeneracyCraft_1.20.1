@@ -8,12 +8,12 @@ public class DCTiers {
     public static final Tier INITIAL_MINING_TOOL = new Tier() {
         @Override
         public int getUses() {
-            return 450;
+            return 600;
         }
 
         @Override
         public float getSpeed() {
-            return 7.0F;
+            return 5.0F;
         }
 
         @Override

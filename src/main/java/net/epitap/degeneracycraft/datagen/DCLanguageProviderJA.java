@@ -4,6 +4,7 @@ import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.item.icon.DCIcons;
 import net.epitap.degeneracycraft.item.DCItems;
+import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -863,6 +864,15 @@ public class DCLanguageProviderJA extends LanguageProvider {
 //        add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "ネザー錫石");
 //        add(DCBlocks.END_CASSITERITE_ORE.get(), "エンド錫石");
 
+
+
+        add(DCTools.WRENCH.get(), "レンチ");
+        add(DCTools.PROTOTYPE_MECHANICAL_AXE.get(), "試作型機械式斧");
+        add(DCTools.PROTOTYPE_MECHANICAL_PICKAXE.get(), "試作型機械式ピッケル");
+        add(DCTools.PROTOTYPE_MECHANICAL_SHOVEL.get(), "試作型機械式シャベル");
+        add(DCTools.PROTOTYPE_MECHANICAL_SWORD.get(), "試作型機械式剣");
+
+
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "基礎フレーム");
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "基礎フレーム (ホログラム)");
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "機械フレーム");
@@ -1504,7 +1514,12 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add("jei." + "degeneracycraft_reality_phase_adjustment_machine", "現実位相調整機 レシピ");
 
-
+        add("tool." + "degeneracycraft_mining_1x1x1", "通常採掘モード");
+        add("tool." + "degeneracycraft_mining_3x1x3", "範囲採掘モード（3x1x3）");
+        add("tool." + "degeneracycraft_cutting_1x1x1", "通常伐採モード");
+        add("tool." + "degeneracycraft_cutting_chain", "連鎖伐採モード");
+        add("tool." + "degeneracycraft_attack_normal", "通常攻撃モード");
+        add("tool." + "degeneracycraft_attack_pierce", "防御貫通モード");
 
         add("creativetab." + "degeneracycraft_materials", "Degeneracy Craft 素材");
         add("creativetab." + "degeneracycraft_machine_elements", "Degeneracy Craft 機械要素");
@@ -1515,6 +1530,8 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft インゴット");
         add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft マルチブロック設備ブロック");
         add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft 鉱石");
+        add("creativetab." + "degeneracycraft_tools", "Degeneracy Craft ツール");
+        add("creativetab." + "degeneracycraft_dimentions", "Degeneracy Craft ディメンション関連");
         add("creativetab." + "degeneracycraft_icons", "Degeneracy Craft アイコン");
 
 
@@ -1557,6 +1574,12 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add("tooltip." + "degeneracycraft" + ".wrench", "搬出 → 搬入 → 切断 → 搬出... シフト右クリックでパイプ状態切替");
         add("tooltip." + "degeneracycraft" + ".wrenchitem", "Shiftキーでレンチ詳細展開");
+        add("tooltip." + "degeneracycraft" + ".tools", "Shiftキー+右クリックでモードチェンジ");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_axe", "通常モードだと原木1つのみ伐採、連鎖モードだと連鎖的に伐採（耐久値を伐採分消費）");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_pickaxe", "通常モードだとブロック1つのみ採掘、範囲モードだと3x1x3の範囲を採掘（耐久値を採掘分消費）");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_shovel", "通常モードだとブロック1つのみ採掘、範囲モードだと3x1x3の範囲を採掘（耐久値を採掘分消費）");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_sword", "通常モードだと通常の剣攻撃、貫通モードだと防御50%無視（耐久値を3倍消費）");
+
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Shiftキーで物質詳細展開");
 
         add("tooltip." + "degeneracycraft." + "ipp", "技術段階: ");
@@ -1591,15 +1614,15 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add("tooltip." + "degeneracycraft." + "science", "科学分野: ");
         
-        add("astronomy", "天文学");
-        add("biology", "生物");
-        add("chemistry", "化学");
-        add("dynamic_energetics", "動力変換学");
-        add("engineering", "工学");
-        add("formal_science", "形式科学");
-        add("geo_science", "地学");
-        add("hybrid_physics", "複合物理学");
-        add("imitation_magic_engineering", "模造魔導工学");
+        add("astronomy", "■天文学");
+        add("biology", "■生物");
+        add("chemistry", "■化学");
+        add("dynamic_energetics", "■動力変換学");
+        add("engineering", "■工学");
+        add("formal_science", "■形式科学");
+        add("geo_science", "■地学");
+        add("hybrid_physics", "■複合物理学");
+        add("imitation_magic_engineering", "■模造魔導工学");
         add("jenith_void_science", "■極点虚界学");
         add("kaleidoscopic_reality_science", "■多相現実学");
 

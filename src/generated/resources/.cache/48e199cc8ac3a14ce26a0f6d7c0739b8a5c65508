@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-16T12:35:03.7387397	Item Tags
+// 1.20.1	2026-07-20T01:06:23.377375	Item Tags
 cbbbba0b51c41c2fcae23d924d454532aa8a73ee data/degeneracycraft/tags/items/basic_astronomy_machine_parts.json
 024b8781657e2ab511799195868985bd1f017f35 data/degeneracycraft/tags/items/basic_biology_machine_parts.json
 54fd29685d1261b5b01df7ad77535f88e3e696ed data/degeneracycraft/tags/items/basic_chemistry_machine_parts.json
@@ -27,6 +27,7 @@ f268b9e1557aaee3d43066ae79e89593ab109b34 data/degeneracycraft/tags/items/nitrati
 e3311e09442757398732705eaf0ac7b82a8fae22 data/degeneracycraft/tags/items/pegmatite_multiplied_ore_material.json
 1e7b75c53e13c43b8979c3e9894d3101a9f313d3 data/degeneracycraft/tags/items/pentlandite_multiplied_ore_material.json
 c502586558869cdb7d8937dff683c556cb77f172 data/degeneracycraft/tags/items/phosphorite_multiplied_ore_material.json
+3dd6034a10b42baaa96e6d22d6db30e86407d7b2 data/degeneracycraft/tags/items/prototype_mechanical_tools.json
 f386394032b27996c7a71b0debd7ca20bd82d259 data/degeneracycraft/tags/items/pyrite_multiplied_ore_material.json
 fbc7f91bc251570f3e7976c3829388aaa3822c21 data/degeneracycraft/tags/items/pyrolusite_multiplied_ore_material.json
 e736d735aa288d8c2099fe6e5b22f646d4f07cc2 data/degeneracycraft/tags/items/quartz_multiplied_ore_material.json

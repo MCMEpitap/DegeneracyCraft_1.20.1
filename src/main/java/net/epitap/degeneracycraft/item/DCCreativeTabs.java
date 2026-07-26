@@ -5,6 +5,7 @@ import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.datagen.DCBlockTagGenerator;
 import net.epitap.degeneracycraft.datagen.DCItemTagGenerator;
 import net.epitap.degeneracycraft.item.icon.DCIcons;
+import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -277,7 +278,6 @@ public class DCCreativeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.BASIC_TECHNOLOGY_MULTIBLOCK_EQUIPMENT_FABRICATOR_BLOCK.get()))
                     .title(Component.translatable("creativetab.degeneracycraft_machines"))
                     .displayItems((displayParameters, output) -> {
-                        output.accept(DCItems.WRENCH.get());
                         ForgeRegistries.BLOCKS.getValues().stream()
                                 .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
                                         .getTag(DCBlockTagGenerator.INITIAL_MACHINES)
@@ -566,18 +566,45 @@ public class DCCreativeTabs {
                                 .forEach(output::accept);
                     }).build());
 
-    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_ORE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_ores",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.OVERWORLD_CASSITERITE_ORE.get()))
-                    .title(Component.translatable("creativetab.degeneracycraft_multiblock"))
+//    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_ORE_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_ores",
+//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.OVERWORLD_CASSITERITE_ORE.get()))
+//                    .title(Component.translatable("creativetab.degeneracycraft_multiblock"))
+//                    .displayItems((displayParameters, output) -> {
+////                        ForgeRegistries.BLOCKS.getValues().stream()
+////                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+////                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MULTIBLOCKS)
+////                                        .contains(block))
+////                                .map(Block::asItem)
+////                                .filter(item -> item != Items.AIR)
+////                                .map(ItemStack::new)
+////                                .forEach(output::accept);
+//                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_TOOLS_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_tools",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCTools.WRENCH.get()))
+                    .title(Component.translatable("creativetab.degeneracycraft_tools"))
                     .displayItems((displayParameters, output) -> {
-//                        ForgeRegistries.BLOCKS.getValues().stream()
-//                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
-//                                        .getTag(DCBlockTagGenerator.DEGENERACYCRAFT_MULTIBLOCKS)
-//                                        .contains(block))
-//                                .map(Block::asItem)
-//                                .filter(item -> item != Items.AIR)
-//                                .map(ItemStack::new)
-//                                .forEach(output::accept);
+                        output.accept(DCTools.WRENCH.get());
+                        ForgeRegistries.ITEMS.getValues().stream()
+                                .filter(item -> Objects.requireNonNull(ForgeRegistries.ITEMS.tags())
+                                        .getTag(DCItemTagGenerator.PROTOTYPE_MECHANICAL_TOOLS)
+                                        .contains(item))
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_DIMENTION_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_dimentions",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(DCBlocks.MOON_STONE.get()))
+                    .title(Component.translatable("creativetab.degeneracycraft_tools"))
+                    .displayItems((displayParameters, output) -> {
+                        ForgeRegistries.BLOCKS.getValues().stream()
+                                .filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.tags())
+                                        .getTag(DCBlockTagGenerator.MOON_BLOCKS)
+                                        .contains(block))
+                                .map(Block::asItem)
+                                .filter(item -> item != Items.AIR)
+                                .map(ItemStack::new)
+                                .forEach(output::accept);
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> DEGENERACYCRAFT_ICON_TAB = CREATIVE_MODE_TABS.register("degeneracycraft_icons",

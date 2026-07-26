@@ -4,6 +4,7 @@ import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.item.icon.DCIcons;
 import net.epitap.degeneracycraft.item.DCItems;
+import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -683,7 +684,11 @@ public class DCItemModelGenerator extends ItemModelProvider {
         basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_FIRE_CRYSTAL.get());
         basicPartImitationMagicEngineeringItem(DCItems.SIMPLE_PSEUDO_MAGIC_LIGHT_CRYSTAL.get());
 
-
+        initialToolItem(DCTools.WRENCH.get());
+        initialToolItem(DCTools.PROTOTYPE_MECHANICAL_AXE.get());
+        initialToolItem(DCTools.PROTOTYPE_MECHANICAL_PICKAXE.get());
+        initialToolItem(DCTools.PROTOTYPE_MECHANICAL_SHOVEL.get());
+        initialToolItem(DCTools.PROTOTYPE_MECHANICAL_SWORD.get());
 
 
         withExistingParent(DCBlocks.OVERWORLD_CASSITERITE_ORE.getId().getPath(),
@@ -1854,5 +1859,11 @@ public class DCItemModelGenerator extends ItemModelProvider {
         withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Degeneracycraft.MOD_ID, "item/device/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
+    }
+
+    private void initialToolItem(Item item) {
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Degeneracycraft.MOD_ID, "item/tool/initial/" + Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)).getPath()));
     }
 }

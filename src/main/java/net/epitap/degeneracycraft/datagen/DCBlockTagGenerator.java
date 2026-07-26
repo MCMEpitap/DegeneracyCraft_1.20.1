@@ -67,6 +67,9 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
 
     public static final TagKey<Block> OVERWORLD_UNDERGROUND_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_overworld_underground_blocks"));
 
+
+    public static final TagKey<Block> MOON_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "moon_blocks"));
+
     public static final TagKey<Block> MOON_CARVER_REPLACEABLES = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_overworld_undergrad_blocks"));
 
     public static final TagKey<Block> TEST_BLOCKS = TagKey.create(Registries.BLOCK, new ResourceLocation(Degeneracycraft.MOD_ID, "degeneracycraft_test_blocks"));
@@ -525,6 +528,11 @@ public class DCBlockTagGenerator extends BlockTagsProvider {
                 .add(Blocks.DEEPSLATE)
         ;
 
+
+        tag(MOON_BLOCKS)
+                .add(DCBlocks.MOON_REGOLITH.get())
+                .add(DCBlocks.MOON_STONE.get())
+        ;
 
         tag(MOON_CARVER_REPLACEABLES)
                 .add(DCBlocks.MOON_REGOLITH.get())

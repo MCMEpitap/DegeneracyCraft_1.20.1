@@ -4,6 +4,7 @@ import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.item.icon.DCIcons;
 import net.epitap.degeneracycraft.item.DCItems;
+import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -866,6 +867,16 @@ public class DCLanguageProviderEN extends LanguageProvider {
 //        add(DCBlocks.NETHER_CASSITERITE_ORE.get(), "Nether Cassiterite Ore");
 //        add(DCBlocks.END_CASSITERITE_ORE.get(), "End Cassiterite Ore");
 
+
+
+        add(DCTools.WRENCH.get(), "Wrench");
+        add(DCTools.PROTOTYPE_MECHANICAL_AXE.get(), "Prototype Mechanical Axe");
+        add(DCTools.PROTOTYPE_MECHANICAL_PICKAXE.get(), "Prototype Mechanical Pickaxe");
+        add(DCTools.PROTOTYPE_MECHANICAL_SHOVEL.get(), "Prototype Mechanical Shovel");
+        add(DCTools.PROTOTYPE_MECHANICAL_SWORD.get(), "Prototype Mechanical Sword");
+
+
+
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK.get(), "Base Frame");
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK.get(), "Base Frame (Hologram)");
         add(DCBlocks.BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_BLOCK.get(), "Machine Frame");
@@ -1514,6 +1525,13 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
         add("jei." + "degeneracycraft_reality_phase_adjustment_machine", "Reality Phase Adjustment Machine Recipe");
 
+        add("tool." + "degeneracycraft_mining_1x1x1", "Normal Mining Mode");
+        add("tool." + "degeneracycraft_mining_3x1x3", "Wide Mining Mode（3x1x3）");
+        add("tool." + "degeneracycraft_cutting_1x1x1", "Normal Cutting Mode");
+        add("tool." + "degeneracycraft_cutting_chain", "Chain Cutting Mode");
+        add("tool." + "degeneracycraft_attack_normal", "Normal Attack Mode");
+        add("tool." + "degeneracycraft_attack_pierce", "Pierce Attack Mode");
+
         add("creativetab." + "degeneracycraft_materials", "Degeneracy Craft Materials");
         add("creativetab." + "degeneracycraft_machine_elements", "Degeneracy Craft Machine Elements");
         add("creativetab." + "degeneracycraft_machine_parts", "Degeneracy Craft Machine Parts");
@@ -1523,6 +1541,8 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("creativetab." + "degeneracycraft_ingots", "Degeneracy Craft Ingots");
         add("creativetab." + "degeneracycraft_multiblock", "Degeneracy Craft Multiblock Blocks");
         add("creativetab." + "degeneracycraft_ores", "Degeneracy Craft Ores");
+        add("creativetab." + "degeneracycraft_tools", "Degeneracy Craft Tools");
+        add("creativetab." + "degeneracycraft_dimentions", "Degeneracy Craft Dimention");
         add("creativetab." + "degeneracycraft_icons", "Degeneracy Craft Icons");
 
         add("screen." + "degeneracycraft" + ".phase", "Phase");
@@ -1563,6 +1583,17 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
         add("tooltip." + "degeneracycraft" + ".wrench", "Export → Import → DisConnection → Export... Pipe Mode change by shift light click");
         add("tooltip." + "degeneracycraft" + ".wrenchitem", "Show Wrench Detail by shift key");
+        add("tooltip." + "degeneracycraft" + ".tools", "Press the Shift key and right-click to change modes");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_axe", "In Normal Mode, it cuts down only one log; in Chain Mode, it cuts down logs in a chain " +
+                "(consuming durability equal to the number of logs cut)\")");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_pickaxe", "In Normal Mode, only one block is mined; in Area Mode, a 3x1x3 area is mined " +
+                "(consuming durability equal to the amount mined).");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_shovel", "In Normal Mode, only one block is mined; in Area Mode, a 3x1x3 area is mined " +
+                "(consuming durability equal to the amount mined).");
+        add("tooltip." + "degeneracycraft" + ".prototype_mechanical_sword", "In Normal Mode, it performs a standard sword attack; in Penetration Mode, it ignores 50% of the target's defense " +
+                "(and consumes three times the Durability).");
+
+
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Show Material Detail by shift key");
 
         add("tooltip." + "degeneracycraft." + "ipp", "Phase: ");

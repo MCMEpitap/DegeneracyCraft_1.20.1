@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-10T10:45:23.1612997	Item Models: degeneracycraft
+// 1.20.1	2026-07-25T23:55:44.0801688	Item Models: degeneracycraft
 4f0386661cf48db2b48b69997650f6d1a8cf17b8 assets/degeneracycraft/models/item/ammonia_gas.json
 bac3372dff6e3c94811331eaa8cb7c6019d03565 assets/degeneracycraft/models/item/ammonium_hydrogen_sulfate_dust.json
 8652a25f108df858e780c79ce0eeed24fee86a64 assets/degeneracycraft/models/item/ammonium_sulfate_dust.json
@@ -673,6 +673,10 @@ b1bd9f608a72c8b21b39ec9ddc23c25c9cc54ca9 assets/degeneracycraft/models/item/phos
 9832b60e0949bc2c1a1ab6bef2aaff9737a26251 assets/degeneracycraft/models/item/phosphorite_washeddust.json
 7b37c1c13e30a2cfdd76f8a00f2ad0747ca5ff4d assets/degeneracycraft/models/item/potassium_chloride_dust.json
 7e535196d3a28eaa662893ae0e817ac891e0e7b2 assets/degeneracycraft/models/item/potassium_nitrate_dust.json
+4e7115eda8a36c2bdd25a1b27a3d93c33b837356 assets/degeneracycraft/models/item/prototype_mechanical_axe.json
+8f657ad4e748e220898c575351e5d50a637ef59e assets/degeneracycraft/models/item/prototype_mechanical_pickaxe.json
+8c6f4a78f5eff1247b43301b4923e80ce5d91eca assets/degeneracycraft/models/item/prototype_mechanical_shovel.json
+94e7a10df320505750975c180cfadbf3c076688b assets/degeneracycraft/models/item/prototype_mechanical_sword.json
 adfe85afe4f021a0139f68ec8ccb3d622f50dc53 assets/degeneracycraft/models/item/purified_graphite_arc_electrode.json
 3d0fce7da4c49d3ef3aea5811ea40fbc3abdbfcc assets/degeneracycraft/models/item/pyrite_antimatter.json
 cf2d21ad8529ceeb083bc22528caef64ab60d6aa assets/degeneracycraft/models/item/pyrite_concentrate.json
@@ -910,3 +914,4 @@ d0225f343dc0ed8f1232e227cfaa639e245fae5f assets/degeneracycraft/models/item/vana
 402ff25bdf7f15de9e16de02cc73b524d5ce135c assets/degeneracycraft/models/item/vanadinite_ultrahotplasma.json
 7c2a09efa3ec85c0dddcf1a6f151f9b5f3eb4458 assets/degeneracycraft/models/item/vanadinite_washeddust.json
 3532ea822f31d7fe3c5e4ef1f4a4d84747aa2ae7 assets/degeneracycraft/models/item/water_container.json
+dec591f1e5ec0e0c2089f635f9624e1c1bfb5f61 assets/degeneracycraft/models/item/wrench.json

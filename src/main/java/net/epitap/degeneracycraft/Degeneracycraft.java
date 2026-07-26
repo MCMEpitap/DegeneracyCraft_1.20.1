@@ -7,6 +7,7 @@ import net.epitap.degeneracycraft.integration.jei.DCRecipeTypes;
 import net.epitap.degeneracycraft.item.DCCreativeTabs;
 import net.epitap.degeneracycraft.item.DCItems;
 import net.epitap.degeneracycraft.item.icon.DCIcons;
+import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.transport.pipe.parametor.PipeModelRegistry;
 import net.epitap.degeneracycraft.transport.pipe.pipebase.PipeBlockClickEvent;
@@ -69,6 +70,7 @@ public class Degeneracycraft {
         DCRecipeTypes.register(bus);
         DCIcons.register(bus);
         DCFeatures.register(bus);
+        DCTools.register(bus);
 
         bus.addListener(PipeModelRegistry::onModelRegister);
         bus.addListener(PipeModelRegistry::onModelBake);

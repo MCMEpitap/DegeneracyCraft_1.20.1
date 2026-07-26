@@ -2,6 +2,7 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.item.DCItems;
+import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -62,6 +63,7 @@ public class DCItemTagGenerator extends ItemTagsProvider {
 
     public static final TagKey<Item> BASIC_MACHINE_CIRCUIT_PARTS =TagKey.create(Registries.ITEM,new ResourceLocation(Degeneracycraft.MOD_ID,"basic_machine_circuit_parts"));
 
+    public static final TagKey<Item> PROTOTYPE_MECHANICAL_TOOLS =TagKey.create(Registries.ITEM,new ResourceLocation(Degeneracycraft.MOD_ID,"prototype_mechanical_tools"));
 
 
     public static final TagKey<Item> TEST_ITEMS =TagKey.create(Registries.ITEM,new ResourceLocation(Degeneracycraft.MOD_ID,"test_items"));
@@ -751,6 +753,15 @@ public class DCItemTagGenerator extends ItemTagsProvider {
         tag(BASIC_JENITH_VOID_SCIENCE_MACHINE_PARTS)
         ;
         tag(BASIC_KALEIDOSCOPIC_REALITY_SCIENCE_MACHINE_PARTS)
+        ;
+
+
+
+        tag(PROTOTYPE_MECHANICAL_TOOLS)
+                .add(DCTools.PROTOTYPE_MECHANICAL_AXE.get())
+                .add(DCTools.PROTOTYPE_MECHANICAL_PICKAXE.get())
+                .add(DCTools.PROTOTYPE_MECHANICAL_SHOVEL.get())
+                .add(DCTools.PROTOTYPE_MECHANICAL_SWORD.get())
         ;
     }
 

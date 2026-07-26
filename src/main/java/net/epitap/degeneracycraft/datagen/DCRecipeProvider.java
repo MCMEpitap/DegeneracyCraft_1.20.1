@@ -2,6 +2,7 @@ package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.item.DCItems;
+import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -140,6 +141,45 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .group("degeneracycraft")
                 .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
                 .save(pWriter);
-        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCTools.PROTOTYPE_MECHANICAL_AXE.get())
+                .pattern("PG ")
+                .pattern("PR ")
+                .pattern(" R ")
+                .define('P', DCItems.IRON_PLATE.get())
+                .define('G', DCItems.IRON_GEAR.get())
+                .define('R', DCItems.IRON_ROD.get())
+                .group("degeneracycraft")
+                .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCTools.PROTOTYPE_MECHANICAL_PICKAXE.get())
+                .pattern("PGB")
+                .pattern(" R ")
+                .pattern(" R ")
+                .define('P', DCItems.IRON_PLATE.get())
+                .define('G', DCItems.IRON_GEAR.get())
+                .define('B', DCItems.IRON_BOLT.get())
+                .define('R', DCItems.IRON_ROD.get())
+                .group("degeneracycraft")
+                .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCTools.PROTOTYPE_MECHANICAL_SHOVEL.get())
+                .pattern(" P ")
+                .pattern(" G ")
+                .pattern(" R ")
+                .define('P', DCItems.IRON_PLATE.get())
+                .define('G', DCItems.IRON_GEAR.get())
+                .define('R', DCItems.IRON_ROD.get())
+                .group("degeneracycraft")
+                .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCTools.PROTOTYPE_MECHANICAL_SWORD.get())
+                .pattern(" R ")
+                .pattern(" G ")
+                .pattern(" R ")
+                .define('G', DCItems.IRON_GEAR.get())
+                .define('R', DCItems.IRON_ROD.get())
+                .group("degeneracycraft")
+                .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
+                .save(pWriter);
     }
 }
