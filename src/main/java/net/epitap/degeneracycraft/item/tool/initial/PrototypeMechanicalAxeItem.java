@@ -1,5 +1,6 @@
 package net.epitap.degeneracycraft.item.tool.initial;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -37,8 +38,12 @@ public class PrototypeMechanicalAxeItem extends AxeItem {
                 : Component.translatable("tool.degeneracycraft_cutting_1x1x1")
                 .withStyle(style -> style.withColor(0xFFFFFF).withUnderlined(true))
         );
-        tooltip.add(Component.translatable("tooltip.degeneracycraft.tools").withStyle(style -> style.withColor(0xFFFFFF)));
-        tooltip.add(Component.translatable("tooltip.degeneracycraft.prototype_mechanical_axe").withStyle(style -> style.withColor(0xFFFFFF)));
+
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.tools").withStyle(style -> style.withColor(0xFFFFFF)));
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.prototype_mechanical_axe").withStyle(style -> style.withColor(0xFFFFFF)));        } else {
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.toolitem").withStyle(style -> style.withColor(0xFFFF00)));
+        }
         super.appendHoverText(stack, level, tooltip, flag);
     }
 

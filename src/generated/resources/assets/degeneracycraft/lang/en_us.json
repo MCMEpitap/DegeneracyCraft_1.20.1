@@ -1266,6 +1266,7 @@
   "tooltip.degeneracycraft.tin.name": "Element Name: Tin",
   "tooltip.degeneracycraft.tin.number": "Atomic Number: 50",
   "tooltip.degeneracycraft.tin.weight": "Atomic Weight: 118.7 g/mol",
+  "tooltip.degeneracycraft.toolitem": "Show Tool Detail by shift key",
   "tooltip.degeneracycraft.tools": "Press the Shift key and right-click to change modes",
   "tooltip.degeneracycraft.tooltipitem": "Show Material Detail by shift key",
   "tooltip.degeneracycraft.water.formula": "Chemical Formula: H₂O",

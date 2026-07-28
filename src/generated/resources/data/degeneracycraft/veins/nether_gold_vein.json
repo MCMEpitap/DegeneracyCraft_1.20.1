@@ -8,12 +8,12 @@
     "blocks": {
       "default": [
         {
-          "block": "minecraft:netherrack",
-          "chance": 0.15
-        },
-        {
           "block": "minecraft:gold_ore",
           "chance": 0.85
+        },
+        {
+          "block": "minecraft:netherrack",
+          "chance": 0.15
         }
       ]
     },

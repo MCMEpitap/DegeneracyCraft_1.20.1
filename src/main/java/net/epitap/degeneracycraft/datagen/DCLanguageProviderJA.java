@@ -1580,6 +1580,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_shovel", "通常モードだとブロック1つのみ採掘、範囲モードだと3x1x3の範囲を採掘（耐久値を採掘分消費）");
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_sword", "通常モードだと通常の剣攻撃、貫通モードだと防御50%無視（耐久値を3倍消費）");
 
+        add("tooltip." + "degeneracycraft" + ".toolitem", "Shiftキーでツール詳細展開");
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Shiftキーで物質詳細展開");
 
         add("tooltip." + "degeneracycraft." + "ipp", "技術段階: ");

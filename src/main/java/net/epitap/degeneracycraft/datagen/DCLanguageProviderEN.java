@@ -1593,7 +1593,7 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_sword", "In Normal Mode, it performs a standard sword attack; in Penetration Mode, it ignores 50% of the target's defense " +
                 "(and consumes three times the Durability).");
 
-
+        add("tooltip." + "degeneracycraft" + ".toolitem", "Show Tool Detail by shift key");
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Show Material Detail by shift key");
 
         add("tooltip." + "degeneracycraft." + "ipp", "Phase: ");

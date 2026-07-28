@@ -1264,6 +1264,7 @@
   "tooltip.degeneracycraft.tin.name": "物質名: スズ",
   "tooltip.degeneracycraft.tin.number": "原子番号: 50",
   "tooltip.degeneracycraft.tin.weight": "原子量: 118.7 g/mol",
+  "tooltip.degeneracycraft.toolitem": "Shiftキーでツール詳細展開",
   "tooltip.degeneracycraft.tools": "Shiftキー+右クリックでモードチェンジ",
   "tooltip.degeneracycraft.tooltipitem": "Shiftキーで物質詳細展開",
   "tooltip.degeneracycraft.water.formula": "化学式: H₂O",

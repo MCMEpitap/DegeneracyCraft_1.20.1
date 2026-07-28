@@ -1,5 +1,6 @@
 package net.epitap.degeneracycraft.item.tool.initial;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -28,10 +29,11 @@ public class PrototypeMechanicalSwordItem extends SwordItem {
                 : Component.translatable("tool.degeneracycraft_attack_normal")
                 .withStyle(style -> style.withColor(0xFFFFFF).withUnderlined(true))
         );
-        tooltip.add(Component.translatable("tooltip.degeneracycraft.tools")
-                .withStyle(style -> style.withColor(0xFFFFFF)));
-
-        tooltip.add(Component.translatable("tooltip.degeneracycraft.prototype_mechanical_sword").withStyle(style -> style.withColor(0xFFFFFF)));
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.tools").withStyle(style -> style.withColor(0xFFFFFF)));
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.prototype_mechanical_sword").withStyle(style -> style.withColor(0xFFFFFF)));
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.toolitem").withStyle(style -> style.withColor(0xFFFF00)));
+        }
 
         super.appendHoverText(stack, level, tooltip, flag);
     }
