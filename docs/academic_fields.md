@@ -2,7 +2,7 @@
 
 Every machine, material, and technological process in **DegeneracyCraft** belongs to one of **eleven Academic Fields**.
 
-Unlike conventional technology mods with a single progression tree, each field represents an independent scientific discipline with its own philosophy, production methods, and gameplay mechanics.
+Not only a single progression tree, each field represents an independent scientific discipline with its own philosophy, production methods, and gameplay mechanics.
 
 Technological advancement is achieved through the integration of multiple disciplines rather than specialization in only one.
 
