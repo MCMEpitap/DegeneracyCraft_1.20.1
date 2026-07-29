@@ -130,8 +130,10 @@ IPP は単なる性能の違いではなく、その技術が**どこまで現�
 
 ## ドキュメント
 
-- 📖 [学術分野](docs/academic_fields_ja.md)
+- 📖 [学術分野 (Academic Fields)](docs/academic_fields_ja.md)
 - ⚙️ [工業進展段階（Industrial Progress Phase）](docs/ipp_ja.md)
+- 📕️ [FTB Quests (進捗確認用)](configfiles/ftbquests/ftb_ja.md)
+
 
 ---
 

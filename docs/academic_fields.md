@@ -8,7 +8,7 @@ Technological advancement is achieved through the integration of multiple discip
 
 ---
 
-<h1 id="astronomy"><span style="color:#FF00FF;">Astronomy</span></h1>
+# <span style="color:#FF00FF;">Astronomy
 <p>
 <img src="../assets/academic_fields/github_astronomy_icon.png" width="200">
 </p>
