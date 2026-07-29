@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:chest"
+        "recipe": "degeneracycraft:barrel_from_logs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:chest"
+      "degeneracycraft:barrel_from_logs"
     ]
   },
   "sends_telemetry_event": false

@@ -37,7 +37,8 @@ public class PrototypeMechanicalPickaxeItem extends PickaxeItem {
         );
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.degeneracycraft.tools").withStyle(style -> style.withColor(0xFFFFFF)));
-            tooltip.add(Component.translatable("tooltip.degeneracycraft.prototype_mechanical_pickaxe").withStyle(style -> style.withColor(0xFFFFFF)));        } else {
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.prototype_mechanical_pickaxe").withStyle(style -> style.withColor(0xFFFFFF)));
+        } else {
             tooltip.add(Component.translatable("tooltip.degeneracycraft.toolitem").withStyle(style -> style.withColor(0xFFFF00)));
         }
         super.appendHoverText(stack, level, tooltip, flagIn);

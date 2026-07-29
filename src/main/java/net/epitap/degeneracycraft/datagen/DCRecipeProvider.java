@@ -1,5 +1,6 @@
 package net.epitap.degeneracycraft.datagen;
 
+import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.item.DCItems;
 import net.epitap.degeneracycraft.item.tool.DCTools;
@@ -9,6 +10,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -30,7 +32,7 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('W', ItemTags.LOGS)
                 .group("degeneracycraft")
                 .unlockedBy("has_log", has(ItemTags.LOGS))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Degeneracycraft.MOD_ID, "stick_from_logs"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC,Items.CHEST, 4)
                 .pattern("WWW")
@@ -39,7 +41,7 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('W', ItemTags.LOGS)
                 .group("degeneracycraft")
                 .unlockedBy("has_log", has(ItemTags.LOGS))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Degeneracycraft.MOD_ID, "chest_from_logs"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC,Items.BOWL, 16)
                 .pattern("   ")
@@ -48,7 +50,7 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('W', ItemTags.LOGS)
                 .group("degeneracycraft")
                 .unlockedBy("has_log", has(ItemTags.LOGS))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Degeneracycraft.MOD_ID, "bowl_from_logs"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC,Items.BARREL, 4)
                 .pattern("W W")
@@ -57,7 +59,7 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('W', ItemTags.LOGS)
                 .group("degeneracycraft")
                 .unlockedBy("has_log", has(ItemTags.LOGS))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Degeneracycraft.MOD_ID, "barrel_from_logs"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC,Items.HOPPER)
                 .pattern("iWi")
@@ -67,7 +69,8 @@ public class DCRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('i', Items.IRON_INGOT)
                 .group("degeneracycraft")
                 .unlockedBy("ingots/iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.IRON_INGOT))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Degeneracycraft.MOD_ID, "hopper_from_logs"));
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DCItems.EMPTY_CONTAINER.get())
                 .pattern("igi")
