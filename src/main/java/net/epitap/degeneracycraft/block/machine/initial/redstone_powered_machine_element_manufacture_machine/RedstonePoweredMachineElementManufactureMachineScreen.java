@@ -41,7 +41,7 @@ public class RedstonePoweredMachineElementManufactureMachineScreen extends Abstr
             guiGraphics.drawCenteredString(this.font, "Stop!",
                     80, 30, 0xFF0000);
         }
-        guiGraphics.drawCenteredString(this.font, (int) menu.getProgressPercent() + " %",
+        guiGraphics.drawCenteredString(this.font, menu.getProgressPercent() + " %",
                 80, 11, 0xFFFFFF);
     }
 

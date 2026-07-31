@@ -40,9 +40,10 @@ import java.util.Optional;
 
 public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends BlockEntity implements MenuProvider {
     public final ContainerData data;
-    public int counter = 0;
+    public int counter;
     public int getProgressPercent;
-    
+
+    public int phase = 0;
     
     public static final int RECIPE_COUNT      = 9;
     public static final int OUTPUT_COUNT      = 1;
@@ -50,9 +51,11 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
     
     public static final int DATA_COUNTER      = 0;
     public static final int DATA_PROGRESS     = 1;
+    public static final int DATA_WORKING      = 2;
 
     public final int IN_0 = 0, IN_1 = 1, IN_2 = 2, IN_3 = 3, IN_4 = 4, IN_5 = 5, IN_6 = 6, IN_7 = 7, IN_8 = 8;
     public final int OUT_0 = 9;
+    public boolean working = false;
     
     public final ItemStackHandler itemHandler = new ItemStackHandler(MACHINE_COUNT) {
         @Override
@@ -90,6 +93,7 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
                 return switch (index) {
                     case DATA_COUNTER    -> counter;
                     case DATA_PROGRESS   -> getProgressPercent;
+                    case DATA_WORKING -> working ? 1 : 0;
                     default -> 0;
                 };
             }
@@ -99,12 +103,13 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
                 switch (index) {
                     case DATA_COUNTER -> counter = value;
                     case DATA_PROGRESS -> getProgressPercent = value;
+                    case DATA_WORKING -> working = value != 0;
                 }
             }
 
             @Override
             public int getCount() {
-                return 2;
+                return 3;
             }
         };
 
@@ -161,6 +166,7 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
         nbt.put("inventory", itemHandler.serializeNBT());
         nbt.putInt("counter", counter);
         nbt.putInt("getProgressPercent", getProgressPercent);
+        nbt.putBoolean("working", working);
     }
 
     @Override
@@ -169,6 +175,7 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         counter = nbt.getInt("counter");
         getProgressPercent = nbt.getInt("getProgressPercent");
+        working = nbt.getBoolean("working");
     }
 
     public void drops() {
@@ -180,60 +187,51 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level level, BlockPos pPos, BlockState pState, RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity) {
-        if (hasRecipe(blockEntity) && hasAmountRecipe(blockEntity) && canOutput(blockEntity)) {
-                blockEntity.counter++;
-                setChanged(level, pPos, pState);
-                if (craftCheck(blockEntity)) {
-                    craftItem(blockEntity);
-                }
-            } else {
+    public static void tick(Level level, BlockPos pos, BlockState state, RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity) {
+        blockEntity.getProgressPercent = 0;
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+
+        if (level.isClientSide()) {
+            return;
+        }
+        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<MachineElementProcessorRecipe> match = level.getRecipeManager()
+                .getRecipeFor(MachineElementProcessorRecipe.Type.INSTANCE, inventory, level);
+
+        if (match.isEmpty()) {
+            blockEntity.working = false;
             blockEntity.resetProgress();
-            setChanged(level, pPos, pState);
+            return;
         }
-    }
-
-    public static boolean craftCheck(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<MachineElementProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(MachineElementProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        return blockEntity.data.get(0) >= match.get().getRequiredTime() * 20;
-    }
-
-    private static boolean hasRecipe(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<MachineElementProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(MachineElementProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent();
-    }
-
-    private static boolean hasAmountRecipe(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<MachineElementProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(MachineElementProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
 
         MachineElementProcessorRecipe recipe = match.get();
+
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasPhaseRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
+
+        if (blockEntity.working) {
+            blockEntity.counter++;
+            blockEntity.getProgressPercent = (int) (blockEntity.counter / (recipe.getRequiredTime() * 20F) * 100F);
+            if (craftCheck(blockEntity, recipe)) {
+                craftItem(blockEntity, recipe);
+            }
+            setChanged(level, pos, state);
+        } else {
+            blockEntity.resetProgress();
+            setChanged(level, pos, state);
+        }
+        setChanged(level, pos, state);
+    }
+
+    public static boolean craftCheck(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity,
+                                     MachineElementProcessorRecipe recipe) {
+        return blockEntity.data.get(0) >= recipe.getRequiredTime() * 20;
+    }
+
+    private static boolean hasAmountRecipe(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity,
+                                           MachineElementProcessorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
 
         for (int i = 0; i < inputs.size(); i++) {
@@ -256,22 +254,13 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
         return true;
     }
 
-    private static void craftItem(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return;
+    private static boolean hasPhaseRecipe(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity,
+                                          MachineElementProcessorRecipe recipe) {
+        return blockEntity.phase >= recipe.getRequiredPhase();
+    }
 
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<MachineElementProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(MachineElementProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return;
-
-        MachineElementProcessorRecipe recipe = match.get();
-
+    private static void craftItem(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity,
+                                  MachineElementProcessorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
@@ -305,23 +294,11 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
 
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
-    private static boolean canOutput(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        if (level == null) return false;
-
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<MachineElementProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(MachineElementProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        if (match.isEmpty()) return false;
-
-        MachineElementProcessorRecipe recipe = match.get();
+    private static boolean canOutput(RedstonePoweredMachineElementManufactureMachineBlockEntity blockEntity,
+                                     MachineElementProcessorRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
         List<ItemStack> outputs = recipe.getOutputs();
 
@@ -348,6 +325,7 @@ public class RedstonePoweredMachineElementManufactureMachineBlockEntity extends 
 
         return true;
     }
+
 
     public void insertRecipeInputsFromPlayer(Player player, Recipe<?> recipe, boolean shift) {
         if (!(recipe instanceof MachineElementProcessorRecipe recipeData)) return;

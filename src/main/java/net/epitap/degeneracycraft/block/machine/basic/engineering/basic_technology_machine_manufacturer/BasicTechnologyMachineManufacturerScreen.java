@@ -1,12 +1,11 @@
 package net.epitap.degeneracycraft.block.machine.basic.engineering.basic_technology_machine_manufacturer;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.epitap.degeneracycraft.block.base.render.EnergyInfoArea;import net.epitap.degeneracycraft.networking.DCMessages;
+import net.epitap.degeneracycraft.block.base.render.EnergyInfoArea;
+import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.networking.packet.DCMachineToggleC2SPacket;
 import net.epitap.degeneracycraft.util.DCMouseUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -59,12 +58,10 @@ public class BasicTechnologyMachineManufacturerScreen extends AbstractContainerS
         renderEnergyAreaTooltips(guiGraphics, pMouseX, pMouseY, x, y);
 
         if (menu.isWorking()) {
-            guiGraphics.drawString(this.font, 
-"Work!",
+            guiGraphics.drawString(this.font, "Work!",
                     67, 30, 0x00FF00);
         } else {
-            guiGraphics.drawString(this.font, 
-"Stop!",
+            guiGraphics.drawString(this.font, "Stop!",
                     67, 30, 0xFF0000);
         }
         guiGraphics.drawCenteredString(this.font, menu.getProgressPercent() + " %",

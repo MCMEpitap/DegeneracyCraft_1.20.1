@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -39,24 +40,34 @@ public class FormingMachineRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public boolean matches(SimpleContainer container, Level level) {
-        if (level.isClientSide) return false;
+public boolean matches(SimpleContainer container, Level level) {
+    if (level.isClientSide) return false;
 
-        if (container.getContainerSize() < inputs.size()) return false;
+    if (container.getContainerSize() < inputs.size()) return false;
 
-        for (int i = 0; i < inputs.size(); i++) {
-            ItemStack required = inputs.get(i);
-            ItemStack actual = container.getItem(i);
+    for (int i = 0; i < inputs.size(); i++) {
+        ItemStack required = inputs.get(i);
+        ItemStack actual = container.getItem(i);
 
-            if (!required.isEmpty()) {
-                if (!ItemStack.isSameItemSameTags(required, actual)) return false;
-                if (actual.getCount() < required.getCount()) return false;
+        // 空スロット
+        if (required.isEmpty() || required.getItem() == Items.AIR) {
+            if (!actual.isEmpty()) {
+                return false;
             }
+            continue;
         }
 
-        return true;
+        if (!ItemStack.isSameItemSameTags(required, actual)) {
+            return false;
+        }
+
+        if (actual.getCount() < required.getCount()) {
+            return false;
+        }
     }
 
+    return true;
+}
     @Override
     public ItemStack assemble(SimpleContainer container, RegistryAccess registryAccess) {
         return outputs.isEmpty() ? ItemStack.EMPTY : outputs.get(0).copy();

@@ -1,6 +1,6 @@
 {
   "type": "degeneracycraft:machine_element_processor_recipe",
-  "energy": 0.0,
+  "energy": 200.0,
   "time": 10.0,
   "phase": 0,
   "inputs": [
@@ -32,7 +32,6 @@
       "item": "minecraft:iron_ingot"
     }
   ],
-
   "outputs": [
     {
     "item": "degeneracycraft:iron_joint"

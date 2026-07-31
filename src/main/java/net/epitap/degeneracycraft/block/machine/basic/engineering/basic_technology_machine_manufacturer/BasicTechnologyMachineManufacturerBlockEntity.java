@@ -54,6 +54,7 @@ public class BasicTechnologyMachineManufacturerBlockEntity extends BlockEntity i
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
 
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;
@@ -331,13 +332,13 @@ public class BasicTechnologyMachineManufacturerBlockEntity extends BlockEntity i
 
         if (match.isEmpty()) {
             blockEntity.working = false;
+            blockEntity.resetProgress();
             return;
         }
 
         MachineManufacturerRecipe recipe = match.get();
 
-        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
-
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && hasPhaseRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
         if (blockEntity.working) {
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
@@ -600,6 +601,11 @@ public class BasicTechnologyMachineManufacturerBlockEntity extends BlockEntity i
         return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
+    private static boolean hasPhaseRecipe(BasicTechnologyMachineManufacturerBlockEntity blockEntity,
+                                          MachineManufacturerRecipe recipe) {
+        return blockEntity.phase >= recipe.getRequiredPhase();
+    }
+
     private static void craftItem(BasicTechnologyMachineManufacturerBlockEntity blockEntity,
                                   MachineManufacturerRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
@@ -635,6 +641,7 @@ public class BasicTechnologyMachineManufacturerBlockEntity extends BlockEntity i
 
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
     private static boolean canOutput(BasicTechnologyMachineManufacturerBlockEntity blockEntity,

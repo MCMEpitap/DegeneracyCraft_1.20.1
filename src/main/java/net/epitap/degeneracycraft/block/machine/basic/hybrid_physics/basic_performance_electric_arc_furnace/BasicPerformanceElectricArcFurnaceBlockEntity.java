@@ -54,6 +54,7 @@ public class BasicPerformanceElectricArcFurnaceBlockEntity extends BlockEntity i
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
 
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;
@@ -327,13 +328,13 @@ public class BasicPerformanceElectricArcFurnaceBlockEntity extends BlockEntity i
 
         if (match.isEmpty()) {
             blockEntity.working = false;
+            blockEntity.resetProgress();
             return;
         }
 
         ElectricArcFurnaceRecipe recipe = match.get();
 
-        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
-
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && hasPhaseRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
         if (blockEntity.working) {
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
@@ -596,6 +597,11 @@ public class BasicPerformanceElectricArcFurnaceBlockEntity extends BlockEntity i
         return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
+    private static boolean hasPhaseRecipe(BasicPerformanceElectricArcFurnaceBlockEntity blockEntity,
+                                          ElectricArcFurnaceRecipe recipe) {
+        return blockEntity.phase >= recipe.getRequiredPhase();
+    }
+
     private static void craftItem(BasicPerformanceElectricArcFurnaceBlockEntity blockEntity,
                                   ElectricArcFurnaceRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
@@ -631,6 +637,7 @@ public class BasicPerformanceElectricArcFurnaceBlockEntity extends BlockEntity i
 
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
     private static boolean canOutput(BasicPerformanceElectricArcFurnaceBlockEntity blockEntity,

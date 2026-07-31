@@ -51,6 +51,8 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
     public int getProgressPercent;
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
+
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;
@@ -326,13 +328,13 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
 
         if (match.isEmpty()) {
             blockEntity.working = false;
+            blockEntity.resetProgress();
             return;
         }
 
         FineParticleAdsorberRecipe recipe = match.get();
 
-        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
-
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && hasPhaseRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
         if (blockEntity.working) {
             if (blockEntity.multiblockLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
@@ -597,6 +599,11 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
         return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
+    private static boolean hasPhaseRecipe(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity,
+                                          FineParticleAdsorberRecipe recipe) {
+        return blockEntity.phase >= recipe.getRequiredPhase();
+    }
+
     private static void craftItem(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity,
                                   FineParticleAdsorberRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
@@ -632,6 +639,7 @@ public class BasicPerformanceFineParticleAdsorberBlockEntity extends BlockEntity
 
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
     private static boolean canOutput(BasicPerformanceFineParticleAdsorberBlockEntity blockEntity,

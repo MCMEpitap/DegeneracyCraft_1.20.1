@@ -641,7 +641,7 @@ public class DCBlocks {
             "-",
             "-",
             "-",
-            "redstone_powered_machine_part_manufacture_machine", "imitation_magic_engineering", "initial");
+            "redstone_powered_machine_element_manufacture_machine", "imitation_magic_engineering", "initial");
 
     public static final RegistryObject<Block> REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK = registerTooltipBasicMachineBlock("redstone_powered_machine_part_manufacture_machine_block", () ->
             new RedstonePoweredMachinePartManufactureMachineBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),

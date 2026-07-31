@@ -53,6 +53,7 @@ public class BasicTechnologyMachineElementProcessorBlockEntity extends BlockEnti
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
 
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;
@@ -327,12 +328,13 @@ public class BasicTechnologyMachineElementProcessorBlockEntity extends BlockEnti
 
         if (match.isEmpty()) {
             blockEntity.working = false;
+            blockEntity.resetProgress();
             return;
         }
 
         MachineElementProcessorRecipe recipe = match.get();
 
-        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && hasPhaseRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
 
         if (blockEntity.working) {
             if (blockEntity.hologramLevel == 1) {
@@ -567,18 +569,6 @@ public class BasicTechnologyMachineElementProcessorBlockEntity extends BlockEnti
         return blockEntity.data.get(0) >= recipe.getRequiredTime() * 20;
     }
 
-    private static boolean hasRecipe(BasicTechnologyMachineElementProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<MachineElementProcessorRecipe> match = level.getRecipeManager()
-                .getRecipeFor(MachineElementProcessorRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent();
-    }
 
     private static boolean hasAmountRecipe(BasicTechnologyMachineElementProcessorBlockEntity blockEntity,
                                            MachineElementProcessorRecipe recipe) {
@@ -607,6 +597,11 @@ public class BasicTechnologyMachineElementProcessorBlockEntity extends BlockEnti
     private static boolean hasEnergyRecipe(BasicTechnologyMachineElementProcessorBlockEntity blockEntity,
                                            MachineElementProcessorRecipe recipe) {
         return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
+    }
+
+    private static boolean hasPhaseRecipe(BasicTechnologyMachineElementProcessorBlockEntity blockEntity,
+                                          MachineElementProcessorRecipe recipe) {
+        return blockEntity.phase >= recipe.getRequiredPhase();
     }
 
     private static void craftItem(BasicTechnologyMachineElementProcessorBlockEntity blockEntity,
@@ -644,6 +639,7 @@ public class BasicTechnologyMachineElementProcessorBlockEntity extends BlockEnti
 
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
     private static boolean canOutput(BasicTechnologyMachineElementProcessorBlockEntity blockEntity,

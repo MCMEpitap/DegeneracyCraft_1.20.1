@@ -54,6 +54,7 @@ public class BasicPerformanceCircuitBuilderBlockEntity extends BlockEntity imple
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
 
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;
@@ -329,13 +330,14 @@ public class BasicPerformanceCircuitBuilderBlockEntity extends BlockEntity imple
 
         if (match.isEmpty()) {
             blockEntity.working = false;
+            blockEntity.resetProgress();
             return;
         }
 
         CircuitBuilderRecipe recipe = match.get();
 
-        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
-
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && hasPhaseRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
+        
         if (blockEntity.working) {
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
@@ -598,6 +600,11 @@ public class BasicPerformanceCircuitBuilderBlockEntity extends BlockEntity imple
         return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
+    private static boolean hasPhaseRecipe(BasicPerformanceCircuitBuilderBlockEntity blockEntity,
+                                          CircuitBuilderRecipe recipe) {
+        return blockEntity.phase >= recipe.getRequiredPhase();
+    }
+
     private static void craftItem(BasicPerformanceCircuitBuilderBlockEntity blockEntity,
                                   CircuitBuilderRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
@@ -633,6 +640,7 @@ public class BasicPerformanceCircuitBuilderBlockEntity extends BlockEntity imple
 
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
     private static boolean canOutput(BasicPerformanceCircuitBuilderBlockEntity blockEntity,

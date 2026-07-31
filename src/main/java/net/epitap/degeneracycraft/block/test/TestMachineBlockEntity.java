@@ -54,6 +54,7 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
 
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;
@@ -678,6 +679,7 @@ public class TestMachineBlockEntity extends BlockEntity implements MenuProvider 
     }
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
     private static boolean canOutput(TestMachineBlockEntity blockEntity) {

@@ -3,7 +3,6 @@ package net.epitap.degeneracycraft.block.machine.basic.imitation_magic_engineeri
 import net.epitap.degeneracycraft.block.DCBlockEntities;
 import net.epitap.degeneracycraft.energy.DCEnergyStorageFloatBase;
 import net.epitap.degeneracycraft.energy.DCIEnergyStorageFloat;
-import net.epitap.degeneracycraft.integration.jei.basic.hybrid_physics.material_separator.MaterialSeparatorRecipe;
 import net.epitap.degeneracycraft.integration.jei.basic.imitation_magic_engineering.imitation_magic_engraver.ImitationMagicEngraverRecipe;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.epitap.degeneracycraft.networking.packet.DCEnergySyncS2CPacket;
@@ -55,6 +54,7 @@ public class BasicTechnologyImitationMagicEngraverBlockEntity extends BlockEntit
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
 
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;
@@ -329,13 +329,13 @@ public class BasicTechnologyImitationMagicEngraverBlockEntity extends BlockEntit
 
         if (match.isEmpty()) {
             blockEntity.working = false;
+            blockEntity.resetProgress();
             return;
         }
 
         ImitationMagicEngraverRecipe recipe = match.get();
 
-        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
-
+        blockEntity.working = hasAmountRecipe(blockEntity, recipe) && hasEnergyRecipe(blockEntity, recipe) && hasPhaseRecipe(blockEntity, recipe) && canOutput(blockEntity, recipe);
         if (blockEntity.working) {
             if (blockEntity.hologramLevel == 1) {
                 blockEntity.counter += blockEntity.MACHINE_MANUFACTURING_SPEED_MODIFIER_POWERED_1;
@@ -598,6 +598,11 @@ public class BasicTechnologyImitationMagicEngraverBlockEntity extends BlockEntit
         return blockEntity.ENERGY_STORAGE.getEnergyStoredFloat() >= recipe.getRequiredEnergy() / recipe.getRequiredTime() / 20F;
     }
 
+    private static boolean hasPhaseRecipe(BasicTechnologyImitationMagicEngraverBlockEntity blockEntity,
+                                          ImitationMagicEngraverRecipe recipe) {
+        return blockEntity.phase >= recipe.getRequiredPhase();
+    }
+
     private static void craftItem(BasicTechnologyImitationMagicEngraverBlockEntity blockEntity,
                                   ImitationMagicEngraverRecipe recipe) {
         List<ItemStack> inputs = recipe.getInputs();
@@ -633,6 +638,7 @@ public class BasicTechnologyImitationMagicEngraverBlockEntity extends BlockEntit
 
     public void resetProgress() {
         this.counter = 0;
+        this.getProgressPercent = 0;
     }
 
     private static boolean canOutput(BasicTechnologyImitationMagicEngraverBlockEntity blockEntity,

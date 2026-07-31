@@ -37,7 +37,7 @@ public class RedstonePoweredMachineElementManufactureMachineMenu extends Abstrac
     public final ContainerData data;
 
     public RedstonePoweredMachineElementManufactureMachineMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(3));
     }
 
     public RedstonePoweredMachineElementManufactureMachineMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -64,7 +64,7 @@ public class RedstonePoweredMachineElementManufactureMachineMenu extends Abstrac
     }
 
     public boolean isWorking() {
-        return data.get(6) != 0;
+        return data.get(2) != 0;
     }
 
     public int getProgressPercent() {

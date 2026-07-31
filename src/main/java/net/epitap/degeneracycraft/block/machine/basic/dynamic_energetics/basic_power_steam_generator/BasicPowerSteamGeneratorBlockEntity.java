@@ -53,6 +53,7 @@ public class BasicPowerSteamGeneratorBlockEntity extends BlockEntity implements 
     public int hologramLevel = -1;
     public int multiblockLevel = -1;
 
+    public int phase = 1;
     public int minX;
     public int maxY;
     public int minZ;

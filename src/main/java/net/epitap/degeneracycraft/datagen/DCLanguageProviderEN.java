@@ -1138,10 +1138,10 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
         add(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get(), "Machine Element Manufacture Machine");
         add("tooltip." + "degeneracycraft." + "redstone_powered_machine_element_manufacture_machine",
-                "Initial Machine Element Manufacture Machine. Redstone-powered machines. Let’s start with this: Part 1.");
+                "Initial Machine Element Manufacture Machine. Redstone-powered machines. Let’s start with this: Part 1.(No Energy)");
         add(DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get(), "Redstone Powered Machine Part Manufacture Machine");
         add("tooltip." + "degeneracycraft." + "redstone_powered_machine_part_manufacture_machine",
-                "Initial Machine Part Manufacture Machine. Redstone-powered machines. Let’s start with this: Part 2.");
+                "Initial Machine Part Manufacture Machine. Redstone-powered machines. Let’s start with this: Part 2.(No Energy)");
 
         add(DCBlocks.REINFORCED_PLANKS.get(), "Reinforced Planks");
 

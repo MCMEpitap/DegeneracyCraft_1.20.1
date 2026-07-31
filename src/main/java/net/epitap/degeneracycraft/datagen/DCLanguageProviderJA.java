@@ -1135,10 +1135,10 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
         add(DCBlocks.REDSTONE_POWERED_MACHINE_ELEMENT_MANUFACTURE_MACHINE_BLOCK.get(), "機械要素製作機");
         add("tooltip." + "degeneracycraft." + "redstone_powered_machine_element_manufacture_machine",
-                "最初の機械要素製作機. レッドストーン動力の機械。まずはこれからその1.");
+                "最初の機械要素製作機. レッドストーン動力の機械。まずはこれからその1.(消費エネルギーなし)");
         add(DCBlocks.REDSTONE_POWERED_MACHINE_PART_MANUFACTURE_MACHINE_BLOCK.get(), "機械部品製作機");
         add("tooltip." + "degeneracycraft." + "redstone_powered_machine_part_manufacture_machine",
-                "最初の機械部品製作機. レッドストーン動力の機械。まずはこれからその2.");
+                "最初の機械部品製作機. レッドストーン動力の機械。まずはこれからその2.(消費エネルギーなし)");
 
         add(DCBlocks.REINFORCED_PLANKS.get(), "強化木材");
 
