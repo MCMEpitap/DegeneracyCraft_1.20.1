@@ -1307,7 +1307,7 @@ public class DCLanguageProviderJA extends LanguageProvider {
                 "基本的な回路構築機. 回路やその部品を製作する機械.");
         add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_BLOCK.get(), "回路防塵室");
         add("tooltip." + "degeneracycraft.ability" + "basic_performance_circuit_builder_block",
-                "回路構築機");
+                "回路構築機用");
         add(DCBlocks.BASIC_PURITY_CIRCUIT_CLEAN_ROOM_HOLO_BLOCK.get(), "回路防塵室 (ホログラム)");
         add(DCItems.BASIC_PERFORMANCE_CIRCUIT_BUILDER_CIRCUIT.get(), "回路構築機回路");
 
@@ -1791,51 +1791,51 @@ public class DCLanguageProviderJA extends LanguageProvider {
         add("tooltip." + "degeneracycraft" + ".material" + ".chance" + "50", "50%の確率で獲得");
         add("tooltip." + "degeneracycraft" + ".material" + ".chance" + "25", "25%の確率で獲得");
 
-        add("advancements." + "degeneracycraft" + ".astronomy" + ".title", "天文学(Astronomy)");
-        add("advancements." + "degeneracycraft" + ".astronomy" + ".description", "目指せ、星間飛行");
-
-        add("advancements." + "degeneracycraft" + ".biology" + ".title", "生物学(Biology)");
-        add("advancements." + "degeneracycraft" + ".biology" + ".description", "目指せ、螺旋復号");
-
-        add("advancements." + "degeneracycraft" + ".chemistry" + ".title", "化学(Chemistry)");
-        add("advancements." + "degeneracycraft" + ".chemistry" + ".description", "目指せ、反応臨界");
-
-        add("advancements." + "degeneracycraft" + ".title", "DegeneracyCraft");
-        add("advancements." + "degeneracycraft" + ".description", "DegeneracyCraft始動");
-
-        add("advancements." + "degeneracycraft" + ".engineering" + ".title", "工学(Engineering)");
-        add("advancements." + "degeneracycraft" + ".engineering" + ".description", "目指せ、工学集積");
-
-        add("advancements." + "Rolling Gear" + ".title", "ローリンギァ－ル？");
-        add("advancements." + "Rolling Gear" + ".description", "鉄の歯車を作成");
-
-        add("advancements." + "Not Crash, But Press" + ".title", "砕くな、圧せよ");
-        add("advancements." + "Not Crash, But Press" + ".description", "鉄の板を作成");
-
-        add("advancements." + "degeneracycraft" + ".formal_science" + ".title", "形式科学(Formal Science)");
-        add("advancements." + "degeneracycraft" + ".formal_science" + ".description", "目指せ、論理構築");
-
-        add("advancements." + "degeneracycraft" + ".geo_science" + ".title", "地学(Geo Science)");
-        add("advancements." + "degeneracycraft" + ".geo_science" + ".description", "目指せ、鉱石探究");
-
-        add("advancements." + "degeneracycraft" + ".hybrid_physics" + ".title", "複合物理学(Hybrid Physics)");
-        add("advancements." + "degeneracycraft" + ".hybrid_physics" + ".description", "目指せ、現象集約");
-
-        add("advancements." + "degeneracycraft" + ".imitation_magic_engineering" + ".title", "模造魔導工学(Imitation Magic Engineering)");
-        add("advancements." + "degeneracycraft" + ".imitation_magic_engineering" + ".description", "目指せ、神秘解読");
-
-        add("advancements." + "Awakening with \"The Fool\"" + ".title", "ある\"愚者\"の目覚め");
-        add("advancements." + "Awakening with \"The Fool\"" + ".description", "レッドストーン動力機械要素製作機を作成");
-
-        add("advancements." + "Call of Industry" + ".title", "工業の呼び声");
-        add("advancements." + "Call of Industry" + ".description", "蒸気発電機を作成");
-
-        add("advancements." + "Machine like \"The Magician\"" + ".title", "機械は\"魔術師\"のように");
-        add("advancements." + "Machine like \"The Magician\"" + ".description", "機械製造機を作成");
-
-        add("advancements." + "Assemble! Assemble!" + ".title", "アッセンブル！アッセンブル！");
-        add("advancements." + "Assemble! Assemble!" + ".description", "万能組立機を作成");
-
+//        add("advancements." + "degeneracycraft" + ".astronomy" + ".title", "天文学(Astronomy)");
+//        add("advancements." + "degeneracycraft" + ".astronomy" + ".description", "目指せ、星間飛行");
+//
+//        add("advancements." + "degeneracycraft" + ".biology" + ".title", "生物学(Biology)");
+//        add("advancements." + "degeneracycraft" + ".biology" + ".description", "目指せ、螺旋復号");
+//
+//        add("advancements." + "degeneracycraft" + ".chemistry" + ".title", "化学(Chemistry)");
+//        add("advancements." + "degeneracycraft" + ".chemistry" + ".description", "目指せ、反応臨界");
+//
+//        add("advancements." + "degeneracycraft" + ".title", "DegeneracyCraft");
+//        add("advancements." + "degeneracycraft" + ".description", "DegeneracyCraft始動");
+//
+//        add("advancements." + "degeneracycraft" + ".engineering" + ".title", "工学(Engineering)");
+//        add("advancements." + "degeneracycraft" + ".engineering" + ".description", "目指せ、工学集積");
+//
+//        add("advancements." + "Rolling Gear" + ".title", "ローリンギァ－ル？");
+//        add("advancements." + "Rolling Gear" + ".description", "鉄の歯車を作成");
+//
+//        add("advancements." + "Not Crash, But Press" + ".title", "砕くな、圧せよ");
+//        add("advancements." + "Not Crash, But Press" + ".description", "鉄の板を作成");
+//
+//        add("advancements." + "degeneracycraft" + ".formal_science" + ".title", "形式科学(Formal Science)");
+//        add("advancements." + "degeneracycraft" + ".formal_science" + ".description", "目指せ、論理構築");
+//
+//        add("advancements." + "degeneracycraft" + ".geo_science" + ".title", "地学(Geo Science)");
+//        add("advancements." + "degeneracycraft" + ".geo_science" + ".description", "目指せ、鉱石探究");
+//
+//        add("advancements." + "degeneracycraft" + ".hybrid_physics" + ".title", "複合物理学(Hybrid Physics)");
+//        add("advancements." + "degeneracycraft" + ".hybrid_physics" + ".description", "目指せ、現象集約");
+//
+//        add("advancements." + "degeneracycraft" + ".imitation_magic_engineering" + ".title", "模造魔導工学(Imitation Magic Engineering)");
+//        add("advancements." + "degeneracycraft" + ".imitation_magic_engineering" + ".description", "目指せ、神秘解読");
+//
+//        add("advancements." + "Awakening with \"The Fool\"" + ".title", "ある\"愚者\"の目覚め");
+//        add("advancements." + "Awakening with \"The Fool\"" + ".description", "レッドストーン動力機械要素製作機を作成");
+//
+//        add("advancements." + "Call of Industry" + ".title", "工業の呼び声");
+//        add("advancements." + "Call of Industry" + ".description", "蒸気発電機を作成");
+//
+//        add("advancements." + "Machine like \"The Magician\"" + ".title", "機械は\"魔術師\"のように");
+//        add("advancements." + "Machine like \"The Magician\"" + ".description", "機械製造機を作成");
+//
+//        add("advancements." + "Assemble! Assemble!" + ".title", "アッセンブル！アッセンブル！");
+//        add("advancements." + "Assemble! Assemble!" + ".description", "万能組立機を作成");
+//
 
         add("degeneracycraft_introduction" + ".title", "DegeneracyCraftPedia");
         add("degeneracycraft_introduction" + ".landing",
