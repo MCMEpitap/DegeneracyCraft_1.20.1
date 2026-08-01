@@ -68,8 +68,6 @@ public class Degeneracycraft {
         DCFeatures.register(bus);
         DCTools.register(bus);
 
-//        bus.addListener(PipeModelRegistry::onModelRegister);
-//        bus.addListener(PipeModelRegistry::onModelBake);
         MinecraftForge.EVENT_BUS.register(this);
 
 //        this.configSetup();

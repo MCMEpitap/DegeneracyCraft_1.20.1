@@ -13,7 +13,9 @@ It also serves as an in-game guide and documentation.
 # Installation
 
 1. Install **FTB Quests**.
-2. Copy the **`quests`** folder from this directory into your Minecraft instance (or server):
+2. Download the latest quest package from the **Releases** page.
+3. Extract the downloaded archive.
+4. Copy the **`ftbquests`** folder into your Minecraft instance configuration directory:
 
 ```text
 .minecraft/
@@ -22,8 +24,8 @@ It also serves as an in-game guide and documentation.
         └── quests/
 ```
 
-If the `ftbquests` directory (or any of its subdirectories) already exists, it is recommended to create a backup before overwriting the files.
-
+The extracted `ftbquests` folder should be placed directly inside the `config` directory.
+If the `ftbquests` directory already exists, it is recommended to create a backup before replacing the files.
 ---
 
 # Compatibility
