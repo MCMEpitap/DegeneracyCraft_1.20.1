@@ -1,12 +1,12 @@
 package net.epitap.degeneracycraft.datagen;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.epitap.degeneracycraft.world.feature.biome.DCBiomes;
-import net.epitap.degeneracycraft.world.feature.configured.DCConfiguredFeatures;
-import net.epitap.degeneracycraft.world.feature.dimention.DCDimensions;
-import net.epitap.degeneracycraft.world.feature.dimention.DCNoiseSettings;
-import net.epitap.degeneracycraft.world.feature.dimention.DCNoises;
-import net.epitap.degeneracycraft.world.feature.placed.DCPlacedFeatures;
+import net.epitap.degeneracycraft.client.world.feature.biome.DCBiomes;
+import net.epitap.degeneracycraft.client.world.feature.configured.DCConfiguredFeatures;
+import net.epitap.degeneracycraft.client.world.feature.dimension.DCDimensions;
+import net.epitap.degeneracycraft.client.world.feature.dimension.DCNoiseSettings;
+import net.epitap.degeneracycraft.client.world.feature.dimension.DCNoises;
+import net.epitap.degeneracycraft.client.world.feature.placed.DCPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;

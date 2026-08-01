@@ -104,10 +104,10 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlock;
 import net.epitap.degeneracycraft.block.test.TestMachineBlock;
 import net.epitap.degeneracycraft.item.DCItems;
-import net.epitap.degeneracycraft.transport.pipe.basic.energy.BasicEnergyPipeBlock;
-import net.epitap.degeneracycraft.transport.pipe.basic.energy.floa.FloatEnergyPipeBlock;
-import net.epitap.degeneracycraft.transport.pipe.basic.item.BasicItemPipeBlock;
-import net.epitap.degeneracycraft.transport.pipe.low.energy.LowEnergyPipeBlock;
+import net.epitap.degeneracycraft.client.transport.pipe.basic.energy.BasicEnergyPipeBlock;
+import net.epitap.degeneracycraft.client.transport.pipe.basic.energy.floa.FloatEnergyPipeBlock;
+import net.epitap.degeneracycraft.client.transport.pipe.basic.item.BasicItemPipeBlock;
+import net.epitap.degeneracycraft.client.transport.pipe.low.energy.LowEnergyPipeBlock;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;

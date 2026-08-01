@@ -1,7 +1,7 @@
 package net.epitap.degeneracycraft.mixin;
 
-import net.epitap.degeneracycraft.world.feature.dimention.DCDimensionTimes;
-import net.epitap.degeneracycraft.world.feature.dimention.DCDimensions;
+import net.epitap.degeneracycraft.client.world.feature.dimension.DCDimensionTimes;
+import net.epitap.degeneracycraft.client.world.feature.dimension.DCDimensions;
 import net.minecraft.server.level.ServerLevel;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

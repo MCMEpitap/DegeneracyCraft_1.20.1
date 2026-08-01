@@ -3,27 +3,23 @@ package net.epitap.degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlockEntities;
 import net.epitap.degeneracycraft.block.DCBlocks;
 import net.epitap.degeneracycraft.block.DCMenuTypes;
+import net.epitap.degeneracycraft.client.transport.pipe.pipebase.PipeBlockClickEvent;
+import net.epitap.degeneracycraft.client.world.feature.DCFeatures;
+import net.epitap.degeneracycraft.client.world.feature.dimension.DCSkyRenderers;
+import net.epitap.degeneracycraft.client.world.feature.vein.veinbase.VeinCapability;
+import net.epitap.degeneracycraft.client.world.feature.vein.veinbase.VeinGeneratedCapability;
+import net.epitap.degeneracycraft.client.world.feature.vein.veinbase.VeinWorldGenDataLoader;
 import net.epitap.degeneracycraft.integration.jei.DCRecipeTypes;
 import net.epitap.degeneracycraft.item.DCCreativeTabs;
 import net.epitap.degeneracycraft.item.DCItems;
 import net.epitap.degeneracycraft.item.icon.DCIcons;
 import net.epitap.degeneracycraft.item.tool.DCTools;
 import net.epitap.degeneracycraft.networking.DCMessages;
-import net.epitap.degeneracycraft.transport.pipe.parametor.PipeModelRegistry;
-import net.epitap.degeneracycraft.transport.pipe.pipebase.PipeBlockClickEvent;
-import net.epitap.degeneracycraft.world.feature.DCFeatures;
-import net.epitap.degeneracycraft.world.feature.dimention.DCDimensionEffects;
-import net.epitap.degeneracycraft.world.feature.dimention.DCSkyRenderers;
-import net.epitap.degeneracycraft.world.feature.dimention.moon.MoonDimensionEffects;
-import net.epitap.degeneracycraft.world.feature.vein.veinbase.VeinCapability;
-import net.epitap.degeneracycraft.world.feature.vein.veinbase.VeinGeneratedCapability;
-import net.epitap.degeneracycraft.world.feature.vein.veinbase.VeinWorldGenDataLoader;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterDimensionSpecialEffectsEvent;
 import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.Capability;
@@ -72,8 +68,8 @@ public class Degeneracycraft {
         DCFeatures.register(bus);
         DCTools.register(bus);
 
-        bus.addListener(PipeModelRegistry::onModelRegister);
-        bus.addListener(PipeModelRegistry::onModelBake);
+//        bus.addListener(PipeModelRegistry::onModelRegister);
+//        bus.addListener(PipeModelRegistry::onModelBake);
         MinecraftForge.EVENT_BUS.register(this);
 
 //        this.configSetup();
@@ -104,13 +100,13 @@ public class Degeneracycraft {
         }
     }
 
-    @SubscribeEvent
-    public static void registerDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
-        event.register(
-                new ResourceLocation(Degeneracycraft.MOD_ID, "moon"),
-                new MoonDimensionEffects()
-        );
-    }
+//    @SubscribeEvent
+//    public static void registerDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
+//        event.register(
+//                new ResourceLocation(Degeneracycraft.MOD_ID, "moon"),
+//                new MoonDimensionEffects()
+//        );
+//    }
 
     @SubscribeEvent
     public void veinEvents(AttachCapabilitiesEvent<Level> event) {
@@ -160,19 +156,18 @@ public class Degeneracycraft {
     }
 
 
-    @Mod.EventBusSubscriber(modid = Degeneracycraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public class DCClientEvents {
-        @SubscribeEvent
-        public static void registerDimensionEffects(
-                RegisterDimensionSpecialEffectsEvent event
-        ) {
-            DCDimensionEffects.register(event);
-        }
-    }
+//    @Mod.EventBusSubscriber(modid = Degeneracycraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+//    public class DCClientEvents {
+//        @SubscribeEvent
+//        public static void registerDimensionEffects(
+//                RegisterDimensionSpecialEffectsEvent event
+//        ) {
+//            DCDimensionEffects.register(event);
+//        }
+//    }
 
     @Mod.EventBusSubscriber(modid = Degeneracycraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
     public class DCForgeClientEvents {
-
         @SubscribeEvent
         public static void onRenderSky(RenderLevelStageEvent event) {
 
