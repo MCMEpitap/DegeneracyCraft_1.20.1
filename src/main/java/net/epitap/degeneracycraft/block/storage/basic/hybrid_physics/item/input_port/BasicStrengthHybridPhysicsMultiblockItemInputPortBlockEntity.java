@@ -1,70 +1,27 @@
 package net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.input_port;
 
 import net.epitap.degeneracycraft.block.DCBlockEntities;
+import net.epitap.degeneracycraft.block.base.machine.DCNearbyStorageManagerBase;
+import net.epitap.degeneracycraft.block.base.multiblock.DCMultiblockItemBlockEntityBase;
+import net.epitap.degeneracycraft.block.storage.basic.hybrid_physics.item.item_storage.BasicStrengthHybridPhysicsMultiblockItemStorageBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.Containers;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity extends BlockEntity implements MenuProvider {
+import java.util.List;
 
-    public final ContainerData data;
-    public final ItemStackHandler itemHandler = new ItemStackHandler(18) {
-        @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-            if(!level.isClientSide()) {
-                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
-            }
-        }
+public class BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity extends DCMultiblockItemBlockEntityBase {
+    public static final int STORAGE_COUNT = 18;
 
-        @Override
-        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            return super.isItemValid(slot, stack);
-        }
-    };
-
-    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-
-    public BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(DCBlockEntities.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
-        this.data = new ContainerData() {
-            @Override
-            public int get(int pIndex) {
-                return 0;
-            }
-
-            @Override
-            public void set(int pIndex, int pValue) {
-            }
-
-            @Override
-            public int getCount() {
-                return 0;
-            }
-        };
-
+    public BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity(BlockPos pos, BlockState state) {
+        super(DCBlockEntities.BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK_ENTITY.get(), pos, state, STORAGE_COUNT);
     }
 
     @Override
@@ -74,58 +31,53 @@ public class BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity extend
 
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new BasicStrengthHybridPhysicsMultiblockItemInputPortMenu(pContainerId, pInventory, this, this.data);
+    public AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
+        return new BasicStrengthHybridPhysicsMultiblockItemInputPortMenu(containerId, inventory, this, data);
     }
 
-    @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
+    private void pullItemsFromNearbyStorage(Level level) {
+        boolean hasSpace = false;
+        for (int machineSlot = 0; machineSlot < itemHandler.getSlots(); machineSlot++) {
+            ItemStack current = itemHandler.getStackInSlot(machineSlot);
+            if (current.isEmpty() || current.getCount() < current.getMaxStackSize()) {
+                hasSpace = true;
+                break;
+            }
         }
 
-        return super.getCapability(cap, side);
-    }
+        if (!hasSpace) return;
 
-    public void setHandler(ItemStackHandler itemStackHandler) {
-        for (int i = 0; i < itemStackHandler.getSlots(); i++) {
-            itemHandler.setStackInSlot(i, itemStackHandler.getStackInSlot(i));
+        List<DCNearbyStorageManagerBase.ExtractItemStorageCandidate> storages =
+                DCNearbyStorageManagerBase.findExtractItemStorages(level, getBlockPos(), BasicStrengthHybridPhysicsMultiblockItemStorageBlockEntity.class);
+
+        for (DCNearbyStorageManagerBase.ExtractItemStorageCandidate candidate : storages) {
+            IItemHandler storage = candidate.handler();
+
+            for (int storageSlot = 0; storageSlot < storage.getSlots(); storageSlot++) {
+                ItemStack sourceStack = storage.getStackInSlot(storageSlot);
+                if (sourceStack.isEmpty()) continue;
+
+                for (int machineSlot = 0; machineSlot < itemHandler.getSlots(); machineSlot++) {
+                    if (!itemHandler.isItemValid(machineSlot, sourceStack)) continue;
+
+                    ItemStack simulated = itemHandler.insertItem(machineSlot, sourceStack.copy(), true);
+                    int insertable = sourceStack.getCount() - simulated.getCount();
+                    if (insertable <= 0) continue;
+
+                    ItemStack extracted = storage.extractItem(storageSlot, insertable, false);
+                    if (extracted.isEmpty()) continue;
+
+                    ItemStack remainder = itemHandler.insertItem(machineSlot, extracted, false);
+                    if (!remainder.isEmpty()) {
+                        storage.insertItem(storageSlot, remainder, false);
+                    }
+                    return;
+                }
+            }
         }
     }
 
-    @Override
-    public void onLoad() {
-        lazyItemHandler = LazyOptional.of(() -> itemHandler);
-        super.onLoad();
-    }
-
-    @Override
-    public void invalidateCaps() {
-        lazyItemHandler.invalidate();
-        super.invalidateCaps();
-    }
-
-    @Override
-    protected void saveAdditional(CompoundTag nbt) {
-        nbt.put("inventory", itemHandler.serializeNBT());
-        super.saveAdditional(nbt);
-    }
-
-    @Override
-    public void load(CompoundTag nbt) {
-        itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        super.load(nbt);
-    }
-
-    public void drops() {
-        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
-        for (int i = 0; i < itemHandler.getSlots(); i++) {
-            inventory.setItem(i, itemHandler.getStackInSlot(i));
-        }
-
-        Containers.dropContents(this.level, this.worldPosition, inventory);
-    }
-
-    public static void tick(Level level, BlockPos pPos, BlockState pState, BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity blockEntity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, BasicStrengthHybridPhysicsMultiblockItemInputPortBlockEntity blockEntity) {
+        blockEntity.pullItemsFromNearbyStorage(level);
     }
 }

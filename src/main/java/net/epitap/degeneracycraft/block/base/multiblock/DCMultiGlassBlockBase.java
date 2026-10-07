@@ -1,4 +1,4 @@
-package net.epitap.degeneracycraft.block.base;
+package net.epitap.degeneracycraft.block.base.multiblock;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -14,10 +14,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class DCGlassBlockBase extends GlassBlock implements EntityBlock {
+public class DCMultiGlassBlockBase extends GlassBlock implements EntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
-    public DCGlassBlockBase(Properties pProperties) {
+    public DCMultiGlassBlockBase(Properties pProperties) {
         super(pProperties);
     }
 

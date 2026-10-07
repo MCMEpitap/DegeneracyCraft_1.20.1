@@ -1,13 +1,12 @@
 package net.epitap.degeneracycraft.integration.jei;
 
 import mezz.jei.api.IModPlugin;
+import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.*;
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.DCBlocks;
-import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeBlockEntity;
-import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeMenu;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeScreen;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeTransferHandler;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberBlockEntity;
@@ -205,6 +204,7 @@ import java.util.Objects;
 
 @JeiPlugin
 public class JEIDCPlugin implements IModPlugin {
+    public static IGuiHelper EMI_GUI_HELPER;
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -213,6 +213,7 @@ public class JEIDCPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
+        EMI_GUI_HELPER = registration.getJeiHelpers().getGuiHelper();
         registration.addRecipeCategories(new
                 AstronomicalTelescopeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new
@@ -606,19 +607,24 @@ public class JEIDCPlugin implements IModPlugin {
                 ),
                 MachinePartProcessorRecipeCategory.TYPE
         );
-        
-        
-        
+
+
         registration.addRecipeTransferHandler(
                 new BasicPerformanceAstronomicalTelescopeTransferHandler(
-                        registration.getTransferHelper(),
-                        BasicPerformanceAstronomicalTelescopeMenu.class,
-                        0, BasicPerformanceAstronomicalTelescopeBlockEntity.RECIPE_COUNT,
-                        BasicPerformanceAstronomicalTelescopeBlockEntity.MACHINE_COUNT,
-                        36
+                        registration.getTransferHelper()
                 ),
                 AstronomicalTelescopeRecipeCategory.TYPE
         );
+//        registration.addRecipeTransferHandler(
+//                new BasicPerformanceAstronomicalTelescopeTransferHandler(
+//                        registration.getTransferHelper(),
+//                        BasicPerformanceAstronomicalTelescopeMenu.class,
+//                        0, BasicPerformanceAstronomicalTelescopeBlockEntity.RECIPE_COUNT,
+//                        BasicPerformanceAstronomicalTelescopeBlockEntity.STORAGE_COUNT,
+//                        36
+//                ),
+//                AstronomicalTelescopeRecipeCategory.TYPE
+//        );
         registration.addRecipeTransferHandler(
                 new BasicPerformanceFineParticleAdsorberTransferHandler(
                         registration.getTransferHelper(),

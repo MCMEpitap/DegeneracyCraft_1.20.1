@@ -1,6 +1,5 @@
 package net.epitap.degeneracycraft.networking.packet;
 
-import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeBlockEntity;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberBlockEntity;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorBlockEntity;
 import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorBlockEntity;
@@ -69,22 +68,22 @@ public class DCMachineToggleC2SPacket {
             if (player == null) return;
 
             BlockEntity blockEntity = player.level().getBlockEntity(pos);
-            if (blockEntity instanceof BasicPerformanceAstronomicalTelescopeBlockEntity machine) {
-                if (type == TOGGLE_HOLOGRAM) {
-                    machine.hologramLevel++;
-                    if (machine.hologramLevel > 1) {
-                        machine.hologramLevel = -1;
-                    }
-                }
-
-                if (type == TOGGLE_HALT) {
-                    machine.forceHalt = !machine.forceHalt;
-                }
-                if (type == TOGGLE_LOCK) {
-                    machine.toggleInputLock();
-                }
-                machine.setChanged();
-            }
+//            if (blockEntity instanceof BasicPerformanceAstronomicalTelescopeBlockEntity machine) {
+//                if (type == TOGGLE_HOLOGRAM) {
+//                    machine.hologramLevel++;
+//                    if (machine.hologramLevel > 1) {
+//                        machine.hologramLevel = -1;
+//                    }
+//                }
+//
+//                if (type == TOGGLE_HALT) {
+//                    machine.forceHalt = !machine.forceHalt;
+//                }
+//                if (type == TOGGLE_LOCK) {
+//                    machine.toggleInputLock();
+//                }
+//                machine.setChanged();
+//            }
 
             if (blockEntity instanceof BasicPerformanceFineParticleAdsorberBlockEntity machine) {
                 if (type == TOGGLE_HOLOGRAM) {

@@ -425,7 +425,10 @@ public class DCBlockLootTableProvider extends BlockLootSubProvider {
         this.add(DCBlocks.BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_HOLO_BLOCK.get(), block -> noDrop());
 
 
-
+        this.add(DCBlocks.BASIC_ITEM_PIPE_BLOCK.get(), block -> createSingleItemTable(DCBlocks.BASIC_ITEM_PIPE_BLOCK.get()));
+        this.add(DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get(), block -> createSingleItemTable(DCBlocks.BASIC_ENERGY_PIPE_BLOCK.get()));
+        this.add(DCBlocks.LOW_ENERGY_PIPE_BLOCK.get(), block -> createSingleItemTable(DCBlocks.LOW_ENERGY_PIPE_BLOCK.get()));
+        this.add(DCBlocks.FLOAT_ENERGY_PIPE_BLOCK.get(), block -> createSingleItemTable(DCBlocks.FLOAT_ENERGY_PIPE_BLOCK.get()));
 
         this.add(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get(), block -> createSingleItemTable(DCBlocks.BASIC_PERFORMANCE_REALITY_PHASE_ADJUSTMENT_MACHINE_BLOCK.get()));
         this.add(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get(), block -> createSingleItemTable(DCBlocks.BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK.get()));
@@ -433,6 +436,8 @@ public class DCBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(DCBlocks.MOON_REGOLITH.get(), block -> createSingleItemTable(DCBlocks.MOON_REGOLITH.get()));
         this.add(DCBlocks.MOON_STONE.get(), block -> createSingleItemTable(DCBlocks.MOON_STONE.get()));
+
+        this.add(DCBlocks.TEST_MACHINE_BLOCK.get(), block -> noDrop());
 
     }
 

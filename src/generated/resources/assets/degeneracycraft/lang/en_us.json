@@ -1174,6 +1174,13 @@
   "tooltip.degeneracycraft.msmultiplication.iron_shaftcoupling.phase0": "Output Multiplication: ×1 ~ ×1",
   "tooltip.degeneracycraft.msmultiplication.iron_shapesteel.phase0": "Output Multiplication: ×1 ~ ×1",
   "tooltip.degeneracycraft.msmultiplication.iron_spring.phase0": "Output Multiplication: ×1 ~ ×1",
+  "tooltip.degeneracycraft.multiblock.energyusege": "Energy Consumption Multiplier:",
+  "tooltip.degeneracycraft.multiblock.parallel": "Parallel Processes:",
+  "tooltip.degeneracycraft.multiblock.size": "Multiblock Size:",
+  "tooltip.degeneracycraft.multiblock_builder.level": "Multiblock Level: %s",
+  "tooltip.degeneracycraft.multiblock_builder.tooltip": "Shift + Right Click: Change Multiblock Level",
+  "tooltip.degeneracycraft.multiblock_builder.tooltip2": "Right Click to place a block from your inventory",
+  "tooltip.degeneracycraft.multiblock_builder.tooltip3": "Left Click to destroy the structure",
   "tooltip.degeneracycraft.multiblock_size.": "Multiblock Size",
   "tooltip.degeneracycraft.night.": "Work in Night",
   "tooltip.degeneracycraft.oxygen.boiling": "Boiling Point: 90.2 K",
@@ -1272,6 +1279,7 @@
   "tooltip.degeneracycraft.water.formula": "Chemical Formula: H₂O",
   "tooltip.degeneracycraft.work": "Machine Working",
   "tooltip.degeneracycraft.wrench": "Export → Import → DisConnection → Export... Pipe Mode change by shift light click",
+  "tooltip.degeneracycraft.wrench2": "Left-click while holding Shift to destroy machinery blocks",
   "tooltip.degeneracycraft.wrenchitem": "Show Wrench Detail by shift key",
   "ultra": "Ultra"
 }

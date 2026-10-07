@@ -1573,15 +1573,26 @@ public class DCLanguageProviderJA extends LanguageProvider {
 
 
         add("tooltip." + "degeneracycraft" + ".wrench", "搬出 → 搬入 → 切断 → 搬出... シフト右クリックでパイプ状態切替");
+        add("tooltip." + "degeneracycraft" + ".wrench2", "シフト左クリックで機械類ブロックを破壊");
+
         add("tooltip." + "degeneracycraft" + ".wrenchitem", "Shiftキーでレンチ詳細展開");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".level", "マルチブロックレベル: %s");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".tooltip", "シフト右クリックでマルチブロックレベル切替");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".tooltip2", "右クリックでインベントリ内のブロックを設置");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".tooltip3", "左クリックで構造を破壊");
+
         add("tooltip." + "degeneracycraft" + ".tools", "Shiftキー+右クリックでモードチェンジ");
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_axe", "通常モードだと原木1つのみ伐採、連鎖モードだと連鎖的に伐採（耐久値を伐採分消費）");
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_pickaxe", "通常モードだとブロック1つのみ採掘、範囲モードだと3x1x3の範囲を採掘（耐久値を採掘分消費）");
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_shovel", "通常モードだとブロック1つのみ採掘、範囲モードだと3x1x3の範囲を採掘（耐久値を採掘分消費）");
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_sword", "通常モードだと通常の剣攻撃、貫通モードだと防御50%無視（耐久値を3倍消費）");
 
+
         add("tooltip." + "degeneracycraft" + ".toolitem", "Shiftキーでツール詳細展開");
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Shiftキーで物質詳細展開");
+        add("tooltip." + "degeneracycraft" + ".multiblock" + ".size", "マルチブロックサイズ:");
+        add("tooltip." + "degeneracycraft" + ".multiblock" + ".parallel", "並列処理数:");
+        add("tooltip." + "degeneracycraft" + ".multiblock" + ".energyusege", "エネルギー消費倍率:");
 
         add("tooltip." + "degeneracycraft." + "ipp", "技術段階: ");
         add("initial", "Initial");

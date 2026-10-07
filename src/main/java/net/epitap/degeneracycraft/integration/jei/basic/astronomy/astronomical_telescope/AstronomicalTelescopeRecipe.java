@@ -41,33 +41,63 @@ public class AstronomicalTelescopeRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer container, Level level) {
-        if (level.isClientSide) return false;
+        if (level.isClientSide) {
+            return false;
+        }
 
-        if (container.getContainerSize() < inputs.size()) return false;
+        if (container.getContainerSize() < inputs.size()) {
+            System.out.println(
+                    "[DC Recipe] Container too small: "
+                            + container.getContainerSize()
+                            + " < "
+                            + inputs.size()
+            );
+            return false;
+        }
 
         for (int i = 0; i < inputs.size(); i++) {
             ItemStack required = inputs.get(i);
             ItemStack actual = container.getItem(i);
 
-            // 空スロット
+            System.out.println(
+                    "[DC Recipe] Slot " + i
+                            + " required=" + required
+                            + " actual=" + actual
+            );
+
             if (required.isEmpty() || required.getItem() == Items.AIR) {
                 if (!actual.isEmpty()) {
+                    System.out.println(
+                            "[DC Recipe] FAIL: slot " + i
+                                    + " should be empty"
+                    );
                     return false;
                 }
                 continue;
             }
 
             if (!ItemStack.isSameItemSameTags(required, actual)) {
+                System.out.println(
+                        "[DC Recipe] FAIL: item mismatch at slot " + i
+                );
                 return false;
             }
 
             if (actual.getCount() < required.getCount()) {
+                System.out.println(
+                        "[DC Recipe] FAIL: insufficient amount at slot " + i
+                                + " required=" + required.getCount()
+                                + " actual=" + actual.getCount()
+                );
                 return false;
             }
         }
 
+        System.out.println("[DC Recipe] MATCHED!");
+
         return true;
     }
+
     @Override
     public ItemStack assemble(SimpleContainer container, RegistryAccess registryAccess) {
         return outputs.isEmpty() ? ItemStack.EMPTY : outputs.get(0).copy();

@@ -8,7 +8,7 @@ plugins {
 
 }
 
-version = '0.4.0'
+version = '0.5.0'
 group = 'net.epitap.degeneracycraft'
 base {
     archivesName = 'DC-Forge1.20.1'
@@ -75,7 +75,10 @@ repositories {
     maven { url = "https://maven.architectury.dev/" }
     maven {url = "https://maven.ftb.dev/releases"}
     maven {url = "https://repo.spongepowered.org/repository/maven-public/"}
-
+    maven {
+        name "firstdarkdev"
+        url "https://maven.firstdark.dev/snapshots"
+    }
     mavenCentral()
 }
 
@@ -87,15 +90,18 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 
-
-//    implementation fg.deobf("curse.maven:emi-580555:5619582")
-    //
+    compileOnly fg.deobf("curse.maven:emi-580555:8081375")
+    runtimeOnly fg.deobf("curse.maven:emi-580555:8081375")
+    runtimeOnly fg.deobf("curse.maven:ldlib-626676:8430516")
+    runtimeOnly fg.deobf("curse.maven:multiblocked2-1104057:8560122")
     runtimeOnly fg.deobf("curse.maven:spark-361579:4738952")
     runtimeOnly fg.deobf("curse.maven:jade-324717:6855440")
 
     runtimeOnly fg.deobf("curse.maven:embeddium-908741:5681725")
     runtimeOnly fg.deobf("curse.maven:ferritecore-429235:4810975")
+
 }
+
 mixin {
     add sourceSets.main, "degeneracycraft.refmap.json"
 

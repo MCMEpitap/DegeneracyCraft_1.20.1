@@ -585,6 +585,8 @@ public class DCCreativeTabs {
                     .title(Component.translatable("creativetab.degeneracycraft_tools"))
                     .displayItems((displayParameters, output) -> {
                         output.accept(DCTools.WRENCH.get());
+                        output.accept(DCTools.MULTIBLOCK_BUILDER.get());
+                        output.accept(DCTools.CREATIVE_MULTIBLOCK_BUILDER.get());
                         ForgeRegistries.ITEMS.getValues().stream()
                                 .filter(item -> Objects.requireNonNull(ForgeRegistries.ITEMS.tags())
                                         .getTag(DCItemTagGenerator.PROTOTYPE_MECHANICAL_TOOLS)

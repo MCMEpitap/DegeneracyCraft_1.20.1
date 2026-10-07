@@ -3,9 +3,12 @@ package net.epitap.degeneracycraft.block;
 import net.epitap.degeneracycraft.Degeneracycraft;
 import net.epitap.degeneracycraft.block.base.DCBlockBase;
 import net.epitap.degeneracycraft.block.base.DCFallingBlockBase;
-import net.epitap.degeneracycraft.block.base.DCGlassBlockBase;
 import net.epitap.degeneracycraft.block.base.DCHoloBlockBase;
+import net.epitap.degeneracycraft.block.base.multiblock.DCMultiBlockBase;
+import net.epitap.degeneracycraft.block.base.multiblock.DCMultiGlassBlockBase;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeBlock;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeBlockEntity;
+import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_astronomical_telescope.BasicPerformanceAstronomicalTelescopeMultiblockRenderer;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_fine_particle_adsorber.BasicPerformanceFineParticleAdsorberBlock;
 import net.epitap.degeneracycraft.block.machine.basic.astronomy.basic_performance_starlight_collector.BasicPerformanceStarlightCollectorBlock;
 import net.epitap.degeneracycraft.block.machine.basic.biology.basic_performance_bio_reactor.BasicPerformanceBioReactorBlock;
@@ -51,6 +54,7 @@ import net.epitap.degeneracycraft.block.storage.basic.biology.item.item_storage.
 import net.epitap.degeneracycraft.block.storage.basic.biology.item.output_port.BasicStrengthBiologyMultiblockItemOutputPortBlock;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.energy_storage.BasicStrengthChemistryMultiblockEnergyStorageBlock;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.input_bus.BasicStrengthChemistryMultiblockEnergyInputBusBlock;
+import net.epitap.degeneracycraft.block.storage.basic.chemistry.energy.output_bus.BasicStrengthChemistryMultiblockEnergyOutputBusBlock;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.input_port.BasicStrengthChemistryMultiblockItemInputPortBlock;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.item_storage.BasicStrengthChemistryMultiblockItemStorageBlock;
 import net.epitap.degeneracycraft.block.storage.basic.chemistry.item.output_port.BasicStrengthChemistryMultiblockItemOutputPortBlock;
@@ -103,16 +107,19 @@ import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_scie
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.item_storage.BasicStrengthKaleidoscopicRealityScienceMultiblockItemStorageBlock;
 import net.epitap.degeneracycraft.block.storage.basic.kaleidoscopic_reality_science.item.output_port.BasicStrengthKaleidoscopicRealityScienceMultiblockItemOutputPortBlock;
 import net.epitap.degeneracycraft.block.test.TestMachineBlock;
-import net.epitap.degeneracycraft.item.DCItems;
 import net.epitap.degeneracycraft.client.transport.pipe.basic.energy.BasicEnergyPipeBlock;
 import net.epitap.degeneracycraft.client.transport.pipe.basic.energy.floa.FloatEnergyPipeBlock;
 import net.epitap.degeneracycraft.client.transport.pipe.basic.item.BasicItemPipeBlock;
 import net.epitap.degeneracycraft.client.transport.pipe.low.energy.LowEnergyPipeBlock;
+import net.epitap.degeneracycraft.item.DCItems;
+import net.epitap.degeneracycraft.multiblock.DCMultiblockFile;
+import net.epitap.degeneracycraft.multiblock.DCMultiblockRegistry;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -130,6 +137,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Locale;
 import java.util.function.Supplier;
 
 public class DCBlocks {
@@ -153,19 +161,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_astronomy_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "astronomy", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "astronomy", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_astronomy_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_astronomy_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "astronomy", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "astronomy", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_astronomy_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_astronomy_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "astronomy", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "astronomy", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_astronomy_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_astronomy_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "astronomy", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "astronomy", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_astronomy_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ASTRONOMY_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_astronomy_multiblock_energy_storage_block", () ->
@@ -197,19 +205,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_biology_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "biology", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "biology", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_biology_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_biology_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "biology", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "biology", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_biology_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_biology_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "biology", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "biology", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_biology_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_biology_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "biology", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "biology", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_biology_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_BIOLOGY_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_biology_multiblock_energy_storage_block", () ->
@@ -241,19 +249,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_chemistry_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "chemistry", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_chemistry_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_chemistry_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "chemistry", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_chemistry_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_chemistry_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "chemistry", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_chemistry_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_chemistry_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "chemistry", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_chemistry_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_chemistry_multiblock_energy_storage_block", () ->
@@ -269,7 +277,7 @@ public class DCBlocks {
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_INPUT_BUS_HOLO_BLOCK = registerHoloBlock("basic_strength_chemistry_multiblock_energy_input_bus_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_BLOCK = registerTooltipScienceBlock("basic_strength_chemistry_multiblock_energy_output_bus_block", () ->
-            new BasicStrengthDynamicEnergeticsMultiblockEnergyOutputBusBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()), "chemistry", "basic");
+            new BasicStrengthChemistryMultiblockEnergyOutputBusBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()), "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ENERGY_OUTPUT_BUS_HOLO_BLOCK = registerHoloBlock("basic_strength_chemistry_multiblock_energy_output_bus_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_CHEMISTRY_MULTIBLOCK_ITEM_INPUT_PORT_BLOCK = registerTooltipScienceBlock("basic_strength_chemistry_multiblock_item_input_port_block", () ->
@@ -284,19 +292,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_dynamic_energetics_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "dynamic_energetics", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "dynamic_energetics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_dynamic_energetics_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_dynamic_energetics_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "dynamic_energetics", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "dynamic_energetics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_dynamic_energetics_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_dynamic_energetics_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "dynamic_energetics", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "dynamic_energetics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_dynamic_energetics_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_dynamic_energetics_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "dynamic_energetics", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "dynamic_energetics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_dynamic_energetics_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_DYNAMIC_ENERGETICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_dynamic_energetics_multiblock_energy_storage_block", () ->
@@ -327,19 +335,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_engineering_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "engineering", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_engineering_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_engineering_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "engineering", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_engineering_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_engineering_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "engineering", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_engineering_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_engineering_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "engineering", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_engineering_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_engineering_multiblock_energy_storage_block", () ->
@@ -371,19 +379,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_formal_science_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "formal_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "formal_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_formal_science_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_formal_science_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "formal_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "formal_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_formal_science_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_formal_science_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "formal_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "formal_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_formal_science_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_formal_science_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "formal_science", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "formal_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_formal_science_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_FORMAL_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_formal_science_multiblock_energy_storage_block", () ->
@@ -415,19 +423,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_geo_science_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "geo_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "geo_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_geo_science_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_geo_science_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "geo_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "geo_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_geo_science_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_geo_science_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "geo_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "geo_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_geo_science_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_geo_science_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "geo_science", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "geo_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_geo_science_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_geo_science_multiblock_energy_storage_block", () ->
@@ -459,19 +467,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_hybrid_physics_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "hybrid_physics", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "hybrid_physics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_hybrid_physics_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_hybrid_physics_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "hybrid_physics", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "hybrid_physics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_hybrid_physics_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_hybrid_physics_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "hybrid_physics", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "hybrid_physics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_hybrid_physics_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_hybrid_physics_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "hybrid_physics", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "hybrid_physics", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_hybrid_physics_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_HYBRID_PHYSICS_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_hybrid_physics_multiblock_energy_storage_block", () ->
@@ -503,19 +511,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_imitation_magic_engineering_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "imitation_magic_engineering", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "imitation_magic_engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_imitation_magic_engineering_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_imitation_magic_engineering_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "imitation_magic_engineering", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "imitation_magic_engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_imitation_magic_engineering_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_imitation_magic_engineering_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "imitation_magic_engineering", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "imitation_magic_engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_imitation_magic_engineering_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_imitation_magic_engineering_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "imitation_magic_engineering", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "imitation_magic_engineering", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_imitation_magic_engineering_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_IMITATION_MAGIC_ENGINEERING_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_imitation_magic_engineering_multiblock_energy_storage_block", () ->
@@ -547,19 +555,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_jenith_void_science_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "jenith_void_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "jenith_void_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_jenith_void_science_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_jenith_void_science_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "jenith_void_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "jenith_void_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_jenith_void_science_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_jenith_void_science_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "jenith_void_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "jenith_void_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_jenith_void_science_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_jenith_void_science_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "jenith_void_science", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "jenith_void_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_jenith_void_science_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_JENITH_VOID_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_jenith_void_science_multiblock_energy_storage_block", () ->
@@ -590,19 +598,19 @@ public class DCBlocks {
 
 
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_kaleidoscopic_reality_science_multiblock_base_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "kaleidoscopic_reality_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "kaleidoscopic_reality_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_BASE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_kaleidoscopic_reality_science_multiblock_base_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_kaleidoscopic_reality_science_multiblock_machine_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "kaleidoscopic_reality_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "kaleidoscopic_reality_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_MACHINE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_kaleidoscopic_reality_science_multiblock_machine_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_BLOCK = registerTooltipScienceBlock("basic_strength_kaleidoscopic_reality_science_multiblock_structure_frame_block", () ->
-            new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "kaleidoscopic_reality_science", "basic");
+            new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f).noOcclusion()), "kaleidoscopic_reality_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_FRAME_HOLO_BLOCK = registerHoloBlock("basic_strength_kaleidoscopic_reality_science_multiblock_structure_frame_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_BLOCK = registerTooltipScienceBlock("basic_strength_kaleidoscopic_reality_science_multiblock_structure_glass_block", () ->
-            new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "kaleidoscopic_reality_science", "basic");
+            new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)), "kaleidoscopic_reality_science", "basic");
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_STRUCTURE_GLASS_HOLO_BLOCK = registerHoloBlock("basic_strength_kaleidoscopic_reality_science_multiblock_structure_glass_holo_block", () ->
             new DCHoloBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).destroyTime(0.0F).strength(0.0F)));
     public static final RegistryObject<Block> BASIC_STRENGTH_KALEIDOSCOPIC_REALITY_SCIENCE_MULTIBLOCK_ENERGY_STORAGE_BLOCK = registerTooltipScienceBlock("basic_strength_kaleidoscopic_reality_science_multiblock_energy_storage_block", () ->
@@ -654,16 +662,19 @@ public class DCBlocks {
 
 
     // BasicAstronomy
-    public static final RegistryObject<Block> BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK = registerTooltipBasicMachineBlock("basic_performance_astronomical_telescope_block", () ->
-                    new BasicPerformanceAstronomicalTelescopeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
-            "Lv0:3×3×3",
-            "Lv1:3×3×3",
-            "Base:Speed ×1.00,Energy Usage ×1.00",
-            "Lv0:Speed ×2.00,Energy Usage ×1.50",
-            "Lv1:Speed ×3.00,Energy Usage ×2.00",
-            "basic_performance_astronomical_telescope_block", "astronomy", "basic");
+    public static final RegistryObject<Block> BASIC_PERFORMANCE_ASTRONOMICAL_TELESCOPE_BLOCK =
+            registerTooltipBasicMachineTestBlock("basic_performance_astronomical_telescope_block", () -> new BasicPerformanceAstronomicalTelescopeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    BasicPerformanceAstronomicalTelescopeMultiblockRenderer.LEVEL_0,
+                    BasicPerformanceAstronomicalTelescopeMultiblockRenderer.LEVEL_1,
+                    1,
+                    BasicPerformanceAstronomicalTelescopeBlockEntity.MACHINE_PARALLEL_COUNT_0,
+                    BasicPerformanceAstronomicalTelescopeBlockEntity.MACHINE_PARALLEL_COUNT_1,
+                    1.00F,
+                    BasicPerformanceAstronomicalTelescopeBlockEntity.MACHINE_ENERGY_USAGE_MODIFIER_0,
+                    BasicPerformanceAstronomicalTelescopeBlockEntity.MACHINE_ENERGY_USAGE_MODIFIER_1,
+                    "basic_performance_astronomical_telescope_block", "astronomy", "basic");
     public static final RegistryObject<Block> BASIC_PRECISION_OBJECTIVE_LENS_BLOCK = registerTooltipMultiblockAbilityBlock("basic_precision_objective_lens_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_astronomical_telescope_block",
             "astronomy",
             "basic");
@@ -679,7 +690,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_fine_particle_adsorber_block", "astronomy", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_FINE_PARTICLE_STORAGE_TANK_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_particle_storage_tank_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_fine_particle_adsorber_block",
             "astronomy",
             "basic");
@@ -695,7 +706,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_starlight_collector_block", "astronomy", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_FAINT_LIGHT_RESERVER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_faint_light_receiver_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_starlight_collector_block",
             "astronomy",
             "basic");
@@ -714,7 +725,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_bio_reactor_block", "biology", "basic");
     public static final RegistryObject<Block> BASIC_SPEED_CULTIVATION_GREENHOUSE_BLOCK = registerTooltipMultiblockAbilityBlock("basic_speed_cultivation_greenhouse_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_bio_reactor_block",
             "biology",
             "basic");
@@ -730,7 +741,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_cell_incubator_block", "biology", "basic");
     public static final RegistryObject<Block> BASIC_DURABILITY_INCUBATION_CONTAINER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_durability_incubation_container_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_cell_incubator_block",
             "biology",
             "basic");
@@ -746,7 +757,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_crop_cultivator_block", "biology", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_GROWTH_STABILIZER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_growth_stabilizer_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_crop_cultivator_block",
             "biology",
             "basic");
@@ -766,7 +777,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_chemical_reactor_block", "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_RATE_COMPOUND_AGITATION_SYSTEM_BLOCK = registerTooltipMultiblockAbilityBlock("basic_rate_compound_agitation_system_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_chemical_reactor_block",
             "chemistry",
             "basic");
@@ -782,7 +793,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_compound_purifier_block", "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_DURABLE_HIGH_SPPED_CHEMICAL_REACTOR_BLOCK = registerTooltipMultiblockAbilityBlock("basic_durable_high_speed_chemical_reactor_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_compound_purifier_block",
             "chemistry",
             "basic");
@@ -798,7 +809,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_electrolyser_block", "chemistry", "basic");
     public static final RegistryObject<Block> BASIC_DURABLE_EXPANDED_ELECTROLYTIC_CELL_BLOCK = registerTooltipMultiblockAbilityBlock("basic_durable_expanded_electrolytic_cell_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_electrolyser_block",
             "chemistry",
             "basic");
@@ -819,7 +830,7 @@ public class DCBlocks {
             "basic_power_steam_generator_block", "dynamic_energetics", "basic");
     public static final RegistryObject<Block> BASIC_ENDURANCE_HIGH_TEMPERATURE_COMBUSTION_CHAMBER_BLOCK = registerTooltipMultiblockAbilityBlock(
             "basic_endurance_high_temperature_combustion_chamber_block", () ->
-                    new DCGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)),
+                    new DCMultiGlassBlockBase(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(4.0f)),
             "basic_power_steam_generator_block",
             "dynamic_energetics",
             "basic");
@@ -836,7 +847,7 @@ public class DCBlocks {
             "basic_technology_compression_condenser_block", "dynamic_energetics", "basic");
     public static final RegistryObject<Block> BASIC_PRESSURE_COMPRESSION_ASSIST_SYSTEM_BLOCK = registerTooltipMultiblockAbilityBlock(
             "basic_pressure_compression_assist_system_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f)),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f)),
             "basic_technology_compression_condenser_block",
             "dynamic_energetics",
             "basic");
@@ -853,7 +864,7 @@ public class DCBlocks {
             "basic_technology_electromagnetic_inductor_block", "dynamic_energetics", "basic");
     public static final RegistryObject<Block> BASIC_DURABLE_INSULATED_CHAMBER_BLOCK = registerTooltipMultiblockAbilityBlock(
             "basic_durable_insulated_chamber_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f)),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4.0f)),
             "basic_technology_electromagnetic_inductor_block",
             "dynamic_energetics",
             "basic");
@@ -872,7 +883,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_machine_manufacturer_block", "engineering", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_MACHINE_PROCESSING_CHAMBER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_machine_processing_chamber_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_machine_manufacturer_block",
             "engineering",
             "basic");
@@ -888,7 +899,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_machine_element_processor_block", "engineering", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_MACHINE_ELEMENT_PROCESSING_CHAMBER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_machine_element_processing_chamber_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_machine_element_processor_block",
             "engineering",
             "basic");
@@ -904,7 +915,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_machine_part_processor_block", "engineering", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_MACHINE_PART_PROCESSING_CHAMBER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_machine_part_processing_chamber_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_machine_part_processor_block",
             "engineering",
             "basic");
@@ -920,7 +931,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_multiblock_equipment_fabricator_block", "engineering", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_EQUIPMENT_PRODUCTION_AUXILIARY_SYSTEM_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_equipment_production_auxiliary_system_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_multiblock_equipment_fabricator_block",
             "engineering",
             "basic");
@@ -940,7 +951,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_circuit_builder_block", "formal_science", "basic");
     public static final RegistryObject<Block> BASIC_PURITY_CIRCUIT_CLEAN_ROOM_BLOCK = registerTooltipMultiblockAbilityBlock("basic_purity_circuit_clean_room_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_circuit_builder_block",
             "formal_science",
             "basic");
@@ -956,7 +967,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_machine_data_installer_block", "formal_science", "basic");
     public static final RegistryObject<Block> BASIC_SPEED_DATA_READER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_speed_data_reader_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_machine_data_installer_block",
             "formal_science",
             "basic");
@@ -972,7 +983,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_designated_data_injector_block", "formal_science", "basic");
     public static final RegistryObject<Block> BASIC_SPEED_CALCULATION_AUXILIARY_WRITE_DEVICE_BLOCK = registerTooltipMultiblockAbilityBlock("basic_speed_calculation_auxiliary_write_device_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_designated_data_injector_block",
             "formal_science",
             "basic");
@@ -992,7 +1003,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_ore_sorter_block", "geo_science", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_ORE_SORTING_FILTER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_ore_sorting_filter_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_ore_sorter_block",
             "geo_science",
             "basic");
@@ -1008,7 +1019,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_rock_crasher_block", "geo_science", "basic");
     public static final RegistryObject<Block> BASIC_CRASHING_BASE_BLOCK = registerTooltipMultiblockAbilityBlock("basic_crashing_base_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_rock_crasher_block",
             "geo_science",
             "basic");
@@ -1024,7 +1035,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_soil_purifier_block", "geo_science", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_PARTICLE_MIXING_CHAMBER_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_particle_mixing_chamber_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_soil_purifier_block",
             "geo_science",
             "basic");
@@ -1044,7 +1055,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_electric_arc_furnace_block", "hybrid_physics", "basic");
     public static final RegistryObject<Block> BASIC_FLOW_COOLING_SYSTEM_BLOCK = registerTooltipMultiblockAbilityBlock("basic_flow_cooling_system_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_electric_arc_furnace_block",
             "hybrid_physics",
             "basic");
@@ -1060,7 +1071,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_forming_machine_block", "hybrid_physics", "basic");
     public static final RegistryObject<Block> BASIC_PRECISION_EXTRUSION_ASSIST_SYSTEM_BLOCK = registerTooltipMultiblockAbilityBlock("basic_precision_extrusion_assist_system_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_forming_machine_block",
             "hybrid_physics",
             "basic");
@@ -1076,7 +1087,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_material_separator_block", "hybrid_physics", "basic");
     public static final RegistryObject<Block> BASIC_DURABILITY_VIBRATION_CONTROL_BASE_BLOCK = registerTooltipMultiblockAbilityBlock("basic_durability_vibration_control_base_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_material_separator_block",
             "hybrid_physics",
             "basic");
@@ -1093,7 +1104,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_imitation_magic_engraver_block", "imitation_magic_engineering", "basic");
     public static final RegistryObject<Block> BASIC_OUTPUT_MYSTIC_OPTICAL_PROJECTION_DEVICE_BLOCK = registerTooltipMultiblockAbilityBlock("basic_output_mystic_optical_projection_device_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_imitation_magic_engraver_block",
             "imitation_magic_engineering",
             "basic");
@@ -1109,7 +1120,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_suspected_magic_condenser_block", "imitation_magic_engineering", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_SEALED_EXTRACTION_CASE_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_sealed_extraction_case_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_suspected_magic_condenser_block",
             "imitation_magic_engineering",
             "basic");
@@ -1125,7 +1136,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_virtual_sigil_processor_block", "imitation_magic_engineering", "basic");
     public static final RegistryObject<Block> BASIC_SPEED_PATTERN_TRANSFER_SYSTEM_BLOCK = registerTooltipMultiblockAbilityBlock("basic_speed_pattern_transfer_system_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_virtual_sigil_processor_block",
             "imitation_magic_engineering",
             "basic");
@@ -1141,7 +1152,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_technology_void_world_coordinate_recording_machine_block", "jenith_void_science", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_VOID_INTERFERENCE_FLAME_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_void_interference_frame_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_technology_void_world_coordinate_recording_machine_block",
             "jenith_void_science",
             "basic");
@@ -1157,7 +1168,7 @@ public class DCBlocks {
             "Lv1:Speed ×3.00,Energy Usage ×2.00",
             "basic_performance_reality_phase_adjustment_machine_block", "kaleidoscopic_reality_science", "basic");
     public static final RegistryObject<Block> BASIC_EFFICIENCY_PHASE_STABLE_FLAME_BLOCK = registerTooltipMultiblockAbilityBlock("basic_efficiency_phase_stable_frame_block", () ->
-                    new DCBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+                    new DCMultiBlockBase(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             "basic_performance_reality_phase_adjustment_machine_block",
             "kaleidoscopic_reality_science",
             "basic");
@@ -1256,6 +1267,180 @@ public class DCBlocks {
                 
         );
     }
+
+
+    private static <T extends Block> RegistryObject<T> registerTooltipBasicMachineTestBlock(String name, Supplier<T> block, ResourceLocation lv0MultiblockId, ResourceLocation lv1MultiblockId, int baseParallel, int lv0Parallel, int lv1Parallel,
+                                                                                            float baseEnergyUsage, float lv0EnergyUsage, float lv1EnergyUsage, String machineName, String scienceName, String phase) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerTooltipBasicMachineTestBlockItem(name, toReturn, lv0MultiblockId, lv1MultiblockId, baseParallel, lv0Parallel, lv1Parallel, baseEnergyUsage, lv0EnergyUsage, lv1EnergyUsage, machineName, scienceName, phase);
+        return toReturn;
+    }
+
+    private static <T extends Block> RegistryObject<Item> registerTooltipBasicMachineTestBlockItem(String name, Supplier<T> block, ResourceLocation lv0MultiblockId, ResourceLocation lv1MultiblockId, int baseParallel, int lv0Parallel, int lv1Parallel,
+                                                                                                   float baseEnergyUsage, float lv0EnergyUsage, float lv1EnergyUsage, String machineName, String scienceName, String phase) {
+        return DCItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()) {
+            private static final int[] RAINBOW = {
+                    0xFF0000, 0xFFFF00, 0x00FF00,
+                    0x00FFFF, 0x0000FF, 0xFF00FF
+            };
+
+            private static final int[] GLAY_SCALE = {
+                    0x404040, 0x808080, 0xFFFFFF
+            };
+
+            private static Component rainbowText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * RAINBOW.length / len;
+
+                    int color = RAINBOW[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
+
+            private static Component grayText(String text) {
+                MutableComponent result = Component.empty();
+
+                int len = text.length();
+
+                for (int i = 0; i < len; i++) {
+                    int index = i * GLAY_SCALE.length / len;
+
+                    int color = GLAY_SCALE[index];
+
+                    result.append(
+                            Component.literal(String.valueOf(text.charAt(i)))
+                                    .withStyle(style -> style
+                                            .withColor(color)
+                                            .withBold(true)
+                                            .withUnderlined(true))
+                    );
+                }
+
+                return result;
+            }
+
+            @Override
+            public void appendHoverText(ItemStack pStack, @Nullable Level level, List<Component> pTooltip, TooltipFlag pFlag) {
+                if (Screen.hasShiftDown()) {
+                    pTooltip.add(Component.translatable("tooltip.degeneracycraft." + machineName).withStyle(style -> style.withColor(0xFFFFFF)));
+                    switch (scienceName) {
+                        case "astronomy" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0xFF00FF))));
+                        case "biology" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0x00FF00))));
+                        case "chemistry" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0x0000FF))));
+                        case "dynamic_energetics" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0x808080))));
+                        case "engineering" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0x404040))));
+                        case "formal_science" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0x00FFFF))));
+                        case "geo_science" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0xFFFF00))));
+                        case "hybrid_physics" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0xFF0000))));
+                        case "imitation_magic_engineering" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(scienceName).withStyle(style -> style.withColor(0xFFFFFF))));
+                        case "jenith_void_science" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(grayText(Component.translatable(scienceName).getString())));
+                        case "kaleidoscopic_reality_science" -> {
+                            pTooltip.add(Component.translatable("tooltip.degeneracycraft.science").withStyle(style -> style.withColor(0x808080)).append(rainbowText(Component.translatable(scienceName).getString())));
+                        }}
+                    switch (phase) {
+                        case "initial" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFFFF))));
+                        case "basic" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF0000))));
+                        case "low" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF8000))));
+                        case "medium" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFFFF00))));
+                        case "high" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x80FF00))));
+                        case "super" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FF00))));
+                        case "over" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x00FFFF))));
+                        case "ultra" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x0080FF))));
+                        case "anti" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x0000FF))));
+                        case "imaginary" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0xFF00FF))));
+                        case "infinity" ->
+                                pTooltip.add(Component.translatable("tooltip.degeneracycraft.ipp").withStyle(style -> style.withColor(0x808080)).append(Component.translatable(phase).withStyle(style -> style.withColor(0x808080))));
+
+                        default -> throw new IllegalStateException("Unexpected value: " + phase);
+                    }
+
+                    DCMultiblockFile lv0File = DCMultiblockRegistry.get(lv0MultiblockId);
+                    DCMultiblockFile lv1File = DCMultiblockRegistry.get(lv1MultiblockId);
+
+                    String lv0MachineSize = lv0File == null
+                            ? "Lv0:???×???×???"
+                            : "Lv0:" + lv0File.getX() + "×" + lv0File.getY() + "×" + lv0File.getZ();
+
+                    String lv1MachineSize = lv1File == null
+                            ? "Lv1:???×???×???"
+                            : "Lv1:" + lv1File.getX() + "×" + lv1File.getY() + "×" + lv1File.getZ();
+
+                    pTooltip.add(
+                            Component.translatable("tooltip.degeneracycraft.multiblock.size").withStyle(style -> style.withColor(0xFFFFFF))
+                                    .append(Component.literal(lv0MachineSize).withStyle(style -> style.withColor(0xFFFFFF)))
+                    );
+
+                    pTooltip.add(
+                            Component.translatable("tooltip.degeneracycraft.multiblock.size").withStyle(style -> style.withColor(0xFFFFFF))
+                                    .append(Component.literal(lv1MachineSize).withStyle(style -> style.withColor(0xFF0000)))
+                    );
+
+                    pTooltip.add(
+                            Component.literal("Base").withStyle(style -> style.withColor(0xFFFFFF))
+                                    .append(Component.translatable("tooltip.degeneracycraft.multiblock.parallel").withStyle(style -> style.withColor(0xFFFFFF)))
+                                    .append(Component.literal(String.valueOf(baseParallel)).withStyle(style -> style.withColor(0x00FFFF)))
+                                    .append(Component.translatable("tooltip.degeneracycraft.multiblock.energyusege").withStyle(style -> style.withColor(0xFFFFFF)))
+                                    .append(Component.literal(String.format(Locale.ROOT, "%.2f", baseEnergyUsage)).withStyle(style -> style.withColor(0xFF0000)))
+                    );
+
+                    pTooltip.add(
+                            Component.literal("Lv0").withStyle(style -> style.withColor(0xFFFFFF))
+                                    .append(Component.translatable("tooltip.degeneracycraft.multiblock.parallel").withStyle(style -> style.withColor(0xFFFFFF)))
+                                    .append(Component.literal(String.valueOf(lv0Parallel)).withStyle(style -> style.withColor(0x00FFFF)))
+                                    .append(Component.translatable("tooltip.degeneracycraft.multiblock.energyusege").withStyle(style -> style.withColor(0xFFFFFF)))
+                                    .append(Component.literal(String.format(Locale.ROOT, "%.2f", lv0EnergyUsage)).withStyle(style -> style.withColor(0xFF0000)))
+                    );
+
+                    pTooltip.add(
+                            Component.literal("Lv1").withStyle(style -> style.withColor(0xFF0000))
+                                    .append(Component.translatable("tooltip.degeneracycraft.multiblock.parallel").withStyle(style -> style.withColor(0xFFFFFF)))
+                                    .append(Component.literal(String.valueOf(lv1Parallel)).withStyle(style -> style.withColor(0x00FFFF)))
+                                    .append(Component.translatable("tooltip.degeneracycraft.multiblock.energyusege").withStyle(style -> style.withColor(0xFFFFFF)))
+                                    .append(Component.literal(String.format(Locale.ROOT, "%.2f", lv1EnergyUsage)).withStyle(style -> style.withColor(0xFF0000)))
+                    );
+
+                } else {
+                    pTooltip.add(Component.translatable("tooltip.degeneracycraft.tooltipitem").withStyle(style -> style.withColor(0xFFFF00)));
+                }
+            }
+        });
+    }
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerTooltipBasicMachineBlock(String name, Supplier<T> block, String lv0MachineSize, String lv1MachineSize,
                                                                                         String basePara, String lv0Para, String lv1Para, String machineName, String scienceName, String phase) {
@@ -1635,6 +1820,7 @@ public class DCBlocks {
     private static <T extends Block> void registerHoloBlockItem(String name, RegistryObject<T> block) {
         DCItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().stacksTo(0)));
     }
+
 
     @OnlyIn(Dist.CLIENT)
     public static void clientSetup() {

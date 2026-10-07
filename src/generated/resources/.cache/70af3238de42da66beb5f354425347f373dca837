@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-18T23:49:58.6426544	Block Tags
+// 1.20.1	2026-09-08T22:36:45.7454295	Block Tags
 c4505c36c495f607c844ceb4cd7e08506e264a92 data/degeneracycraft/tags/blocks/basic_astronomy_ability_blocks.json
 82cac7457e356d4b0ad0e7330f58ec04214cc5ec data/degeneracycraft/tags/blocks/basic_astronomy_machines.json
 214c68cb775b5e27e1033ce91068b0dd7efcbcf1 data/degeneracycraft/tags/blocks/basic_astronomy_multiblocks.json
@@ -42,5 +42,5 @@ e6768ca5c1fcabb35acae1c8704813818af9824d data/degeneracycraft/tags/blocks/degene
 4ac2c30017875877b2474826b8b7b8084b7ab34f data/degeneracycraft/tags/blocks/degeneracycraft_test_blocks.json
 7ad4f1d8f9addbc97a66f32dc7df7ae60df117a6 data/degeneracycraft/tags/blocks/initial_machines.json
 9af10bfee1b3fd8b7266895d28830c016f7d10e8 data/degeneracycraft/tags/blocks/moon_blocks.json
-3a1a24a8c350011b770480f8cdd5bf3d4a243f7d data/minecraft/tags/blocks/mineable/pickaxe.json
+9c6be996e32f91a571cce9ec84f86c5e1d95de4d data/minecraft/tags/blocks/mineable/pickaxe.json
 d8dba839d742549d8f302d778d010b1885760872 data/minecraft/tags/blocks/needs_iron_tool.json

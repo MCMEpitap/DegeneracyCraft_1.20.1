@@ -21,6 +21,7 @@ public class WrenchItem extends Item {
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flagIn) {
         if (Screen.hasShiftDown()) {
             tooltip.add(Component.translatable("tooltip.degeneracycraft.wrench").withStyle(style -> style.withColor(0xFFFFFF)));
+            tooltip.add(Component.translatable("tooltip.degeneracycraft.wrench2").withStyle(style -> style.withColor(0xFFFFFF)));
         } else {
             tooltip.add(Component.translatable("tooltip.degeneracycraft.toolitem").withStyle(style -> style.withColor(0xFFFF00)));
         }
@@ -39,4 +40,5 @@ public class WrenchItem extends Item {
         }
         return false;
     }
+
 }

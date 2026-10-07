@@ -5,28 +5,28 @@
   "phase": 1,
   "inputs": [
     {
-      "item": "minecraft:tin_ingot"
+      "item": "degeneracycraft:tin_ingot"
     },
     {
-      "item": "minecraft:tin_ingot"
+      "item": "degeneracycraft:tin_ingot"
     },
     {
-      "item": "minecraft:tin_ingot"
-    },
-    {
-      "item": "minecraft:air"
-    },
-    {
-      "item": "minecraft:tin_ingot"
+      "item": "degeneracycraft:tin_ingot"
     },
     {
       "item": "minecraft:air"
     },
     {
+      "item": "degeneracycraft:tin_ingot"
+    },
+    {
       "item": "minecraft:air"
     },
     {
-      "item": "minecraft:tin_ingot"
+      "item": "minecraft:air"
+    },
+    {
+      "item": "degeneracycraft:tin_ingot"
     },
     {
       "item": "minecraft:air"

@@ -1,42 +1,31 @@
 package net.epitap.degeneracycraft.block.storage.basic.imitation_magic_engineering.item.input_port;
 
 import net.epitap.degeneracycraft.Degeneracycraft;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.epitap.degeneracycraft.block.base.multiblock.DCMultiblockItemScreenBase;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class BasicStrengthImitationMagicEngineeringMultiblockItemInputPortScreen extends AbstractContainerScreen<BasicStrengthImitationMagicEngineeringMultiblockItemInputPortMenu> {
+public class BasicStrengthImitationMagicEngineeringMultiblockItemInputPortScreen
+        extends DCMultiblockItemScreenBase<BasicStrengthImitationMagicEngineeringMultiblockItemInputPortMenu> {
+
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Degeneracycraft.MOD_ID,
-                    "textures/gui/multiblock/basic/imitation_magic_engineering/basic_strength_imitation_magic_engineering_multiblock_item_input_port/basic_strength_imitation_magic_engineering_multiblock_item_input_port_gui.png");
+            new ResourceLocation(
+                    Degeneracycraft.MOD_ID,
+                    "textures/gui/multiblock/basic/imitation_magic_engineering/basic_strength_imitation_magic_engineering_multiblock_item_input_port/basic_strength_imitation_magic_engineering_multiblock_item_input_port_gui.png"
+            );
 
-
-    public BasicStrengthImitationMagicEngineeringMultiblockItemInputPortScreen(BasicStrengthImitationMagicEngineeringMultiblockItemInputPortMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
-        super(pMenu, pPlayerInventory, pTitle);
-        this.imageWidth = 176;
-        this.imageHeight = 166;
-    }
-
-
-    @Override
-    protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
-        int x = (width - imageWidth) / 2;
-        int y = (height - imageHeight) / 2;
-
-        guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+    public BasicStrengthImitationMagicEngineeringMultiblockItemInputPortScreen(BasicStrengthImitationMagicEngineeringMultiblockItemInputPortMenu menu, Inventory playerInventory, Component title) {
+        super(menu, playerInventory, title);
     }
 
     @Override
-    public void renderLabels(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY) {
-
+    protected DCMultiblockItemScreenLayout createLayout() {
+        return new DCMultiblockItemScreenLayout(176, 166);
     }
 
     @Override
-    public void render(GuiGraphics pGuiGraphics, int mouseX, int mouseY, float delta) {
-        renderBackground(pGuiGraphics);
-        super.render(pGuiGraphics, mouseX, mouseY, delta);
-        renderTooltip(pGuiGraphics, mouseX, mouseY);
+    protected ResourceLocation getTexture() {
+        return TEXTURE;
     }
 }

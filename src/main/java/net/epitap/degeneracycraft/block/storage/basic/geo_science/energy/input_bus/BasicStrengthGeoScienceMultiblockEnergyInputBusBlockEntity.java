@@ -1,75 +1,31 @@
 package net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.input_bus;
 
 import net.epitap.degeneracycraft.block.DCBlockEntities;
-import net.epitap.degeneracycraft.energy.DCEnergyStorageFloatBase;
-import net.epitap.degeneracycraft.energy.DCIEnergyStorageFloat;
-import net.epitap.degeneracycraft.networking.DCMessages;
-import net.epitap.degeneracycraft.networking.packet.DCEnergySyncS2CPacket;
+import net.epitap.degeneracycraft.block.base.machine.DCNearbyStorageManagerBase;
+import net.epitap.degeneracycraft.block.base.multiblock.DCMultiblockEnergyBlockEntityBase;
+import net.epitap.degeneracycraft.block.storage.basic.geo_science.energy.energy_storage.BasicStrengthGeoScienceMultiblockEnergyStorageBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
-import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
+import java.util.List;
 
-public class BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity extends BlockEntity implements MenuProvider {
-    public float STORAGE_CAPACITY = 100000F;
-    public float STORAGE_TRANSFER = 32F;
-    public final ContainerData data;
+public class BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity extends DCMultiblockEnergyBlockEntityBase {
+    public static final float STORAGE_CAPACITY = 100000F;
+    public static final float STORAGE_TRANSFER = 32F;
+    public static final int STORAGE_COUNT = 9;
 
-    private final DCEnergyStorageFloatBase ENERGY_STORAGE = new DCEnergyStorageFloatBase(STORAGE_CAPACITY, STORAGE_TRANSFER) {
-        @Override
-        public void onEnergyChanged() {
-            setChanged();
-            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3); 
-            DCMessages.sendToClients(new DCEnergySyncS2CPacket(this.energy, getBlockPos()));        }
-    };
 
-    public DCIEnergyStorageFloat getEnergyStorage() {
-        return ENERGY_STORAGE;
+    public BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity(BlockPos pos, BlockState state) {
+        super(DCBlockEntities.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY.get(), pos, state,
+                STORAGE_CAPACITY, STORAGE_TRANSFER, STORAGE_COUNT);
     }
 
-    public void setEnergyLevel(float energy) {
-        this.ENERGY_STORAGE.setEnergyFloat(energy);
-    }
-
-    private final LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-    private LazyOptional<DCIEnergyStorageFloat> lazyEnergyHandler = LazyOptional.empty();
-
-    public BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(DCBlockEntities.BASIC_STRENGTH_GEO_SCIENCE_MULTIBLOCK_ENERGY_INPUT_BUS_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
-        this.data = new ContainerData() {
-            @Override
-            public int get(int pIndex) {
-                return 0;
-            }
-
-            @Override
-            public void set(int pIndex, int pValue) {
-            }
-
-            @Override
-            public int getCount() {
-                return 0;
-            }
-        };
-    }
 
     @Override
     public Component getDisplayName() {
@@ -78,52 +34,37 @@ public class BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity extends 
 
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new BasicStrengthGeoScienceMultiblockEnergyInputBusMenu(pContainerId, pInventory, this, this.data);
+    public AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
+        return new BasicStrengthGeoScienceMultiblockEnergyInputBusMenu(containerId, inventory, this, data);
     }
 
-    @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == ForgeCapabilities.ENERGY) {
-            return lazyEnergyHandler.cast();
-        } else if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
+    private void pullEnergyFromNearbyStorage(Level level) {
+        float needed = STORAGE_CAPACITY - ENERGY_STORAGE.getEnergyStoredFloat();
+
+        if (needed <= 0F) {
+            return;
         }
 
-        return super.getCapability(cap, side);
+        List<DCNearbyStorageManagerBase.ExtractEnergyStorageCandidate> storages =
+                DCNearbyStorageManagerBase.findExtractEnergyStorages(level, getBlockPos(), BasicStrengthGeoScienceMultiblockEnergyStorageBlockEntity.class);
+
+        for (DCNearbyStorageManagerBase.ExtractEnergyStorageCandidate candidate : storages) {
+            if (needed <= 0F) {
+                break;
+            }
+
+            float extracted = candidate.storage().extractEnergyFloat(needed, false);
+
+            if (extracted <= 0F) {
+                continue;
+            }
+
+            ENERGY_STORAGE.receiveEnergyFloat(extracted, false);
+            needed -= extracted;
+        }
     }
 
-    @Override
-    public void onLoad() {
-        lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
-        super.onLoad();
+    public static void tick(Level level, BlockPos pos, BlockState state, BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity blockEntity) {
+        blockEntity.pullEnergyFromNearbyStorage(level);
     }
-
-    @Override
-    public void invalidateCaps() {
-        lazyItemHandler.invalidate();
-        lazyEnergyHandler.invalidate();
-        super.invalidateCaps();
-    }
-
-    @Override
-    protected void saveAdditional(CompoundTag nbt) {
-        nbt.putFloat("energy", ENERGY_STORAGE.getEnergyStoredFloat());
-        super.saveAdditional(nbt);
-    }
-
-    @Override
-    public void load(CompoundTag nbt) {
-        ENERGY_STORAGE.setEnergyFloat(nbt.getFloat("energy"));
-        super.load(nbt);
-    }
-
-    public void drops() {
-    }
-
-    public static void tick(Level level, BlockPos pPos, BlockState pState, BasicStrengthGeoScienceMultiblockEnergyInputBusBlockEntity blockEntity) {
-        blockEntity.ENERGY_STORAGE.receiveEnergyFloat(1e-20F, false);
-        blockEntity.ENERGY_STORAGE.extractEnergyFloat(1e-20F, false);
-    }
-
 }

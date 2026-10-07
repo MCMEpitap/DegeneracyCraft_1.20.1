@@ -14,12 +14,14 @@ import net.epitap.degeneracycraft.item.DCCreativeTabs;
 import net.epitap.degeneracycraft.item.DCItems;
 import net.epitap.degeneracycraft.item.icon.DCIcons;
 import net.epitap.degeneracycraft.item.tool.DCTools;
+import net.epitap.degeneracycraft.multiblock.DCMultiblockLoader;
 import net.epitap.degeneracycraft.networking.DCMessages;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.Capability;
@@ -56,6 +58,10 @@ public class Degeneracycraft {
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        bus.addListener(
+                this::registerClientReloadListeners
+        );
+
         bus.addListener(this::commonSetup);
         DCItems.register(bus);
         DCCreativeTabs.register(bus);
@@ -80,6 +86,19 @@ public class Degeneracycraft {
     @SubscribeEvent
     public void onSlashReload(AddReloadListenerEvent event) {
         event.addListener(new VeinWorldGenDataLoader());
+    }
+
+    @SubscribeEvent
+    public void registerClientReloadListeners(
+            RegisterClientReloadListenersEvent event
+    ) {
+        event.registerReloadListener(
+                new DCMultiblockLoader()
+        );
+
+        System.out.println(
+                "[DegeneracyCraft] DCMultiblockLoader registered on CLIENT."
+        );
     }
 
 

@@ -1582,7 +1582,13 @@ public class DCLanguageProviderEN extends LanguageProvider {
         add("screen." + "degeneracycraft_machine" + ".energy_usage_modifier_3", "Required Energy Usage ×3.00");
 
         add("tooltip." + "degeneracycraft" + ".wrench", "Export → Import → DisConnection → Export... Pipe Mode change by shift light click");
+        add("tooltip." + "degeneracycraft" + ".wrench2", "Left-click while holding Shift to destroy machinery blocks");
         add("tooltip." + "degeneracycraft" + ".wrenchitem", "Show Wrench Detail by shift key");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".level", "Multiblock Level: %s");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".tooltip", "Shift + Right Click: Change Multiblock Level");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".tooltip2", "Right Click to place a block from your inventory");
+        add("tooltip." + "degeneracycraft" + ".multiblock_builder" + ".tooltip3", "Left Click to destroy the structure");
+
         add("tooltip." + "degeneracycraft" + ".tools", "Press the Shift key and right-click to change modes");
         add("tooltip." + "degeneracycraft" + ".prototype_mechanical_axe", "In Normal Mode, it cuts down only one log; in Chain Mode, it cuts down logs in a chain " +
                 "(consuming durability equal to the number of logs cut)\")");
@@ -1595,7 +1601,9 @@ public class DCLanguageProviderEN extends LanguageProvider {
 
         add("tooltip." + "degeneracycraft" + ".toolitem", "Show Tool Detail by shift key");
         add("tooltip." + "degeneracycraft" + ".tooltipitem", "Show Material Detail by shift key");
-
+        add("tooltip." + "degeneracycraft" + ".multiblock" + ".size", "Multiblock Size:");
+        add("tooltip." + "degeneracycraft" + ".multiblock" + ".parallel", "Parallel Processes:");
+        add("tooltip." + "degeneracycraft" + ".multiblock" + ".energyusege", "Energy Consumption Multiplier:");
         add("tooltip." + "degeneracycraft." + "ipp", "Phase: ");
         add("initial", "Initial");
         add("basic", "Basic");

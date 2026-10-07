@@ -15,6 +15,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class DCTools {
     public static final DeferredRegister<Item> TOOL_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Degeneracycraft.MOD_ID);
     public static final RegistryObject<Item> WRENCH = TOOL_ITEMS.register("wrench", () -> new WrenchItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MULTIBLOCK_BUILDER = TOOL_ITEMS.register("multiblock_builder", () -> new MultiblockBuilderItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CREATIVE_MULTIBLOCK_BUILDER = TOOL_ITEMS.register("creative_multiblock_builder", () -> new CreativeMultiblockBuilderItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> PROTOTYPE_MECHANICAL_AXE =
             TOOL_ITEMS.register("prototype_mechanical_axe",() -> new PrototypeMechanicalAxeItem(DCTiers.INITIAL_MINING_TOOL, 1,-2.8F, new Item.Properties()));
