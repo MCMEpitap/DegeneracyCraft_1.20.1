@@ -1,0 +1,40 @@
+{
+  "type": "degeneracycraft:machine_element_processor_recipe",
+  "energy": 200.0,
+  "time": 10.0,
+  "phase": 1,
+  "inputs": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:air"
+    }
+  ],
+  "outputs": [
+    {
+    "item": "degeneracycraft:iron_spring"
+    }
+  ]
+}
