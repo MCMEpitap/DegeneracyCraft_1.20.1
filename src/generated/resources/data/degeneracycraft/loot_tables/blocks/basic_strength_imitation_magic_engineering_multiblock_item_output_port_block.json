@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "degeneracycraft:basic_strength_imitation_magic_engineering_multiblock_item_input_port_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "degeneracycraft:blocks/basic_strength_imitation_magic_engineering_multiblock_item_output_port_block"
+}
